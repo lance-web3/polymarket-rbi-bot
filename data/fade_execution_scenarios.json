@@ -1,0 +1,141 @@
+{
+  "config": {
+    "csv_dir": "data/quote_backtests",
+    "out": "data/fade_execution_scenarios.json",
+    "holds": "3,5,10,20",
+    "size": 10.0,
+    "min_slow_momentum_bps": 90.0,
+    "min_breakout_position": 0.65,
+    "min_jump_share": 0.35,
+    "max_jump_share": 0.85,
+    "max_source_spread_bps": 150.0,
+    "max_opposite_entry_spread_bps": 150.0,
+    "min_bars_between_trades": 3
+  },
+  "holds": [
+    {
+      "hold_bars": 3,
+      "trade_count": 48,
+      "scenarios": {
+        "taker_taker": {
+          "avg": -0.0192,
+          "total": -0.92,
+          "win_rate": 0.0
+        },
+        "maker_maker": {
+          "avg": 0.0129,
+          "total": 0.62,
+          "win_rate": 0.9167
+        },
+        "maker_entry_taker_exit": {
+          "avg": -0.0042,
+          "total": -0.2,
+          "win_rate": 0.0
+        },
+        "taker_entry_maker_exit": {
+          "avg": -0.0021,
+          "total": -0.1,
+          "win_rate": 0.0
+        },
+        "mid_mid": {
+          "avg": -0.0031,
+          "total": -0.15,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "hold_bars": 5,
+      "trade_count": 48,
+      "scenarios": {
+        "taker_taker": {
+          "avg": -0.0233,
+          "total": -1.12,
+          "win_rate": 0.0
+        },
+        "maker_maker": {
+          "avg": 0.0108,
+          "total": 0.52,
+          "win_rate": 0.8333
+        },
+        "maker_entry_taker_exit": {
+          "avg": -0.0083,
+          "total": -0.4,
+          "win_rate": 0.0
+        },
+        "taker_entry_maker_exit": {
+          "avg": -0.0042,
+          "total": -0.2,
+          "win_rate": 0.0
+        },
+        "mid_mid": {
+          "avg": -0.0063,
+          "total": -0.3,
+          "win_rate": 0.0
+        }
+      }
+    },
+    {
+      "hold_bars": 10,
+      "trade_count": 48,
+      "scenarios": {
+        "taker_taker": {
+          "avg": -0.0292,
+          "total": -1.4,
+          "win_rate": 0.0
+        },
+        "maker_maker": {
+          "avg": 0.0083,
+          "total": 0.4,
+          "win_rate": 0.7083
+        },
+        "maker_entry_taker_exit": {
+          "avg": -0.0142,
+          "total": -0.68,
+          "win_rate": 0.0417
+        },
+        "taker_entry_maker_exit": {
+          "avg": -0.0067,
+          "total": -0.32,
+          "win_rate": 0.0
+        },
+        "mid_mid": {
+          "avg": -0.0104,
+          "total": -0.5,
+          "win_rate": 0.0417
+        }
+      }
+    },
+    {
+      "hold_bars": 20,
+      "trade_count": 48,
+      "scenarios": {
+        "taker_taker": {
+          "avg": -0.0408,
+          "total": -1.96,
+          "win_rate": 0.0
+        },
+        "maker_maker": {
+          "avg": -0.0088,
+          "total": -0.42,
+          "win_rate": 0.5417
+        },
+        "maker_entry_taker_exit": {
+          "avg": -0.0258,
+          "total": -1.24,
+          "win_rate": 0.0833
+        },
+        "taker_entry_maker_exit": {
+          "avg": -0.0238,
+          "total": -1.14,
+          "win_rate": 0.0417
+        },
+        "mid_mid": {
+          "avg": -0.0248,
+          "total": -1.19,
+          "win_rate": 0.0833
+        }
+      }
+    }
+  ]
+}

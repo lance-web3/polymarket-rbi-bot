@@ -1,0 +1,434 @@
+{
+  "summary": {
+    "markets_scanned": 50,
+    "eligible_count": 4,
+    "backtested": 10,
+    "errors": 0,
+    "positive_net_returns": 0,
+    "positive_expectancy": 0,
+    "zero_trade_runs": 7
+  },
+  "results": [
+    {
+      "rank": 1,
+      "question": "Will the Colorado Avalanche win the 2026 NHL Stanley Cup?",
+      "eligible": true,
+      "reason": "Eligible",
+      "quality_score": 91.5,
+      "net_return_pct": -0.7081,
+      "expectancy": -0.18957044007169543,
+      "round_trip_count": 4,
+      "trade_count": 9,
+      "max_drawdown_pct": 0.8946,
+      "strict_meta": {
+        "enabled": true,
+        "min_entry_confidence": 0.5,
+        "min_buy_score": 1.1,
+        "min_buy_sell_score_gap": 0.35,
+        "min_buy_signal_count": 1,
+        "strict_require_confirmers": false,
+        "strict_min_confirmers": 0,
+        "strict_confirmer_buy_bonus": 0.08,
+        "strict_confirmer_sell_penalty": 0.12,
+        "strict_min_entry_score": 0.55,
+        "min_hold_bars": 3,
+        "cooldown_bars_after_exit": 2,
+        "estimated_round_trip_cost_bps": 80.0,
+        "min_expected_edge_bps": 120.0,
+        "edge_cost_buffer_bps": 30.0,
+        "blocked_entries": {
+          "long_entry_missing": 0,
+          "long_entry_not_buy": 53,
+          "long_entry_confidence": 0,
+          "confirmers": 0,
+          "entry_score": 1,
+          "edge_vs_cost": 12,
+          "cooldown": 0
+        },
+        "blocked_exits": {
+          "min_hold": 0,
+          "weak_exit": 176
+        }
+      }
+    },
+    {
+      "rank": 2,
+      "question": "Will Harvey Weinstein be sentenced to no prison time?",
+      "eligible": true,
+      "reason": "Eligible",
+      "quality_score": 85.8,
+      "net_return_pct": -1.6694,
+      "expectancy": -0.5564539767248541,
+      "round_trip_count": 3,
+      "trade_count": 6,
+      "max_drawdown_pct": 1.8276,
+      "strict_meta": {
+        "enabled": true,
+        "min_entry_confidence": 0.5,
+        "min_buy_score": 1.1,
+        "min_buy_sell_score_gap": 0.35,
+        "min_buy_signal_count": 1,
+        "strict_require_confirmers": false,
+        "strict_min_confirmers": 0,
+        "strict_confirmer_buy_bonus": 0.08,
+        "strict_confirmer_sell_penalty": 0.12,
+        "strict_min_entry_score": 0.55,
+        "min_hold_bars": 3,
+        "cooldown_bars_after_exit": 2,
+        "estimated_round_trip_cost_bps": 80.0,
+        "min_expected_edge_bps": 120.0,
+        "edge_cost_buffer_bps": 30.0,
+        "blocked_entries": {
+          "long_entry_missing": 0,
+          "long_entry_not_buy": 370,
+          "long_entry_confidence": 0,
+          "confirmers": 0,
+          "entry_score": 0,
+          "edge_vs_cost": 1,
+          "cooldown": 0
+        },
+        "blocked_exits": {
+          "min_hold": 1,
+          "weak_exit": 34
+        }
+      }
+    },
+    {
+      "rank": 3,
+      "question": "Will Harvey Weinstein be sentenced to between 20 and 30 years in prison?",
+      "eligible": true,
+      "reason": "Eligible",
+      "quality_score": 84.7,
+      "net_return_pct": 0.0,
+      "expectancy": null,
+      "round_trip_count": 0,
+      "trade_count": 0,
+      "max_drawdown_pct": 0.0,
+      "strict_meta": {
+        "enabled": true,
+        "min_entry_confidence": 0.5,
+        "min_buy_score": 1.1,
+        "min_buy_sell_score_gap": 0.35,
+        "min_buy_signal_count": 1,
+        "strict_require_confirmers": false,
+        "strict_min_confirmers": 0,
+        "strict_confirmer_buy_bonus": 0.08,
+        "strict_confirmer_sell_penalty": 0.12,
+        "strict_min_entry_score": 0.55,
+        "min_hold_bars": 3,
+        "cooldown_bars_after_exit": 2,
+        "estimated_round_trip_cost_bps": 80.0,
+        "min_expected_edge_bps": 120.0,
+        "edge_cost_buffer_bps": 30.0,
+        "blocked_entries": {
+          "long_entry_missing": 0,
+          "long_entry_not_buy": 360,
+          "long_entry_confidence": 0,
+          "confirmers": 0,
+          "entry_score": 0,
+          "edge_vs_cost": 0,
+          "cooldown": 0
+        },
+        "blocked_exits": {
+          "min_hold": 0,
+          "weak_exit": 0
+        }
+      }
+    },
+    {
+      "rank": 4,
+      "question": "Will the Oklahoma City Thunder win the 2026 NBA Finals?",
+      "eligible": true,
+      "reason": "Eligible",
+      "quality_score": 78.2,
+      "net_return_pct": -0.0562,
+      "expectancy": -0.05622673784289267,
+      "round_trip_count": 1,
+      "trade_count": 2,
+      "max_drawdown_pct": 0.128,
+      "strict_meta": {
+        "enabled": true,
+        "min_entry_confidence": 0.5,
+        "min_buy_score": 1.1,
+        "min_buy_sell_score_gap": 0.35,
+        "min_buy_signal_count": 1,
+        "strict_require_confirmers": false,
+        "strict_min_confirmers": 0,
+        "strict_confirmer_buy_bonus": 0.08,
+        "strict_confirmer_sell_penalty": 0.12,
+        "strict_min_entry_score": 0.55,
+        "min_hold_bars": 3,
+        "cooldown_bars_after_exit": 2,
+        "estimated_round_trip_cost_bps": 80.0,
+        "min_expected_edge_bps": 120.0,
+        "edge_cost_buffer_bps": 30.0,
+        "blocked_entries": {
+          "long_entry_missing": 0,
+          "long_entry_not_buy": 491,
+          "long_entry_confidence": 0,
+          "confirmers": 0,
+          "entry_score": 0,
+          "edge_vs_cost": 15,
+          "cooldown": 0
+        },
+        "blocked_exits": {
+          "min_hold": 0,
+          "weak_exit": 0
+        }
+      }
+    },
+    {
+      "rank": 5,
+      "question": "Will the Boston Celtics win the 2026 NBA Finals?",
+      "eligible": false,
+      "reason": "Current price outside configured range",
+      "quality_score": 87.5,
+      "net_return_pct": 0.0,
+      "expectancy": null,
+      "round_trip_count": 0,
+      "trade_count": 0,
+      "max_drawdown_pct": 0.0,
+      "strict_meta": {
+        "enabled": true,
+        "min_entry_confidence": 0.5,
+        "min_buy_score": 1.1,
+        "min_buy_sell_score_gap": 0.35,
+        "min_buy_signal_count": 1,
+        "strict_require_confirmers": false,
+        "strict_min_confirmers": 0,
+        "strict_confirmer_buy_bonus": 0.08,
+        "strict_confirmer_sell_penalty": 0.12,
+        "strict_min_entry_score": 0.55,
+        "min_hold_bars": 3,
+        "cooldown_bars_after_exit": 2,
+        "estimated_round_trip_cost_bps": 80.0,
+        "min_expected_edge_bps": 120.0,
+        "edge_cost_buffer_bps": 30.0,
+        "blocked_entries": {
+          "long_entry_missing": 0,
+          "long_entry_not_buy": 472,
+          "long_entry_confidence": 0,
+          "confirmers": 0,
+          "entry_score": 0,
+          "edge_vs_cost": 0,
+          "cooldown": 0
+        },
+        "blocked_exits": {
+          "min_hold": 0,
+          "weak_exit": 0
+        }
+      }
+    },
+    {
+      "rank": 6,
+      "question": "Will the Utah Mammoth win the 2026 NHL Stanley Cup?",
+      "eligible": false,
+      "reason": "Current price outside configured range",
+      "quality_score": 87.0,
+      "net_return_pct": 0.0,
+      "expectancy": null,
+      "round_trip_count": 0,
+      "trade_count": 0,
+      "max_drawdown_pct": 0.0,
+      "strict_meta": {
+        "enabled": true,
+        "min_entry_confidence": 0.5,
+        "min_buy_score": 1.1,
+        "min_buy_sell_score_gap": 0.35,
+        "min_buy_signal_count": 1,
+        "strict_require_confirmers": false,
+        "strict_min_confirmers": 0,
+        "strict_confirmer_buy_bonus": 0.08,
+        "strict_confirmer_sell_penalty": 0.12,
+        "strict_min_entry_score": 0.55,
+        "min_hold_bars": 3,
+        "cooldown_bars_after_exit": 2,
+        "estimated_round_trip_cost_bps": 80.0,
+        "min_expected_edge_bps": 120.0,
+        "edge_cost_buffer_bps": 30.0,
+        "blocked_entries": {
+          "long_entry_missing": 0,
+          "long_entry_not_buy": 490,
+          "long_entry_confidence": 0,
+          "confirmers": 0,
+          "entry_score": 0,
+          "edge_vs_cost": 0,
+          "cooldown": 0
+        },
+        "blocked_exits": {
+          "min_hold": 0,
+          "weak_exit": 0
+        }
+      }
+    },
+    {
+      "rank": 7,
+      "question": "Will the New York Knicks win the 2026 NBA Finals?",
+      "eligible": false,
+      "reason": "Current price outside configured range",
+      "quality_score": 85.8,
+      "net_return_pct": 0.0,
+      "expectancy": null,
+      "round_trip_count": 0,
+      "trade_count": 0,
+      "max_drawdown_pct": 0.0,
+      "strict_meta": {
+        "enabled": true,
+        "min_entry_confidence": 0.5,
+        "min_buy_score": 1.1,
+        "min_buy_sell_score_gap": 0.35,
+        "min_buy_signal_count": 1,
+        "strict_require_confirmers": false,
+        "strict_min_confirmers": 0,
+        "strict_confirmer_buy_bonus": 0.08,
+        "strict_confirmer_sell_penalty": 0.12,
+        "strict_min_entry_score": 0.55,
+        "min_hold_bars": 3,
+        "cooldown_bars_after_exit": 2,
+        "estimated_round_trip_cost_bps": 80.0,
+        "min_expected_edge_bps": 120.0,
+        "edge_cost_buffer_bps": 30.0,
+        "blocked_entries": {
+          "long_entry_missing": 0,
+          "long_entry_not_buy": 397,
+          "long_entry_confidence": 0,
+          "confirmers": 0,
+          "entry_score": 0,
+          "edge_vs_cost": 0,
+          "cooldown": 0
+        },
+        "blocked_exits": {
+          "min_hold": 0,
+          "weak_exit": 0
+        }
+      }
+    },
+    {
+      "rank": 8,
+      "question": "Will the Dallas Stars win the 2026 NHL Stanley Cup?",
+      "eligible": false,
+      "reason": "Current price outside configured range",
+      "quality_score": 85.8,
+      "net_return_pct": 0.0,
+      "expectancy": null,
+      "round_trip_count": 0,
+      "trade_count": 0,
+      "max_drawdown_pct": 0.0,
+      "strict_meta": {
+        "enabled": true,
+        "min_entry_confidence": 0.5,
+        "min_buy_score": 1.1,
+        "min_buy_sell_score_gap": 0.35,
+        "min_buy_signal_count": 1,
+        "strict_require_confirmers": false,
+        "strict_min_confirmers": 0,
+        "strict_confirmer_buy_bonus": 0.08,
+        "strict_confirmer_sell_penalty": 0.12,
+        "strict_min_entry_score": 0.55,
+        "min_hold_bars": 3,
+        "cooldown_bars_after_exit": 2,
+        "estimated_round_trip_cost_bps": 80.0,
+        "min_expected_edge_bps": 120.0,
+        "edge_cost_buffer_bps": 30.0,
+        "blocked_entries": {
+          "long_entry_missing": 0,
+          "long_entry_not_buy": 436,
+          "long_entry_confidence": 0,
+          "confirmers": 0,
+          "entry_score": 0,
+          "edge_vs_cost": 0,
+          "cooldown": 0
+        },
+        "blocked_exits": {
+          "min_hold": 0,
+          "weak_exit": 0
+        }
+      }
+    },
+    {
+      "rank": 9,
+      "question": "Will the Vegas Golden Knights win the 2026 NHL Stanley Cup?",
+      "eligible": false,
+      "reason": "Current price outside configured range",
+      "quality_score": 85.6,
+      "net_return_pct": 0.0,
+      "expectancy": null,
+      "round_trip_count": 0,
+      "trade_count": 0,
+      "max_drawdown_pct": 0.0,
+      "strict_meta": {
+        "enabled": true,
+        "min_entry_confidence": 0.5,
+        "min_buy_score": 1.1,
+        "min_buy_sell_score_gap": 0.35,
+        "min_buy_signal_count": 1,
+        "strict_require_confirmers": false,
+        "strict_min_confirmers": 0,
+        "strict_confirmer_buy_bonus": 0.08,
+        "strict_confirmer_sell_penalty": 0.12,
+        "strict_min_entry_score": 0.55,
+        "min_hold_bars": 3,
+        "cooldown_bars_after_exit": 2,
+        "estimated_round_trip_cost_bps": 80.0,
+        "min_expected_edge_bps": 120.0,
+        "edge_cost_buffer_bps": 30.0,
+        "blocked_entries": {
+          "long_entry_missing": 0,
+          "long_entry_not_buy": 369,
+          "long_entry_confidence": 0,
+          "confirmers": 0,
+          "entry_score": 0,
+          "edge_vs_cost": 0,
+          "cooldown": 0
+        },
+        "blocked_exits": {
+          "min_hold": 0,
+          "weak_exit": 0
+        }
+      }
+    },
+    {
+      "rank": 10,
+      "question": "Will Harvey Weinstein be sentenced to less than 5 years in prison?",
+      "eligible": false,
+      "reason": "Current price outside configured range",
+      "quality_score": 85.6,
+      "net_return_pct": 0.0,
+      "expectancy": null,
+      "round_trip_count": 0,
+      "trade_count": 0,
+      "max_drawdown_pct": 0.0,
+      "strict_meta": {
+        "enabled": true,
+        "min_entry_confidence": 0.5,
+        "min_buy_score": 1.1,
+        "min_buy_sell_score_gap": 0.35,
+        "min_buy_signal_count": 1,
+        "strict_require_confirmers": false,
+        "strict_min_confirmers": 0,
+        "strict_confirmer_buy_bonus": 0.08,
+        "strict_confirmer_sell_penalty": 0.12,
+        "strict_min_entry_score": 0.55,
+        "min_hold_bars": 3,
+        "cooldown_bars_after_exit": 2,
+        "estimated_round_trip_cost_bps": 80.0,
+        "min_expected_edge_bps": 120.0,
+        "edge_cost_buffer_bps": 30.0,
+        "blocked_entries": {
+          "long_entry_missing": 0,
+          "long_entry_not_buy": 499,
+          "long_entry_confidence": 0,
+          "confirmers": 0,
+          "entry_score": 0,
+          "edge_vs_cost": 0,
+          "cooldown": 0
+        },
+        "blocked_exits": {
+          "min_hold": 0,
+          "weak_exit": 0
+        }
+      }
+    }
+  ],
+  "errors": []
+}

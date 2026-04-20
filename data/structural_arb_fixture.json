@@ -1,0 +1,22 @@
+[
+  {
+    "question": "Who will win Sample League?",
+    "conditionId": "fixture-underround-1",
+    "slug": "sample-league-outright",
+    "liquidity": "25000",
+    "volume": "150000",
+    "outcomes": "[\"Team A\", \"Team B\", \"Team C\"]",
+    "outcomePrices": "[\"0.30\", \"0.31\", \"0.32\"]",
+    "clobTokenIds": "[\"tok-a\", \"tok-b\", \"tok-c\"]"
+  },
+  {
+    "question": "Who will win Other Sample League?",
+    "conditionId": "fixture-balanced-1",
+    "slug": "other-sample-league-outright",
+    "liquidity": "12000",
+    "volume": "40000",
+    "outcomes": "[\"Alpha\", \"Beta\", \"Gamma\"]",
+    "outcomePrices": "[\"0.33\", \"0.33\", \"0.34\"]",
+    "clobTokenIds": "[\"tok-x\", \"tok-y\", \"tok-z\"]"
+  }
+]

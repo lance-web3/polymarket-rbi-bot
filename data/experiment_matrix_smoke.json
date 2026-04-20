@@ -1,0 +1,1731 @@
+{
+  "summary": {
+    "csv_count": 2,
+    "experiment_count": 7,
+    "total_runs": 14
+  },
+  "inputs": {
+    "csvs": [
+      "data/sample_snapshots.csv",
+      "data/ceasefire_yes.csv"
+    ]
+  },
+  "ranked_summary": {
+    "ranked_experiments": [
+      {
+        "rank": 1,
+        "experiment": "loose_baseline",
+        "avg_score": 29.65,
+        "avg_net_return_pct": -0.16,
+        "avg_expectancy": -0.0464,
+        "avg_trade_count": 35.0,
+        "avg_win_rate": 0.2571,
+        "avg_max_drawdown_pct": 0.165
+      },
+      {
+        "rank": 2,
+        "experiment": "strict_no_micro_gate",
+        "avg_score": 23.0,
+        "avg_net_return_pct": -0.01,
+        "avg_expectancy": -0.0335,
+        "avg_trade_count": 3.0,
+        "avg_win_rate": 0.3333,
+        "avg_max_drawdown_pct": 0.01
+      },
+      {
+        "rank": 3,
+        "experiment": "strict_full",
+        "avg_score": 20.0,
+        "avg_net_return_pct": 0.0,
+        "avg_expectancy": 0.0,
+        "avg_trade_count": 0.0,
+        "avg_win_rate": null,
+        "avg_max_drawdown_pct": 0.0
+      },
+      {
+        "rank": 4,
+        "experiment": "strict_no_long_entry_led",
+        "avg_score": 20.0,
+        "avg_net_return_pct": 0.0,
+        "avg_expectancy": 0.0,
+        "avg_trade_count": 0.0,
+        "avg_win_rate": null,
+        "avg_max_drawdown_pct": 0.0
+      },
+      {
+        "rank": 5,
+        "experiment": "strict_long_entry_legacy",
+        "avg_score": 20.0,
+        "avg_net_return_pct": 0.0,
+        "avg_expectancy": 0.0,
+        "avg_trade_count": 0.0,
+        "avg_win_rate": null,
+        "avg_max_drawdown_pct": 0.0
+      },
+      {
+        "rank": 6,
+        "experiment": "strict_exit_legacy",
+        "avg_score": 20.0,
+        "avg_net_return_pct": 0.0,
+        "avg_expectancy": 0.0,
+        "avg_trade_count": 0.0,
+        "avg_win_rate": null,
+        "avg_max_drawdown_pct": 0.0
+      },
+      {
+        "rank": 7,
+        "experiment": "strict_no_maturity_gate",
+        "avg_score": 20.0,
+        "avg_net_return_pct": 0.0,
+        "avg_expectancy": 0.0,
+        "avg_trade_count": 0.0,
+        "avg_win_rate": null,
+        "avg_max_drawdown_pct": 0.0
+      }
+    ],
+    "notes": [
+      "Best by average score: loose_baseline (score 29.65, avg return -0.16%, avg expectancy -0.0464).",
+      "loose_baseline helped vs strict_full (\u0394score 9.65, \u0394expectancy -0.0464, \u0394trades 35.0) mostly by changing turnover.",
+      "strict_no_micro_gate helped vs strict_full (\u0394score 3.0, \u0394expectancy -0.0335, \u0394trades 3.0) mostly by changing turnover.",
+      "strict_no_long_entry_led was neutral vs strict_full (\u0394score 0.0, \u0394expectancy 0.0, \u0394trades 0.0) without much turnover change."
+    ]
+  },
+  "toggle_summary": [
+    {
+      "experiment": "loose_baseline",
+      "vs": "strict_full",
+      "delta_avg_net_return_pct": -0.16,
+      "delta_avg_expectancy": -0.0464,
+      "delta_avg_drawdown_pct": 0.165,
+      "delta_avg_trade_count": 35.0,
+      "delta_avg_win_rate": 0.2571,
+      "delta_avg_time_in_market_ratio": 0.311,
+      "delta_avg_score": 9.65
+    },
+    {
+      "experiment": "strict_no_micro_gate",
+      "vs": "strict_full",
+      "delta_avg_net_return_pct": -0.01,
+      "delta_avg_expectancy": -0.0335,
+      "delta_avg_drawdown_pct": 0.01,
+      "delta_avg_trade_count": 3.0,
+      "delta_avg_win_rate": 0.3333,
+      "delta_avg_time_in_market_ratio": 0.0134,
+      "delta_avg_score": 3.0
+    },
+    {
+      "experiment": "strict_no_long_entry_led",
+      "vs": "strict_full",
+      "delta_avg_net_return_pct": 0.0,
+      "delta_avg_expectancy": 0.0,
+      "delta_avg_drawdown_pct": 0.0,
+      "delta_avg_trade_count": 0.0,
+      "delta_avg_win_rate": 0.0,
+      "delta_avg_time_in_market_ratio": 0.0,
+      "delta_avg_score": 0.0
+    },
+    {
+      "experiment": "strict_long_entry_legacy",
+      "vs": "strict_full",
+      "delta_avg_net_return_pct": 0.0,
+      "delta_avg_expectancy": 0.0,
+      "delta_avg_drawdown_pct": 0.0,
+      "delta_avg_trade_count": 0.0,
+      "delta_avg_win_rate": 0.0,
+      "delta_avg_time_in_market_ratio": 0.0,
+      "delta_avg_score": 0.0
+    },
+    {
+      "experiment": "strict_exit_legacy",
+      "vs": "strict_full",
+      "delta_avg_net_return_pct": 0.0,
+      "delta_avg_expectancy": 0.0,
+      "delta_avg_drawdown_pct": 0.0,
+      "delta_avg_trade_count": 0.0,
+      "delta_avg_win_rate": 0.0,
+      "delta_avg_time_in_market_ratio": 0.0,
+      "delta_avg_score": 0.0
+    },
+    {
+      "experiment": "strict_no_maturity_gate",
+      "vs": "strict_full",
+      "delta_avg_net_return_pct": 0.0,
+      "delta_avg_expectancy": 0.0,
+      "delta_avg_drawdown_pct": 0.0,
+      "delta_avg_trade_count": 0.0,
+      "delta_avg_win_rate": 0.0,
+      "delta_avg_time_in_market_ratio": 0.0,
+      "delta_avg_score": 0.0
+    }
+  ],
+  "experiments": [
+    {
+      "experiment": "loose_baseline",
+      "description": "Loose ensemble baseline.",
+      "config": {
+        "name": "loose_baseline",
+        "description": "Loose ensemble baseline.",
+        "strict_mode": false,
+        "long_entry_version": "v2",
+        "strict_long_entry_led": false,
+        "strict_exit_style": "legacy",
+        "enable_maturity_gating": false,
+        "enable_microstructure_gating": false
+      },
+      "market_count": 2,
+      "avg_net_return_pct": -0.16,
+      "avg_expectancy": -0.0464,
+      "avg_max_drawdown_pct": 0.165,
+      "avg_trade_count": 35.0,
+      "avg_win_rate": 0.2571,
+      "avg_time_in_market_ratio": 0.311,
+      "avg_score": 29.65,
+      "top_blocked_reasons": [
+        {
+          "reason": "cooldown",
+          "count": 7
+        }
+      ],
+      "markets": [
+        {
+          "csv": "data/ceasefire_yes.csv",
+          "net_return_pct": -0.32,
+          "expectancy": -0.0928408831047375,
+          "max_drawdown_pct": 0.33,
+          "trade_count": 70,
+          "round_trip_count": 35,
+          "win_rate": 0.2571428571428571,
+          "time_in_market_ratio": 0.6220238095238095,
+          "score": 39.3
+        },
+        {
+          "csv": "data/sample_snapshots.csv",
+          "net_return_pct": 0.0,
+          "expectancy": null,
+          "max_drawdown_pct": 0.0,
+          "trade_count": 0,
+          "round_trip_count": 0,
+          "win_rate": null,
+          "time_in_market_ratio": 0.0,
+          "score": 20.0
+        }
+      ]
+    },
+    {
+      "experiment": "strict_no_micro_gate",
+      "description": "Strict with microstructure gating disabled.",
+      "config": {
+        "name": "strict_no_micro_gate",
+        "description": "Strict with microstructure gating disabled.",
+        "strict_mode": true,
+        "long_entry_version": "v2",
+        "strict_long_entry_led": true,
+        "strict_exit_style": "upgraded",
+        "enable_maturity_gating": true,
+        "enable_microstructure_gating": false
+      },
+      "market_count": 2,
+      "avg_net_return_pct": -0.01,
+      "avg_expectancy": -0.0335,
+      "avg_max_drawdown_pct": 0.01,
+      "avg_trade_count": 3.0,
+      "avg_win_rate": 0.3333,
+      "avg_time_in_market_ratio": 0.0134,
+      "avg_score": 23.0,
+      "top_blocked_reasons": [
+        {
+          "reason": "long_entry_not_buy",
+          "count": 475
+        }
+      ],
+      "markets": [
+        {
+          "csv": "data/ceasefire_yes.csv",
+          "net_return_pct": -0.02,
+          "expectancy": -0.06692349023275053,
+          "max_drawdown_pct": 0.02,
+          "trade_count": 6,
+          "round_trip_count": 3,
+          "win_rate": 0.3333333333333333,
+          "time_in_market_ratio": 0.026785714285714284,
+          "score": 26.0
+        },
+        {
+          "csv": "data/sample_snapshots.csv",
+          "net_return_pct": 0.0,
+          "expectancy": null,
+          "max_drawdown_pct": 0.0,
+          "trade_count": 0,
+          "round_trip_count": 0,
+          "win_rate": null,
+          "time_in_market_ratio": 0.0,
+          "score": 20.0
+        }
+      ]
+    },
+    {
+      "experiment": "strict_full",
+      "description": "Current strict profile with long-entry-led entries, upgraded exits, and gating on.",
+      "config": {
+        "name": "strict_full",
+        "description": "Current strict profile with long-entry-led entries, upgraded exits, and gating on.",
+        "strict_mode": true,
+        "long_entry_version": "v2",
+        "strict_long_entry_led": true,
+        "strict_exit_style": "upgraded",
+        "enable_maturity_gating": true,
+        "enable_microstructure_gating": true
+      },
+      "market_count": 2,
+      "avg_net_return_pct": 0.0,
+      "avg_expectancy": 0.0,
+      "avg_max_drawdown_pct": 0.0,
+      "avg_trade_count": 0.0,
+      "avg_win_rate": null,
+      "avg_time_in_market_ratio": 0.0,
+      "avg_score": 20.0,
+      "top_blocked_reasons": [
+        {
+          "reason": "insufficient_quotes",
+          "count": 489
+        }
+      ],
+      "markets": [
+        {
+          "csv": "data/sample_snapshots.csv",
+          "net_return_pct": 0.0,
+          "expectancy": null,
+          "max_drawdown_pct": 0.0,
+          "trade_count": 0,
+          "round_trip_count": 0,
+          "win_rate": null,
+          "time_in_market_ratio": 0.0,
+          "score": 20.0
+        },
+        {
+          "csv": "data/ceasefire_yes.csv",
+          "net_return_pct": 0.0,
+          "expectancy": null,
+          "max_drawdown_pct": 0.0,
+          "trade_count": 0,
+          "round_trip_count": 0,
+          "win_rate": null,
+          "time_in_market_ratio": 0.0,
+          "score": 20.0
+        }
+      ]
+    },
+    {
+      "experiment": "strict_no_long_entry_led",
+      "description": "Strict, but use old aggregate entry gating instead of long-entry-led entries.",
+      "config": {
+        "name": "strict_no_long_entry_led",
+        "description": "Strict, but use old aggregate entry gating instead of long-entry-led entries.",
+        "strict_mode": true,
+        "long_entry_version": "v2",
+        "strict_long_entry_led": false,
+        "strict_exit_style": "upgraded",
+        "enable_maturity_gating": true,
+        "enable_microstructure_gating": true
+      },
+      "market_count": 2,
+      "avg_net_return_pct": 0.0,
+      "avg_expectancy": 0.0,
+      "avg_max_drawdown_pct": 0.0,
+      "avg_trade_count": 0.0,
+      "avg_win_rate": null,
+      "avg_time_in_market_ratio": 0.0,
+      "avg_score": 20.0,
+      "top_blocked_reasons": [
+        {
+          "reason": "insufficient_quotes",
+          "count": 489
+        }
+      ],
+      "markets": [
+        {
+          "csv": "data/sample_snapshots.csv",
+          "net_return_pct": 0.0,
+          "expectancy": null,
+          "max_drawdown_pct": 0.0,
+          "trade_count": 0,
+          "round_trip_count": 0,
+          "win_rate": null,
+          "time_in_market_ratio": 0.0,
+          "score": 20.0
+        },
+        {
+          "csv": "data/ceasefire_yes.csv",
+          "net_return_pct": 0.0,
+          "expectancy": null,
+          "max_drawdown_pct": 0.0,
+          "trade_count": 0,
+          "round_trip_count": 0,
+          "win_rate": null,
+          "time_in_market_ratio": 0.0,
+          "score": 20.0
+        }
+      ]
+    },
+    {
+      "experiment": "strict_long_entry_legacy",
+      "description": "Strict with the simpler legacy long-entry recipe.",
+      "config": {
+        "name": "strict_long_entry_legacy",
+        "description": "Strict with the simpler legacy long-entry recipe.",
+        "strict_mode": true,
+        "long_entry_version": "legacy",
+        "strict_long_entry_led": true,
+        "strict_exit_style": "upgraded",
+        "enable_maturity_gating": true,
+        "enable_microstructure_gating": true
+      },
+      "market_count": 2,
+      "avg_net_return_pct": 0.0,
+      "avg_expectancy": 0.0,
+      "avg_max_drawdown_pct": 0.0,
+      "avg_trade_count": 0.0,
+      "avg_win_rate": null,
+      "avg_time_in_market_ratio": 0.0,
+      "avg_score": 20.0,
+      "top_blocked_reasons": [
+        {
+          "reason": "insufficient_quotes",
+          "count": 489
+        }
+      ],
+      "markets": [
+        {
+          "csv": "data/sample_snapshots.csv",
+          "net_return_pct": 0.0,
+          "expectancy": null,
+          "max_drawdown_pct": 0.0,
+          "trade_count": 0,
+          "round_trip_count": 0,
+          "win_rate": null,
+          "time_in_market_ratio": 0.0,
+          "score": 20.0
+        },
+        {
+          "csv": "data/ceasefire_yes.csv",
+          "net_return_pct": 0.0,
+          "expectancy": null,
+          "max_drawdown_pct": 0.0,
+          "trade_count": 0,
+          "round_trip_count": 0,
+          "win_rate": null,
+          "time_in_market_ratio": 0.0,
+          "score": 20.0
+        }
+      ]
+    },
+    {
+      "experiment": "strict_exit_legacy",
+      "description": "Strict with old-like simpler exits.",
+      "config": {
+        "name": "strict_exit_legacy",
+        "description": "Strict with old-like simpler exits.",
+        "strict_mode": true,
+        "long_entry_version": "v2",
+        "strict_long_entry_led": true,
+        "strict_exit_style": "legacy",
+        "enable_maturity_gating": true,
+        "enable_microstructure_gating": true
+      },
+      "market_count": 2,
+      "avg_net_return_pct": 0.0,
+      "avg_expectancy": 0.0,
+      "avg_max_drawdown_pct": 0.0,
+      "avg_trade_count": 0.0,
+      "avg_win_rate": null,
+      "avg_time_in_market_ratio": 0.0,
+      "avg_score": 20.0,
+      "top_blocked_reasons": [
+        {
+          "reason": "insufficient_quotes",
+          "count": 489
+        }
+      ],
+      "markets": [
+        {
+          "csv": "data/sample_snapshots.csv",
+          "net_return_pct": 0.0,
+          "expectancy": null,
+          "max_drawdown_pct": 0.0,
+          "trade_count": 0,
+          "round_trip_count": 0,
+          "win_rate": null,
+          "time_in_market_ratio": 0.0,
+          "score": 20.0
+        },
+        {
+          "csv": "data/ceasefire_yes.csv",
+          "net_return_pct": 0.0,
+          "expectancy": null,
+          "max_drawdown_pct": 0.0,
+          "trade_count": 0,
+          "round_trip_count": 0,
+          "win_rate": null,
+          "time_in_market_ratio": 0.0,
+          "score": 20.0
+        }
+      ]
+    },
+    {
+      "experiment": "strict_no_maturity_gate",
+      "description": "Strict with maturity gating disabled.",
+      "config": {
+        "name": "strict_no_maturity_gate",
+        "description": "Strict with maturity gating disabled.",
+        "strict_mode": true,
+        "long_entry_version": "v2",
+        "strict_long_entry_led": true,
+        "strict_exit_style": "upgraded",
+        "enable_maturity_gating": false,
+        "enable_microstructure_gating": true
+      },
+      "market_count": 2,
+      "avg_net_return_pct": 0.0,
+      "avg_expectancy": 0.0,
+      "avg_max_drawdown_pct": 0.0,
+      "avg_trade_count": 0.0,
+      "avg_win_rate": null,
+      "avg_time_in_market_ratio": 0.0,
+      "avg_score": 20.0,
+      "top_blocked_reasons": [
+        {
+          "reason": "insufficient_quotes",
+          "count": 489
+        }
+      ],
+      "markets": [
+        {
+          "csv": "data/sample_snapshots.csv",
+          "net_return_pct": 0.0,
+          "expectancy": null,
+          "max_drawdown_pct": 0.0,
+          "trade_count": 0,
+          "round_trip_count": 0,
+          "win_rate": null,
+          "time_in_market_ratio": 0.0,
+          "score": 20.0
+        },
+        {
+          "csv": "data/ceasefire_yes.csv",
+          "net_return_pct": 0.0,
+          "expectancy": null,
+          "max_drawdown_pct": 0.0,
+          "trade_count": 0,
+          "round_trip_count": 0,
+          "win_rate": null,
+          "time_in_market_ratio": 0.0,
+          "score": 20.0
+        }
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "csv": "data/sample_snapshots.csv",
+      "snapshot_count": 0,
+      "experiment": "loose_baseline",
+      "description": "Loose ensemble baseline.",
+      "config": {
+        "name": "loose_baseline",
+        "description": "Loose ensemble baseline.",
+        "strict_mode": false,
+        "long_entry_version": "v2",
+        "strict_long_entry_led": false,
+        "strict_exit_style": "legacy",
+        "enable_maturity_gating": false,
+        "enable_microstructure_gating": false
+      },
+      "headline": {
+        "net_return_pct": 0.0,
+        "expectancy": null,
+        "max_drawdown_pct": 0.0,
+        "trade_count": 0,
+        "round_trip_count": 0,
+        "win_rate": null,
+        "time_in_market_ratio": 0.0,
+        "score": 20.0
+      },
+      "blocked_entries": {},
+      "top_blocked_entries": [],
+      "strict_metadata": {},
+      "metrics": {
+        "trade_count": 0,
+        "buy_trade_count": 0,
+        "sell_trade_count": 0,
+        "round_trip_count": 0,
+        "filled_volume": 0.0,
+        "win_rate": null,
+        "average_win": null,
+        "average_loss": null,
+        "expectancy": null,
+        "average_inventory": 0.0,
+        "average_inventory_notional": 0.0,
+        "max_inventory": 0.0,
+        "time_in_market_ratio": 0.0
+      }
+    },
+    {
+      "csv": "data/sample_snapshots.csv",
+      "snapshot_count": 0,
+      "experiment": "strict_full",
+      "description": "Current strict profile with long-entry-led entries, upgraded exits, and gating on.",
+      "config": {
+        "name": "strict_full",
+        "description": "Current strict profile with long-entry-led entries, upgraded exits, and gating on.",
+        "strict_mode": true,
+        "long_entry_version": "v2",
+        "strict_long_entry_led": true,
+        "strict_exit_style": "upgraded",
+        "enable_maturity_gating": true,
+        "enable_microstructure_gating": true
+      },
+      "headline": {
+        "net_return_pct": 0.0,
+        "expectancy": null,
+        "max_drawdown_pct": 0.0,
+        "trade_count": 0,
+        "round_trip_count": 0,
+        "win_rate": null,
+        "time_in_market_ratio": 0.0,
+        "score": 20.0
+      },
+      "blocked_entries": {},
+      "top_blocked_entries": [],
+      "strict_metadata": {},
+      "metrics": {
+        "trade_count": 0,
+        "buy_trade_count": 0,
+        "sell_trade_count": 0,
+        "round_trip_count": 0,
+        "filled_volume": 0.0,
+        "win_rate": null,
+        "average_win": null,
+        "average_loss": null,
+        "expectancy": null,
+        "average_inventory": 0.0,
+        "average_inventory_notional": 0.0,
+        "max_inventory": 0.0,
+        "time_in_market_ratio": 0.0
+      }
+    },
+    {
+      "csv": "data/sample_snapshots.csv",
+      "snapshot_count": 0,
+      "experiment": "strict_no_long_entry_led",
+      "description": "Strict, but use old aggregate entry gating instead of long-entry-led entries.",
+      "config": {
+        "name": "strict_no_long_entry_led",
+        "description": "Strict, but use old aggregate entry gating instead of long-entry-led entries.",
+        "strict_mode": true,
+        "long_entry_version": "v2",
+        "strict_long_entry_led": false,
+        "strict_exit_style": "upgraded",
+        "enable_maturity_gating": true,
+        "enable_microstructure_gating": true
+      },
+      "headline": {
+        "net_return_pct": 0.0,
+        "expectancy": null,
+        "max_drawdown_pct": 0.0,
+        "trade_count": 0,
+        "round_trip_count": 0,
+        "win_rate": null,
+        "time_in_market_ratio": 0.0,
+        "score": 20.0
+      },
+      "blocked_entries": {},
+      "top_blocked_entries": [],
+      "strict_metadata": {},
+      "metrics": {
+        "trade_count": 0,
+        "buy_trade_count": 0,
+        "sell_trade_count": 0,
+        "round_trip_count": 0,
+        "filled_volume": 0.0,
+        "win_rate": null,
+        "average_win": null,
+        "average_loss": null,
+        "expectancy": null,
+        "average_inventory": 0.0,
+        "average_inventory_notional": 0.0,
+        "max_inventory": 0.0,
+        "time_in_market_ratio": 0.0
+      }
+    },
+    {
+      "csv": "data/sample_snapshots.csv",
+      "snapshot_count": 0,
+      "experiment": "strict_long_entry_legacy",
+      "description": "Strict with the simpler legacy long-entry recipe.",
+      "config": {
+        "name": "strict_long_entry_legacy",
+        "description": "Strict with the simpler legacy long-entry recipe.",
+        "strict_mode": true,
+        "long_entry_version": "legacy",
+        "strict_long_entry_led": true,
+        "strict_exit_style": "upgraded",
+        "enable_maturity_gating": true,
+        "enable_microstructure_gating": true
+      },
+      "headline": {
+        "net_return_pct": 0.0,
+        "expectancy": null,
+        "max_drawdown_pct": 0.0,
+        "trade_count": 0,
+        "round_trip_count": 0,
+        "win_rate": null,
+        "time_in_market_ratio": 0.0,
+        "score": 20.0
+      },
+      "blocked_entries": {},
+      "top_blocked_entries": [],
+      "strict_metadata": {},
+      "metrics": {
+        "trade_count": 0,
+        "buy_trade_count": 0,
+        "sell_trade_count": 0,
+        "round_trip_count": 0,
+        "filled_volume": 0.0,
+        "win_rate": null,
+        "average_win": null,
+        "average_loss": null,
+        "expectancy": null,
+        "average_inventory": 0.0,
+        "average_inventory_notional": 0.0,
+        "max_inventory": 0.0,
+        "time_in_market_ratio": 0.0
+      }
+    },
+    {
+      "csv": "data/sample_snapshots.csv",
+      "snapshot_count": 0,
+      "experiment": "strict_exit_legacy",
+      "description": "Strict with old-like simpler exits.",
+      "config": {
+        "name": "strict_exit_legacy",
+        "description": "Strict with old-like simpler exits.",
+        "strict_mode": true,
+        "long_entry_version": "v2",
+        "strict_long_entry_led": true,
+        "strict_exit_style": "legacy",
+        "enable_maturity_gating": true,
+        "enable_microstructure_gating": true
+      },
+      "headline": {
+        "net_return_pct": 0.0,
+        "expectancy": null,
+        "max_drawdown_pct": 0.0,
+        "trade_count": 0,
+        "round_trip_count": 0,
+        "win_rate": null,
+        "time_in_market_ratio": 0.0,
+        "score": 20.0
+      },
+      "blocked_entries": {},
+      "top_blocked_entries": [],
+      "strict_metadata": {},
+      "metrics": {
+        "trade_count": 0,
+        "buy_trade_count": 0,
+        "sell_trade_count": 0,
+        "round_trip_count": 0,
+        "filled_volume": 0.0,
+        "win_rate": null,
+        "average_win": null,
+        "average_loss": null,
+        "expectancy": null,
+        "average_inventory": 0.0,
+        "average_inventory_notional": 0.0,
+        "max_inventory": 0.0,
+        "time_in_market_ratio": 0.0
+      }
+    },
+    {
+      "csv": "data/sample_snapshots.csv",
+      "snapshot_count": 0,
+      "experiment": "strict_no_maturity_gate",
+      "description": "Strict with maturity gating disabled.",
+      "config": {
+        "name": "strict_no_maturity_gate",
+        "description": "Strict with maturity gating disabled.",
+        "strict_mode": true,
+        "long_entry_version": "v2",
+        "strict_long_entry_led": true,
+        "strict_exit_style": "upgraded",
+        "enable_maturity_gating": false,
+        "enable_microstructure_gating": true
+      },
+      "headline": {
+        "net_return_pct": 0.0,
+        "expectancy": null,
+        "max_drawdown_pct": 0.0,
+        "trade_count": 0,
+        "round_trip_count": 0,
+        "win_rate": null,
+        "time_in_market_ratio": 0.0,
+        "score": 20.0
+      },
+      "blocked_entries": {},
+      "top_blocked_entries": [],
+      "strict_metadata": {},
+      "metrics": {
+        "trade_count": 0,
+        "buy_trade_count": 0,
+        "sell_trade_count": 0,
+        "round_trip_count": 0,
+        "filled_volume": 0.0,
+        "win_rate": null,
+        "average_win": null,
+        "average_loss": null,
+        "expectancy": null,
+        "average_inventory": 0.0,
+        "average_inventory_notional": 0.0,
+        "max_inventory": 0.0,
+        "time_in_market_ratio": 0.0
+      }
+    },
+    {
+      "csv": "data/sample_snapshots.csv",
+      "snapshot_count": 0,
+      "experiment": "strict_no_micro_gate",
+      "description": "Strict with microstructure gating disabled.",
+      "config": {
+        "name": "strict_no_micro_gate",
+        "description": "Strict with microstructure gating disabled.",
+        "strict_mode": true,
+        "long_entry_version": "v2",
+        "strict_long_entry_led": true,
+        "strict_exit_style": "upgraded",
+        "enable_maturity_gating": true,
+        "enable_microstructure_gating": false
+      },
+      "headline": {
+        "net_return_pct": 0.0,
+        "expectancy": null,
+        "max_drawdown_pct": 0.0,
+        "trade_count": 0,
+        "round_trip_count": 0,
+        "win_rate": null,
+        "time_in_market_ratio": 0.0,
+        "score": 20.0
+      },
+      "blocked_entries": {},
+      "top_blocked_entries": [],
+      "strict_metadata": {},
+      "metrics": {
+        "trade_count": 0,
+        "buy_trade_count": 0,
+        "sell_trade_count": 0,
+        "round_trip_count": 0,
+        "filled_volume": 0.0,
+        "win_rate": null,
+        "average_win": null,
+        "average_loss": null,
+        "expectancy": null,
+        "average_inventory": 0.0,
+        "average_inventory_notional": 0.0,
+        "max_inventory": 0.0,
+        "time_in_market_ratio": 0.0
+      }
+    },
+    {
+      "csv": "data/ceasefire_yes.csv",
+      "snapshot_count": 673,
+      "experiment": "loose_baseline",
+      "description": "Loose ensemble baseline.",
+      "config": {
+        "name": "loose_baseline",
+        "description": "Loose ensemble baseline.",
+        "strict_mode": false,
+        "long_entry_version": "v2",
+        "strict_long_entry_led": false,
+        "strict_exit_style": "legacy",
+        "enable_maturity_gating": false,
+        "enable_microstructure_gating": false
+      },
+      "headline": {
+        "net_return_pct": -0.32,
+        "expectancy": -0.0928408831047375,
+        "max_drawdown_pct": 0.33,
+        "trade_count": 70,
+        "round_trip_count": 35,
+        "win_rate": 0.2571428571428571,
+        "time_in_market_ratio": 0.6220238095238095,
+        "score": 39.3
+      },
+      "blocked_entries": {
+        "long_entry_missing": 0,
+        "long_entry_not_buy": 0,
+        "long_entry_confidence": 0,
+        "confirmers": 0,
+        "entry_score": 0,
+        "edge_vs_cost": 0,
+        "cooldown": 7,
+        "maturity_too_soon": 0,
+        "maturity_too_far": 0,
+        "market_too_new": 0,
+        "spread_too_wide": 0,
+        "avg_spread_too_wide": 0,
+        "insufficient_quotes": 0,
+        "wide_spread_rate": 0
+      },
+      "top_blocked_entries": [
+        {
+          "reason": "cooldown",
+          "count": 7
+        }
+      ],
+      "strict_metadata": {
+        "enabled": false,
+        "min_entry_confidence": 0.5,
+        "min_buy_score": 1.1,
+        "min_buy_sell_score_gap": 0.35,
+        "min_buy_signal_count": 1,
+        "strict_require_confirmers": false,
+        "strict_min_confirmers": 0,
+        "strict_confirmer_buy_bonus": 0.08,
+        "strict_confirmer_sell_penalty": 0.12,
+        "strict_min_entry_score": 0.55,
+        "min_hold_bars": 3,
+        "cooldown_bars_after_exit": 2,
+        "strict_max_hold_bars": 12,
+        "strict_fail_exit_bars": 6,
+        "strict_fail_exit_pnl_bps": -35.0,
+        "strict_take_profit_bars": 4,
+        "strict_take_profit_pnl_bps": 80.0,
+        "strict_profit_giveback_bps": 45.0,
+        "strict_extended_hold_bars": 8,
+        "strict_extended_hold_exit_gap": 0.15,
+        "estimated_round_trip_cost_bps": 80.0,
+        "min_expected_edge_bps": 120.0,
+        "edge_cost_buffer_bps": 30.0,
+        "blocked_entries": {
+          "long_entry_missing": 0,
+          "long_entry_not_buy": 0,
+          "long_entry_confidence": 0,
+          "confirmers": 0,
+          "entry_score": 0,
+          "edge_vs_cost": 0,
+          "cooldown": 7,
+          "maturity_too_soon": 0,
+          "maturity_too_far": 0,
+          "market_too_new": 0,
+          "spread_too_wide": 0,
+          "avg_spread_too_wide": 0,
+          "insufficient_quotes": 0,
+          "wide_spread_rate": 0
+        },
+        "blocked_exits": {
+          "min_hold": 0,
+          "weak_exit": 0,
+          "max_hold": 0,
+          "fail_exit": 0,
+          "profit_protect": 0,
+          "extended_hold_weak_exit": 0
+        },
+        "strict_long_entry_led": false,
+        "strict_exit_style": "legacy",
+        "gating": {
+          "enable_maturity_gating": false,
+          "enable_microstructure_gating": false,
+          "strict_min_time_to_resolution_hours": null,
+          "strict_max_time_to_resolution_hours": null,
+          "strict_min_time_since_open_hours": null,
+          "strict_quote_lookback_bars": 24,
+          "strict_min_quote_availability_ratio": 0.6,
+          "strict_max_avg_spread_bps": 300.0,
+          "strict_max_current_spread_bps": 300.0,
+          "strict_max_wide_spread_rate": 0.4,
+          "strict_wide_spread_bps": 500.0
+        }
+      },
+      "metrics": {
+        "trade_count": 70,
+        "buy_trade_count": 35,
+        "sell_trade_count": 35,
+        "round_trip_count": 35,
+        "filled_volume": 700.0,
+        "win_rate": 0.2571428571428571,
+        "average_win": 0.07234241046688893,
+        "average_loss": -0.15001971549491586,
+        "expectancy": -0.0928408831047375,
+        "average_inventory": 6.220238095238095,
+        "average_inventory_notional": 3.4953125000000007,
+        "max_inventory": 10.0,
+        "time_in_market_ratio": 0.6220238095238095
+      }
+    },
+    {
+      "csv": "data/ceasefire_yes.csv",
+      "snapshot_count": 673,
+      "experiment": "strict_full",
+      "description": "Current strict profile with long-entry-led entries, upgraded exits, and gating on.",
+      "config": {
+        "name": "strict_full",
+        "description": "Current strict profile with long-entry-led entries, upgraded exits, and gating on.",
+        "strict_mode": true,
+        "long_entry_version": "v2",
+        "strict_long_entry_led": true,
+        "strict_exit_style": "upgraded",
+        "enable_maturity_gating": true,
+        "enable_microstructure_gating": true
+      },
+      "headline": {
+        "net_return_pct": 0.0,
+        "expectancy": null,
+        "max_drawdown_pct": 0.0,
+        "trade_count": 0,
+        "round_trip_count": 0,
+        "win_rate": null,
+        "time_in_market_ratio": 0.0,
+        "score": 20.0
+      },
+      "blocked_entries": {
+        "long_entry_missing": 0,
+        "long_entry_not_buy": 0,
+        "long_entry_confidence": 0,
+        "confirmers": 0,
+        "entry_score": 0,
+        "edge_vs_cost": 0,
+        "cooldown": 0,
+        "maturity_too_soon": 0,
+        "maturity_too_far": 0,
+        "market_too_new": 0,
+        "spread_too_wide": 0,
+        "avg_spread_too_wide": 0,
+        "insufficient_quotes": 489,
+        "wide_spread_rate": 0
+      },
+      "top_blocked_entries": [
+        {
+          "reason": "insufficient_quotes",
+          "count": 489
+        }
+      ],
+      "strict_metadata": {
+        "enabled": true,
+        "min_entry_confidence": 0.5,
+        "min_buy_score": 1.1,
+        "min_buy_sell_score_gap": 0.35,
+        "min_buy_signal_count": 1,
+        "strict_require_confirmers": false,
+        "strict_min_confirmers": 0,
+        "strict_confirmer_buy_bonus": 0.08,
+        "strict_confirmer_sell_penalty": 0.12,
+        "strict_min_entry_score": 0.55,
+        "min_hold_bars": 3,
+        "cooldown_bars_after_exit": 2,
+        "strict_max_hold_bars": 12,
+        "strict_fail_exit_bars": 6,
+        "strict_fail_exit_pnl_bps": -35.0,
+        "strict_take_profit_bars": 4,
+        "strict_take_profit_pnl_bps": 80.0,
+        "strict_profit_giveback_bps": 45.0,
+        "strict_extended_hold_bars": 8,
+        "strict_extended_hold_exit_gap": 0.15,
+        "estimated_round_trip_cost_bps": 80.0,
+        "min_expected_edge_bps": 120.0,
+        "edge_cost_buffer_bps": 30.0,
+        "blocked_entries": {
+          "long_entry_missing": 0,
+          "long_entry_not_buy": 0,
+          "long_entry_confidence": 0,
+          "confirmers": 0,
+          "entry_score": 0,
+          "edge_vs_cost": 0,
+          "cooldown": 0,
+          "maturity_too_soon": 0,
+          "maturity_too_far": 0,
+          "market_too_new": 0,
+          "spread_too_wide": 0,
+          "avg_spread_too_wide": 0,
+          "insufficient_quotes": 489,
+          "wide_spread_rate": 0
+        },
+        "blocked_exits": {
+          "min_hold": 0,
+          "weak_exit": 0,
+          "max_hold": 0,
+          "fail_exit": 0,
+          "profit_protect": 0,
+          "extended_hold_weak_exit": 0
+        },
+        "strict_long_entry_led": true,
+        "strict_exit_style": "upgraded",
+        "gating": {
+          "enable_maturity_gating": true,
+          "enable_microstructure_gating": true,
+          "strict_min_time_to_resolution_hours": null,
+          "strict_max_time_to_resolution_hours": null,
+          "strict_min_time_since_open_hours": null,
+          "strict_quote_lookback_bars": 24,
+          "strict_min_quote_availability_ratio": 0.6,
+          "strict_max_avg_spread_bps": 300.0,
+          "strict_max_current_spread_bps": 300.0,
+          "strict_max_wide_spread_rate": 0.4,
+          "strict_wide_spread_bps": 500.0
+        }
+      },
+      "metrics": {
+        "trade_count": 0,
+        "buy_trade_count": 0,
+        "sell_trade_count": 0,
+        "round_trip_count": 0,
+        "filled_volume": 0,
+        "win_rate": null,
+        "average_win": null,
+        "average_loss": null,
+        "expectancy": null,
+        "average_inventory": 0.0,
+        "average_inventory_notional": 0.0,
+        "max_inventory": 0.0,
+        "time_in_market_ratio": 0.0
+      }
+    },
+    {
+      "csv": "data/ceasefire_yes.csv",
+      "snapshot_count": 673,
+      "experiment": "strict_no_long_entry_led",
+      "description": "Strict, but use old aggregate entry gating instead of long-entry-led entries.",
+      "config": {
+        "name": "strict_no_long_entry_led",
+        "description": "Strict, but use old aggregate entry gating instead of long-entry-led entries.",
+        "strict_mode": true,
+        "long_entry_version": "v2",
+        "strict_long_entry_led": false,
+        "strict_exit_style": "upgraded",
+        "enable_maturity_gating": true,
+        "enable_microstructure_gating": true
+      },
+      "headline": {
+        "net_return_pct": 0.0,
+        "expectancy": null,
+        "max_drawdown_pct": 0.0,
+        "trade_count": 0,
+        "round_trip_count": 0,
+        "win_rate": null,
+        "time_in_market_ratio": 0.0,
+        "score": 20.0
+      },
+      "blocked_entries": {
+        "long_entry_missing": 0,
+        "long_entry_not_buy": 0,
+        "long_entry_confidence": 0,
+        "confirmers": 0,
+        "entry_score": 0,
+        "edge_vs_cost": 0,
+        "cooldown": 0,
+        "maturity_too_soon": 0,
+        "maturity_too_far": 0,
+        "market_too_new": 0,
+        "spread_too_wide": 0,
+        "avg_spread_too_wide": 0,
+        "insufficient_quotes": 489,
+        "wide_spread_rate": 0
+      },
+      "top_blocked_entries": [
+        {
+          "reason": "insufficient_quotes",
+          "count": 489
+        }
+      ],
+      "strict_metadata": {
+        "enabled": true,
+        "min_entry_confidence": 0.5,
+        "min_buy_score": 1.1,
+        "min_buy_sell_score_gap": 0.35,
+        "min_buy_signal_count": 1,
+        "strict_require_confirmers": false,
+        "strict_min_confirmers": 0,
+        "strict_confirmer_buy_bonus": 0.08,
+        "strict_confirmer_sell_penalty": 0.12,
+        "strict_min_entry_score": 0.55,
+        "min_hold_bars": 3,
+        "cooldown_bars_after_exit": 2,
+        "strict_max_hold_bars": 12,
+        "strict_fail_exit_bars": 6,
+        "strict_fail_exit_pnl_bps": -35.0,
+        "strict_take_profit_bars": 4,
+        "strict_take_profit_pnl_bps": 80.0,
+        "strict_profit_giveback_bps": 45.0,
+        "strict_extended_hold_bars": 8,
+        "strict_extended_hold_exit_gap": 0.15,
+        "estimated_round_trip_cost_bps": 80.0,
+        "min_expected_edge_bps": 120.0,
+        "edge_cost_buffer_bps": 30.0,
+        "blocked_entries": {
+          "long_entry_missing": 0,
+          "long_entry_not_buy": 0,
+          "long_entry_confidence": 0,
+          "confirmers": 0,
+          "entry_score": 0,
+          "edge_vs_cost": 0,
+          "cooldown": 0,
+          "maturity_too_soon": 0,
+          "maturity_too_far": 0,
+          "market_too_new": 0,
+          "spread_too_wide": 0,
+          "avg_spread_too_wide": 0,
+          "insufficient_quotes": 489,
+          "wide_spread_rate": 0
+        },
+        "blocked_exits": {
+          "min_hold": 0,
+          "weak_exit": 0,
+          "max_hold": 0,
+          "fail_exit": 0,
+          "profit_protect": 0,
+          "extended_hold_weak_exit": 0
+        },
+        "strict_long_entry_led": false,
+        "strict_exit_style": "upgraded",
+        "gating": {
+          "enable_maturity_gating": true,
+          "enable_microstructure_gating": true,
+          "strict_min_time_to_resolution_hours": null,
+          "strict_max_time_to_resolution_hours": null,
+          "strict_min_time_since_open_hours": null,
+          "strict_quote_lookback_bars": 24,
+          "strict_min_quote_availability_ratio": 0.6,
+          "strict_max_avg_spread_bps": 300.0,
+          "strict_max_current_spread_bps": 300.0,
+          "strict_max_wide_spread_rate": 0.4,
+          "strict_wide_spread_bps": 500.0
+        }
+      },
+      "metrics": {
+        "trade_count": 0,
+        "buy_trade_count": 0,
+        "sell_trade_count": 0,
+        "round_trip_count": 0,
+        "filled_volume": 0,
+        "win_rate": null,
+        "average_win": null,
+        "average_loss": null,
+        "expectancy": null,
+        "average_inventory": 0.0,
+        "average_inventory_notional": 0.0,
+        "max_inventory": 0.0,
+        "time_in_market_ratio": 0.0
+      }
+    },
+    {
+      "csv": "data/ceasefire_yes.csv",
+      "snapshot_count": 673,
+      "experiment": "strict_long_entry_legacy",
+      "description": "Strict with the simpler legacy long-entry recipe.",
+      "config": {
+        "name": "strict_long_entry_legacy",
+        "description": "Strict with the simpler legacy long-entry recipe.",
+        "strict_mode": true,
+        "long_entry_version": "legacy",
+        "strict_long_entry_led": true,
+        "strict_exit_style": "upgraded",
+        "enable_maturity_gating": true,
+        "enable_microstructure_gating": true
+      },
+      "headline": {
+        "net_return_pct": 0.0,
+        "expectancy": null,
+        "max_drawdown_pct": 0.0,
+        "trade_count": 0,
+        "round_trip_count": 0,
+        "win_rate": null,
+        "time_in_market_ratio": 0.0,
+        "score": 20.0
+      },
+      "blocked_entries": {
+        "long_entry_missing": 0,
+        "long_entry_not_buy": 0,
+        "long_entry_confidence": 0,
+        "confirmers": 0,
+        "entry_score": 0,
+        "edge_vs_cost": 0,
+        "cooldown": 0,
+        "maturity_too_soon": 0,
+        "maturity_too_far": 0,
+        "market_too_new": 0,
+        "spread_too_wide": 0,
+        "avg_spread_too_wide": 0,
+        "insufficient_quotes": 489,
+        "wide_spread_rate": 0
+      },
+      "top_blocked_entries": [
+        {
+          "reason": "insufficient_quotes",
+          "count": 489
+        }
+      ],
+      "strict_metadata": {
+        "enabled": true,
+        "min_entry_confidence": 0.5,
+        "min_buy_score": 1.1,
+        "min_buy_sell_score_gap": 0.35,
+        "min_buy_signal_count": 1,
+        "strict_require_confirmers": false,
+        "strict_min_confirmers": 0,
+        "strict_confirmer_buy_bonus": 0.08,
+        "strict_confirmer_sell_penalty": 0.12,
+        "strict_min_entry_score": 0.55,
+        "min_hold_bars": 3,
+        "cooldown_bars_after_exit": 2,
+        "strict_max_hold_bars": 12,
+        "strict_fail_exit_bars": 6,
+        "strict_fail_exit_pnl_bps": -35.0,
+        "strict_take_profit_bars": 4,
+        "strict_take_profit_pnl_bps": 80.0,
+        "strict_profit_giveback_bps": 45.0,
+        "strict_extended_hold_bars": 8,
+        "strict_extended_hold_exit_gap": 0.15,
+        "estimated_round_trip_cost_bps": 80.0,
+        "min_expected_edge_bps": 120.0,
+        "edge_cost_buffer_bps": 30.0,
+        "blocked_entries": {
+          "long_entry_missing": 0,
+          "long_entry_not_buy": 0,
+          "long_entry_confidence": 0,
+          "confirmers": 0,
+          "entry_score": 0,
+          "edge_vs_cost": 0,
+          "cooldown": 0,
+          "maturity_too_soon": 0,
+          "maturity_too_far": 0,
+          "market_too_new": 0,
+          "spread_too_wide": 0,
+          "avg_spread_too_wide": 0,
+          "insufficient_quotes": 489,
+          "wide_spread_rate": 0
+        },
+        "blocked_exits": {
+          "min_hold": 0,
+          "weak_exit": 0,
+          "max_hold": 0,
+          "fail_exit": 0,
+          "profit_protect": 0,
+          "extended_hold_weak_exit": 0
+        },
+        "strict_long_entry_led": true,
+        "strict_exit_style": "upgraded",
+        "gating": {
+          "enable_maturity_gating": true,
+          "enable_microstructure_gating": true,
+          "strict_min_time_to_resolution_hours": null,
+          "strict_max_time_to_resolution_hours": null,
+          "strict_min_time_since_open_hours": null,
+          "strict_quote_lookback_bars": 24,
+          "strict_min_quote_availability_ratio": 0.6,
+          "strict_max_avg_spread_bps": 300.0,
+          "strict_max_current_spread_bps": 300.0,
+          "strict_max_wide_spread_rate": 0.4,
+          "strict_wide_spread_bps": 500.0
+        }
+      },
+      "metrics": {
+        "trade_count": 0,
+        "buy_trade_count": 0,
+        "sell_trade_count": 0,
+        "round_trip_count": 0,
+        "filled_volume": 0,
+        "win_rate": null,
+        "average_win": null,
+        "average_loss": null,
+        "expectancy": null,
+        "average_inventory": 0.0,
+        "average_inventory_notional": 0.0,
+        "max_inventory": 0.0,
+        "time_in_market_ratio": 0.0
+      }
+    },
+    {
+      "csv": "data/ceasefire_yes.csv",
+      "snapshot_count": 673,
+      "experiment": "strict_exit_legacy",
+      "description": "Strict with old-like simpler exits.",
+      "config": {
+        "name": "strict_exit_legacy",
+        "description": "Strict with old-like simpler exits.",
+        "strict_mode": true,
+        "long_entry_version": "v2",
+        "strict_long_entry_led": true,
+        "strict_exit_style": "legacy",
+        "enable_maturity_gating": true,
+        "enable_microstructure_gating": true
+      },
+      "headline": {
+        "net_return_pct": 0.0,
+        "expectancy": null,
+        "max_drawdown_pct": 0.0,
+        "trade_count": 0,
+        "round_trip_count": 0,
+        "win_rate": null,
+        "time_in_market_ratio": 0.0,
+        "score": 20.0
+      },
+      "blocked_entries": {
+        "long_entry_missing": 0,
+        "long_entry_not_buy": 0,
+        "long_entry_confidence": 0,
+        "confirmers": 0,
+        "entry_score": 0,
+        "edge_vs_cost": 0,
+        "cooldown": 0,
+        "maturity_too_soon": 0,
+        "maturity_too_far": 0,
+        "market_too_new": 0,
+        "spread_too_wide": 0,
+        "avg_spread_too_wide": 0,
+        "insufficient_quotes": 489,
+        "wide_spread_rate": 0
+      },
+      "top_blocked_entries": [
+        {
+          "reason": "insufficient_quotes",
+          "count": 489
+        }
+      ],
+      "strict_metadata": {
+        "enabled": true,
+        "min_entry_confidence": 0.5,
+        "min_buy_score": 1.1,
+        "min_buy_sell_score_gap": 0.35,
+        "min_buy_signal_count": 1,
+        "strict_require_confirmers": false,
+        "strict_min_confirmers": 0,
+        "strict_confirmer_buy_bonus": 0.08,
+        "strict_confirmer_sell_penalty": 0.12,
+        "strict_min_entry_score": 0.55,
+        "min_hold_bars": 3,
+        "cooldown_bars_after_exit": 2,
+        "strict_max_hold_bars": 12,
+        "strict_fail_exit_bars": 6,
+        "strict_fail_exit_pnl_bps": -35.0,
+        "strict_take_profit_bars": 4,
+        "strict_take_profit_pnl_bps": 80.0,
+        "strict_profit_giveback_bps": 45.0,
+        "strict_extended_hold_bars": 8,
+        "strict_extended_hold_exit_gap": 0.15,
+        "estimated_round_trip_cost_bps": 80.0,
+        "min_expected_edge_bps": 120.0,
+        "edge_cost_buffer_bps": 30.0,
+        "blocked_entries": {
+          "long_entry_missing": 0,
+          "long_entry_not_buy": 0,
+          "long_entry_confidence": 0,
+          "confirmers": 0,
+          "entry_score": 0,
+          "edge_vs_cost": 0,
+          "cooldown": 0,
+          "maturity_too_soon": 0,
+          "maturity_too_far": 0,
+          "market_too_new": 0,
+          "spread_too_wide": 0,
+          "avg_spread_too_wide": 0,
+          "insufficient_quotes": 489,
+          "wide_spread_rate": 0
+        },
+        "blocked_exits": {
+          "min_hold": 0,
+          "weak_exit": 0,
+          "max_hold": 0,
+          "fail_exit": 0,
+          "profit_protect": 0,
+          "extended_hold_weak_exit": 0
+        },
+        "strict_long_entry_led": true,
+        "strict_exit_style": "legacy",
+        "gating": {
+          "enable_maturity_gating": true,
+          "enable_microstructure_gating": true,
+          "strict_min_time_to_resolution_hours": null,
+          "strict_max_time_to_resolution_hours": null,
+          "strict_min_time_since_open_hours": null,
+          "strict_quote_lookback_bars": 24,
+          "strict_min_quote_availability_ratio": 0.6,
+          "strict_max_avg_spread_bps": 300.0,
+          "strict_max_current_spread_bps": 300.0,
+          "strict_max_wide_spread_rate": 0.4,
+          "strict_wide_spread_bps": 500.0
+        }
+      },
+      "metrics": {
+        "trade_count": 0,
+        "buy_trade_count": 0,
+        "sell_trade_count": 0,
+        "round_trip_count": 0,
+        "filled_volume": 0,
+        "win_rate": null,
+        "average_win": null,
+        "average_loss": null,
+        "expectancy": null,
+        "average_inventory": 0.0,
+        "average_inventory_notional": 0.0,
+        "max_inventory": 0.0,
+        "time_in_market_ratio": 0.0
+      }
+    },
+    {
+      "csv": "data/ceasefire_yes.csv",
+      "snapshot_count": 673,
+      "experiment": "strict_no_maturity_gate",
+      "description": "Strict with maturity gating disabled.",
+      "config": {
+        "name": "strict_no_maturity_gate",
+        "description": "Strict with maturity gating disabled.",
+        "strict_mode": true,
+        "long_entry_version": "v2",
+        "strict_long_entry_led": true,
+        "strict_exit_style": "upgraded",
+        "enable_maturity_gating": false,
+        "enable_microstructure_gating": true
+      },
+      "headline": {
+        "net_return_pct": 0.0,
+        "expectancy": null,
+        "max_drawdown_pct": 0.0,
+        "trade_count": 0,
+        "round_trip_count": 0,
+        "win_rate": null,
+        "time_in_market_ratio": 0.0,
+        "score": 20.0
+      },
+      "blocked_entries": {
+        "long_entry_missing": 0,
+        "long_entry_not_buy": 0,
+        "long_entry_confidence": 0,
+        "confirmers": 0,
+        "entry_score": 0,
+        "edge_vs_cost": 0,
+        "cooldown": 0,
+        "maturity_too_soon": 0,
+        "maturity_too_far": 0,
+        "market_too_new": 0,
+        "spread_too_wide": 0,
+        "avg_spread_too_wide": 0,
+        "insufficient_quotes": 489,
+        "wide_spread_rate": 0
+      },
+      "top_blocked_entries": [
+        {
+          "reason": "insufficient_quotes",
+          "count": 489
+        }
+      ],
+      "strict_metadata": {
+        "enabled": true,
+        "min_entry_confidence": 0.5,
+        "min_buy_score": 1.1,
+        "min_buy_sell_score_gap": 0.35,
+        "min_buy_signal_count": 1,
+        "strict_require_confirmers": false,
+        "strict_min_confirmers": 0,
+        "strict_confirmer_buy_bonus": 0.08,
+        "strict_confirmer_sell_penalty": 0.12,
+        "strict_min_entry_score": 0.55,
+        "min_hold_bars": 3,
+        "cooldown_bars_after_exit": 2,
+        "strict_max_hold_bars": 12,
+        "strict_fail_exit_bars": 6,
+        "strict_fail_exit_pnl_bps": -35.0,
+        "strict_take_profit_bars": 4,
+        "strict_take_profit_pnl_bps": 80.0,
+        "strict_profit_giveback_bps": 45.0,
+        "strict_extended_hold_bars": 8,
+        "strict_extended_hold_exit_gap": 0.15,
+        "estimated_round_trip_cost_bps": 80.0,
+        "min_expected_edge_bps": 120.0,
+        "edge_cost_buffer_bps": 30.0,
+        "blocked_entries": {
+          "long_entry_missing": 0,
+          "long_entry_not_buy": 0,
+          "long_entry_confidence": 0,
+          "confirmers": 0,
+          "entry_score": 0,
+          "edge_vs_cost": 0,
+          "cooldown": 0,
+          "maturity_too_soon": 0,
+          "maturity_too_far": 0,
+          "market_too_new": 0,
+          "spread_too_wide": 0,
+          "avg_spread_too_wide": 0,
+          "insufficient_quotes": 489,
+          "wide_spread_rate": 0
+        },
+        "blocked_exits": {
+          "min_hold": 0,
+          "weak_exit": 0,
+          "max_hold": 0,
+          "fail_exit": 0,
+          "profit_protect": 0,
+          "extended_hold_weak_exit": 0
+        },
+        "strict_long_entry_led": true,
+        "strict_exit_style": "upgraded",
+        "gating": {
+          "enable_maturity_gating": false,
+          "enable_microstructure_gating": true,
+          "strict_min_time_to_resolution_hours": null,
+          "strict_max_time_to_resolution_hours": null,
+          "strict_min_time_since_open_hours": null,
+          "strict_quote_lookback_bars": 24,
+          "strict_min_quote_availability_ratio": 0.6,
+          "strict_max_avg_spread_bps": 300.0,
+          "strict_max_current_spread_bps": 300.0,
+          "strict_max_wide_spread_rate": 0.4,
+          "strict_wide_spread_bps": 500.0
+        }
+      },
+      "metrics": {
+        "trade_count": 0,
+        "buy_trade_count": 0,
+        "sell_trade_count": 0,
+        "round_trip_count": 0,
+        "filled_volume": 0,
+        "win_rate": null,
+        "average_win": null,
+        "average_loss": null,
+        "expectancy": null,
+        "average_inventory": 0.0,
+        "average_inventory_notional": 0.0,
+        "max_inventory": 0.0,
+        "time_in_market_ratio": 0.0
+      }
+    },
+    {
+      "csv": "data/ceasefire_yes.csv",
+      "snapshot_count": 673,
+      "experiment": "strict_no_micro_gate",
+      "description": "Strict with microstructure gating disabled.",
+      "config": {
+        "name": "strict_no_micro_gate",
+        "description": "Strict with microstructure gating disabled.",
+        "strict_mode": true,
+        "long_entry_version": "v2",
+        "strict_long_entry_led": true,
+        "strict_exit_style": "upgraded",
+        "enable_maturity_gating": true,
+        "enable_microstructure_gating": false
+      },
+      "headline": {
+        "net_return_pct": -0.02,
+        "expectancy": -0.06692349023275053,
+        "max_drawdown_pct": 0.02,
+        "trade_count": 6,
+        "round_trip_count": 3,
+        "win_rate": 0.3333333333333333,
+        "time_in_market_ratio": 0.026785714285714284,
+        "score": 26.0
+      },
+      "blocked_entries": {
+        "long_entry_missing": 0,
+        "long_entry_not_buy": 475,
+        "long_entry_confidence": 0,
+        "confirmers": 0,
+        "entry_score": 0,
+        "edge_vs_cost": 0,
+        "cooldown": 0,
+        "maturity_too_soon": 0,
+        "maturity_too_far": 0,
+        "market_too_new": 0,
+        "spread_too_wide": 0,
+        "avg_spread_too_wide": 0,
+        "insufficient_quotes": 0,
+        "wide_spread_rate": 0
+      },
+      "top_blocked_entries": [
+        {
+          "reason": "long_entry_not_buy",
+          "count": 475
+        }
+      ],
+      "strict_metadata": {
+        "enabled": true,
+        "min_entry_confidence": 0.5,
+        "min_buy_score": 1.1,
+        "min_buy_sell_score_gap": 0.35,
+        "min_buy_signal_count": 1,
+        "strict_require_confirmers": false,
+        "strict_min_confirmers": 0,
+        "strict_confirmer_buy_bonus": 0.08,
+        "strict_confirmer_sell_penalty": 0.12,
+        "strict_min_entry_score": 0.55,
+        "min_hold_bars": 3,
+        "cooldown_bars_after_exit": 2,
+        "strict_max_hold_bars": 12,
+        "strict_fail_exit_bars": 6,
+        "strict_fail_exit_pnl_bps": -35.0,
+        "strict_take_profit_bars": 4,
+        "strict_take_profit_pnl_bps": 80.0,
+        "strict_profit_giveback_bps": 45.0,
+        "strict_extended_hold_bars": 8,
+        "strict_extended_hold_exit_gap": 0.15,
+        "estimated_round_trip_cost_bps": 80.0,
+        "min_expected_edge_bps": 120.0,
+        "edge_cost_buffer_bps": 30.0,
+        "blocked_entries": {
+          "long_entry_missing": 0,
+          "long_entry_not_buy": 475,
+          "long_entry_confidence": 0,
+          "confirmers": 0,
+          "entry_score": 0,
+          "edge_vs_cost": 0,
+          "cooldown": 0,
+          "maturity_too_soon": 0,
+          "maturity_too_far": 0,
+          "market_too_new": 0,
+          "spread_too_wide": 0,
+          "avg_spread_too_wide": 0,
+          "insufficient_quotes": 0,
+          "wide_spread_rate": 0
+        },
+        "blocked_exits": {
+          "min_hold": 6,
+          "weak_exit": 9,
+          "max_hold": 0,
+          "fail_exit": 0,
+          "profit_protect": 0,
+          "extended_hold_weak_exit": 0
+        },
+        "strict_long_entry_led": true,
+        "strict_exit_style": "upgraded",
+        "gating": {
+          "enable_maturity_gating": true,
+          "enable_microstructure_gating": false,
+          "strict_min_time_to_resolution_hours": null,
+          "strict_max_time_to_resolution_hours": null,
+          "strict_min_time_since_open_hours": null,
+          "strict_quote_lookback_bars": 24,
+          "strict_min_quote_availability_ratio": 0.6,
+          "strict_max_avg_spread_bps": 300.0,
+          "strict_max_current_spread_bps": 300.0,
+          "strict_max_wide_spread_rate": 0.4,
+          "strict_wide_spread_bps": 500.0
+        }
+      },
+      "metrics": {
+        "trade_count": 6,
+        "buy_trade_count": 3,
+        "sell_trade_count": 3,
+        "round_trip_count": 3,
+        "filled_volume": 60.0,
+        "win_rate": 0.3333333333333333,
+        "average_win": 0.016036298316708386,
+        "average_loss": -0.10840338450748,
+        "expectancy": -0.06692349023275053,
+        "average_inventory": 0.26785714285714285,
+        "average_inventory_notional": 0.1496279761904762,
+        "max_inventory": 10.0,
+        "time_in_market_ratio": 0.026785714285714284
+      }
+    }
+  ],
+  "limitations": [
+    "This runner compares backtest behavior on the CSV set you feed it; it does not by itself discover markets.",
+    "LLM classifier and market-family filtering are selection-layer tools, so they are not cleanly isolatable from raw CSV-only backtests in the same way as entry/exit/gating toggles.",
+    "Legacy long_entry and legacy strict exits are intentionally old-like approximations for comparison, not exact historical reproductions."
+  ]
+}

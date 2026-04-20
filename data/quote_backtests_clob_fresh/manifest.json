@@ -1,0 +1,66 @@
+[
+  {
+    "token_id": "2527312495175492857904889758552137141356236738032676480522356889996545113869",
+    "path": "data/quote_backtests_clob_fresh/quote_backtest_2527312495175492857904889758552137141356236738032676480522356889996545113869.csv",
+    "rows": 20,
+    "question": "Russia-Ukraine Ceasefire before GTA VI?",
+    "condition_id": "0x9c1a953fe92c8357f1b646ba25d983aa83e90c525992db14fb726fa895cb5763",
+    "outcome": "No"
+  },
+  {
+    "token_id": "35573117698117780238142713946749692621043319879346349609080985768472429209643",
+    "path": "data/quote_backtests_clob_fresh/quote_backtest_35573117698117780238142713946749692621043319879346349609080985768472429209643.csv",
+    "rows": 20,
+    "question": "Will the Tampa Bay Lightning win the 2026 NHL Stanley Cup?",
+    "condition_id": "0xbdd688664b4f3cf7ec4ec011607934fe8ae720c08353fc14a6e9dfbf6bbcf11a",
+    "outcome": "Yes"
+  },
+  {
+    "token_id": "53831553061883006530739877284105938919721408776239639687877978808906551086026",
+    "path": "data/quote_backtests_clob_fresh/quote_backtest_53831553061883006530739877284105938919721408776239639687877978808906551086026.csv",
+    "rows": 20,
+    "question": "New Rihanna Album before GTA VI?",
+    "condition_id": "0x1fad72fae204143ff1c3035e99e7c0f65ea8d5cd9bd1070987bd1a3316f772be",
+    "outcome": "No"
+  },
+  {
+    "token_id": "68988781087071608596579516085819336301201525599500826069950065091990393143710",
+    "path": "data/quote_backtests_clob_fresh/quote_backtest_68988781087071608596579516085819336301201525599500826069950065091990393143710.csv",
+    "rows": 20,
+    "question": "Will the Boston Celtics win the 2026 NBA Finals?",
+    "condition_id": "0x13e1cc703a120883a709d3bb29707097952845d61ca6793ea2b4328bae2a7451",
+    "outcome": "No"
+  },
+  {
+    "token_id": "76626937605855383085159195963889428951048025160807952406004049979161449392204",
+    "path": "data/quote_backtests_clob_fresh/quote_backtest_76626937605855383085159195963889428951048025160807952406004049979161449392204.csv",
+    "rows": 20,
+    "question": "Will the Tampa Bay Lightning win the 2026 NHL Stanley Cup?",
+    "condition_id": "0xbdd688664b4f3cf7ec4ec011607934fe8ae720c08353fc14a6e9dfbf6bbcf11a",
+    "outcome": "No"
+  },
+  {
+    "token_id": "8501497159083948713316135768103773293754490207922884688769443031624417212426",
+    "path": "data/quote_backtests_clob_fresh/quote_backtest_8501497159083948713316135768103773293754490207922884688769443031624417212426.csv",
+    "rows": 20,
+    "question": "Russia-Ukraine Ceasefire before GTA VI?",
+    "condition_id": "0x9c1a953fe92c8357f1b646ba25d983aa83e90c525992db14fb726fa895cb5763",
+    "outcome": "Yes"
+  },
+  {
+    "token_id": "98022490269692409998126496127597032490334070080325855126491859374983463996227",
+    "path": "data/quote_backtests_clob_fresh/quote_backtest_98022490269692409998126496127597032490334070080325855126491859374983463996227.csv",
+    "rows": 20,
+    "question": "New Rihanna Album before GTA VI?",
+    "condition_id": "0x1fad72fae204143ff1c3035e99e7c0f65ea8d5cd9bd1070987bd1a3316f772be",
+    "outcome": "Yes"
+  },
+  {
+    "token_id": "98951343420969493497594761179562691809954416596888138302255086663562042936451",
+    "path": "data/quote_backtests_clob_fresh/quote_backtest_98951343420969493497594761179562691809954416596888138302255086663562042936451.csv",
+    "rows": 20,
+    "question": "Will the Boston Celtics win the 2026 NBA Finals?",
+    "condition_id": "0x13e1cc703a120883a709d3bb29707097952845d61ca6793ea2b4328bae2a7451",
+    "outcome": "Yes"
+  }
+]

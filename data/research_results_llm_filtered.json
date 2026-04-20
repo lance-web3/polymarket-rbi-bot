@@ -1,0 +1,1206 @@
+{
+  "summary": {
+    "markets_scanned": 50,
+    "eligible_count": 3,
+    "ineligible_count": 47,
+    "top_requested": 10,
+    "backtested": 10,
+    "errors": 0
+  },
+  "shortlist": [
+    {
+      "rank": 1,
+      "question": "Will the Orlando Magic win the 2026 NBA Finals?",
+      "token_id": "95140346952277551620015228752585531762813913098320669805735291271863965388665",
+      "condition_id": "0x7338d9dea0de820ed621abdff3de2d4b07a573bc0c1a6f7128941f4d0c5606e3",
+      "net_return_pct": 0.0,
+      "experiment_score": 39.9,
+      "tradability_score": 80.7,
+      "tier": "weak"
+    },
+    {
+      "rank": 2,
+      "question": "Will the San Jose Sharks win the 2026 NHL Stanley Cup?",
+      "token_id": "84105030255296194000685400984047343200505768293107751790364245140894647606509",
+      "condition_id": "0x9a3436e94742acc7049aa0ff10992dc1c6a574535c3150ea157b7631cad83e2c",
+      "net_return_pct": -0.03,
+      "experiment_score": 39.9,
+      "tradability_score": 61.4,
+      "tier": "weak"
+    },
+    {
+      "rank": 3,
+      "question": "Will the Philadelphia Flyers win the 2026 NHL Stanley Cup?",
+      "token_id": "89876650777103845660381011502618435196005005316371719080379226306122186643898",
+      "condition_id": "0xd66cbb60c333c2eed61717370755c18bc7e494fed90cb507cd9b49c77100951d",
+      "net_return_pct": 0.0,
+      "experiment_score": 39.8,
+      "tradability_score": 81.2,
+      "tier": "weak"
+    },
+    {
+      "rank": 4,
+      "question": "Will the Nashville Predators win the 2026 NHL Stanley Cup?",
+      "token_id": "98049742009801855771548452791429416975406795240797895877767309269050997573962",
+      "condition_id": "0x54cb2293de4ce01c85b62b0c43911a36614c8558b02b70703326ca4b938a83d4",
+      "net_return_pct": 0.0,
+      "experiment_score": 39.8,
+      "tradability_score": 61.6,
+      "tier": "weak"
+    },
+    {
+      "rank": 5,
+      "question": "Will the Houston Rockets win the 2026 NBA Finals?",
+      "token_id": "50705248713323657762767401378286601907820885259053704401453562452183494476631",
+      "condition_id": "0x9b56568af78dd036b03c641e0673729d72cd7d63578eb0119cd23eb1f94f1b56",
+      "net_return_pct": -0.19,
+      "experiment_score": 39.6,
+      "tradability_score": 80.7,
+      "tier": "weak"
+    },
+    {
+      "rank": 6,
+      "question": "Will the Denver Nuggets win the 2026 NBA Finals?",
+      "token_id": "56814725870179920615881424393027028330166672775619196396436430486653645555698",
+      "condition_id": "0x4e65282819c98c6aed529f357fbf5983b1ae9407a3c25bd50fe97b2906df68f9",
+      "net_return_pct": -0.2,
+      "experiment_score": 39.4,
+      "tradability_score": 77.1,
+      "tier": "weak"
+    },
+    {
+      "rank": 7,
+      "question": "Will the Cleveland Cavaliers win the 2026 NBA Finals?",
+      "token_id": "21929863894047830651599085392978377118642353711084157807549430066031384497667",
+      "condition_id": "0x6b44bd667fad6cb5b3b68d8bd1055a038c77d9176dbd51f123879797cc3368a7",
+      "net_return_pct": -0.46,
+      "experiment_score": 39.0,
+      "tradability_score": 66.3,
+      "tier": "weak"
+    },
+    {
+      "rank": 8,
+      "question": "Will the Boston Celtics win the 2026 NBA Finals?",
+      "token_id": "98951343420969493497594761179562691809954416596888138302255086663562042936451",
+      "condition_id": "0x13e1cc703a120883a709d3bb29707097952845d61ca6793ea2b4328bae2a7451",
+      "net_return_pct": -0.83,
+      "experiment_score": 37.9,
+      "tradability_score": 93.0,
+      "tier": "weak"
+    },
+    {
+      "rank": 9,
+      "question": "Will the Tampa Bay Lightning win the 2026 NHL Stanley Cup?",
+      "token_id": "35573117698117780238142713946749692621043319879346349609080985768472429209643",
+      "condition_id": "0xbdd688664b4f3cf7ec4ec011607934fe8ae720c08353fc14a6e9dfbf6bbcf11a",
+      "net_return_pct": -1.0,
+      "experiment_score": 37.6,
+      "tradability_score": 94.1,
+      "tier": "weak"
+    },
+    {
+      "rank": 10,
+      "question": "Will the Oklahoma City Thunder win the 2026 NBA Finals?",
+      "token_id": "49500299856831034491021962156746701298730459370557900271970866855042624695770",
+      "condition_id": "0x22e7b5e35423e76842dd3a5e1a21d13793811080d5e7b2896d0c001bd5e97d54",
+      "net_return_pct": -1.27,
+      "experiment_score": 37.1,
+      "tradability_score": 85.8,
+      "tier": "weak"
+    }
+  ],
+  "candidates": [
+    {
+      "rank": 5,
+      "question": "Will the Orlando Magic win the 2026 NBA Finals?",
+      "token_id": "95140346952277551620015228752585531762813913098320669805735291271863965388665",
+      "condition_id": "0x7338d9dea0de820ed621abdff3de2d4b07a573bc0c1a6f7128941f4d0c5606e3",
+      "outcome": "Yes",
+      "tradability": {
+        "eligible": false,
+        "quality_score": 80.7,
+        "quality_tier": "A",
+        "reason": "Current price outside configured range",
+        "ranking_summary": {
+          "score": 80.7,
+          "tier": "A",
+          "best_feature": "liquidity",
+          "weakest_feature": "quote_quality"
+        }
+      },
+      "backtest": {
+        "snapshot_count": 706,
+        "strategies": [
+          "long_entry",
+          "macd",
+          "rsi"
+        ],
+        "cash": {
+          "starting": 100.0,
+          "ending": 100.0,
+          "realized_pnl": 0.0,
+          "mark_to_market_equity": 100.0
+        },
+        "risk": {
+          "max_drawdown": 0.0006499999999999773,
+          "ending_inventory": 0.0,
+          "average_entry_price": 0.0
+        },
+        "metrics": {
+          "trade_count": 36,
+          "buy_trade_count": 18,
+          "sell_trade_count": 18,
+          "round_trip_count": 18,
+          "filled_volume": 360.0,
+          "win_rate": 0.0,
+          "average_win": null,
+          "average_loss": null,
+          "expectancy": 0.0,
+          "average_inventory": 1.574468085106383,
+          "average_inventory_notional": 0.00785815602836879,
+          "max_inventory": 10.0,
+          "time_in_market_ratio": 0.1574468085106383
+        },
+        "headline": {
+          "net_return_pct": 0.0,
+          "expectancy_per_round_trip": 0.0,
+          "round_trip_count": 18,
+          "max_drawdown_pct": 0.06
+        },
+        "experiment_score": {
+          "score": 39.9,
+          "tier": "weak",
+          "trade_count": 36,
+          "round_trip_count": 18,
+          "components": {
+            "net_return": {
+              "score": 0.0,
+              "max_score": 35.0,
+              "value": 0.0,
+              "explanation": "Positive return matters most, capped to avoid fake precision."
+            },
+            "expectancy": {
+              "score": 0.0,
+              "max_score": 25.0,
+              "value": 0.0,
+              "explanation": "Average realized PnL per completed round trip."
+            },
+            "sample_size": {
+              "score": 20.0,
+              "max_score": 20.0,
+              "value": 18,
+              "explanation": "More completed trades increases confidence."
+            },
+            "drawdown_control": {
+              "score": 19.9,
+              "max_score": 20.0,
+              "value": 0.06,
+              "explanation": "Lower drawdown earns more points."
+            }
+          },
+          "limitations": [
+            "Heuristic for comparison; sensitive to fill model and period.",
+            "Low-trade samples may overstate results."
+          ]
+        }
+      },
+      "execution_model": {
+        "fill_timing": "next_bar",
+        "price_source": "same_side_quote_then_mid_fallback",
+        "slippage_bps": 25.0,
+        "fallback_half_spread_bps": 50.0,
+        "max_spread_bps": 1500.0,
+        "missing_quote_fill_ratio": 1.0,
+        "wide_spread_fill_ratio": 0.5,
+        "strict_mode": false,
+        "min_hold_bars": 3,
+        "cooldown_bars_after_exit": 2
+      }
+    },
+    {
+      "rank": 10,
+      "question": "Will the San Jose Sharks win the 2026 NHL Stanley Cup?",
+      "token_id": "84105030255296194000685400984047343200505768293107751790364245140894647606509",
+      "condition_id": "0x9a3436e94742acc7049aa0ff10992dc1c6a574535c3150ea157b7631cad83e2c",
+      "outcome": "Yes",
+      "tradability": {
+        "eligible": false,
+        "quality_score": 61.4,
+        "quality_tier": "B",
+        "reason": "Current price outside configured range",
+        "ranking_summary": {
+          "score": 61.4,
+          "tier": "B",
+          "best_feature": "liquidity",
+          "weakest_feature": "recent_move"
+        }
+      },
+      "backtest": {
+        "snapshot_count": 595,
+        "strategies": [
+          "long_entry",
+          "macd",
+          "rsi"
+        ],
+        "cash": {
+          "starting": 100.0,
+          "ending": 99.9,
+          "realized_pnl": 0.0,
+          "mark_to_market_equity": 99.965
+        },
+        "risk": {
+          "max_drawdown": 0.0006499999999999773,
+          "ending_inventory": 10.0,
+          "average_entry_price": 0.01
+        },
+        "metrics": {
+          "trade_count": 55,
+          "buy_trade_count": 28,
+          "sell_trade_count": 27,
+          "round_trip_count": 27,
+          "filled_volume": 550.0,
+          "win_rate": 0.0,
+          "average_win": null,
+          "average_loss": null,
+          "expectancy": 0.0,
+          "average_inventory": 3.569023569023569,
+          "average_inventory_notional": 0.01647306397306393,
+          "max_inventory": 10.0,
+          "time_in_market_ratio": 0.3569023569023569
+        },
+        "headline": {
+          "net_return_pct": -0.03,
+          "expectancy_per_round_trip": 0.0,
+          "round_trip_count": 27,
+          "max_drawdown_pct": 0.06
+        },
+        "experiment_score": {
+          "score": 39.9,
+          "tier": "weak",
+          "trade_count": 55,
+          "round_trip_count": 27,
+          "components": {
+            "net_return": {
+              "score": 0.0,
+              "max_score": 35.0,
+              "value": -0.03,
+              "explanation": "Positive return matters most, capped to avoid fake precision."
+            },
+            "expectancy": {
+              "score": 0.0,
+              "max_score": 25.0,
+              "value": 0.0,
+              "explanation": "Average realized PnL per completed round trip."
+            },
+            "sample_size": {
+              "score": 20.0,
+              "max_score": 20.0,
+              "value": 27,
+              "explanation": "More completed trades increases confidence."
+            },
+            "drawdown_control": {
+              "score": 19.9,
+              "max_score": 20.0,
+              "value": 0.06,
+              "explanation": "Lower drawdown earns more points."
+            }
+          },
+          "limitations": [
+            "Heuristic for comparison; sensitive to fill model and period.",
+            "Low-trade samples may overstate results."
+          ]
+        }
+      },
+      "execution_model": {
+        "fill_timing": "next_bar",
+        "price_source": "same_side_quote_then_mid_fallback",
+        "slippage_bps": 25.0,
+        "fallback_half_spread_bps": 50.0,
+        "max_spread_bps": 1500.0,
+        "missing_quote_fill_ratio": 1.0,
+        "wide_spread_fill_ratio": 0.5,
+        "strict_mode": false,
+        "min_hold_bars": 3,
+        "cooldown_bars_after_exit": 2
+      }
+    },
+    {
+      "rank": 4,
+      "question": "Will the Philadelphia Flyers win the 2026 NHL Stanley Cup?",
+      "token_id": "89876650777103845660381011502618435196005005316371719080379226306122186643898",
+      "condition_id": "0xd66cbb60c333c2eed61717370755c18bc7e494fed90cb507cd9b49c77100951d",
+      "outcome": "Yes",
+      "tradability": {
+        "eligible": false,
+        "quality_score": 81.2,
+        "quality_tier": "A",
+        "reason": "Current price outside configured range",
+        "ranking_summary": {
+          "score": 81.2,
+          "tier": "A",
+          "best_feature": "liquidity",
+          "weakest_feature": "quote_quality"
+        }
+      },
+      "backtest": {
+        "snapshot_count": 595,
+        "strategies": [
+          "long_entry",
+          "macd",
+          "rsi"
+        ],
+        "cash": {
+          "starting": 100.0,
+          "ending": 100.0,
+          "realized_pnl": 0.0,
+          "mark_to_market_equity": 100.0
+        },
+        "risk": {
+          "max_drawdown": 0.0008499999999999375,
+          "ending_inventory": 0.0,
+          "average_entry_price": 0.0
+        },
+        "metrics": {
+          "trade_count": 56,
+          "buy_trade_count": 28,
+          "sell_trade_count": 28,
+          "round_trip_count": 28,
+          "filled_volume": 560.0,
+          "win_rate": 0.0,
+          "average_win": null,
+          "average_loss": null,
+          "expectancy": 0.0,
+          "average_inventory": 2.643097643097643,
+          "average_inventory_notional": 0.004831649831649823,
+          "max_inventory": 10.0,
+          "time_in_market_ratio": 0.26430976430976433
+        },
+        "headline": {
+          "net_return_pct": 0.0,
+          "expectancy_per_round_trip": 0.0,
+          "round_trip_count": 28,
+          "max_drawdown_pct": 0.08
+        },
+        "experiment_score": {
+          "score": 39.8,
+          "tier": "weak",
+          "trade_count": 56,
+          "round_trip_count": 28,
+          "components": {
+            "net_return": {
+              "score": 0.0,
+              "max_score": 35.0,
+              "value": 0.0,
+              "explanation": "Positive return matters most, capped to avoid fake precision."
+            },
+            "expectancy": {
+              "score": 0.0,
+              "max_score": 25.0,
+              "value": 0.0,
+              "explanation": "Average realized PnL per completed round trip."
+            },
+            "sample_size": {
+              "score": 20.0,
+              "max_score": 20.0,
+              "value": 28,
+              "explanation": "More completed trades increases confidence."
+            },
+            "drawdown_control": {
+              "score": 19.8,
+              "max_score": 20.0,
+              "value": 0.08,
+              "explanation": "Lower drawdown earns more points."
+            }
+          },
+          "limitations": [
+            "Heuristic for comparison; sensitive to fill model and period.",
+            "Low-trade samples may overstate results."
+          ]
+        }
+      },
+      "execution_model": {
+        "fill_timing": "next_bar",
+        "price_source": "same_side_quote_then_mid_fallback",
+        "slippage_bps": 25.0,
+        "fallback_half_spread_bps": 50.0,
+        "max_spread_bps": 1500.0,
+        "missing_quote_fill_ratio": 1.0,
+        "wide_spread_fill_ratio": 0.5,
+        "strict_mode": false,
+        "min_hold_bars": 3,
+        "cooldown_bars_after_exit": 2
+      }
+    },
+    {
+      "rank": 9,
+      "question": "Will the Nashville Predators win the 2026 NHL Stanley Cup?",
+      "token_id": "98049742009801855771548452791429416975406795240797895877767309269050997573962",
+      "condition_id": "0x54cb2293de4ce01c85b62b0c43911a36614c8558b02b70703326ca4b938a83d4",
+      "outcome": "Yes",
+      "tradability": {
+        "eligible": false,
+        "quality_score": 61.6,
+        "quality_tier": "B",
+        "reason": "Current price outside configured range",
+        "ranking_summary": {
+          "score": 61.6,
+          "tier": "B",
+          "best_feature": "liquidity",
+          "weakest_feature": "recent_move"
+        }
+      },
+      "backtest": {
+        "snapshot_count": 601,
+        "strategies": [
+          "long_entry",
+          "macd",
+          "rsi"
+        ],
+        "cash": {
+          "starting": 100.0,
+          "ending": 100.0,
+          "realized_pnl": 0.0,
+          "mark_to_market_equity": 100.0
+        },
+        "risk": {
+          "max_drawdown": 0.0008499999999999375,
+          "ending_inventory": 0.0,
+          "average_entry_price": 0.0
+        },
+        "metrics": {
+          "trade_count": 66,
+          "buy_trade_count": 33,
+          "sell_trade_count": 33,
+          "round_trip_count": 33,
+          "filled_volume": 660.0,
+          "win_rate": 0.0,
+          "average_win": null,
+          "average_loss": null,
+          "expectancy": 0.0,
+          "average_inventory": 3.2333333333333334,
+          "average_inventory_notional": 0.010474999999999998,
+          "max_inventory": 10.0,
+          "time_in_market_ratio": 0.3233333333333333
+        },
+        "headline": {
+          "net_return_pct": 0.0,
+          "expectancy_per_round_trip": 0.0,
+          "round_trip_count": 33,
+          "max_drawdown_pct": 0.08
+        },
+        "experiment_score": {
+          "score": 39.8,
+          "tier": "weak",
+          "trade_count": 66,
+          "round_trip_count": 33,
+          "components": {
+            "net_return": {
+              "score": 0.0,
+              "max_score": 35.0,
+              "value": 0.0,
+              "explanation": "Positive return matters most, capped to avoid fake precision."
+            },
+            "expectancy": {
+              "score": 0.0,
+              "max_score": 25.0,
+              "value": 0.0,
+              "explanation": "Average realized PnL per completed round trip."
+            },
+            "sample_size": {
+              "score": 20.0,
+              "max_score": 20.0,
+              "value": 33,
+              "explanation": "More completed trades increases confidence."
+            },
+            "drawdown_control": {
+              "score": 19.8,
+              "max_score": 20.0,
+              "value": 0.08,
+              "explanation": "Lower drawdown earns more points."
+            }
+          },
+          "limitations": [
+            "Heuristic for comparison; sensitive to fill model and period.",
+            "Low-trade samples may overstate results."
+          ]
+        }
+      },
+      "execution_model": {
+        "fill_timing": "next_bar",
+        "price_source": "same_side_quote_then_mid_fallback",
+        "slippage_bps": 25.0,
+        "fallback_half_spread_bps": 50.0,
+        "max_spread_bps": 1500.0,
+        "missing_quote_fill_ratio": 1.0,
+        "wide_spread_fill_ratio": 0.5,
+        "strict_mode": false,
+        "min_hold_bars": 3,
+        "cooldown_bars_after_exit": 2
+      }
+    },
+    {
+      "rank": 6,
+      "question": "Will the Houston Rockets win the 2026 NBA Finals?",
+      "token_id": "50705248713323657762767401378286601907820885259053704401453562452183494476631",
+      "condition_id": "0x9b56568af78dd036b03c641e0673729d72cd7d63578eb0119cd23eb1f94f1b56",
+      "outcome": "Yes",
+      "tradability": {
+        "eligible": false,
+        "quality_score": 80.7,
+        "quality_tier": "A",
+        "reason": "Current price outside configured range",
+        "ranking_summary": {
+          "score": 80.7,
+          "tier": "A",
+          "best_feature": "liquidity",
+          "weakest_feature": "quote_quality"
+        }
+      },
+      "backtest": {
+        "snapshot_count": 625,
+        "strategies": [
+          "long_entry",
+          "macd",
+          "rsi"
+        ],
+        "cash": {
+          "starting": 100.0,
+          "ending": 99.81258283868459,
+          "realized_pnl": -0.1874171613154605,
+          "mark_to_market_equity": 99.81258283868459
+        },
+        "risk": {
+          "max_drawdown": 0.0019900864682038844,
+          "ending_inventory": 0.0,
+          "average_entry_price": 0.0
+        },
+        "metrics": {
+          "trade_count": 62,
+          "buy_trade_count": 31,
+          "sell_trade_count": 31,
+          "round_trip_count": 31,
+          "filled_volume": 620.0,
+          "win_rate": 0.2903225806451613,
+          "average_win": 0.005072312551953467,
+          "average_loss": -0.010593998831047348,
+          "expectancy": -0.006045714881143886,
+          "average_inventory": 4.05448717948718,
+          "average_inventory_notional": 0.09084134615384627,
+          "max_inventory": 10.0,
+          "time_in_market_ratio": 0.40544871794871795
+        },
+        "headline": {
+          "net_return_pct": -0.19,
+          "expectancy_per_round_trip": -0.006045714881143886,
+          "round_trip_count": 31,
+          "max_drawdown_pct": 0.2
+        },
+        "experiment_score": {
+          "score": 39.6,
+          "tier": "weak",
+          "trade_count": 62,
+          "round_trip_count": 31,
+          "components": {
+            "net_return": {
+              "score": 0.0,
+              "max_score": 35.0,
+              "value": -0.19,
+              "explanation": "Positive return matters most, capped to avoid fake precision."
+            },
+            "expectancy": {
+              "score": 0.0,
+              "max_score": 25.0,
+              "value": -0.006,
+              "explanation": "Average realized PnL per completed round trip."
+            },
+            "sample_size": {
+              "score": 20.0,
+              "max_score": 20.0,
+              "value": 31,
+              "explanation": "More completed trades increases confidence."
+            },
+            "drawdown_control": {
+              "score": 19.6,
+              "max_score": 20.0,
+              "value": 0.2,
+              "explanation": "Lower drawdown earns more points."
+            }
+          },
+          "limitations": [
+            "Heuristic for comparison; sensitive to fill model and period.",
+            "Low-trade samples may overstate results."
+          ]
+        }
+      },
+      "execution_model": {
+        "fill_timing": "next_bar",
+        "price_source": "same_side_quote_then_mid_fallback",
+        "slippage_bps": 25.0,
+        "fallback_half_spread_bps": 50.0,
+        "max_spread_bps": 1500.0,
+        "missing_quote_fill_ratio": 1.0,
+        "wide_spread_fill_ratio": 0.5,
+        "strict_mode": false,
+        "min_hold_bars": 3,
+        "cooldown_bars_after_exit": 2
+      }
+    },
+    {
+      "rank": 7,
+      "question": "Will the Denver Nuggets win the 2026 NBA Finals?",
+      "token_id": "56814725870179920615881424393027028330166672775619196396436430486653645555698",
+      "condition_id": "0x4e65282819c98c6aed529f357fbf5983b1ae9407a3c25bd50fe97b2906df68f9",
+      "outcome": "Yes",
+      "tradability": {
+        "eligible": false,
+        "quality_score": 77.1,
+        "quality_tier": "A",
+        "reason": "Current price outside configured range",
+        "ranking_summary": {
+          "score": 77.1,
+          "tier": "A",
+          "best_feature": "liquidity",
+          "weakest_feature": "quote_quality"
+        }
+      },
+      "backtest": {
+        "snapshot_count": 709,
+        "strategies": [
+          "long_entry",
+          "macd",
+          "rsi"
+        ],
+        "cash": {
+          "starting": 100.0,
+          "ending": 99.79983281327925,
+          "realized_pnl": -0.20016718672069694,
+          "mark_to_market_equity": 99.79983281327925
+        },
+        "risk": {
+          "max_drawdown": 0.0032175424666997052,
+          "ending_inventory": 0.0,
+          "average_entry_price": 0.0
+        },
+        "metrics": {
+          "trade_count": 30,
+          "buy_trade_count": 15,
+          "sell_trade_count": 15,
+          "round_trip_count": 15,
+          "filled_volume": 300.0,
+          "win_rate": 0.26666666666666666,
+          "average_win": 0.061506753039276864,
+          "average_loss": -0.04056310898889131,
+          "expectancy": -0.013344479114713129,
+          "average_inventory": 1.384180790960452,
+          "average_inventory_notional": 0.12033898305084738,
+          "max_inventory": 10.0,
+          "time_in_market_ratio": 0.1384180790960452
+        },
+        "headline": {
+          "net_return_pct": -0.2,
+          "expectancy_per_round_trip": -0.013344479114713129,
+          "round_trip_count": 15,
+          "max_drawdown_pct": 0.32
+        },
+        "experiment_score": {
+          "score": 39.4,
+          "tier": "weak",
+          "trade_count": 30,
+          "round_trip_count": 15,
+          "components": {
+            "net_return": {
+              "score": 0.0,
+              "max_score": 35.0,
+              "value": -0.2,
+              "explanation": "Positive return matters most, capped to avoid fake precision."
+            },
+            "expectancy": {
+              "score": 0.0,
+              "max_score": 25.0,
+              "value": -0.0133,
+              "explanation": "Average realized PnL per completed round trip."
+            },
+            "sample_size": {
+              "score": 20.0,
+              "max_score": 20.0,
+              "value": 15,
+              "explanation": "More completed trades increases confidence."
+            },
+            "drawdown_control": {
+              "score": 19.4,
+              "max_score": 20.0,
+              "value": 0.32,
+              "explanation": "Lower drawdown earns more points."
+            }
+          },
+          "limitations": [
+            "Heuristic for comparison; sensitive to fill model and period.",
+            "Low-trade samples may overstate results."
+          ]
+        }
+      },
+      "execution_model": {
+        "fill_timing": "next_bar",
+        "price_source": "same_side_quote_then_mid_fallback",
+        "slippage_bps": 25.0,
+        "fallback_half_spread_bps": 50.0,
+        "max_spread_bps": 1500.0,
+        "missing_quote_fill_ratio": 1.0,
+        "wide_spread_fill_ratio": 0.5,
+        "strict_mode": false,
+        "min_hold_bars": 3,
+        "cooldown_bars_after_exit": 2
+      }
+    },
+    {
+      "rank": 8,
+      "question": "Will the Cleveland Cavaliers win the 2026 NBA Finals?",
+      "token_id": "21929863894047830651599085392978377118642353711084157807549430066031384497667",
+      "condition_id": "0x6b44bd667fad6cb5b3b68d8bd1055a038c77d9176dbd51f123879797cc3368a7",
+      "outcome": "Yes",
+      "tradability": {
+        "eligible": false,
+        "quality_score": 66.3,
+        "quality_tier": "B",
+        "reason": "Current price outside configured range",
+        "ranking_summary": {
+          "score": 66.3,
+          "tier": "B",
+          "best_feature": "liquidity",
+          "weakest_feature": "recent_move"
+        }
+      },
+      "backtest": {
+        "snapshot_count": 712,
+        "strategies": [
+          "long_entry",
+          "macd",
+          "rsi"
+        ],
+        "cash": {
+          "starting": 100.0,
+          "ending": 99.06385723082914,
+          "realized_pnl": -0.45253676917082064,
+          "mark_to_market_equity": 99.53885723082914
+        },
+        "risk": {
+          "max_drawdown": 0.004941626759752895,
+          "ending_inventory": 10.0,
+          "average_entry_price": 0.0483606
+        },
+        "metrics": {
+          "trade_count": 95,
+          "buy_trade_count": 48,
+          "sell_trade_count": 47,
+          "round_trip_count": 47,
+          "filled_volume": 950.0,
+          "win_rate": 0.23404255319148937,
+          "average_win": 0.009845582960213132,
+          "average_loss": -0.015578838381476806,
+          "expectancy": -0.0096284418972515,
+          "average_inventory": 5.147679324894515,
+          "average_inventory_notional": 0.2676090014064697,
+          "max_inventory": 10.0,
+          "time_in_market_ratio": 0.5147679324894515
+        },
+        "headline": {
+          "net_return_pct": -0.46,
+          "expectancy_per_round_trip": -0.0096284418972515,
+          "round_trip_count": 47,
+          "max_drawdown_pct": 0.49
+        },
+        "experiment_score": {
+          "score": 39.0,
+          "tier": "weak",
+          "trade_count": 95,
+          "round_trip_count": 47,
+          "components": {
+            "net_return": {
+              "score": 0.0,
+              "max_score": 35.0,
+              "value": -0.46,
+              "explanation": "Positive return matters most, capped to avoid fake precision."
+            },
+            "expectancy": {
+              "score": 0.0,
+              "max_score": 25.0,
+              "value": -0.0096,
+              "explanation": "Average realized PnL per completed round trip."
+            },
+            "sample_size": {
+              "score": 20.0,
+              "max_score": 20.0,
+              "value": 47,
+              "explanation": "More completed trades increases confidence."
+            },
+            "drawdown_control": {
+              "score": 19.0,
+              "max_score": 20.0,
+              "value": 0.49,
+              "explanation": "Lower drawdown earns more points."
+            }
+          },
+          "limitations": [
+            "Heuristic for comparison; sensitive to fill model and period.",
+            "Low-trade samples may overstate results."
+          ]
+        }
+      },
+      "execution_model": {
+        "fill_timing": "next_bar",
+        "price_source": "same_side_quote_then_mid_fallback",
+        "slippage_bps": 25.0,
+        "fallback_half_spread_bps": 50.0,
+        "max_spread_bps": 1500.0,
+        "missing_quote_fill_ratio": 1.0,
+        "wide_spread_fill_ratio": 0.5,
+        "strict_mode": false,
+        "min_hold_bars": 3,
+        "cooldown_bars_after_exit": 2
+      }
+    },
+    {
+      "rank": 2,
+      "question": "Will the Boston Celtics win the 2026 NBA Finals?",
+      "token_id": "98951343420969493497594761179562691809954416596888138302255086663562042936451",
+      "condition_id": "0x13e1cc703a120883a709d3bb29707097952845d61ca6793ea2b4328bae2a7451",
+      "outcome": "Yes",
+      "tradability": {
+        "eligible": true,
+        "quality_score": 93.0,
+        "quality_tier": "A",
+        "reason": "Eligible",
+        "ranking_summary": {
+          "score": 85.7,
+          "tier": "A",
+          "best_feature": "liquidity",
+          "weakest_feature": "price_zone"
+        }
+      },
+      "backtest": {
+        "snapshot_count": 667,
+        "strategies": [
+          "long_entry",
+          "macd",
+          "rsi"
+        ],
+        "cash": {
+          "starting": 100.0,
+          "ending": 97.98752371586662,
+          "realized_pnl": -0.813536409133413,
+          "mark_to_market_equity": 99.16752371586662
+        },
+        "risk": {
+          "max_drawdown": 0.010736245540813791,
+          "ending_inventory": 10.0,
+          "average_entry_price": 0.1198939875
+        },
+        "metrics": {
+          "trade_count": 75,
+          "buy_trade_count": 38,
+          "sell_trade_count": 37,
+          "round_trip_count": 37,
+          "filled_volume": 750.0,
+          "win_rate": 0.21621621621621623,
+          "average_win": 0.04198780766832924,
+          "average_loss": -0.039635823120001606,
+          "expectancy": -0.021987470517119266,
+          "average_inventory": 5.870870870870871,
+          "average_inventory_notional": 0.6943093093093085,
+          "max_inventory": 10.0,
+          "time_in_market_ratio": 0.5870870870870871
+        },
+        "headline": {
+          "net_return_pct": -0.83,
+          "expectancy_per_round_trip": -0.021987470517119266,
+          "round_trip_count": 37,
+          "max_drawdown_pct": 1.07
+        },
+        "experiment_score": {
+          "score": 37.9,
+          "tier": "weak",
+          "trade_count": 75,
+          "round_trip_count": 37,
+          "components": {
+            "net_return": {
+              "score": 0.0,
+              "max_score": 35.0,
+              "value": -0.83,
+              "explanation": "Positive return matters most, capped to avoid fake precision."
+            },
+            "expectancy": {
+              "score": 0.0,
+              "max_score": 25.0,
+              "value": -0.022,
+              "explanation": "Average realized PnL per completed round trip."
+            },
+            "sample_size": {
+              "score": 20.0,
+              "max_score": 20.0,
+              "value": 37,
+              "explanation": "More completed trades increases confidence."
+            },
+            "drawdown_control": {
+              "score": 17.9,
+              "max_score": 20.0,
+              "value": 1.07,
+              "explanation": "Lower drawdown earns more points."
+            }
+          },
+          "limitations": [
+            "Heuristic for comparison; sensitive to fill model and period.",
+            "Low-trade samples may overstate results."
+          ]
+        }
+      },
+      "execution_model": {
+        "fill_timing": "next_bar",
+        "price_source": "same_side_quote_then_mid_fallback",
+        "slippage_bps": 25.0,
+        "fallback_half_spread_bps": 50.0,
+        "max_spread_bps": 1500.0,
+        "missing_quote_fill_ratio": 1.0,
+        "wide_spread_fill_ratio": 0.5,
+        "strict_mode": false,
+        "min_hold_bars": 3,
+        "cooldown_bars_after_exit": 2
+      }
+    },
+    {
+      "rank": 1,
+      "question": "Will the Tampa Bay Lightning win the 2026 NHL Stanley Cup?",
+      "token_id": "35573117698117780238142713946749692621043319879346349609080985768472429209643",
+      "condition_id": "0xbdd688664b4f3cf7ec4ec011607934fe8ae720c08353fc14a6e9dfbf6bbcf11a",
+      "outcome": "Yes",
+      "tradability": {
+        "eligible": true,
+        "quality_score": 94.1,
+        "quality_tier": "A",
+        "reason": "Eligible",
+        "ranking_summary": {
+          "score": 86.6,
+          "tier": "A",
+          "best_feature": "liquidity",
+          "weakest_feature": "price_zone"
+        }
+      },
+      "backtest": {
+        "snapshot_count": 710,
+        "strategies": [
+          "long_entry",
+          "macd",
+          "rsi"
+        ],
+        "cash": {
+          "starting": 100.0,
+          "ending": 97.50264022319202,
+          "realized_pnl": -1.0767671518079736,
+          "mark_to_market_equity": 99.00264022319202
+        },
+        "risk": {
+          "max_drawdown": 0.012005725020770172,
+          "ending_inventory": 10.0,
+          "average_entry_price": 0.14205926249999998
+        },
+        "metrics": {
+          "trade_count": 87,
+          "buy_trade_count": 44,
+          "sell_trade_count": 43,
+          "round_trip_count": 43,
+          "filled_volume": 870.0,
+          "win_rate": 0.18604651162790697,
+          "average_win": 0.04119858250857243,
+          "average_loss": -0.04018159462504437,
+          "expectancy": -0.02504109655367381,
+          "average_inventory": 6.445698166431594,
+          "average_inventory_notional": 0.9058744710860347,
+          "max_inventory": 10.0,
+          "time_in_market_ratio": 0.6445698166431594
+        },
+        "headline": {
+          "net_return_pct": -1.0,
+          "expectancy_per_round_trip": -0.02504109655367381,
+          "round_trip_count": 43,
+          "max_drawdown_pct": 1.2
+        },
+        "experiment_score": {
+          "score": 37.6,
+          "tier": "weak",
+          "trade_count": 87,
+          "round_trip_count": 43,
+          "components": {
+            "net_return": {
+              "score": 0.0,
+              "max_score": 35.0,
+              "value": -1.0,
+              "explanation": "Positive return matters most, capped to avoid fake precision."
+            },
+            "expectancy": {
+              "score": 0.0,
+              "max_score": 25.0,
+              "value": -0.025,
+              "explanation": "Average realized PnL per completed round trip."
+            },
+            "sample_size": {
+              "score": 20.0,
+              "max_score": 20.0,
+              "value": 43,
+              "explanation": "More completed trades increases confidence."
+            },
+            "drawdown_control": {
+              "score": 17.6,
+              "max_score": 20.0,
+              "value": 1.2,
+              "explanation": "Lower drawdown earns more points."
+            }
+          },
+          "limitations": [
+            "Heuristic for comparison; sensitive to fill model and period.",
+            "Low-trade samples may overstate results."
+          ]
+        }
+      },
+      "execution_model": {
+        "fill_timing": "next_bar",
+        "price_source": "same_side_quote_then_mid_fallback",
+        "slippage_bps": 25.0,
+        "fallback_half_spread_bps": 50.0,
+        "max_spread_bps": 1500.0,
+        "missing_quote_fill_ratio": 1.0,
+        "wide_spread_fill_ratio": 0.5,
+        "strict_mode": false,
+        "min_hold_bars": 3,
+        "cooldown_bars_after_exit": 2
+      }
+    },
+    {
+      "rank": 3,
+      "question": "Will the Oklahoma City Thunder win the 2026 NBA Finals?",
+      "token_id": "49500299856831034491021962156746701298730459370557900271970866855042624695770",
+      "condition_id": "0x22e7b5e35423e76842dd3a5e1a21d13793811080d5e7b2896d0c001bd5e97d54",
+      "outcome": "Yes",
+      "tradability": {
+        "eligible": true,
+        "quality_score": 85.8,
+        "quality_tier": "A",
+        "reason": "Eligible",
+        "ranking_summary": {
+          "score": 78.3,
+          "tier": "A",
+          "best_feature": "liquidity",
+          "weakest_feature": "movement_consistency"
+        }
+      },
+      "backtest": {
+        "snapshot_count": 602,
+        "strategies": [
+          "long_entry",
+          "macd",
+          "rsi"
+        ],
+        "cash": {
+          "starting": 100.0,
+          "ending": 94.8797192487532,
+          "realized_pnl": -1.2413576262468797,
+          "mark_to_market_equity": 98.7297192487532
+        },
+        "risk": {
+          "max_drawdown": 0.01445376920199422,
+          "ending_inventory": 10.0,
+          "average_entry_price": 0.3878923125
+        },
+        "metrics": {
+          "trade_count": 57,
+          "buy_trade_count": 29,
+          "sell_trade_count": 28,
+          "round_trip_count": 28,
+          "filled_volume": 570.0,
+          "win_rate": 0.25,
+          "average_win": 0.045167103446740624,
+          "average_loss": -0.07416796906543162,
+          "expectancy": -0.04433420093738855,
+          "average_inventory": 3.5773710482529117,
+          "average_inventory_notional": 1.3146422628951744,
+          "max_inventory": 10.0,
+          "time_in_market_ratio": 0.3577371048252912
+        },
+        "headline": {
+          "net_return_pct": -1.27,
+          "expectancy_per_round_trip": -0.04433420093738855,
+          "round_trip_count": 28,
+          "max_drawdown_pct": 1.45
+        },
+        "experiment_score": {
+          "score": 37.1,
+          "tier": "weak",
+          "trade_count": 57,
+          "round_trip_count": 28,
+          "components": {
+            "net_return": {
+              "score": 0.0,
+              "max_score": 35.0,
+              "value": -1.27,
+              "explanation": "Positive return matters most, capped to avoid fake precision."
+            },
+            "expectancy": {
+              "score": 0.0,
+              "max_score": 25.0,
+              "value": -0.0443,
+              "explanation": "Average realized PnL per completed round trip."
+            },
+            "sample_size": {
+              "score": 20.0,
+              "max_score": 20.0,
+              "value": 28,
+              "explanation": "More completed trades increases confidence."
+            },
+            "drawdown_control": {
+              "score": 17.1,
+              "max_score": 20.0,
+              "value": 1.45,
+              "explanation": "Lower drawdown earns more points."
+            }
+          },
+          "limitations": [
+            "Heuristic for comparison; sensitive to fill model and period.",
+            "Low-trade samples may overstate results."
+          ]
+        }
+      },
+      "execution_model": {
+        "fill_timing": "next_bar",
+        "price_source": "same_side_quote_then_mid_fallback",
+        "slippage_bps": 25.0,
+        "fallback_half_spread_bps": 50.0,
+        "max_spread_bps": 1500.0,
+        "missing_quote_fill_ratio": 1.0,
+        "wide_spread_fill_ratio": 0.5,
+        "strict_mode": false,
+        "min_hold_bars": 3,
+        "cooldown_bars_after_exit": 2
+      }
+    }
+  ],
+  "errors": [],
+  "assumptions": {
+    "backtest": {
+      "starting_cash": 100.0,
+      "per_trade_size": 10.0,
+      "slippage_bps": 25.0,
+      "fallback_half_spread_bps": 50.0,
+      "max_spread_bps": 1500.0,
+      "missing_quote_fill_ratio": 1.0,
+      "wide_spread_fill_ratio": 0.5,
+      "with_cvd": false
+    },
+    "selection": {
+      "scan_limit": 50,
+      "rank_by": [
+        "eligible -> quality_score -> liquidity -> abs_return_bps_24h (descending)"
+      ],
+      "shortlist_rank_by": [
+        "experiment_score.score -> tradability.quality_score (descending)"
+      ]
+    }
+  }
+}

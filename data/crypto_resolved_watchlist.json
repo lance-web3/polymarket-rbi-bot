@@ -1,0 +1,147 @@
+[
+  {
+    "label": "btc_updown_5m",
+    "asset": "BTC",
+    "market_type": "up_down_short_horizon",
+    "source_url": "https://polymarket.com/event/btc-updown-5m-1775729100",
+    "series_slug": "btc-up-or-down-5m",
+    "resolved": true,
+    "series_title": "BTC Up or Down 5m",
+    "event_slug": "btc-updown-5m-1775730000",
+    "event_title": "Bitcoin Up or Down - April 9, 6:20AM-6:25AM ET",
+    "question": "Bitcoin Up or Down - April 9, 6:20AM-6:25AM ET",
+    "condition_id": "0x6a0bd8b5245913a05641f82fcc2f501b79684b127be89310e1e655f7fafa1950",
+    "market_slug": "btc-updown-5m-1775730000",
+    "accepting_orders": true,
+    "minimum_tick_size": null,
+    "minimum_order_size": null,
+    "liquidity": "10799.3114",
+    "volume": "276.40671399999997",
+    "tokens": [
+      {
+        "token_id": "103153090364203937238721439524402249938896244037652278778768627852868244301382",
+        "outcome": "Up"
+      },
+      {
+        "token_id": "10220031024278608207769150397916619380346090714869928200552755735031039369073",
+        "outcome": "Down"
+      }
+    ]
+  },
+  {
+    "label": "eth_updown_5m",
+    "asset": "ETH",
+    "market_type": "up_down_short_horizon",
+    "source_url": "https://polymarket.com/search?query=Ethereum%20Up%20or%20Down%20-%205%20Minutes",
+    "series_slug": "eth-up-or-down-5m",
+    "resolved": true,
+    "series_title": "ETH Up or Down 5m",
+    "event_slug": "eth-updown-5m-1775730000",
+    "event_title": "Ethereum Up or Down - April 9, 6:20AM-6:25AM ET",
+    "question": "Ethereum Up or Down - April 9, 6:20AM-6:25AM ET",
+    "condition_id": "0x091879479905ce0012381efb421ca8af05f24865f136cb103bd56dcf5c205fc9",
+    "market_slug": "eth-updown-5m-1775730000",
+    "accepting_orders": true,
+    "minimum_tick_size": null,
+    "minimum_order_size": null,
+    "liquidity": "14964.2361",
+    "volume": "90.46000000000001",
+    "tokens": [
+      {
+        "token_id": "14477208307190615406995203053037131672185904135369805644581756038439139385840",
+        "outcome": "Up"
+      },
+      {
+        "token_id": "51738091373691669555766830080210043064347964685432352093197730954446925959787",
+        "outcome": "Down"
+      }
+    ]
+  },
+  {
+    "label": "sol_updown_5m",
+    "asset": "SOL",
+    "market_type": "up_down_short_horizon",
+    "source_url": "https://polymarket.com/search?query=Solana%20Up%20or%20Down%20-%205%20Minutes",
+    "series_slug": "sol-up-or-down-5m",
+    "resolved": true,
+    "series_title": "SOL Up or Down 5m",
+    "event_slug": "sol-updown-5m-1775730000",
+    "event_title": "Solana Up or Down - April 9, 6:20AM-6:25AM ET",
+    "question": "Solana Up or Down - April 9, 6:20AM-6:25AM ET",
+    "condition_id": "0xeec761d85d4637c91e6c9eedd8f5055199e44201b58a32a5eefbbdca9cf632b7",
+    "market_slug": "sol-updown-5m-1775730000",
+    "accepting_orders": true,
+    "minimum_tick_size": null,
+    "minimum_order_size": null,
+    "liquidity": "14301.1208",
+    "volume": "5",
+    "tokens": [
+      {
+        "token_id": "484954395123937849245728478054933069241223851630135497856142474338982254117",
+        "outcome": "Up"
+      },
+      {
+        "token_id": "17773864293640846545558044314291435956432871672494269096594849619256964115916",
+        "outcome": "Down"
+      }
+    ]
+  },
+  {
+    "label": "xrp_updown_5m",
+    "asset": "XRP",
+    "market_type": "up_down_short_horizon",
+    "source_url": "https://polymarket.com/search?query=XRP%20Up%20or%20Down%20-%205%20Minutes",
+    "series_slug": "xrp-up-or-down-5m",
+    "resolved": true,
+    "series_title": "XRP Up or Down 5m",
+    "event_slug": "xrp-updown-5m-1775730000",
+    "event_title": "XRP Up or Down - April 9, 6:20AM-6:25AM ET",
+    "question": "XRP Up or Down - April 9, 6:20AM-6:25AM ET",
+    "condition_id": "0xa47dfd9a4d8ae4b5c651913e2eb82deeac1b045548d6627ae90391786ff68e81",
+    "market_slug": "xrp-updown-5m-1775730000",
+    "accepting_orders": true,
+    "minimum_tick_size": null,
+    "minimum_order_size": null,
+    "liquidity": "13695.2709",
+    "volume": "67.690407",
+    "tokens": [
+      {
+        "token_id": "100196928008561097492585567585529901843651302849211426866166028688844222671863",
+        "outcome": "Up"
+      },
+      {
+        "token_id": "100018864193041724771626754043795788828370562659367552445362839490971662863994",
+        "outcome": "Down"
+      }
+    ]
+  },
+  {
+    "label": "doge_updown_5m",
+    "asset": "DOGE",
+    "market_type": "up_down_short_horizon",
+    "source_url": "https://polymarket.com/search?query=Dogecoin%20Up%20or%20Down%20-%205%20Minutes",
+    "series_slug": "doge-up-or-down-5m",
+    "resolved": true,
+    "series_title": "DOGE Up or Down 5m",
+    "event_slug": "doge-updown-5m-1775730000",
+    "event_title": "Dogecoin Up or Down - April 9, 6:20AM-6:25AM ET",
+    "question": "Dogecoin Up or Down - April 9, 6:20AM-6:25AM ET",
+    "condition_id": "0xc6e6515066f4b70494c333f0235c5f13773bc712b5d23897ab56f6a82efd5c9a",
+    "market_slug": "doge-updown-5m-1775730000",
+    "accepting_orders": true,
+    "minimum_tick_size": null,
+    "minimum_order_size": null,
+    "liquidity": "4886.32",
+    "volume": null,
+    "tokens": [
+      {
+        "token_id": "65651630681860390700983956928687473292864119763439940602346489448803373537872",
+        "outcome": "Up"
+      },
+      {
+        "token_id": "95094672172970248681099917768860406918446856402244102693609659577047933192753",
+        "outcome": "Down"
+      }
+    ]
+  }
+]

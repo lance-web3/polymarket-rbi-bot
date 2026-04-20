@@ -1,0 +1,111 @@
+{
+  "row_count": 21880,
+  "buy_signal_count": 0,
+  "strict_mode_rows": 21880,
+  "forward_returns": {
+    "all": {
+      "fwd_1_bar_bps": 0.06,
+      "fwd_2_bar_bps": 0.12,
+      "fwd_3_bar_bps": 0.18
+    },
+    "buy_only": {
+      "fwd_1_bar_bps": null,
+      "fwd_2_bar_bps": null,
+      "fwd_3_bar_bps": null
+    }
+  },
+  "buckets": {
+    "price_bucket": {
+      "0.12_0.18": {
+        "count": 8822,
+        "avg_fwd_1_bar_bps": -0.05,
+        "avg_fwd_2_bar_bps": -0.08,
+        "avg_fwd_3_bar_bps": -0.11,
+        "buy_rate": 0.0
+      },
+      "0.30_0.50": {
+        "count": 4376,
+        "avg_fwd_1_bar_bps": -0.05,
+        "avg_fwd_2_bar_bps": -0.09,
+        "avg_fwd_3_bar_bps": -0.14,
+        "buy_rate": 0.0
+      },
+      "lt_0.12": {
+        "count": 8682,
+        "avg_fwd_1_bar_bps": 0.22,
+        "avg_fwd_2_bar_bps": 0.43,
+        "avg_fwd_3_bar_bps": 0.63,
+        "buy_rate": 0.0
+      }
+    },
+    "spread_bucket": {
+      "150_250": {
+        "count": 6004,
+        "avg_fwd_1_bar_bps": -0.37,
+        "avg_fwd_2_bar_bps": -0.72,
+        "avg_fwd_3_bar_bps": -1.06,
+        "buy_rate": 0.0
+      },
+      "ge_250": {
+        "count": 9966,
+        "avg_fwd_1_bar_bps": 0.32,
+        "avg_fwd_2_bar_bps": 0.63,
+        "avg_fwd_3_bar_bps": 0.95,
+        "buy_rate": 0.0
+      },
+      "80_150": {
+        "count": 3594,
+        "avg_fwd_1_bar_bps": -0.55,
+        "avg_fwd_2_bar_bps": -1.16,
+        "avg_fwd_3_bar_bps": -1.76,
+        "buy_rate": 0.0
+      },
+      "lt_80": {
+        "count": 2316,
+        "avg_fwd_1_bar_bps": 1.03,
+        "avg_fwd_2_bar_bps": 2.07,
+        "avg_fwd_3_bar_bps": 3.1,
+        "buy_rate": 0.0
+      }
+    },
+    "expected_edge_bucket": {
+      "unknown": {
+        "count": 21880,
+        "avg_fwd_1_bar_bps": 0.06,
+        "avg_fwd_2_bar_bps": 0.12,
+        "avg_fwd_3_bar_bps": 0.18,
+        "buy_rate": 0.0
+      }
+    },
+    "momentum_bucket": {
+      "unknown": {
+        "count": 17552,
+        "avg_fwd_1_bar_bps": 0.09,
+        "avg_fwd_2_bar_bps": 0.17,
+        "avg_fwd_3_bar_bps": 0.26,
+        "buy_rate": 0.0
+      },
+      "lt_90": {
+        "count": 4084,
+        "avg_fwd_1_bar_bps": 0.13,
+        "avg_fwd_2_bar_bps": 0.27,
+        "avg_fwd_3_bar_bps": 0.4,
+        "buy_rate": 0.0
+      },
+      "180_300": {
+        "count": 136,
+        "avg_fwd_1_bar_bps": -1.82,
+        "avg_fwd_2_bar_bps": -3.63,
+        "avg_fwd_3_bar_bps": -5.45,
+        "buy_rate": 0.0
+      },
+      "90_180": {
+        "count": 108,
+        "avg_fwd_1_bar_bps": -4.57,
+        "avg_fwd_2_bar_bps": -9.14,
+        "avg_fwd_3_bar_bps": -13.72,
+        "buy_rate": 0.0
+      }
+    }
+  }
+}

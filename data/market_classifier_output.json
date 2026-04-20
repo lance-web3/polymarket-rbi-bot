@@ -1,0 +1,1746 @@
+{
+  "generated_at": "2026-04-06T08:08:32.853725+00:00",
+  "source": "deploy.classify_markets_openai",
+  "input_path": "data/market_classifier_input.json",
+  "model": "gpt-5.4",
+  "summary": {
+    "markets_in_input": 25,
+    "records_written": 25,
+    "api_requests": 4,
+    "batch_size": 8,
+    "dry_run": false,
+    "decision_counts": {
+      "allow": 3,
+      "avoid": 10,
+      "review": 12
+    }
+  },
+  "records": [
+    {
+      "condition_id": "0xbdd688664b4f3cf7ec4ec011607934fe8ae720c08353fc14a6e9dfbf6bbcf11a",
+      "token_id": "35573117698117780238142713946749692621043319879346349609080985768472429209643",
+      "question": "Will the Tampa Bay Lightning win the 2026 NHL Stanley Cup?",
+      "decision": "allow",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "gradual_repricing",
+        "team_outright"
+      ],
+      "confidence": 0.91,
+      "risk_flags": [
+        "moderate_spread"
+      ],
+      "rationale": "Season-long sports outright with clear resolution and steady repricing; liquidity/history are solid.",
+      "tradable": true,
+      "score_adjustment": 7.46,
+      "reason": "Season-long sports outright with clear resolution and steady repricing; liquidity/history are solid."
+    },
+    {
+      "condition_id": "0x13e1cc703a120883a709d3bb29707097952845d61ca6793ea2b4328bae2a7451",
+      "token_id": "98951343420969493497594761179562691809954416596888138302255086663562042936451",
+      "question": "Will the Boston Celtics win the 2026 NBA Finals?",
+      "decision": "allow",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "gradual_repricing",
+        "team_outright"
+      ],
+      "confidence": 0.89,
+      "risk_flags": [
+        "moderate_spread"
+      ],
+      "rationale": "Good fit as a liquid season-long outright with predictable information flow and non-ambiguous resolution.",
+      "tradable": true,
+      "score_adjustment": 7.34,
+      "reason": "Good fit as a liquid season-long outright with predictable information flow and non-ambiguous resolution."
+    },
+    {
+      "condition_id": "0xf8f63bb47b2a7c2e0c1be3cedf4075079b11c07476d76a9469065b0c4791961a",
+      "token_id": "101738487887518832481587379955535423775326921556438741919099866785354159699479",
+      "question": "Will the Colorado Avalanche win the 2026 NHL Stanley Cup?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "gradual_repricing",
+        "team_outright"
+      ],
+      "confidence": 0.69,
+      "risk_flags": [
+        "wide_spread"
+      ],
+      "rationale": "Structurally good outright, but spread is fairly wide for efficient momentum execution.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Structurally good outright, but spread is fairly wide for efficient momentum execution."
+    },
+    {
+      "condition_id": "0x22e7b5e35423e76842dd3a5e1a21d13793811080d5e7b2896d0c001bd5e97d54",
+      "token_id": "49500299856831034491021962156746701298730459370557900271970866855042624695770",
+      "question": "Will the Oklahoma City Thunder win the 2026 NBA Finals?",
+      "decision": "allow",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "gradual_repricing",
+        "team_outright"
+      ],
+      "confidence": 0.92,
+      "risk_flags": [],
+      "rationale": "Strong structural fit: liquid, scheduled outright with gradual repricing and relatively tight spread.",
+      "tradable": true,
+      "score_adjustment": 7.52,
+      "reason": "Strong structural fit: liquid, scheduled outright with gradual repricing and relatively tight spread."
+    },
+    {
+      "condition_id": "0x44887f53abbfe7531b1384420b185a5f10ee42a4e6c9441d5883abd4f3c1e5ef",
+      "token_id": "17581551835670188629115760053820570516688258623733228909199148495084738589631",
+      "question": "Will the Dallas Stars win the 2026 NHL Stanley Cup?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "gradual_repricing",
+        "team_outright",
+        "low_price_tail"
+      ],
+      "confidence": 0.72,
+      "risk_flags": [
+        "price_outside_bot_range",
+        "low_yes_price",
+        "high_volatility"
+      ],
+      "rationale": "Outright structure is fine, but very low price and elevated volatility make execution less clean for this bot.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Outright structure is fine, but very low price and elevated volatility make execution less clean for this bot."
+    },
+    {
+      "condition_id": "0x89389a6b1439856a8d366234c795d72865c927a1aa3cf9d4cc04a3a400defde1",
+      "token_id": "68803485030073596962715540294172682212192134248970512695855620898253368033218",
+      "question": "Will the Vegas Golden Knights win the 2026 NHL Stanley Cup?",
+      "decision": "avoid",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "team_outright",
+        "low_price_tail",
+        "shocky_repricing"
+      ],
+      "confidence": 0.9,
+      "risk_flags": [
+        "price_outside_bot_range",
+        "low_yes_price",
+        "extreme_24h_move",
+        "high_volatility"
+      ],
+      "rationale": "Despite clear resolution, this is deep low-price tail with shocky moves and outside configured range.",
+      "tradable": false,
+      "score_adjustment": -7.4,
+      "reason": "Despite clear resolution, this is deep low-price tail with shocky moves and outside configured range."
+    },
+    {
+      "condition_id": "0xfdc1041ba84bfd8f741eee0bdafce8b1887626c83afd017d18ee9b1f77008b9f",
+      "token_id": "77381084121703585434442737895792916741546405992903866299069398776973629407962",
+      "question": "Will the Utah Mammoth win the 2026 NHL Stanley Cup?",
+      "decision": "avoid",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "team_outright",
+        "low_price_tail",
+        "shocky_repricing"
+      ],
+      "confidence": 0.93,
+      "risk_flags": [
+        "price_outside_bot_range",
+        "very_low_yes_price",
+        "high_volatility",
+        "wide_spread"
+      ],
+      "rationale": "Very low-priced longshot with wide spread and volatile repricing; poor fit for systematic momentum trading.",
+      "tradable": false,
+      "score_adjustment": -7.58,
+      "reason": "Very low-priced longshot with wide spread and volatile repricing; poor fit for systematic momentum trading."
+    },
+    {
+      "condition_id": "0x713641f745d71f6ec61f906237ffca3c8583f251e49384429a63ceb0ccdb2d37",
+      "token_id": "20257190540739490630509657713144742134547949967093643458458133445357169845406",
+      "question": "Will the New York Knicks win the 2026 NBA Finals?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "team_outright",
+        "low_price_tail",
+        "gradual_repricing"
+      ],
+      "confidence": 0.76,
+      "risk_flags": [
+        "price_outside_bot_range",
+        "low_yes_price"
+      ],
+      "rationale": "Market structure is acceptable, but the very low price tail and bot ineligibility argue for manual inspection.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Market structure is acceptable, but the very low price tail and bot ineligibility argue for manual inspection."
+    },
+    {
+      "condition_id": "0x9e54856d758cd7de25b75c97273a38d711642f16eacad57e61982028f2791206",
+      "token_id": "8851645587670338204652278122922654341568030658294043049798551516787478126093",
+      "question": "Will the Pittsburgh Penguins win the 2026 NHL Stanley Cup?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled_outright",
+        "season_long_repricing",
+        "low_price_longshot"
+      ],
+      "confidence": 0.79,
+      "risk_flags": [
+        "wide_spread",
+        "longshot_tail",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Good outright structure, but very low price and wide spread make execution/repricing less reliable.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Good outright structure, but very low price and wide spread make execution/repricing less reliable."
+    },
+    {
+      "condition_id": "0x0d082a85f48a5226b1205acdb6e95ead2fe373acabcf6c471f5895f86f42a276",
+      "token_id": "52393600221905688380980180540161090876971894580569515967716227210336633318551",
+      "question": "Will the Minnesota Wild win the 2026 NHL Stanley Cup?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled_outright",
+        "season_long_repricing",
+        "low_price_longshot"
+      ],
+      "confidence": 0.81,
+      "risk_flags": [
+        "very_wide_spread",
+        "longshot_tail",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Season outright is structurally decent, but spread is very wide and price is deep longshot.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Season outright is structurally decent, but spread is very wide and price is deep longshot."
+    },
+    {
+      "condition_id": "0xbefea6668e49e328db4d5c792bc15cea309bbc06101dfd6ced1e0556ad3ea301",
+      "token_id": "86989765000750155883097827320609652927052275812009422751609183177638176999827",
+      "question": "Will the Buffalo Sabres win the 2026 NHL Stanley Cup?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled_outright",
+        "season_long_repricing",
+        "low_price_longshot"
+      ],
+      "confidence": 0.81,
+      "risk_flags": [
+        "wide_spread",
+        "longshot_tail",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Scheduled outright fits momentum better than news markets, but low-price tail and wide spread are concerns.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Scheduled outright fits momentum better than news markets, but low-price tail and wide spread are concerns."
+    },
+    {
+      "condition_id": "0x52847ca1413b76a5570b97c0c432e38dbe61b0140f9d45e912604591b08f6fca",
+      "token_id": "114248353339288476395516704859280406139740194553592209059241667781908210476009",
+      "question": "Will the Montreal Canadiens win the 2026 NHL Stanley Cup?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled_outright",
+        "season_long_repricing",
+        "low_price_longshot"
+      ],
+      "confidence": 0.8,
+      "risk_flags": [
+        "wide_spread",
+        "longshot_tail",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Usable outright regime in principle, but still a low-priced longshot with costly spread.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Usable outright regime in principle, but still a low-priced longshot with costly spread."
+    },
+    {
+      "condition_id": "0xceb5e0c99a9195da148d79693f3c6819d44d4d3d7e5be77931e174a3eebe4a85",
+      "token_id": "1755198236548058730692725634969806667163093356894670716555961840777456036471",
+      "question": "Will the Anaheim Ducks win the 2026 NHL Stanley Cup?",
+      "decision": "avoid",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled_outright",
+        "season_long_repricing",
+        "extreme_longshot"
+      ],
+      "confidence": 0.89,
+      "risk_flags": [
+        "very_wide_spread",
+        "extreme_longshot_tail",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Outright format is fine, but this is too deep a longshot with very poor spread for systematic trading.",
+      "tradable": false,
+      "score_adjustment": -7.34,
+      "reason": "Outright format is fine, but this is too deep a longshot with very poor spread for systematic trading."
+    },
+    {
+      "condition_id": "0x796e791e7058571e460278814fc7a3183752285338f1400087b98bef3c447908",
+      "token_id": "86297520870744792204751483474339201341298076835836561764334428915355504860913",
+      "question": "Will the Los Angeles Lakers win the 2026 NBA Finals?",
+      "decision": "avoid",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled_outright",
+        "season_long_repricing",
+        "extreme_longshot"
+      ],
+      "confidence": 0.91,
+      "risk_flags": [
+        "very_wide_spread",
+        "extreme_longshot_tail",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Scheduled outright, but price is near zero and spread is too wide for robust momentum execution.",
+      "tradable": false,
+      "score_adjustment": -7.46,
+      "reason": "Scheduled outright, but price is near zero and spread is too wide for robust momentum execution."
+    },
+    {
+      "condition_id": "0x3b6cdd4f72cef7f29ff7e054444095564dc582266b7230be3c2b5f194d89f37d",
+      "token_id": "75497690502531380056390405612014900797768656980504946546336044296003833597355",
+      "question": "Will the Los Angeles Kings win the 2026 NHL Stanley Cup?",
+      "decision": "avoid",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled_outright",
+        "season_long_repricing",
+        "extreme_longshot"
+      ],
+      "confidence": 0.93,
+      "risk_flags": [
+        "extremely_wide_spread",
+        "extreme_longshot_tail",
+        "high_volatility",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Structure is acceptable, but near-zero pricing plus extreme spread/volatility make it a poor bot fit.",
+      "tradable": false,
+      "score_adjustment": -7.58,
+      "reason": "Structure is acceptable, but near-zero pricing plus extreme spread/volatility make it a poor bot fit."
+    },
+    {
+      "condition_id": "0x4c317ee82d81e0a49aa9862a8c2d876fee322064acf02cd8e1346fbed36083e8",
+      "token_id": "6772099324721707224715070437205709623671146843087680984461675764599992554029",
+      "question": "Will the Columbus Blue Jackets win the 2026 NHL Stanley Cup?",
+      "decision": "avoid",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled_outright",
+        "season_long_repricing",
+        "extreme_longshot"
+      ],
+      "confidence": 0.92,
+      "risk_flags": [
+        "wide_spread",
+        "extreme_longshot_tail",
+        "high_volatility",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Season outright is normally workable, but this contract sits in an unstable near-zero longshot regime.",
+      "tradable": false,
+      "score_adjustment": -7.52,
+      "reason": "Season outright is normally workable, but this contract sits in an unstable near-zero longshot regime."
+    },
+    {
+      "condition_id": "0x649ad05a2868343271fe82ea692031d567ca1af652e3529788933157e94aa088",
+      "token_id": "5771676627182954113677164857547228277089396639521594262964034606220001939923",
+      "question": "Will the Minnesota Timberwolves win the 2026 NBA Finals?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "gradual_repricing",
+        "sports_outright"
+      ],
+      "confidence": 0.79,
+      "risk_flags": [
+        "long_horizon",
+        "low_price_tail",
+        "wide_spread",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Season-long outright with orderly repricing, but very low price and wide spread make execution less reliable.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Season-long outright with orderly repricing, but very low price and wide spread make execution less reliable."
+    },
+    {
+      "condition_id": "0x82d8c535c037a779ffbd2eb94704b093a5341350b49ca68128fc1c16a0901e4a",
+      "token_id": "96156230578747105661476819749931380321917772151891667564189808442987244872145",
+      "question": "Will the Boston Bruins win the 2026 NHL Stanley Cup?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "gradual_repricing",
+        "sports_outright"
+      ],
+      "confidence": 0.84,
+      "risk_flags": [
+        "long_horizon",
+        "low_price_tail",
+        "wide_spread",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Good outright structure, but sub-2% pricing and very wide spread create poor microstructure for momentum entries.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Good outright structure, but sub-2% pricing and very wide spread create poor microstructure for momentum entries."
+    },
+    {
+      "condition_id": "0x139b893a7ae21eaec72e887ba88910831944b4662512428c122c4ad0a5c125ac",
+      "token_id": "52122163926965666340769912737036425235018536048643947600257470162508745804215",
+      "question": "Will the Ottawa Senators win the 2026 NHL Stanley Cup?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "gradual_repricing",
+        "sports_outright"
+      ],
+      "confidence": 0.82,
+      "risk_flags": [
+        "long_horizon",
+        "low_price_tail",
+        "wide_spread",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Structurally acceptable season outright, but low-price tail and wide spread reduce tradability.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Structurally acceptable season outright, but low-price tail and wide spread reduce tradability."
+    },
+    {
+      "condition_id": "0x99d0ce2ab858154ba1ec511863dae5a9fe41731457022cf2ef8b1024cf97405a",
+      "token_id": "100198467481990754389879542132900146141512359428605143337944632886324000145723",
+      "question": "Will the New York Islanders win the 2026 NHL Stanley Cup?",
+      "decision": "avoid",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "sports_outright",
+        "extreme_longshot"
+      ],
+      "confidence": 0.93,
+      "risk_flags": [
+        "long_horizon",
+        "extreme_low_price",
+        "very_wide_spread",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Scheduled outright, but extreme longshot pricing and very wide spread make this a poor bot fit.",
+      "tradable": false,
+      "score_adjustment": -7.58,
+      "reason": "Scheduled outright, but extreme longshot pricing and very wide spread make this a poor bot fit."
+    },
+    {
+      "condition_id": "0xa8b42e207814d2844997523ba83e708b5bfe19cf5d2203325e4eb3ed459a9ded",
+      "token_id": "99302435322944813052105841164428761175935099146724842887228853211763294863784",
+      "question": "Will the Winnipeg Jets win the 2026 NHL Stanley Cup?",
+      "decision": "avoid",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "sports_outright",
+        "extreme_longshot"
+      ],
+      "confidence": 0.97,
+      "risk_flags": [
+        "long_horizon",
+        "extreme_low_price",
+        "very_wide_spread",
+        "high_jump_risk",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Extreme tail market with huge spread and jumpy repricing; unsuitable for systematic momentum trading.",
+      "tradable": false,
+      "score_adjustment": -7.82,
+      "reason": "Extreme tail market with huge spread and jumpy repricing; unsuitable for systematic momentum trading."
+    },
+    {
+      "condition_id": "0x08fa7d350c801391e7ec81d0da90f1fb05ec365f98d16d27e6d64a18d7118973",
+      "token_id": "89607539467374084618016881443767018676837500055609025995679802231807669451541",
+      "question": "Will the Washington Capitals win the 2026 NHL Stanley Cup?",
+      "decision": "avoid",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "sports_outright",
+        "extreme_longshot"
+      ],
+      "confidence": 0.98,
+      "risk_flags": [
+        "long_horizon",
+        "extreme_low_price",
+        "very_wide_spread",
+        "high_jump_risk",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Near-zero price outright with maxed-out spread; microstructure is too poor for reliable bot execution.",
+      "tradable": false,
+      "score_adjustment": -7.88,
+      "reason": "Near-zero price outright with maxed-out spread; microstructure is too poor for reliable bot execution."
+    },
+    {
+      "condition_id": "0x7014b40f62a559be0a0abd2bf1ca1ef16e44674b2c505bb5243c752f2e0d351f",
+      "token_id": "105820657025478857015993206354412568572835231572443865502882842764049428172501",
+      "question": "Will the Detroit Red Wings win the 2026 NHL Stanley Cup?",
+      "decision": "avoid",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "sports_outright",
+        "extreme_longshot"
+      ],
+      "confidence": 0.94,
+      "risk_flags": [
+        "long_horizon",
+        "extreme_low_price",
+        "very_wide_spread",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Season outright is normally workable, but this tail contract is too low-priced and wide for clean momentum trading.",
+      "tradable": false,
+      "score_adjustment": -7.64,
+      "reason": "Season outright is normally workable, but this tail contract is too low-priced and wide for clean momentum trading."
+    },
+    {
+      "condition_id": "0x4a67e1270a2ed86be8fc524b6114640e41b0c56303ecaa9584deacd62402650a",
+      "token_id": "26994926807159308505531352241892510362185630293975165092400997815774500370214",
+      "question": "Will the Edmonton Oilers win the 2026 NHL Stanley Cup?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "gradual_repricing",
+        "sports_outright"
+      ],
+      "confidence": 0.76,
+      "risk_flags": [
+        "long_horizon",
+        "moderate_liquidity",
+        "wide_spread",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Better-priced outright than the tail names and structurally suitable, but liquidity is lighter and spread still wide.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Better-priced outright than the tail names and structurally suitable, but liquidity is lighter and spread still wide."
+    },
+    {
+      "condition_id": "0x1e03cd6255e4dec87c7c85d2267b7b4104beba48abf50e2fc15acabbf233b308",
+      "token_id": "83053136095375464518484635535538303979818736083252284786624282549893531568449",
+      "question": "Will the New Jersey Devils win the 2026 NHL Stanley Cup?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled_outright",
+        "season_long_repricing",
+        "low_price_longshot"
+      ],
+      "confidence": 0.84,
+      "risk_flags": [
+        "extreme_longshot_price",
+        "wide_spread",
+        "high_volatility",
+        "possible_illiquidity_at_touch"
+      ],
+      "rationale": "Season-long outright is generally suitable, but this contract is an extreme low-price longshot with very wide spread and jumpy repricing, so execution quality needs manual review.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Season-long outright is generally suitable, but this contract is an extreme low-price longshot with very wide spread and jumpy repricing, so execution quality needs manual review."
+    }
+  ],
+  "index_by_condition_id": {
+    "0xbdd688664b4f3cf7ec4ec011607934fe8ae720c08353fc14a6e9dfbf6bbcf11a": {
+      "condition_id": "0xbdd688664b4f3cf7ec4ec011607934fe8ae720c08353fc14a6e9dfbf6bbcf11a",
+      "token_id": "35573117698117780238142713946749692621043319879346349609080985768472429209643",
+      "question": "Will the Tampa Bay Lightning win the 2026 NHL Stanley Cup?",
+      "decision": "allow",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "gradual_repricing",
+        "team_outright"
+      ],
+      "confidence": 0.91,
+      "risk_flags": [
+        "moderate_spread"
+      ],
+      "rationale": "Season-long sports outright with clear resolution and steady repricing; liquidity/history are solid.",
+      "tradable": true,
+      "score_adjustment": 7.46,
+      "reason": "Season-long sports outright with clear resolution and steady repricing; liquidity/history are solid."
+    },
+    "0x13e1cc703a120883a709d3bb29707097952845d61ca6793ea2b4328bae2a7451": {
+      "condition_id": "0x13e1cc703a120883a709d3bb29707097952845d61ca6793ea2b4328bae2a7451",
+      "token_id": "98951343420969493497594761179562691809954416596888138302255086663562042936451",
+      "question": "Will the Boston Celtics win the 2026 NBA Finals?",
+      "decision": "allow",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "gradual_repricing",
+        "team_outright"
+      ],
+      "confidence": 0.89,
+      "risk_flags": [
+        "moderate_spread"
+      ],
+      "rationale": "Good fit as a liquid season-long outright with predictable information flow and non-ambiguous resolution.",
+      "tradable": true,
+      "score_adjustment": 7.34,
+      "reason": "Good fit as a liquid season-long outright with predictable information flow and non-ambiguous resolution."
+    },
+    "0xf8f63bb47b2a7c2e0c1be3cedf4075079b11c07476d76a9469065b0c4791961a": {
+      "condition_id": "0xf8f63bb47b2a7c2e0c1be3cedf4075079b11c07476d76a9469065b0c4791961a",
+      "token_id": "101738487887518832481587379955535423775326921556438741919099866785354159699479",
+      "question": "Will the Colorado Avalanche win the 2026 NHL Stanley Cup?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "gradual_repricing",
+        "team_outright"
+      ],
+      "confidence": 0.69,
+      "risk_flags": [
+        "wide_spread"
+      ],
+      "rationale": "Structurally good outright, but spread is fairly wide for efficient momentum execution.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Structurally good outright, but spread is fairly wide for efficient momentum execution."
+    },
+    "0x22e7b5e35423e76842dd3a5e1a21d13793811080d5e7b2896d0c001bd5e97d54": {
+      "condition_id": "0x22e7b5e35423e76842dd3a5e1a21d13793811080d5e7b2896d0c001bd5e97d54",
+      "token_id": "49500299856831034491021962156746701298730459370557900271970866855042624695770",
+      "question": "Will the Oklahoma City Thunder win the 2026 NBA Finals?",
+      "decision": "allow",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "gradual_repricing",
+        "team_outright"
+      ],
+      "confidence": 0.92,
+      "risk_flags": [],
+      "rationale": "Strong structural fit: liquid, scheduled outright with gradual repricing and relatively tight spread.",
+      "tradable": true,
+      "score_adjustment": 7.52,
+      "reason": "Strong structural fit: liquid, scheduled outright with gradual repricing and relatively tight spread."
+    },
+    "0x44887f53abbfe7531b1384420b185a5f10ee42a4e6c9441d5883abd4f3c1e5ef": {
+      "condition_id": "0x44887f53abbfe7531b1384420b185a5f10ee42a4e6c9441d5883abd4f3c1e5ef",
+      "token_id": "17581551835670188629115760053820570516688258623733228909199148495084738589631",
+      "question": "Will the Dallas Stars win the 2026 NHL Stanley Cup?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "gradual_repricing",
+        "team_outright",
+        "low_price_tail"
+      ],
+      "confidence": 0.72,
+      "risk_flags": [
+        "price_outside_bot_range",
+        "low_yes_price",
+        "high_volatility"
+      ],
+      "rationale": "Outright structure is fine, but very low price and elevated volatility make execution less clean for this bot.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Outright structure is fine, but very low price and elevated volatility make execution less clean for this bot."
+    },
+    "0x89389a6b1439856a8d366234c795d72865c927a1aa3cf9d4cc04a3a400defde1": {
+      "condition_id": "0x89389a6b1439856a8d366234c795d72865c927a1aa3cf9d4cc04a3a400defde1",
+      "token_id": "68803485030073596962715540294172682212192134248970512695855620898253368033218",
+      "question": "Will the Vegas Golden Knights win the 2026 NHL Stanley Cup?",
+      "decision": "avoid",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "team_outright",
+        "low_price_tail",
+        "shocky_repricing"
+      ],
+      "confidence": 0.9,
+      "risk_flags": [
+        "price_outside_bot_range",
+        "low_yes_price",
+        "extreme_24h_move",
+        "high_volatility"
+      ],
+      "rationale": "Despite clear resolution, this is deep low-price tail with shocky moves and outside configured range.",
+      "tradable": false,
+      "score_adjustment": -7.4,
+      "reason": "Despite clear resolution, this is deep low-price tail with shocky moves and outside configured range."
+    },
+    "0xfdc1041ba84bfd8f741eee0bdafce8b1887626c83afd017d18ee9b1f77008b9f": {
+      "condition_id": "0xfdc1041ba84bfd8f741eee0bdafce8b1887626c83afd017d18ee9b1f77008b9f",
+      "token_id": "77381084121703585434442737895792916741546405992903866299069398776973629407962",
+      "question": "Will the Utah Mammoth win the 2026 NHL Stanley Cup?",
+      "decision": "avoid",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "team_outright",
+        "low_price_tail",
+        "shocky_repricing"
+      ],
+      "confidence": 0.93,
+      "risk_flags": [
+        "price_outside_bot_range",
+        "very_low_yes_price",
+        "high_volatility",
+        "wide_spread"
+      ],
+      "rationale": "Very low-priced longshot with wide spread and volatile repricing; poor fit for systematic momentum trading.",
+      "tradable": false,
+      "score_adjustment": -7.58,
+      "reason": "Very low-priced longshot with wide spread and volatile repricing; poor fit for systematic momentum trading."
+    },
+    "0x713641f745d71f6ec61f906237ffca3c8583f251e49384429a63ceb0ccdb2d37": {
+      "condition_id": "0x713641f745d71f6ec61f906237ffca3c8583f251e49384429a63ceb0ccdb2d37",
+      "token_id": "20257190540739490630509657713144742134547949967093643458458133445357169845406",
+      "question": "Will the New York Knicks win the 2026 NBA Finals?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "team_outright",
+        "low_price_tail",
+        "gradual_repricing"
+      ],
+      "confidence": 0.76,
+      "risk_flags": [
+        "price_outside_bot_range",
+        "low_yes_price"
+      ],
+      "rationale": "Market structure is acceptable, but the very low price tail and bot ineligibility argue for manual inspection.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Market structure is acceptable, but the very low price tail and bot ineligibility argue for manual inspection."
+    },
+    "0x9e54856d758cd7de25b75c97273a38d711642f16eacad57e61982028f2791206": {
+      "condition_id": "0x9e54856d758cd7de25b75c97273a38d711642f16eacad57e61982028f2791206",
+      "token_id": "8851645587670338204652278122922654341568030658294043049798551516787478126093",
+      "question": "Will the Pittsburgh Penguins win the 2026 NHL Stanley Cup?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled_outright",
+        "season_long_repricing",
+        "low_price_longshot"
+      ],
+      "confidence": 0.79,
+      "risk_flags": [
+        "wide_spread",
+        "longshot_tail",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Good outright structure, but very low price and wide spread make execution/repricing less reliable.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Good outright structure, but very low price and wide spread make execution/repricing less reliable."
+    },
+    "0x0d082a85f48a5226b1205acdb6e95ead2fe373acabcf6c471f5895f86f42a276": {
+      "condition_id": "0x0d082a85f48a5226b1205acdb6e95ead2fe373acabcf6c471f5895f86f42a276",
+      "token_id": "52393600221905688380980180540161090876971894580569515967716227210336633318551",
+      "question": "Will the Minnesota Wild win the 2026 NHL Stanley Cup?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled_outright",
+        "season_long_repricing",
+        "low_price_longshot"
+      ],
+      "confidence": 0.81,
+      "risk_flags": [
+        "very_wide_spread",
+        "longshot_tail",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Season outright is structurally decent, but spread is very wide and price is deep longshot.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Season outright is structurally decent, but spread is very wide and price is deep longshot."
+    },
+    "0xbefea6668e49e328db4d5c792bc15cea309bbc06101dfd6ced1e0556ad3ea301": {
+      "condition_id": "0xbefea6668e49e328db4d5c792bc15cea309bbc06101dfd6ced1e0556ad3ea301",
+      "token_id": "86989765000750155883097827320609652927052275812009422751609183177638176999827",
+      "question": "Will the Buffalo Sabres win the 2026 NHL Stanley Cup?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled_outright",
+        "season_long_repricing",
+        "low_price_longshot"
+      ],
+      "confidence": 0.81,
+      "risk_flags": [
+        "wide_spread",
+        "longshot_tail",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Scheduled outright fits momentum better than news markets, but low-price tail and wide spread are concerns.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Scheduled outright fits momentum better than news markets, but low-price tail and wide spread are concerns."
+    },
+    "0x52847ca1413b76a5570b97c0c432e38dbe61b0140f9d45e912604591b08f6fca": {
+      "condition_id": "0x52847ca1413b76a5570b97c0c432e38dbe61b0140f9d45e912604591b08f6fca",
+      "token_id": "114248353339288476395516704859280406139740194553592209059241667781908210476009",
+      "question": "Will the Montreal Canadiens win the 2026 NHL Stanley Cup?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled_outright",
+        "season_long_repricing",
+        "low_price_longshot"
+      ],
+      "confidence": 0.8,
+      "risk_flags": [
+        "wide_spread",
+        "longshot_tail",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Usable outright regime in principle, but still a low-priced longshot with costly spread.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Usable outright regime in principle, but still a low-priced longshot with costly spread."
+    },
+    "0xceb5e0c99a9195da148d79693f3c6819d44d4d3d7e5be77931e174a3eebe4a85": {
+      "condition_id": "0xceb5e0c99a9195da148d79693f3c6819d44d4d3d7e5be77931e174a3eebe4a85",
+      "token_id": "1755198236548058730692725634969806667163093356894670716555961840777456036471",
+      "question": "Will the Anaheim Ducks win the 2026 NHL Stanley Cup?",
+      "decision": "avoid",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled_outright",
+        "season_long_repricing",
+        "extreme_longshot"
+      ],
+      "confidence": 0.89,
+      "risk_flags": [
+        "very_wide_spread",
+        "extreme_longshot_tail",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Outright format is fine, but this is too deep a longshot with very poor spread for systematic trading.",
+      "tradable": false,
+      "score_adjustment": -7.34,
+      "reason": "Outright format is fine, but this is too deep a longshot with very poor spread for systematic trading."
+    },
+    "0x796e791e7058571e460278814fc7a3183752285338f1400087b98bef3c447908": {
+      "condition_id": "0x796e791e7058571e460278814fc7a3183752285338f1400087b98bef3c447908",
+      "token_id": "86297520870744792204751483474339201341298076835836561764334428915355504860913",
+      "question": "Will the Los Angeles Lakers win the 2026 NBA Finals?",
+      "decision": "avoid",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled_outright",
+        "season_long_repricing",
+        "extreme_longshot"
+      ],
+      "confidence": 0.91,
+      "risk_flags": [
+        "very_wide_spread",
+        "extreme_longshot_tail",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Scheduled outright, but price is near zero and spread is too wide for robust momentum execution.",
+      "tradable": false,
+      "score_adjustment": -7.46,
+      "reason": "Scheduled outright, but price is near zero and spread is too wide for robust momentum execution."
+    },
+    "0x3b6cdd4f72cef7f29ff7e054444095564dc582266b7230be3c2b5f194d89f37d": {
+      "condition_id": "0x3b6cdd4f72cef7f29ff7e054444095564dc582266b7230be3c2b5f194d89f37d",
+      "token_id": "75497690502531380056390405612014900797768656980504946546336044296003833597355",
+      "question": "Will the Los Angeles Kings win the 2026 NHL Stanley Cup?",
+      "decision": "avoid",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled_outright",
+        "season_long_repricing",
+        "extreme_longshot"
+      ],
+      "confidence": 0.93,
+      "risk_flags": [
+        "extremely_wide_spread",
+        "extreme_longshot_tail",
+        "high_volatility",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Structure is acceptable, but near-zero pricing plus extreme spread/volatility make it a poor bot fit.",
+      "tradable": false,
+      "score_adjustment": -7.58,
+      "reason": "Structure is acceptable, but near-zero pricing plus extreme spread/volatility make it a poor bot fit."
+    },
+    "0x4c317ee82d81e0a49aa9862a8c2d876fee322064acf02cd8e1346fbed36083e8": {
+      "condition_id": "0x4c317ee82d81e0a49aa9862a8c2d876fee322064acf02cd8e1346fbed36083e8",
+      "token_id": "6772099324721707224715070437205709623671146843087680984461675764599992554029",
+      "question": "Will the Columbus Blue Jackets win the 2026 NHL Stanley Cup?",
+      "decision": "avoid",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled_outright",
+        "season_long_repricing",
+        "extreme_longshot"
+      ],
+      "confidence": 0.92,
+      "risk_flags": [
+        "wide_spread",
+        "extreme_longshot_tail",
+        "high_volatility",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Season outright is normally workable, but this contract sits in an unstable near-zero longshot regime.",
+      "tradable": false,
+      "score_adjustment": -7.52,
+      "reason": "Season outright is normally workable, but this contract sits in an unstable near-zero longshot regime."
+    },
+    "0x649ad05a2868343271fe82ea692031d567ca1af652e3529788933157e94aa088": {
+      "condition_id": "0x649ad05a2868343271fe82ea692031d567ca1af652e3529788933157e94aa088",
+      "token_id": "5771676627182954113677164857547228277089396639521594262964034606220001939923",
+      "question": "Will the Minnesota Timberwolves win the 2026 NBA Finals?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "gradual_repricing",
+        "sports_outright"
+      ],
+      "confidence": 0.79,
+      "risk_flags": [
+        "long_horizon",
+        "low_price_tail",
+        "wide_spread",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Season-long outright with orderly repricing, but very low price and wide spread make execution less reliable.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Season-long outright with orderly repricing, but very low price and wide spread make execution less reliable."
+    },
+    "0x82d8c535c037a779ffbd2eb94704b093a5341350b49ca68128fc1c16a0901e4a": {
+      "condition_id": "0x82d8c535c037a779ffbd2eb94704b093a5341350b49ca68128fc1c16a0901e4a",
+      "token_id": "96156230578747105661476819749931380321917772151891667564189808442987244872145",
+      "question": "Will the Boston Bruins win the 2026 NHL Stanley Cup?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "gradual_repricing",
+        "sports_outright"
+      ],
+      "confidence": 0.84,
+      "risk_flags": [
+        "long_horizon",
+        "low_price_tail",
+        "wide_spread",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Good outright structure, but sub-2% pricing and very wide spread create poor microstructure for momentum entries.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Good outright structure, but sub-2% pricing and very wide spread create poor microstructure for momentum entries."
+    },
+    "0x139b893a7ae21eaec72e887ba88910831944b4662512428c122c4ad0a5c125ac": {
+      "condition_id": "0x139b893a7ae21eaec72e887ba88910831944b4662512428c122c4ad0a5c125ac",
+      "token_id": "52122163926965666340769912737036425235018536048643947600257470162508745804215",
+      "question": "Will the Ottawa Senators win the 2026 NHL Stanley Cup?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "gradual_repricing",
+        "sports_outright"
+      ],
+      "confidence": 0.82,
+      "risk_flags": [
+        "long_horizon",
+        "low_price_tail",
+        "wide_spread",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Structurally acceptable season outright, but low-price tail and wide spread reduce tradability.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Structurally acceptable season outright, but low-price tail and wide spread reduce tradability."
+    },
+    "0x99d0ce2ab858154ba1ec511863dae5a9fe41731457022cf2ef8b1024cf97405a": {
+      "condition_id": "0x99d0ce2ab858154ba1ec511863dae5a9fe41731457022cf2ef8b1024cf97405a",
+      "token_id": "100198467481990754389879542132900146141512359428605143337944632886324000145723",
+      "question": "Will the New York Islanders win the 2026 NHL Stanley Cup?",
+      "decision": "avoid",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "sports_outright",
+        "extreme_longshot"
+      ],
+      "confidence": 0.93,
+      "risk_flags": [
+        "long_horizon",
+        "extreme_low_price",
+        "very_wide_spread",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Scheduled outright, but extreme longshot pricing and very wide spread make this a poor bot fit.",
+      "tradable": false,
+      "score_adjustment": -7.58,
+      "reason": "Scheduled outright, but extreme longshot pricing and very wide spread make this a poor bot fit."
+    },
+    "0xa8b42e207814d2844997523ba83e708b5bfe19cf5d2203325e4eb3ed459a9ded": {
+      "condition_id": "0xa8b42e207814d2844997523ba83e708b5bfe19cf5d2203325e4eb3ed459a9ded",
+      "token_id": "99302435322944813052105841164428761175935099146724842887228853211763294863784",
+      "question": "Will the Winnipeg Jets win the 2026 NHL Stanley Cup?",
+      "decision": "avoid",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "sports_outright",
+        "extreme_longshot"
+      ],
+      "confidence": 0.97,
+      "risk_flags": [
+        "long_horizon",
+        "extreme_low_price",
+        "very_wide_spread",
+        "high_jump_risk",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Extreme tail market with huge spread and jumpy repricing; unsuitable for systematic momentum trading.",
+      "tradable": false,
+      "score_adjustment": -7.82,
+      "reason": "Extreme tail market with huge spread and jumpy repricing; unsuitable for systematic momentum trading."
+    },
+    "0x08fa7d350c801391e7ec81d0da90f1fb05ec365f98d16d27e6d64a18d7118973": {
+      "condition_id": "0x08fa7d350c801391e7ec81d0da90f1fb05ec365f98d16d27e6d64a18d7118973",
+      "token_id": "89607539467374084618016881443767018676837500055609025995679802231807669451541",
+      "question": "Will the Washington Capitals win the 2026 NHL Stanley Cup?",
+      "decision": "avoid",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "sports_outright",
+        "extreme_longshot"
+      ],
+      "confidence": 0.98,
+      "risk_flags": [
+        "long_horizon",
+        "extreme_low_price",
+        "very_wide_spread",
+        "high_jump_risk",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Near-zero price outright with maxed-out spread; microstructure is too poor for reliable bot execution.",
+      "tradable": false,
+      "score_adjustment": -7.88,
+      "reason": "Near-zero price outright with maxed-out spread; microstructure is too poor for reliable bot execution."
+    },
+    "0x7014b40f62a559be0a0abd2bf1ca1ef16e44674b2c505bb5243c752f2e0d351f": {
+      "condition_id": "0x7014b40f62a559be0a0abd2bf1ca1ef16e44674b2c505bb5243c752f2e0d351f",
+      "token_id": "105820657025478857015993206354412568572835231572443865502882842764049428172501",
+      "question": "Will the Detroit Red Wings win the 2026 NHL Stanley Cup?",
+      "decision": "avoid",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "sports_outright",
+        "extreme_longshot"
+      ],
+      "confidence": 0.94,
+      "risk_flags": [
+        "long_horizon",
+        "extreme_low_price",
+        "very_wide_spread",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Season outright is normally workable, but this tail contract is too low-priced and wide for clean momentum trading.",
+      "tradable": false,
+      "score_adjustment": -7.64,
+      "reason": "Season outright is normally workable, but this tail contract is too low-priced and wide for clean momentum trading."
+    },
+    "0x4a67e1270a2ed86be8fc524b6114640e41b0c56303ecaa9584deacd62402650a": {
+      "condition_id": "0x4a67e1270a2ed86be8fc524b6114640e41b0c56303ecaa9584deacd62402650a",
+      "token_id": "26994926807159308505531352241892510362185630293975165092400997815774500370214",
+      "question": "Will the Edmonton Oilers win the 2026 NHL Stanley Cup?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "gradual_repricing",
+        "sports_outright"
+      ],
+      "confidence": 0.76,
+      "risk_flags": [
+        "long_horizon",
+        "moderate_liquidity",
+        "wide_spread",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Better-priced outright than the tail names and structurally suitable, but liquidity is lighter and spread still wide.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Better-priced outright than the tail names and structurally suitable, but liquidity is lighter and spread still wide."
+    },
+    "0x1e03cd6255e4dec87c7c85d2267b7b4104beba48abf50e2fc15acabbf233b308": {
+      "condition_id": "0x1e03cd6255e4dec87c7c85d2267b7b4104beba48abf50e2fc15acabbf233b308",
+      "token_id": "83053136095375464518484635535538303979818736083252284786624282549893531568449",
+      "question": "Will the New Jersey Devils win the 2026 NHL Stanley Cup?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled_outright",
+        "season_long_repricing",
+        "low_price_longshot"
+      ],
+      "confidence": 0.84,
+      "risk_flags": [
+        "extreme_longshot_price",
+        "wide_spread",
+        "high_volatility",
+        "possible_illiquidity_at_touch"
+      ],
+      "rationale": "Season-long outright is generally suitable, but this contract is an extreme low-price longshot with very wide spread and jumpy repricing, so execution quality needs manual review.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Season-long outright is generally suitable, but this contract is an extreme low-price longshot with very wide spread and jumpy repricing, so execution quality needs manual review."
+    }
+  },
+  "index_by_token_id": {
+    "35573117698117780238142713946749692621043319879346349609080985768472429209643": {
+      "condition_id": "0xbdd688664b4f3cf7ec4ec011607934fe8ae720c08353fc14a6e9dfbf6bbcf11a",
+      "token_id": "35573117698117780238142713946749692621043319879346349609080985768472429209643",
+      "question": "Will the Tampa Bay Lightning win the 2026 NHL Stanley Cup?",
+      "decision": "allow",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "gradual_repricing",
+        "team_outright"
+      ],
+      "confidence": 0.91,
+      "risk_flags": [
+        "moderate_spread"
+      ],
+      "rationale": "Season-long sports outright with clear resolution and steady repricing; liquidity/history are solid.",
+      "tradable": true,
+      "score_adjustment": 7.46,
+      "reason": "Season-long sports outright with clear resolution and steady repricing; liquidity/history are solid."
+    },
+    "98951343420969493497594761179562691809954416596888138302255086663562042936451": {
+      "condition_id": "0x13e1cc703a120883a709d3bb29707097952845d61ca6793ea2b4328bae2a7451",
+      "token_id": "98951343420969493497594761179562691809954416596888138302255086663562042936451",
+      "question": "Will the Boston Celtics win the 2026 NBA Finals?",
+      "decision": "allow",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "gradual_repricing",
+        "team_outright"
+      ],
+      "confidence": 0.89,
+      "risk_flags": [
+        "moderate_spread"
+      ],
+      "rationale": "Good fit as a liquid season-long outright with predictable information flow and non-ambiguous resolution.",
+      "tradable": true,
+      "score_adjustment": 7.34,
+      "reason": "Good fit as a liquid season-long outright with predictable information flow and non-ambiguous resolution."
+    },
+    "101738487887518832481587379955535423775326921556438741919099866785354159699479": {
+      "condition_id": "0xf8f63bb47b2a7c2e0c1be3cedf4075079b11c07476d76a9469065b0c4791961a",
+      "token_id": "101738487887518832481587379955535423775326921556438741919099866785354159699479",
+      "question": "Will the Colorado Avalanche win the 2026 NHL Stanley Cup?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "gradual_repricing",
+        "team_outright"
+      ],
+      "confidence": 0.69,
+      "risk_flags": [
+        "wide_spread"
+      ],
+      "rationale": "Structurally good outright, but spread is fairly wide for efficient momentum execution.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Structurally good outright, but spread is fairly wide for efficient momentum execution."
+    },
+    "49500299856831034491021962156746701298730459370557900271970866855042624695770": {
+      "condition_id": "0x22e7b5e35423e76842dd3a5e1a21d13793811080d5e7b2896d0c001bd5e97d54",
+      "token_id": "49500299856831034491021962156746701298730459370557900271970866855042624695770",
+      "question": "Will the Oklahoma City Thunder win the 2026 NBA Finals?",
+      "decision": "allow",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "gradual_repricing",
+        "team_outright"
+      ],
+      "confidence": 0.92,
+      "risk_flags": [],
+      "rationale": "Strong structural fit: liquid, scheduled outright with gradual repricing and relatively tight spread.",
+      "tradable": true,
+      "score_adjustment": 7.52,
+      "reason": "Strong structural fit: liquid, scheduled outright with gradual repricing and relatively tight spread."
+    },
+    "17581551835670188629115760053820570516688258623733228909199148495084738589631": {
+      "condition_id": "0x44887f53abbfe7531b1384420b185a5f10ee42a4e6c9441d5883abd4f3c1e5ef",
+      "token_id": "17581551835670188629115760053820570516688258623733228909199148495084738589631",
+      "question": "Will the Dallas Stars win the 2026 NHL Stanley Cup?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "gradual_repricing",
+        "team_outright",
+        "low_price_tail"
+      ],
+      "confidence": 0.72,
+      "risk_flags": [
+        "price_outside_bot_range",
+        "low_yes_price",
+        "high_volatility"
+      ],
+      "rationale": "Outright structure is fine, but very low price and elevated volatility make execution less clean for this bot.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Outright structure is fine, but very low price and elevated volatility make execution less clean for this bot."
+    },
+    "68803485030073596962715540294172682212192134248970512695855620898253368033218": {
+      "condition_id": "0x89389a6b1439856a8d366234c795d72865c927a1aa3cf9d4cc04a3a400defde1",
+      "token_id": "68803485030073596962715540294172682212192134248970512695855620898253368033218",
+      "question": "Will the Vegas Golden Knights win the 2026 NHL Stanley Cup?",
+      "decision": "avoid",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "team_outright",
+        "low_price_tail",
+        "shocky_repricing"
+      ],
+      "confidence": 0.9,
+      "risk_flags": [
+        "price_outside_bot_range",
+        "low_yes_price",
+        "extreme_24h_move",
+        "high_volatility"
+      ],
+      "rationale": "Despite clear resolution, this is deep low-price tail with shocky moves and outside configured range.",
+      "tradable": false,
+      "score_adjustment": -7.4,
+      "reason": "Despite clear resolution, this is deep low-price tail with shocky moves and outside configured range."
+    },
+    "77381084121703585434442737895792916741546405992903866299069398776973629407962": {
+      "condition_id": "0xfdc1041ba84bfd8f741eee0bdafce8b1887626c83afd017d18ee9b1f77008b9f",
+      "token_id": "77381084121703585434442737895792916741546405992903866299069398776973629407962",
+      "question": "Will the Utah Mammoth win the 2026 NHL Stanley Cup?",
+      "decision": "avoid",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "team_outright",
+        "low_price_tail",
+        "shocky_repricing"
+      ],
+      "confidence": 0.93,
+      "risk_flags": [
+        "price_outside_bot_range",
+        "very_low_yes_price",
+        "high_volatility",
+        "wide_spread"
+      ],
+      "rationale": "Very low-priced longshot with wide spread and volatile repricing; poor fit for systematic momentum trading.",
+      "tradable": false,
+      "score_adjustment": -7.58,
+      "reason": "Very low-priced longshot with wide spread and volatile repricing; poor fit for systematic momentum trading."
+    },
+    "20257190540739490630509657713144742134547949967093643458458133445357169845406": {
+      "condition_id": "0x713641f745d71f6ec61f906237ffca3c8583f251e49384429a63ceb0ccdb2d37",
+      "token_id": "20257190540739490630509657713144742134547949967093643458458133445357169845406",
+      "question": "Will the New York Knicks win the 2026 NBA Finals?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "team_outright",
+        "low_price_tail",
+        "gradual_repricing"
+      ],
+      "confidence": 0.76,
+      "risk_flags": [
+        "price_outside_bot_range",
+        "low_yes_price"
+      ],
+      "rationale": "Market structure is acceptable, but the very low price tail and bot ineligibility argue for manual inspection.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Market structure is acceptable, but the very low price tail and bot ineligibility argue for manual inspection."
+    },
+    "8851645587670338204652278122922654341568030658294043049798551516787478126093": {
+      "condition_id": "0x9e54856d758cd7de25b75c97273a38d711642f16eacad57e61982028f2791206",
+      "token_id": "8851645587670338204652278122922654341568030658294043049798551516787478126093",
+      "question": "Will the Pittsburgh Penguins win the 2026 NHL Stanley Cup?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled_outright",
+        "season_long_repricing",
+        "low_price_longshot"
+      ],
+      "confidence": 0.79,
+      "risk_flags": [
+        "wide_spread",
+        "longshot_tail",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Good outright structure, but very low price and wide spread make execution/repricing less reliable.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Good outright structure, but very low price and wide spread make execution/repricing less reliable."
+    },
+    "52393600221905688380980180540161090876971894580569515967716227210336633318551": {
+      "condition_id": "0x0d082a85f48a5226b1205acdb6e95ead2fe373acabcf6c471f5895f86f42a276",
+      "token_id": "52393600221905688380980180540161090876971894580569515967716227210336633318551",
+      "question": "Will the Minnesota Wild win the 2026 NHL Stanley Cup?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled_outright",
+        "season_long_repricing",
+        "low_price_longshot"
+      ],
+      "confidence": 0.81,
+      "risk_flags": [
+        "very_wide_spread",
+        "longshot_tail",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Season outright is structurally decent, but spread is very wide and price is deep longshot.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Season outright is structurally decent, but spread is very wide and price is deep longshot."
+    },
+    "86989765000750155883097827320609652927052275812009422751609183177638176999827": {
+      "condition_id": "0xbefea6668e49e328db4d5c792bc15cea309bbc06101dfd6ced1e0556ad3ea301",
+      "token_id": "86989765000750155883097827320609652927052275812009422751609183177638176999827",
+      "question": "Will the Buffalo Sabres win the 2026 NHL Stanley Cup?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled_outright",
+        "season_long_repricing",
+        "low_price_longshot"
+      ],
+      "confidence": 0.81,
+      "risk_flags": [
+        "wide_spread",
+        "longshot_tail",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Scheduled outright fits momentum better than news markets, but low-price tail and wide spread are concerns.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Scheduled outright fits momentum better than news markets, but low-price tail and wide spread are concerns."
+    },
+    "114248353339288476395516704859280406139740194553592209059241667781908210476009": {
+      "condition_id": "0x52847ca1413b76a5570b97c0c432e38dbe61b0140f9d45e912604591b08f6fca",
+      "token_id": "114248353339288476395516704859280406139740194553592209059241667781908210476009",
+      "question": "Will the Montreal Canadiens win the 2026 NHL Stanley Cup?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled_outright",
+        "season_long_repricing",
+        "low_price_longshot"
+      ],
+      "confidence": 0.8,
+      "risk_flags": [
+        "wide_spread",
+        "longshot_tail",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Usable outright regime in principle, but still a low-priced longshot with costly spread.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Usable outright regime in principle, but still a low-priced longshot with costly spread."
+    },
+    "1755198236548058730692725634969806667163093356894670716555961840777456036471": {
+      "condition_id": "0xceb5e0c99a9195da148d79693f3c6819d44d4d3d7e5be77931e174a3eebe4a85",
+      "token_id": "1755198236548058730692725634969806667163093356894670716555961840777456036471",
+      "question": "Will the Anaheim Ducks win the 2026 NHL Stanley Cup?",
+      "decision": "avoid",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled_outright",
+        "season_long_repricing",
+        "extreme_longshot"
+      ],
+      "confidence": 0.89,
+      "risk_flags": [
+        "very_wide_spread",
+        "extreme_longshot_tail",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Outright format is fine, but this is too deep a longshot with very poor spread for systematic trading.",
+      "tradable": false,
+      "score_adjustment": -7.34,
+      "reason": "Outright format is fine, but this is too deep a longshot with very poor spread for systematic trading."
+    },
+    "86297520870744792204751483474339201341298076835836561764334428915355504860913": {
+      "condition_id": "0x796e791e7058571e460278814fc7a3183752285338f1400087b98bef3c447908",
+      "token_id": "86297520870744792204751483474339201341298076835836561764334428915355504860913",
+      "question": "Will the Los Angeles Lakers win the 2026 NBA Finals?",
+      "decision": "avoid",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled_outright",
+        "season_long_repricing",
+        "extreme_longshot"
+      ],
+      "confidence": 0.91,
+      "risk_flags": [
+        "very_wide_spread",
+        "extreme_longshot_tail",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Scheduled outright, but price is near zero and spread is too wide for robust momentum execution.",
+      "tradable": false,
+      "score_adjustment": -7.46,
+      "reason": "Scheduled outright, but price is near zero and spread is too wide for robust momentum execution."
+    },
+    "75497690502531380056390405612014900797768656980504946546336044296003833597355": {
+      "condition_id": "0x3b6cdd4f72cef7f29ff7e054444095564dc582266b7230be3c2b5f194d89f37d",
+      "token_id": "75497690502531380056390405612014900797768656980504946546336044296003833597355",
+      "question": "Will the Los Angeles Kings win the 2026 NHL Stanley Cup?",
+      "decision": "avoid",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled_outright",
+        "season_long_repricing",
+        "extreme_longshot"
+      ],
+      "confidence": 0.93,
+      "risk_flags": [
+        "extremely_wide_spread",
+        "extreme_longshot_tail",
+        "high_volatility",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Structure is acceptable, but near-zero pricing plus extreme spread/volatility make it a poor bot fit.",
+      "tradable": false,
+      "score_adjustment": -7.58,
+      "reason": "Structure is acceptable, but near-zero pricing plus extreme spread/volatility make it a poor bot fit."
+    },
+    "6772099324721707224715070437205709623671146843087680984461675764599992554029": {
+      "condition_id": "0x4c317ee82d81e0a49aa9862a8c2d876fee322064acf02cd8e1346fbed36083e8",
+      "token_id": "6772099324721707224715070437205709623671146843087680984461675764599992554029",
+      "question": "Will the Columbus Blue Jackets win the 2026 NHL Stanley Cup?",
+      "decision": "avoid",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled_outright",
+        "season_long_repricing",
+        "extreme_longshot"
+      ],
+      "confidence": 0.92,
+      "risk_flags": [
+        "wide_spread",
+        "extreme_longshot_tail",
+        "high_volatility",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Season outright is normally workable, but this contract sits in an unstable near-zero longshot regime.",
+      "tradable": false,
+      "score_adjustment": -7.52,
+      "reason": "Season outright is normally workable, but this contract sits in an unstable near-zero longshot regime."
+    },
+    "5771676627182954113677164857547228277089396639521594262964034606220001939923": {
+      "condition_id": "0x649ad05a2868343271fe82ea692031d567ca1af652e3529788933157e94aa088",
+      "token_id": "5771676627182954113677164857547228277089396639521594262964034606220001939923",
+      "question": "Will the Minnesota Timberwolves win the 2026 NBA Finals?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "gradual_repricing",
+        "sports_outright"
+      ],
+      "confidence": 0.79,
+      "risk_flags": [
+        "long_horizon",
+        "low_price_tail",
+        "wide_spread",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Season-long outright with orderly repricing, but very low price and wide spread make execution less reliable.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Season-long outright with orderly repricing, but very low price and wide spread make execution less reliable."
+    },
+    "96156230578747105661476819749931380321917772151891667564189808442987244872145": {
+      "condition_id": "0x82d8c535c037a779ffbd2eb94704b093a5341350b49ca68128fc1c16a0901e4a",
+      "token_id": "96156230578747105661476819749931380321917772151891667564189808442987244872145",
+      "question": "Will the Boston Bruins win the 2026 NHL Stanley Cup?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "gradual_repricing",
+        "sports_outright"
+      ],
+      "confidence": 0.84,
+      "risk_flags": [
+        "long_horizon",
+        "low_price_tail",
+        "wide_spread",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Good outright structure, but sub-2% pricing and very wide spread create poor microstructure for momentum entries.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Good outright structure, but sub-2% pricing and very wide spread create poor microstructure for momentum entries."
+    },
+    "52122163926965666340769912737036425235018536048643947600257470162508745804215": {
+      "condition_id": "0x139b893a7ae21eaec72e887ba88910831944b4662512428c122c4ad0a5c125ac",
+      "token_id": "52122163926965666340769912737036425235018536048643947600257470162508745804215",
+      "question": "Will the Ottawa Senators win the 2026 NHL Stanley Cup?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "gradual_repricing",
+        "sports_outright"
+      ],
+      "confidence": 0.82,
+      "risk_flags": [
+        "long_horizon",
+        "low_price_tail",
+        "wide_spread",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Structurally acceptable season outright, but low-price tail and wide spread reduce tradability.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Structurally acceptable season outright, but low-price tail and wide spread reduce tradability."
+    },
+    "100198467481990754389879542132900146141512359428605143337944632886324000145723": {
+      "condition_id": "0x99d0ce2ab858154ba1ec511863dae5a9fe41731457022cf2ef8b1024cf97405a",
+      "token_id": "100198467481990754389879542132900146141512359428605143337944632886324000145723",
+      "question": "Will the New York Islanders win the 2026 NHL Stanley Cup?",
+      "decision": "avoid",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "sports_outright",
+        "extreme_longshot"
+      ],
+      "confidence": 0.93,
+      "risk_flags": [
+        "long_horizon",
+        "extreme_low_price",
+        "very_wide_spread",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Scheduled outright, but extreme longshot pricing and very wide spread make this a poor bot fit.",
+      "tradable": false,
+      "score_adjustment": -7.58,
+      "reason": "Scheduled outright, but extreme longshot pricing and very wide spread make this a poor bot fit."
+    },
+    "99302435322944813052105841164428761175935099146724842887228853211763294863784": {
+      "condition_id": "0xa8b42e207814d2844997523ba83e708b5bfe19cf5d2203325e4eb3ed459a9ded",
+      "token_id": "99302435322944813052105841164428761175935099146724842887228853211763294863784",
+      "question": "Will the Winnipeg Jets win the 2026 NHL Stanley Cup?",
+      "decision": "avoid",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "sports_outright",
+        "extreme_longshot"
+      ],
+      "confidence": 0.97,
+      "risk_flags": [
+        "long_horizon",
+        "extreme_low_price",
+        "very_wide_spread",
+        "high_jump_risk",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Extreme tail market with huge spread and jumpy repricing; unsuitable for systematic momentum trading.",
+      "tradable": false,
+      "score_adjustment": -7.82,
+      "reason": "Extreme tail market with huge spread and jumpy repricing; unsuitable for systematic momentum trading."
+    },
+    "89607539467374084618016881443767018676837500055609025995679802231807669451541": {
+      "condition_id": "0x08fa7d350c801391e7ec81d0da90f1fb05ec365f98d16d27e6d64a18d7118973",
+      "token_id": "89607539467374084618016881443767018676837500055609025995679802231807669451541",
+      "question": "Will the Washington Capitals win the 2026 NHL Stanley Cup?",
+      "decision": "avoid",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "sports_outright",
+        "extreme_longshot"
+      ],
+      "confidence": 0.98,
+      "risk_flags": [
+        "long_horizon",
+        "extreme_low_price",
+        "very_wide_spread",
+        "high_jump_risk",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Near-zero price outright with maxed-out spread; microstructure is too poor for reliable bot execution.",
+      "tradable": false,
+      "score_adjustment": -7.88,
+      "reason": "Near-zero price outright with maxed-out spread; microstructure is too poor for reliable bot execution."
+    },
+    "105820657025478857015993206354412568572835231572443865502882842764049428172501": {
+      "condition_id": "0x7014b40f62a559be0a0abd2bf1ca1ef16e44674b2c505bb5243c752f2e0d351f",
+      "token_id": "105820657025478857015993206354412568572835231572443865502882842764049428172501",
+      "question": "Will the Detroit Red Wings win the 2026 NHL Stanley Cup?",
+      "decision": "avoid",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "sports_outright",
+        "extreme_longshot"
+      ],
+      "confidence": 0.94,
+      "risk_flags": [
+        "long_horizon",
+        "extreme_low_price",
+        "very_wide_spread",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Season outright is normally workable, but this tail contract is too low-priced and wide for clean momentum trading.",
+      "tradable": false,
+      "score_adjustment": -7.64,
+      "reason": "Season outright is normally workable, but this tail contract is too low-priced and wide for clean momentum trading."
+    },
+    "26994926807159308505531352241892510362185630293975165092400997815774500370214": {
+      "condition_id": "0x4a67e1270a2ed86be8fc524b6114640e41b0c56303ecaa9584deacd62402650a",
+      "token_id": "26994926807159308505531352241892510362185630293975165092400997815774500370214",
+      "question": "Will the Edmonton Oilers win the 2026 NHL Stanley Cup?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled",
+        "season_long",
+        "gradual_repricing",
+        "sports_outright"
+      ],
+      "confidence": 0.76,
+      "risk_flags": [
+        "long_horizon",
+        "moderate_liquidity",
+        "wide_spread",
+        "outside_bot_price_range"
+      ],
+      "rationale": "Better-priced outright than the tail names and structurally suitable, but liquidity is lighter and spread still wide.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Better-priced outright than the tail names and structurally suitable, but liquidity is lighter and spread still wide."
+    },
+    "83053136095375464518484635535538303979818736083252284786624282549893531568449": {
+      "condition_id": "0x1e03cd6255e4dec87c7c85d2267b7b4104beba48abf50e2fc15acabbf233b308",
+      "token_id": "83053136095375464518484635535538303979818736083252284786624282549893531568449",
+      "question": "Will the New Jersey Devils win the 2026 NHL Stanley Cup?",
+      "decision": "review",
+      "family": "sports_outright",
+      "regime_labels": [
+        "scheduled_outright",
+        "season_long_repricing",
+        "low_price_longshot"
+      ],
+      "confidence": 0.84,
+      "risk_flags": [
+        "extreme_longshot_price",
+        "wide_spread",
+        "high_volatility",
+        "possible_illiquidity_at_touch"
+      ],
+      "rationale": "Season-long outright is generally suitable, but this contract is an extreme low-price longshot with very wide spread and jumpy repricing, so execution quality needs manual review.",
+      "tradable": false,
+      "score_adjustment": 0.0,
+      "reason": "Season-long outright is generally suitable, but this contract is an extreme low-price longshot with very wide spread and jumpy repricing, so execution quality needs manual review."
+    }
+  }
+}

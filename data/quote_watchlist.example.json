@@ -1,0 +1,11 @@
+[
+  {
+    "token_id": "12345678901234567890",
+    "condition_id": "0xabc123...",
+    "question": "Example market",
+    "outcome": "Yes"
+  },
+  {
+    "condition_id": "0xdef456..."
+  }
+]

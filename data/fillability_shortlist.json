@@ -1,0 +1,250 @@
+{
+  "window": "10",
+  "summary": {
+    "market_count": 10,
+    "top_markets": [
+      {
+        "question": "Will the San Antonio Spurs win the 2026 NBA Finals?",
+        "outcome": "Yes",
+        "token_id": "102227184035967850089766981958743064457339118173548431660886438726896222843254",
+        "csv": "quote_backtest_102227184035967850089766981958743064457339118173548431660886438726896222843254.csv",
+        "window": "10",
+        "metrics": {
+          "at_touch_crossed_price_rate": 0.0554,
+          "one_tick_inside_crossed_price_rate": 0.1591,
+          "never_touched_rate": 0.8523,
+          "avg_spread_bps": 173.61,
+          "avg_abs_next_move_bps": 28.69
+        },
+        "fillability_score": 14.96,
+        "rank": 1
+      },
+      {
+        "question": "Will the San Antonio Spurs win the 2026 NBA Finals?",
+        "outcome": "No",
+        "token_id": "12636035070565821048178968461063687179393834041535317885287743395873720755118",
+        "csv": "quote_backtest_12636035070565821048178968461063687179393834041535317885287743395873720755118.csv",
+        "window": "10",
+        "metrics": {
+          "at_touch_crossed_price_rate": 0.0554,
+          "one_tick_inside_crossed_price_rate": 0.1591,
+          "never_touched_rate": 0.8523,
+          "avg_spread_bps": 173.61,
+          "avg_abs_next_move_bps": 28.69
+        },
+        "fillability_score": 14.96,
+        "rank": 2
+      },
+      {
+        "question": "Will the Tampa Bay Lightning win the 2026 NHL Stanley Cup?",
+        "outcome": "Yes",
+        "token_id": "35573117698117780238142713946749692621043319879346349609080985768472429209643",
+        "csv": "quote_backtest_35573117698117780238142713946749692621043319879346349609080985768472429209643.csv",
+        "window": "10",
+        "metrics": {
+          "at_touch_crossed_price_rate": 0.0229,
+          "one_tick_inside_crossed_price_rate": 0.0513,
+          "never_touched_rate": 0.8564,
+          "avg_spread_bps": 173.35,
+          "avg_abs_next_move_bps": 18.74
+        },
+        "fillability_score": 5.32,
+        "rank": 3
+      },
+      {
+        "question": "Will the Tampa Bay Lightning win the 2026 NHL Stanley Cup?",
+        "outcome": "No",
+        "token_id": "76626937605855383085159195963889428951048025160807952406004049979161449392204",
+        "csv": "quote_backtest_76626937605855383085159195963889428951048025160807952406004049979161449392204.csv",
+        "window": "10",
+        "metrics": {
+          "at_touch_crossed_price_rate": 0.0229,
+          "one_tick_inside_crossed_price_rate": 0.0513,
+          "never_touched_rate": 0.8564,
+          "avg_spread_bps": 173.35,
+          "avg_abs_next_move_bps": 18.74
+        },
+        "fillability_score": 5.32,
+        "rank": 4
+      },
+      {
+        "question": "Will the Boston Celtics win the 2026 NBA Finals?",
+        "outcome": "No",
+        "token_id": "68988781087071608596579516085819336301201525599500826069950065091990393143710",
+        "csv": "quote_backtest_68988781087071608596579516085819336301201525599500826069950065091990393143710.csv",
+        "window": "10",
+        "metrics": {
+          "at_touch_crossed_price_rate": 0.0091,
+          "one_tick_inside_crossed_price_rate": 0.0221,
+          "never_touched_rate": 0.9543,
+          "avg_spread_bps": 257.3,
+          "avg_abs_next_move_bps": 15.37
+        },
+        "fillability_score": -4.27,
+        "rank": 5
+      }
+    ]
+  },
+  "ranked": [
+    {
+      "question": "Will the San Antonio Spurs win the 2026 NBA Finals?",
+      "outcome": "Yes",
+      "token_id": "102227184035967850089766981958743064457339118173548431660886438726896222843254",
+      "csv": "quote_backtest_102227184035967850089766981958743064457339118173548431660886438726896222843254.csv",
+      "window": "10",
+      "metrics": {
+        "at_touch_crossed_price_rate": 0.0554,
+        "one_tick_inside_crossed_price_rate": 0.1591,
+        "never_touched_rate": 0.8523,
+        "avg_spread_bps": 173.61,
+        "avg_abs_next_move_bps": 28.69
+      },
+      "fillability_score": 14.96,
+      "rank": 1
+    },
+    {
+      "question": "Will the San Antonio Spurs win the 2026 NBA Finals?",
+      "outcome": "No",
+      "token_id": "12636035070565821048178968461063687179393834041535317885287743395873720755118",
+      "csv": "quote_backtest_12636035070565821048178968461063687179393834041535317885287743395873720755118.csv",
+      "window": "10",
+      "metrics": {
+        "at_touch_crossed_price_rate": 0.0554,
+        "one_tick_inside_crossed_price_rate": 0.1591,
+        "never_touched_rate": 0.8523,
+        "avg_spread_bps": 173.61,
+        "avg_abs_next_move_bps": 28.69
+      },
+      "fillability_score": 14.96,
+      "rank": 2
+    },
+    {
+      "question": "Will the Tampa Bay Lightning win the 2026 NHL Stanley Cup?",
+      "outcome": "Yes",
+      "token_id": "35573117698117780238142713946749692621043319879346349609080985768472429209643",
+      "csv": "quote_backtest_35573117698117780238142713946749692621043319879346349609080985768472429209643.csv",
+      "window": "10",
+      "metrics": {
+        "at_touch_crossed_price_rate": 0.0229,
+        "one_tick_inside_crossed_price_rate": 0.0513,
+        "never_touched_rate": 0.8564,
+        "avg_spread_bps": 173.35,
+        "avg_abs_next_move_bps": 18.74
+      },
+      "fillability_score": 5.32,
+      "rank": 3
+    },
+    {
+      "question": "Will the Tampa Bay Lightning win the 2026 NHL Stanley Cup?",
+      "outcome": "No",
+      "token_id": "76626937605855383085159195963889428951048025160807952406004049979161449392204",
+      "csv": "quote_backtest_76626937605855383085159195963889428951048025160807952406004049979161449392204.csv",
+      "window": "10",
+      "metrics": {
+        "at_touch_crossed_price_rate": 0.0229,
+        "one_tick_inside_crossed_price_rate": 0.0513,
+        "never_touched_rate": 0.8564,
+        "avg_spread_bps": 173.35,
+        "avg_abs_next_move_bps": 18.74
+      },
+      "fillability_score": 5.32,
+      "rank": 4
+    },
+    {
+      "question": "Will the Boston Celtics win the 2026 NBA Finals?",
+      "outcome": "No",
+      "token_id": "68988781087071608596579516085819336301201525599500826069950065091990393143710",
+      "csv": "quote_backtest_68988781087071608596579516085819336301201525599500826069950065091990393143710.csv",
+      "window": "10",
+      "metrics": {
+        "at_touch_crossed_price_rate": 0.0091,
+        "one_tick_inside_crossed_price_rate": 0.0221,
+        "never_touched_rate": 0.9543,
+        "avg_spread_bps": 257.3,
+        "avg_abs_next_move_bps": 15.37
+      },
+      "fillability_score": -4.27,
+      "rank": 5
+    },
+    {
+      "question": "Will the Boston Celtics win the 2026 NBA Finals?",
+      "outcome": "Yes",
+      "token_id": "98951343420969493497594761179562691809954416596888138302255086663562042936451",
+      "csv": "quote_backtest_98951343420969493497594761179562691809954416596888138302255086663562042936451.csv",
+      "window": "10",
+      "metrics": {
+        "at_touch_crossed_price_rate": 0.0091,
+        "one_tick_inside_crossed_price_rate": 0.0221,
+        "never_touched_rate": 0.9543,
+        "avg_spread_bps": 257.3,
+        "avg_abs_next_move_bps": 15.37
+      },
+      "fillability_score": -4.27,
+      "rank": 6
+    },
+    {
+      "question": "Will the Oklahoma City Thunder win the 2026 NBA Finals?",
+      "outcome": "No",
+      "token_id": "44914465637297319816681463234953032477919413063019359633128421605039733545953",
+      "csv": "quote_backtest_44914465637297319816681463234953032477919413063019359633128421605039733545953.csv",
+      "window": "10",
+      "metrics": {
+        "at_touch_crossed_price_rate": 0.0091,
+        "one_tick_inside_crossed_price_rate": 0.0091,
+        "never_touched_rate": 0.9771,
+        "avg_spread_bps": 260.93,
+        "avg_abs_next_move_bps": 6.61
+      },
+      "fillability_score": -9.13,
+      "rank": 7
+    },
+    {
+      "question": "Will the Oklahoma City Thunder win the 2026 NBA Finals?",
+      "outcome": "Yes",
+      "token_id": "49500299856831034491021962156746701298730459370557900271970866855042624695770",
+      "csv": "quote_backtest_49500299856831034491021962156746701298730459370557900271970866855042624695770.csv",
+      "window": "10",
+      "metrics": {
+        "at_touch_crossed_price_rate": 0.0091,
+        "one_tick_inside_crossed_price_rate": 0.0091,
+        "never_touched_rate": 0.9771,
+        "avg_spread_bps": 260.93,
+        "avg_abs_next_move_bps": 6.61
+      },
+      "fillability_score": -9.13,
+      "rank": 8
+    },
+    {
+      "question": "Will the Denver Nuggets win the 2026 NBA Finals?",
+      "outcome": "Yes",
+      "token_id": "56814725870179920615881424393027028330166672775619196396436430486653645555698",
+      "csv": "quote_backtest_56814725870179920615881424393027028330166672775619196396436430486653645555698.csv",
+      "window": "10",
+      "metrics": {
+        "at_touch_crossed_price_rate": 0.0093,
+        "one_tick_inside_crossed_price_rate": 0.0093,
+        "never_touched_rate": 0.9907,
+        "avg_spread_bps": 948.91,
+        "avg_abs_next_move_bps": 7.11
+      },
+      "fillability_score": -16.13,
+      "rank": 9
+    },
+    {
+      "question": "Will the Denver Nuggets win the 2026 NBA Finals?",
+      "outcome": "No",
+      "token_id": "76502490060038468983308870100553689583720145873703214557423080536912388384600",
+      "csv": "quote_backtest_76502490060038468983308870100553689583720145873703214557423080536912388384600.csv",
+      "window": "10",
+      "metrics": {
+        "at_touch_crossed_price_rate": 0.0093,
+        "one_tick_inside_crossed_price_rate": 0.0093,
+        "never_touched_rate": 0.9907,
+        "avg_spread_bps": 948.91,
+        "avg_abs_next_move_bps": 7.11
+      },
+      "fillability_score": -16.13,
+      "rank": 10
+    }
+  ]
+}

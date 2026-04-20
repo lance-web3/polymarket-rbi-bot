@@ -1,0 +1,222 @@
+{
+  "mode": "quote_backtests",
+  "summary": {
+    "conditions_scanned": 5,
+    "timestamp_rows_scanned": 10940,
+    "buy_bundle_count": 0,
+    "sell_bundle_count": 0,
+    "invalid_quote_rows": 40,
+    "rejected_reference_rows": 10940,
+    "ask_buffer": 0.01,
+    "bid_buffer": 0.01,
+    "min_rows_per_condition": 3,
+    "min_reference_sum": 0.95,
+    "max_reference_sum": 1.05,
+    "top_requested": 10
+  },
+  "shortlist": [],
+  "ranked_conditions": [
+    {
+      "condition_id": "0x13e1cc703a120883a709d3bb29707097952845d61ca6793ea2b4328bae2a7451",
+      "question": "Will the Boston Celtics win the 2026 NBA Finals?",
+      "outcomes": [
+        "No",
+        "Yes"
+      ],
+      "paths": [
+        "data/quote_backtests/quote_backtest_68988781087071608596579516085819336301201525599500826069950065091990393143710.csv",
+        "data/quote_backtests/quote_backtest_98951343420969493497594761179562691809954416596888138302255086663562042936451.csv"
+      ],
+      "aligned_rows": 2188,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 2188,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0x22e7b5e35423e76842dd3a5e1a21d13793811080d5e7b2896d0c001bd5e97d54",
+      "question": "Will the Oklahoma City Thunder win the 2026 NBA Finals?",
+      "outcomes": [
+        "No",
+        "Yes"
+      ],
+      "paths": [
+        "data/quote_backtests/quote_backtest_44914465637297319816681463234953032477919413063019359633128421605039733545953.csv",
+        "data/quote_backtests/quote_backtest_49500299856831034491021962156746701298730459370557900271970866855042624695770.csv"
+      ],
+      "aligned_rows": 2188,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 2188,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0x4e65282819c98c6aed529f357fbf5983b1ae9407a3c25bd50fe97b2906df68f9",
+      "question": "Will the Denver Nuggets win the 2026 NBA Finals?",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "paths": [
+        "data/quote_backtests/quote_backtest_56814725870179920615881424393027028330166672775619196396436430486653645555698.csv",
+        "data/quote_backtests/quote_backtest_76502490060038468983308870100553689583720145873703214557423080536912388384600.csv"
+      ],
+      "aligned_rows": 2188,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 40,
+      "rejected_reference_rows": 2188,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0xb6b3d7a2037b3faa7e1306d741840d453432902d73cc9a146a035e40271eae73",
+      "question": "Will the San Antonio Spurs win the 2026 NBA Finals?",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "paths": [
+        "data/quote_backtests/quote_backtest_102227184035967850089766981958743064457339118173548431660886438726896222843254.csv",
+        "data/quote_backtests/quote_backtest_12636035070565821048178968461063687179393834041535317885287743395873720755118.csv"
+      ],
+      "aligned_rows": 2188,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 2188,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0xbdd688664b4f3cf7ec4ec011607934fe8ae720c08353fc14a6e9dfbf6bbcf11a",
+      "question": "Will the Tampa Bay Lightning win the 2026 NHL Stanley Cup?",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "paths": [
+        "data/quote_backtests/quote_backtest_35573117698117780238142713946749692621043319879346349609080985768472429209643.csv",
+        "data/quote_backtests/quote_backtest_76626937605855383085159195963889428951048025160807952406004049979161449392204.csv"
+      ],
+      "aligned_rows": 2188,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 2188,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    }
+  ],
+  "all_condition_summaries": [
+    {
+      "condition_id": "0x13e1cc703a120883a709d3bb29707097952845d61ca6793ea2b4328bae2a7451",
+      "question": "Will the Boston Celtics win the 2026 NBA Finals?",
+      "outcomes": [
+        "No",
+        "Yes"
+      ],
+      "paths": [
+        "data/quote_backtests/quote_backtest_68988781087071608596579516085819336301201525599500826069950065091990393143710.csv",
+        "data/quote_backtests/quote_backtest_98951343420969493497594761179562691809954416596888138302255086663562042936451.csv"
+      ],
+      "aligned_rows": 2188,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 2188,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0x22e7b5e35423e76842dd3a5e1a21d13793811080d5e7b2896d0c001bd5e97d54",
+      "question": "Will the Oklahoma City Thunder win the 2026 NBA Finals?",
+      "outcomes": [
+        "No",
+        "Yes"
+      ],
+      "paths": [
+        "data/quote_backtests/quote_backtest_44914465637297319816681463234953032477919413063019359633128421605039733545953.csv",
+        "data/quote_backtests/quote_backtest_49500299856831034491021962156746701298730459370557900271970866855042624695770.csv"
+      ],
+      "aligned_rows": 2188,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 2188,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0x4e65282819c98c6aed529f357fbf5983b1ae9407a3c25bd50fe97b2906df68f9",
+      "question": "Will the Denver Nuggets win the 2026 NBA Finals?",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "paths": [
+        "data/quote_backtests/quote_backtest_56814725870179920615881424393027028330166672775619196396436430486653645555698.csv",
+        "data/quote_backtests/quote_backtest_76502490060038468983308870100553689583720145873703214557423080536912388384600.csv"
+      ],
+      "aligned_rows": 2188,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 40,
+      "rejected_reference_rows": 2188,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0xb6b3d7a2037b3faa7e1306d741840d453432902d73cc9a146a035e40271eae73",
+      "question": "Will the San Antonio Spurs win the 2026 NBA Finals?",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "paths": [
+        "data/quote_backtests/quote_backtest_102227184035967850089766981958743064457339118173548431660886438726896222843254.csv",
+        "data/quote_backtests/quote_backtest_12636035070565821048178968461063687179393834041535317885287743395873720755118.csv"
+      ],
+      "aligned_rows": 2188,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 2188,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0xbdd688664b4f3cf7ec4ec011607934fe8ae720c08353fc14a6e9dfbf6bbcf11a",
+      "question": "Will the Tampa Bay Lightning win the 2026 NHL Stanley Cup?",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "paths": [
+        "data/quote_backtests/quote_backtest_35573117698117780238142713946749692621043319879346349609080985768472429209643.csv",
+        "data/quote_backtests/quote_backtest_76626937605855383085159195963889428951048025160807952406004049979161449392204.csv"
+      ],
+      "aligned_rows": 2188,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 2188,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    }
+  ],
+  "notes": [
+    "quote-backtest mode requires one CSV per token with shared condition_id and aligned timestamps.",
+    "Executable bundle signals are only emitted when every leg has sane quotes (0<=bid<=ask<=1) at that timestamp.",
+    "The scanner also requires complementary reference prices to sum near $1 (configurable) to suppress stale or structurally inconsistent quote artifacts.",
+    "Edges here are raw bundle sums versus $1 and do not yet subtract fees, inventory, or execution latency."
+  ],
+  "combinatorial_scaffold": {
+    "status": "not_implemented_yet",
+    "idea": "Future step: link logically dependent conditions across separate markets once we have robust dependency mapping and executable pricing checks."
+  }
+}

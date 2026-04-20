@@ -1,0 +1,898 @@
+{
+  "windows": [
+    10,
+    20
+  ],
+  "markets": [
+    {
+      "csv": "quote_backtest_10398766811303655595339782235864350348828881761515262235130136230008770201075.csv",
+      "question": "Will Ghana win the 2026 FIFA World Cup?",
+      "outcome": "No",
+      "token_id": "10398766811303655595339782235864350348828881761515262235130136230008770201075",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 10.03,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 10.03,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_104137480799334367207764507943317769727862093918816792190533154232239547234217.csv",
+      "question": "Will Iraq win the 2026 FIFA World Cup?",
+      "outcome": "No",
+      "token_id": "104137480799334367207764507943317769727862093918816792190533154232239547234217",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 10.02,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 10.02,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_110028171623846551687151479494325822981244001939750602839571004785511377900325.csv",
+      "question": "Will Tunisia win the 2026 FIFA World Cup?",
+      "outcome": "No",
+      "token_id": "110028171623846551687151479494325822981244001939750602839571004785511377900325",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 10.03,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 10.03,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_112181485529919660901332188537214992263355343785744498550605179448744432717486.csv",
+      "question": "Will Panama win the 2026 FIFA World Cup?",
+      "outcome": "Yes",
+      "token_id": "112181485529919660901332188537214992263355343785744498550605179448744432717486",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 4000.0,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 4000.0,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_113379015922744700109400673843380371641970914885846970213129353605968934558386.csv",
+      "question": "Will Haiti win the 2026 FIFA World Cup?",
+      "outcome": "Yes",
+      "token_id": "113379015922744700109400673843380371641970914885846970213129353605968934558386",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 6666.67,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 6666.67,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_114546670306823666642195507621782951860129088864927983250949362928442688463192.csv",
+      "question": "Will Saudi Arabia win the 2026 FIFA World Cup?",
+      "outcome": "No",
+      "token_id": "114546670306823666642195507621782951860129088864927983250949362928442688463192",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 10.03,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 10.03,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_18605216520960122093689427575806651607517827372535894526532079999408408169156.csv",
+      "question": "Will Qatar win the 2026 FIFA World Cup?",
+      "outcome": "Yes",
+      "token_id": "18605216520960122093689427575806651607517827372535894526532079999408408169156",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 6666.67,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 6666.67,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_23542782083949026234898323432000742558288032327930681121040136746492993951914.csv",
+      "question": "Will Saudi Arabia win the 2026 FIFA World Cup?",
+      "outcome": "Yes",
+      "token_id": "23542782083949026234898323432000742558288032327930681121040136746492993951914",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 4000.0,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 4000.0,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_334114555297655433618918589540388457186530884312703967834539640747792887116.csv",
+      "question": "Will Bosnia-Herzegovina win the 2026 FIFA World Cup?",
+      "outcome": "No",
+      "token_id": "334114555297655433618918589540388457186530884312703967834539640747792887116",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 10.03,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 10.03,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_35797818400757287472708740881657961304270157125643131597907636474183210188025.csv",
+      "question": "Will Cezchia win the 2026 FIFA World Cup?",
+      "outcome": "Yes",
+      "token_id": "35797818400757287472708740881657961304270157125643131597907636474183210188025",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 2857.14,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 2857.14,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_43907673646206657865778036957293730446366626078011238443367990170655175896145.csv",
+      "question": "Will Ghana win the 2026 FIFA World Cup?",
+      "outcome": "Yes",
+      "token_id": "43907673646206657865778036957293730446366626078011238443367990170655175896145",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 4000.0,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 4000.0,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_51603557647605526784272094285656249935467020057355371392584885347569984808630.csv",
+      "question": "Will Cape Verde win the 2026 FIFA World Cup?",
+      "outcome": "No",
+      "token_id": "51603557647605526784272094285656249935467020057355371392584885347569984808630",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 10.02,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 10.02,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_53465512181802150755993130711224070738002100921790051090044528012833736167995.csv",
+      "question": "Will Iraq win the 2026 FIFA World Cup?",
+      "outcome": "Yes",
+      "token_id": "53465512181802150755993130711224070738002100921790051090044528012833736167995",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 6666.67,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 6666.67,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_54713157489249811305010442901837547158293079674050742517995375602657385198814.csv",
+      "question": "Will Panama win the 2026 FIFA World Cup?",
+      "outcome": "No",
+      "token_id": "54713157489249811305010442901837547158293079674050742517995375602657385198814",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 10.03,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 10.03,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_58374167250364215964582274356498746399676421878376948523944979542572589542202.csv",
+      "question": "Will Ivory Coast win the 2026 FIFA World Cup?",
+      "outcome": "Yes",
+      "token_id": "58374167250364215964582274356498746399676421878376948523944979542572589542202",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 2222.22,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 2222.22,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_61595193871140044336898809781418183952441527621084596848414908595268863899573.csv",
+      "question": "Will Cape Verde win the 2026 FIFA World Cup?",
+      "outcome": "Yes",
+      "token_id": "61595193871140044336898809781418183952441527621084596848414908595268863899573",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 6666.67,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 6666.67,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_64799211284650435818319700973089994510508551533538430983091938324711590775445.csv",
+      "question": "Will Jordan win the 2026 FIFA World Cup?",
+      "outcome": "No",
+      "token_id": "64799211284650435818319700973089994510508551533538430983091938324711590775445",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 10.02,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 10.02,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_70753274007979480001882804624792378182371580903023185997594096497692751054228.csv",
+      "question": "Will Ivory Coast win the 2026 FIFA World Cup?",
+      "outcome": "No",
+      "token_id": "70753274007979480001882804624792378182371580903023185997594096497692751054228",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 10.05,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 10.05,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_7178132479418833271220202496199802982233847400465199094850639568068936253094.csv",
+      "question": "Will Cezchia win the 2026 FIFA World Cup?",
+      "outcome": "No",
+      "token_id": "7178132479418833271220202496199802982233847400465199094850639568068936253094",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 10.04,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 10.04,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_7452445673065716792879664309598949732608843578632923430902121866203768915742.csv",
+      "question": "Will Haiti win the 2026 FIFA World Cup?",
+      "outcome": "No",
+      "token_id": "7452445673065716792879664309598949732608843578632923430902121866203768915742",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 10.02,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 10.02,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_84553189233868837011173802287245466242361930181501918469303092803731514390253.csv",
+      "question": "Will Qatar win the 2026 FIFA World Cup?",
+      "outcome": "No",
+      "token_id": "84553189233868837011173802287245466242361930181501918469303092803731514390253",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 10.02,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 10.02,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_86035858416252385053603758548087253570549129844230230783932738372075949702177.csv",
+      "question": "Will Tunisia win the 2026 FIFA World Cup?",
+      "outcome": "Yes",
+      "token_id": "86035858416252385053603758548087253570549129844230230783932738372075949702177",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 4000.0,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 4000.0,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_89770121993255619705119104591644526712193505786928967250693522950895615785005.csv",
+      "question": "Will Bosnia-Herzegovina win the 2026 FIFA World Cup?",
+      "outcome": "Yes",
+      "token_id": "89770121993255619705119104591644526712193505786928967250693522950895615785005",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 4000.0,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 4000.0,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_98686749402500678753487703372528277029342097490180026723487433517076969282825.csv",
+      "question": "Will Jordan win the 2026 FIFA World Cup?",
+      "outcome": "Yes",
+      "token_id": "98686749402500678753487703372528277029342097490180026723487433517076969282825",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 6666.67,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 23,
+            "avg_spread_bps": 6666.67,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 0
+          }
+        }
+      }
+    }
+  ],
+  "summary": {
+    "10:at_touch": {
+      "count": 552,
+      "avg_spread_bps": 2438.87,
+      "avg_abs_next_move_bps": 0.0,
+      "crossed_mid_rate": 0.0,
+      "crossed_price_rate": 0.0,
+      "moved_away_rate": 0.0,
+      "never_touched_rate": 1.0
+    },
+    "10:one_tick_inside": {
+      "count": 0
+    },
+    "20:at_touch": {
+      "count": 552,
+      "avg_spread_bps": 2438.87,
+      "avg_abs_next_move_bps": 0.0,
+      "crossed_mid_rate": 0.0,
+      "crossed_price_rate": 0.0,
+      "moved_away_rate": 0.0,
+      "never_touched_rate": 1.0
+    },
+    "20:one_tick_inside": {
+      "count": 0
+    }
+  }
+}
