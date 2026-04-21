@@ -89,6 +89,11 @@ With real collected data, run the research tools that already exist. Do not buil
 - [ ] Run `deploy.run_walk_forward` on the same data with `--train-bars 12 --test-bars 4 --step-bars 4`. This is the honesty test — out-of-sample only.
 - [ ] Run `deploy.export_state_features` to inspect which regimes the bot actually trades in vs. which are profitable.
 - [ ] Fit the above against the cost model from Phase 1. The only number that matters is **out-of-sample net expectancy after honest costs**.
+- [ ] **Calibration check (new).** For every BUY decision the signal stack would have made, record (model_prob, market_prob_at_entry, resolution). At the end of Phase 2, compute:
+  - Brier score of model vs market prob on ≥ 200 decisions.
+  - Calibration curve binned by model probability (are bins reliable?).
+  - Edge-after-costs per decile of confidence.
+  A strategy that is "often right" on direction can still lose money if its probabilities are poorly calibrated and it enters at bad prices. Calibration is the honest test of whether the signal stack's confidence means anything. If Brier(model) ≥ Brier(market-implied), the stack is adding noise — treat that as a no-pass.
 
 **Decision gate — hard:**
 - If at least one strict-mode profile is out-of-sample net-positive after costs on fresh data across ≥ 10 markets, continue with that profile as a **secondary** overlay.
@@ -134,7 +139,16 @@ Ship criteria: 8 weeks of live without tripping a kill criterion, net positive a
 
 - [ ] Only if Phase 4 cleared: scale capital in 2× steps, no more frequent than monthly. Do not scale complexity.
 - [ ] Track capacity: at each step, check whether fill rate or slippage degraded. If they did, you hit venue capacity — stop scaling, don't fight it.
-- [ ] Add a second, uncorrelated edge candidate only after the first is stable at target size. Candidates: maker-style passive quoting (requires websocket work), information overlay in narrow families you personally track.
+- [ ] Add a second, uncorrelated edge candidate only after the first is stable at target size. Ranked candidates:
+  1. **Maker-style passive quoting** in mature high-liquidity sports outrights. Requires websocket/order-book infrastructure (not present today — 2–4 week build).
+  2. **LLM-probability engine** (AI-as-updater, not oracle) on narrow niches where information is messy and the consensus is slow. Scope:
+     - Build a news/evidence ingestion pipeline (RSS + Gamma market descriptions + scheduled data releases). 2–3 week build.
+     - For each selected market, prompt the model for `(p_yes, confidence, top 3 evidence points, "what would flip this")`. Reuse the existing `classify_markets_openai` offline pattern — no synchronous LLM calls inside the trade loop.
+     - Trade only when `|model_prob − market_prob| × notional > MVE + 2 × estimated_costs_bps` and Phase 2's calibration check said this niche was calibrated.
+     - Honest caveat: LLMs compete poorly on breaking-news markets where insiders and scrapers are faster. Pick niches (earnings-call wording, macro-data-release markets, crypto governance) where messy-text parsing genuinely helps.
+  3. **Information overlay** in families you personally track (human in the loop, bot executes).
+
+  Only build one. Picking the LLM track before the maker track commits us to the news infrastructure; do not build both in parallel.
 
 Ship criteria: 3+ months of live at scaled size with PnL consistent with Phase 4 run-rate.
 
@@ -176,6 +190,7 @@ Stopping is a valid outcome. This file should be updated with the stop reason if
 
 Append entries as we go. Newest at top. Each entry: date, phase, what changed, expected impact, actual outcome (backfilled later).
 
+- 2026-04-20 — Plan refinement — Absorbed useful pieces of an "AI-as-probability-engine" framework: (1) added Brier-score/calibration check to Phase 2 (a stack that is often right on direction can still lose money with poorly calibrated probabilities); (2) expanded Phase 5 second-edge candidates to rank maker-quoting above LLM-probability-engine, with explicit scope + niche selection for the LLM track. Declined to restructure PLAN around LLM-as-primary because (a) competitors on news-driven markets are fast and informed, (b) we don't have news/evidence infrastructure, (c) it doesn't solve the liquidity/capacity ceiling. Arb-first stance unchanged.
 - 2026-04-20 — Phase 1 — Cost model + paper log schema **shipped**. `BacktestEngine` now emits per-trade cost decomposition (spread / slippage / fee / post-fill-move / notional) and a run-level `cost_attribution` block (gross vs net PnL, USD cost buckets, adverse-fill ratio). `run_backtest` + `run_experiment_matrix` surface it. Paper log now carries `best_bid`/`best_ask`/`observed_spread_bps`/`schema_version=1` on every entry. Validated on `data/ceasefire_yes.csv`: 70 fills, $3.29 total costs split correctly, 82.8% adverse-fill ratio (flags this as a bad regime for the signal stack — exactly the Phase 2 insight we want).
 - 2026-04-20 — Phase 0 — `.env` reconciliation: config loads clean, creds populated, not in git history. Open question on `SIGNATURE_TYPE=2` — user to confirm Polymarket account type.
 - 2026-04-20 — Phase 1 — Quote collector **running**. LaunchAgent active under venv python `/Library/Frameworks/Python.framework/Versions/3.13/bin/python3.13` (FDA granted). Collecting 100 tokens @ 30s interval → `data/quote_collection/run.jsonl`. Clock starts now on the ≥3-week accumulation window. Next review: ~2026-05-11.
