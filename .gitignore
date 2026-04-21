@@ -8,3 +8,4 @@ __pycache__/
 dist/
 build/
 data/live_state.json
+data/quote_collection/run.jsonl
