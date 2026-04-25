@@ -136,6 +136,36 @@ class MarketFilter:
 
         return MarketEligibilityResult(True, 'Eligible', metrics)
 
+    def evaluate_family_only(self, market: dict) -> MarketEligibilityResult:
+        """Lightweight check: keyword + family gates only, no history fetch.
+
+        Intended for backtest replay where history is already loaded from CSV.
+        """
+        question = str(market.get('question') or '')
+        lowered = question.lower()
+        for keyword in self.excluded_keywords:
+            if keyword and keyword in lowered:
+                return MarketEligibilityResult(
+                    False, f'Excluded keyword matched: {keyword}', {'question': question}
+                )
+        if self.strict_mode:
+            for keyword in self.strict_excluded_keywords:
+                if keyword and keyword in lowered:
+                    return MarketEligibilityResult(
+                        False, f'Strict-mode keyword matched: {keyword}', {'question': question}
+                    )
+        family_info = self._classify_family(market)
+        family_block_reason = self._family_block_reason(question=question, family_info=family_info)
+        if family_block_reason is not None:
+            return MarketEligibilityResult(
+                False,
+                family_block_reason,
+                {'question': question, 'market_family': family_info},
+            )
+        return MarketEligibilityResult(
+            True, 'Eligible', {'question': question, 'market_family': family_info}
+        )
+
     def _classify_family(self, market: dict[str, Any]) -> dict[str, Any]:
         heuristic_family, heuristic_reason = self._heuristic_family(market)
         classifier = self.classifier

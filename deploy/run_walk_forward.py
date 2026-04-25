@@ -12,7 +12,14 @@ from typing import Any
 if __package__ in {None, ""}:
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from deploy.run_experiment_matrix import DEFAULT_EXPERIMENTS, expand_csv_inputs, run_snapshots
+from bot.market_filter import MarketFilter
+from data.csv_metadata import extract_market_metadata
+from deploy.run_experiment_matrix import (
+    DEFAULT_EXPERIMENTS,
+    build_market_filter_from_env,
+    expand_csv_inputs,
+    run_snapshots,
+)
 from polymarket_rbi_bot.data import load_snapshots_from_csv
 
 
@@ -32,6 +39,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--test-bars", type=int, default=50, help="Out-of-sample test window size in bars.")
     parser.add_argument("--step-bars", type=int, default=50, help="How far to roll the window each step.")
     parser.add_argument("--min-train-round-trips", type=int, default=0, help="Skip train winners with fewer than this many round trips if alternatives exist.")
+    parser.add_argument(
+        "--family-filter",
+        choices=["off", "on"],
+        default="off",
+        help="Apply MarketFilter family/keyword gates to each CSV.",
+    )
     return parser.parse_args()
 
 
@@ -53,19 +66,34 @@ def _avg(values: list[float]) -> float | None:
     return round(statistics.fmean(values), 4) if values else None
 
 
-def run_walk_forward_for_csv(csv_path: Path, args: argparse.Namespace, experiments: list[dict[str, Any]]) -> dict[str, Any]:
+def run_walk_forward_for_csv(
+    csv_path: Path,
+    args: argparse.Namespace,
+    experiments: list[dict[str, Any]],
+    *,
+    market_filter: MarketFilter | None = None,
+    market_metadata: dict[str, Any] | None = None,
+    family_filter_mode: str = "off",
+) -> dict[str, Any]:
     snapshots = load_snapshots_from_csv(csv_path)
     total = len(snapshots)
     if total < args.train_bars + args.test_bars:
         return {
             "csv": str(csv_path),
             "snapshot_count": total,
+            "market_family": (market_metadata or {}).get("market_family") if market_metadata else None,
             "windows": [],
             "summary": {
                 "window_count": 0,
                 "reason": f"not enough snapshots for train={args.train_bars} and test={args.test_bars}",
             },
         }
+
+    run_kwargs = {
+        "market_filter": market_filter,
+        "market_metadata": market_metadata,
+        "family_filter_mode": family_filter_mode,
+    }
 
     windows: list[dict[str, Any]] = []
     step = max(args.step_bars, 1)
@@ -77,12 +105,18 @@ def run_walk_forward_for_csv(csv_path: Path, args: argparse.Namespace, experimen
         train = snapshots[train_start:train_end]
         test = snapshots[train_end:test_end]
 
-        train_rows = [run_snapshots(train, f"{csv_path}#train[{train_start}:{train_end}]", args, experiment) for experiment in experiments]
+        train_rows = [
+            run_snapshots(train, f"{csv_path}#train[{train_start}:{train_end}]", args, experiment, **run_kwargs)
+            for experiment in experiments
+        ]
         train_winner = _choose_train_winner(train_rows, args.min_train_round_trips)
         chosen_experiment_name = train_winner["experiment"]
         chosen_experiment = next(exp for exp in experiments if exp["name"] == chosen_experiment_name)
-        test_chosen = run_snapshots(test, f"{csv_path}#test[{train_end}:{test_end}]", args, chosen_experiment)
-        test_all = [run_snapshots(test, f"{csv_path}#test[{train_end}:{test_end}]", args, experiment) for experiment in experiments]
+        test_chosen = run_snapshots(test, f"{csv_path}#test[{train_end}:{test_end}]", args, chosen_experiment, **run_kwargs)
+        test_all = [
+            run_snapshots(test, f"{csv_path}#test[{train_end}:{test_end}]", args, experiment, **run_kwargs)
+            for experiment in experiments
+        ]
         best_test = max(test_all, key=lambda row: float((row.get("headline") or {}).get("score") or 0.0))
 
         windows.append(
@@ -133,7 +167,20 @@ def main() -> None:
     if args.experiments:
         experiments = json.loads(Path(args.experiments).read_text())
 
-    per_csv = [run_walk_forward_for_csv(csv_path, args, experiments) for csv_path in csv_paths]
+    market_filter = build_market_filter_from_env() if args.family_filter == "on" else None
+    per_csv: list[dict[str, Any]] = []
+    for csv_path in csv_paths:
+        meta = extract_market_metadata(csv_path) if args.family_filter == "on" else None
+        per_csv.append(
+            run_walk_forward_for_csv(
+                csv_path,
+                args,
+                experiments,
+                market_filter=market_filter,
+                market_metadata=meta,
+                family_filter_mode=args.family_filter,
+            )
+        )
     usable = [row for row in per_csv if int((row.get("summary") or {}).get("window_count") or 0) > 0]
 
     aggregate_scores = [float(row["summary"]["avg_selected_test_score"]) for row in usable if row["summary"].get("avg_selected_test_score") is not None]

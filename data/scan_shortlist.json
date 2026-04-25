@@ -3,7 +3,20 @@
     "markets_scanned": 200,
     "eligible_count": 13,
     "ineligible_count": 187,
-    "top_requested": 50
+    "top_requested": 50,
+    "last_outright_expansion": {
+      "new_entries": 17,
+      "by_pattern": {
+        "NHL_CUP_2026": {
+          "matched": 16,
+          "added": 14
+        },
+        "NBA_FINALS_2026": {
+          "matched": 16,
+          "added": 3
+        }
+      }
+    }
   },
   "shortlist": [
     {
@@ -855,6 +868,142 @@
       "reason": "Current price outside configured range",
       "best_feature": "liquidity",
       "weakest_feature": "quote_quality"
+    },
+    {
+      "condition_id": "0xf7b5491e70b477d451afe7d9c1fde4bf1a927e69ff289d294b96df164f6c10f0",
+      "question": "Will the Carolina Hurricanes win the 2026 NHL Stanley Cup?",
+      "market_slug": "will-the-carolina-hurricanes-win-the-2026-nhl-stanley-cup",
+      "liquidity": "91452.3845",
+      "added_via": "expand_watchlist_outright",
+      "championship_pattern": "NHL_CUP_2026"
+    },
+    {
+      "condition_id": "0x4a67e1270a2ed86be8fc524b6114640e41b0c56303ecaa9584deacd62402650a",
+      "question": "Will the Edmonton Oilers win the 2026 NHL Stanley Cup?",
+      "market_slug": "will-the-edmonton-oilers-win-the-2026-nhl-stanley-cup",
+      "liquidity": "53505.2016",
+      "added_via": "expand_watchlist_outright",
+      "championship_pattern": "NHL_CUP_2026"
+    },
+    {
+      "condition_id": "0x44887f53abbfe7531b1384420b185a5f10ee42a4e6c9441d5883abd4f3c1e5ef",
+      "question": "Will the Dallas Stars win the 2026 NHL Stanley Cup?",
+      "market_slug": "will-the-dallas-stars-win-the-2026-nhl-stanley-cup",
+      "liquidity": "94747.31975",
+      "added_via": "expand_watchlist_outright",
+      "championship_pattern": "NHL_CUP_2026"
+    },
+    {
+      "condition_id": "0xf8f63bb47b2a7c2e0c1be3cedf4075079b11c07476d76a9469065b0c4791961a",
+      "question": "Will the Colorado Avalanche win the 2026 NHL Stanley Cup?",
+      "market_slug": "will-the-colorado-avalanche-win-the-2026-nhl-stanley-cup",
+      "liquidity": "131582.28603",
+      "added_via": "expand_watchlist_outright",
+      "championship_pattern": "NHL_CUP_2026"
+    },
+    {
+      "condition_id": "0x89389a6b1439856a8d366234c795d72865c927a1aa3cf9d4cc04a3a400defde1",
+      "question": "Will the Vegas Golden Knights win the 2026 NHL Stanley Cup?",
+      "market_slug": "will-the-vegas-golden-knights-win-the-2026-nhl-stanley-cup",
+      "liquidity": "97321.52342",
+      "added_via": "expand_watchlist_outright",
+      "championship_pattern": "NHL_CUP_2026"
+    },
+    {
+      "condition_id": "0x3b6cdd4f72cef7f29ff7e054444095564dc582266b7230be3c2b5f194d89f37d",
+      "question": "Will the Los Angeles Kings win the 2026 NHL Stanley Cup?",
+      "market_slug": "will-the-los-angeles-kings-win-the-2026-nhl-stanley-cup",
+      "liquidity": "157349.1783",
+      "added_via": "expand_watchlist_outright",
+      "championship_pattern": "NHL_CUP_2026"
+    },
+    {
+      "condition_id": "0x139b893a7ae21eaec72e887ba88910831944b4662512428c122c4ad0a5c125ac",
+      "question": "Will the Ottawa Senators win the 2026 NHL Stanley Cup?",
+      "market_slug": "will-the-ottawa-senators-win-the-2026-nhl-stanley-cup",
+      "liquidity": "113725.82167",
+      "added_via": "expand_watchlist_outright",
+      "championship_pattern": "NHL_CUP_2026"
+    },
+    {
+      "condition_id": "0x0d082a85f48a5226b1205acdb6e95ead2fe373acabcf6c471f5895f86f42a276",
+      "question": "Will the Minnesota Wild win the 2026 NHL Stanley Cup?",
+      "market_slug": "will-the-minnesota-wild-win-the-2026-nhl-stanley-cup",
+      "liquidity": "94467.02897",
+      "added_via": "expand_watchlist_outright",
+      "championship_pattern": "NHL_CUP_2026"
+    },
+    {
+      "condition_id": "0xfdc1041ba84bfd8f741eee0bdafce8b1887626c83afd017d18ee9b1f77008b9f",
+      "question": "Will the Utah Mammoth win the 2026 NHL Stanley Cup?",
+      "market_slug": "will-the-utah-mammoth-win-the-2026-nhl-stanley-cup",
+      "liquidity": "142718.9942",
+      "added_via": "expand_watchlist_outright",
+      "championship_pattern": "NHL_CUP_2026"
+    },
+    {
+      "condition_id": "0xceb5e0c99a9195da148d79693f3c6819d44d4d3d7e5be77931e174a3eebe4a85",
+      "question": "Will the Anaheim Ducks win the 2026 NHL Stanley Cup?",
+      "market_slug": "will-the-anaheim-ducks-win-the-2026-nhl-stanley-cup",
+      "liquidity": "192234.39825",
+      "added_via": "expand_watchlist_outright",
+      "championship_pattern": "NHL_CUP_2026"
+    },
+    {
+      "condition_id": "0x52847ca1413b76a5570b97c0c432e38dbe61b0140f9d45e912604591b08f6fca",
+      "question": "Will the Montreal Canadiens win the 2026 NHL Stanley Cup?",
+      "market_slug": "will-the-montreal-canadiens-win-the-2026-nhl-stanley-cup",
+      "liquidity": "120254.06171",
+      "added_via": "expand_watchlist_outright",
+      "championship_pattern": "NHL_CUP_2026"
+    },
+    {
+      "condition_id": "0x82d8c535c037a779ffbd2eb94704b093a5341350b49ca68128fc1c16a0901e4a",
+      "question": "Will the Boston Bruins win the 2026 NHL Stanley Cup?",
+      "market_slug": "will-the-boston-bruins-win-the-2026-nhl-stanley-cup",
+      "liquidity": "177084.52018",
+      "added_via": "expand_watchlist_outright",
+      "championship_pattern": "NHL_CUP_2026"
+    },
+    {
+      "condition_id": "0xbefea6668e49e328db4d5c792bc15cea309bbc06101dfd6ced1e0556ad3ea301",
+      "question": "Will the Buffalo Sabres win the 2026 NHL Stanley Cup?",
+      "market_slug": "will-the-buffalo-sabres-win-the-2026-nhl-stanley-cup",
+      "liquidity": "102179.19952",
+      "added_via": "expand_watchlist_outright",
+      "championship_pattern": "NHL_CUP_2026"
+    },
+    {
+      "condition_id": "0x9e54856d758cd7de25b75c97273a38d711642f16eacad57e61982028f2791206",
+      "question": "Will the Pittsburgh Penguins win the 2026 NHL Stanley Cup?",
+      "market_slug": "will-the-pittsburgh-penguins-win-the-2026-nhl-stanley-cup",
+      "liquidity": "158072.90171",
+      "added_via": "expand_watchlist_outright",
+      "championship_pattern": "NHL_CUP_2026"
+    },
+    {
+      "condition_id": "0x713641f745d71f6ec61f906237ffca3c8583f251e49384429a63ceb0ccdb2d37",
+      "question": "Will the New York Knicks win the 2026 NBA Finals?",
+      "market_slug": "will-the-new-york-knicks-win-the-2026-nba-finals",
+      "liquidity": "234595.69515",
+      "added_via": "expand_watchlist_outright",
+      "championship_pattern": "NBA_FINALS_2026"
+    },
+    {
+      "condition_id": "0x649ad05a2868343271fe82ea692031d567ca1af652e3529788933157e94aa088",
+      "question": "Will the Minnesota Timberwolves win the 2026 NBA Finals?",
+      "market_slug": "will-the-minnesota-timberwolves-win-the-2026-nba-finals",
+      "liquidity": "325043.21021",
+      "added_via": "expand_watchlist_outright",
+      "championship_pattern": "NBA_FINALS_2026"
+    },
+    {
+      "condition_id": "0x796e791e7058571e460278814fc7a3183752285338f1400087b98bef3c447908",
+      "question": "Will the Los Angeles Lakers win the 2026 NBA Finals?",
+      "market_slug": "will-the-los-angeles-lakers-win-the-2026-nba-finals",
+      "liquidity": "389719.47867",
+      "added_via": "expand_watchlist_outright",
+      "championship_pattern": "NBA_FINALS_2026"
     }
   ],
   "ranked_markets": [

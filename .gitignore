@@ -9,3 +9,4 @@ dist/
 build/
 data/live_state.json
 data/quote_collection/run.jsonl
+data/*.json

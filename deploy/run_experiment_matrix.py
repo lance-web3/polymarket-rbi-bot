@@ -13,10 +13,81 @@ if __package__ in {None, ""}:
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from backtesting.engine import BacktestEngine
+from bot.market_filter import MarketFilter
+from data.csv_metadata import extract_market_metadata
+from polymarket_rbi_bot.calibration import brier_score, reference_brier_baselines
+from polymarket_rbi_bot.config import BotConfig
 from polymarket_rbi_bot.data import load_snapshots_from_csv
+from polymarket_rbi_bot.models import SignalSide
 from strategies.long_entry_strategy import LongEntryStrategy
 from strategies.macd_strategy import MACDStrategy
 from strategies.rsi_strategy import RSIStrategy
+
+
+def build_market_filter_from_env() -> MarketFilter:
+    config = BotConfig.from_env()
+    return MarketFilter(
+        min_liquidity=config.min_market_liquidity,
+        min_history_points=config.min_market_history_points,
+        min_price=config.min_price,
+        max_price=config.max_price,
+        min_abs_return_bps_24h=config.min_abs_return_bps_24h,
+        excluded_keywords=config.excluded_keywords,
+        strict_mode=config.strict_strategy_mode,
+        strict_min_price=config.strict_min_price,
+        strict_max_price=config.strict_max_price,
+        strict_excluded_keywords=config.strict_excluded_keywords,
+        market_family_mode=config.market_family_mode,
+        allowed_market_families=config.allowed_market_families,
+        blocked_market_families=config.blocked_market_families,
+        family_allow_keywords=config.family_allow_keywords,
+        family_block_keywords=config.family_block_keywords,
+        llm_market_classifier_path=config.llm_market_classifier_path,
+        enable_maturity_gating=config.enable_maturity_gating,
+        enable_microstructure_gating=config.enable_microstructure_gating,
+        strict_min_time_to_resolution_hours=config.strict_min_time_to_resolution_hours,
+        strict_max_time_to_resolution_hours=config.strict_max_time_to_resolution_hours,
+        strict_min_time_since_open_hours=config.strict_min_time_since_open_hours,
+        strict_max_current_spread_bps=config.strict_max_current_spread_bps,
+    )
+
+
+def compute_trade_brier(trades: list[Any]) -> dict[str, Any]:
+    """Pair each BUY's long_entry_confidence with the next SELL's realized_pnl sign.
+
+    Returns {count, brier_score, baselines, predictions, outcomes} or a
+    null-filled dict when fewer than 1 round trip exists.
+    """
+    predictions: list[float] = []
+    outcomes: list[int] = []
+    pending_confidence: float | None = None
+    for trade in trades:
+        side = trade.side
+        meta = trade.metadata or {}
+        if side == SignalSide.BUY:
+            summary = meta.get("decision_summary") or {}
+            raw_conf = summary.get("long_entry_confidence")
+            try:
+                conf = float(raw_conf) if raw_conf is not None else 0.0
+            except (TypeError, ValueError):
+                conf = 0.0
+            pending_confidence = max(0.0, min(1.0, conf))
+        elif side == SignalSide.SELL and pending_confidence is not None:
+            realized = meta.get("realized_pnl_delta")
+            try:
+                outcome = 1 if realized is not None and float(realized) > 0.0 else 0
+            except (TypeError, ValueError):
+                outcome = 0
+            predictions.append(pending_confidence)
+            outcomes.append(outcome)
+            pending_confidence = None
+    if not predictions:
+        return {"count": 0, "brier_score": None, "baselines": None}
+    return {
+        "count": len(predictions),
+        "brier_score": round(brier_score(predictions, outcomes), 6),
+        "baselines": {k: round(v, 6) for k, v in reference_brier_baselines(outcomes).items()},
+    }
 
 
 DEFAULT_EXPERIMENTS = [
@@ -178,6 +249,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--missing-quote-fill-ratio", type=float, default=1.0)
     parser.add_argument("--wide-spread-fill-ratio", type=float, default=0.5)
     parser.add_argument("--experiments", help="Optional JSON file with a list of experiment overrides.")
+    parser.add_argument(
+        "--family-filter",
+        choices=["off", "on", "both"],
+        default="off",
+        help="Apply MarketFilter family/keyword gates to each CSV. 'both' runs on and off per CSV.",
+    )
     return parser.parse_args()
 
 
@@ -233,7 +310,16 @@ def build_engine_kwargs(args: argparse.Namespace, experiment: dict[str, Any]) ->
     return kwargs
 
 
-def run_snapshots(snapshots: list[Any], snapshot_label: str, args: argparse.Namespace, experiment: dict[str, Any]) -> dict[str, Any]:
+def run_snapshots(
+    snapshots: list[Any],
+    snapshot_label: str,
+    args: argparse.Namespace,
+    experiment: dict[str, Any],
+    *,
+    market_filter: MarketFilter | None = None,
+    market_metadata: dict[str, Any] | None = None,
+    family_filter_mode: str = "off",
+) -> dict[str, Any]:
     long_entry_kwargs = {
         "strict_mode": bool(experiment.get("strict_mode", False)),
         "signal_version": str(experiment.get("long_entry_version", "v2")),
@@ -244,7 +330,11 @@ def run_snapshots(snapshots: list[Any], snapshot_label: str, args: argparse.Name
         MACDStrategy(),
         RSIStrategy(),
     ]
-    engine = BacktestEngine(strategies=strategies, **build_engine_kwargs(args, experiment))
+    engine_kwargs = build_engine_kwargs(args, experiment)
+    if market_filter is not None and market_metadata is not None:
+        engine_kwargs["market_filter"] = market_filter
+        engine_kwargs["market_metadata"] = market_metadata
+    engine = BacktestEngine(strategies=strategies, **engine_kwargs)
     result = engine.run(snapshots)
     metrics = deepcopy(result.metadata.get("metrics", {}))
     cost_attribution = deepcopy(result.metadata.get("cost_attribution", {}))
@@ -259,12 +349,28 @@ def run_snapshots(snapshots: list[Any], snapshot_label: str, args: argparse.Name
         round_trip_count=int(metrics.get("round_trip_count") or 0),
         max_drawdown_pct=max_drawdown_pct,
     )
+    brier = compute_trade_brier(result.trades)
+    family_name = None
+    if market_metadata:
+        family_name = (market_metadata.get("market_family") or "").strip() or None
+    if family_name is None and market_filter is not None and market_metadata:
+        try:
+            family_info = market_filter._classify_family(market_metadata)
+            family_name = (family_info or {}).get("family") or None
+        except Exception:
+            family_name = None
+    skipped_by_family = bool(result.metadata.get("skipped_by_family_filter"))
+    family_filter_reason = result.metadata.get("family_filter_reason")
     return {
         "csv": snapshot_label,
         "snapshot_count": len(snapshots),
         "experiment": experiment["name"],
         "description": experiment.get("description"),
         "config": experiment,
+        "family_filter_mode": family_filter_mode,
+        "market_family": family_name,
+        "skipped_by_family_filter": skipped_by_family,
+        "family_filter_reason": family_filter_reason,
         "headline": {
             "net_return_pct": round(net_return_pct, 2),
             "expectancy": metrics.get("expectancy"),
@@ -274,18 +380,37 @@ def run_snapshots(snapshots: list[Any], snapshot_label: str, args: argparse.Name
             "win_rate": metrics.get("win_rate"),
             "time_in_market_ratio": metrics.get("time_in_market_ratio"),
             "score": score,
+            "brier_score": brier.get("brier_score"),
+            "brier_count": brier.get("count"),
         },
         "blocked_entries": blocked_entries,
         "top_blocked_entries": [{"reason": reason, "count": count} for reason, count in top_blocks if count],
         "strict_metadata": strict_meta,
         "metrics": metrics,
         "cost_attribution": cost_attribution,
+        "brier": brier,
     }
 
 
-def run_one(csv_path: Path, args: argparse.Namespace, experiment: dict[str, Any]) -> dict[str, Any]:
+def run_one(
+    csv_path: Path,
+    args: argparse.Namespace,
+    experiment: dict[str, Any],
+    *,
+    market_filter: MarketFilter | None = None,
+    market_metadata: dict[str, Any] | None = None,
+    family_filter_mode: str = "off",
+) -> dict[str, Any]:
     snapshots = load_snapshots_from_csv(csv_path)
-    return run_snapshots(snapshots, str(csv_path), args, experiment)
+    return run_snapshots(
+        snapshots,
+        str(csv_path),
+        args,
+        experiment,
+        market_filter=market_filter,
+        market_metadata=market_metadata,
+        family_filter_mode=family_filter_mode,
+    )
 
 
 def summarize_experiment(rows: list[dict[str, Any]]) -> dict[str, Any]:
@@ -300,8 +425,13 @@ def summarize_experiment(rows: list[dict[str, Any]]) -> dict[str, Any]:
     for row in rows:
         for reason, count in (row.get("blocked_entries") or {}).items():
             blocked[reason] += int(count or 0)
+    mode = rows[0].get("family_filter_mode", "off")
+    base_name = rows[0]["experiment"]
+    display_name = base_name if mode == "off" else f"{base_name}[filter_{mode}]"
     return {
-        "experiment": rows[0]["experiment"],
+        "experiment": display_name,
+        "base_experiment": base_name,
+        "family_filter_mode": mode,
         "description": rows[0].get("description"),
         "config": rows[0].get("config"),
         "market_count": len(rows),
@@ -383,6 +513,32 @@ def build_ranked_summary(experiment_summaries: list[dict[str, Any]], toggle_summ
     }
 
 
+def summarize_by_family(rows: list[dict[str, Any]]) -> dict[str, Any]:
+    groups: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for row in rows:
+        family = row.get("market_family") or "unknown"
+        mode = row.get("family_filter_mode", "off")
+        key = f"{family}::filter_{mode}"
+        groups[key].append(row)
+    out: dict[str, Any] = {}
+    for key, bucket in groups.items():
+        briers = [float(r["headline"]["brier_score"]) for r in bucket if r["headline"].get("brier_score") is not None]
+        trades = [int(r["headline"]["trade_count"] or 0) for r in bucket]
+        returns = [float(r["headline"]["net_return_pct"] or 0.0) for r in bucket]
+        wins = [r["headline"]["win_rate"] for r in bucket if r["headline"]["win_rate"] is not None]
+        skipped = sum(1 for r in bucket if r.get("skipped_by_family_filter"))
+        out[key] = {
+            "run_count": len(bucket),
+            "skipped_by_family_filter": skipped,
+            "avg_trade_count": round(statistics.fmean(trades), 2) if trades else None,
+            "avg_net_return_pct": round(statistics.fmean(returns), 3) if returns else None,
+            "avg_win_rate": round(statistics.fmean(wins), 4) if wins else None,
+            "avg_brier_score": round(statistics.fmean(briers), 6) if briers else None,
+            "brier_sample_count": len(briers),
+        }
+    return out
+
+
 def main() -> None:
     args = parse_args()
     csv_paths = expand_csv_inputs(args.csv)
@@ -393,27 +549,55 @@ def main() -> None:
     if args.experiments:
         experiments = json.loads(Path(args.experiments).read_text())
 
-    detailed_rows = [run_one(csv_path, args, experiment) for csv_path in csv_paths for experiment in experiments]
+    modes: list[str] = ["off"] if args.family_filter == "off" else ["on"] if args.family_filter == "on" else ["off", "on"]
+    market_filter = build_market_filter_from_env() if "on" in modes else None
+    metadata_cache: dict[str, dict[str, Any] | None] = {}
+
+    detailed_rows: list[dict[str, Any]] = []
+    for csv_path in csv_paths:
+        key = str(csv_path.resolve())
+        if key not in metadata_cache:
+            metadata_cache[key] = extract_market_metadata(csv_path)
+        meta = metadata_cache[key]
+        for experiment in experiments:
+            for mode in modes:
+                active_filter = market_filter if mode == "on" else None
+                active_meta = meta if mode == "on" else None
+                detailed_rows.append(
+                    run_one(
+                        csv_path,
+                        args,
+                        experiment,
+                        market_filter=active_filter,
+                        market_metadata=active_meta,
+                        family_filter_mode=mode,
+                    )
+                )
+
     grouped: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for row in detailed_rows:
-        grouped[row["experiment"]].append(row)
+        grouped_key = f"{row['experiment']}::filter_{row['family_filter_mode']}"
+        grouped[grouped_key].append(row)
 
     experiment_summaries = [summarize_experiment(rows) for _, rows in grouped.items()]
     experiment_summaries.sort(key=lambda item: item["avg_score"], reverse=True)
     toggle_summary = build_toggle_summary(experiment_summaries)
     ranked_summary = build_ranked_summary(experiment_summaries, toggle_summary)
+    by_family = summarize_by_family(detailed_rows)
 
     payload = {
         "summary": {
             "csv_count": len(csv_paths),
             "experiment_count": len(experiments),
             "total_runs": len(detailed_rows),
+            "family_filter_modes": modes,
         },
         "inputs": {
             "csvs": [str(path) for path in csv_paths],
         },
         "ranked_summary": ranked_summary,
         "toggle_summary": toggle_summary,
+        "by_family": by_family,
         "experiments": experiment_summaries,
         "runs": detailed_rows,
         "limitations": [

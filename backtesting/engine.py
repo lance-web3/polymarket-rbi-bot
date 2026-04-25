@@ -62,8 +62,13 @@ class BacktestEngine:
     microstructure_proxy_policy: str = "auto"
     strict_long_entry_led: bool = True
     strict_exit_style: str = "upgraded"
+    market_filter: Any = None
+    market_metadata: dict[str, Any] | None = None
 
     def run(self, history: list[MarketSnapshot]) -> BacktestResult:
+        family_filter_skip = self._maybe_family_filter_skip()
+        if family_filter_skip is not None:
+            return family_filter_skip
         if len(history) < 2:
             return BacktestResult(
                 starting_cash=self.starting_cash,
@@ -729,6 +734,31 @@ class BacktestEngine:
             "max_inventory": 0.0,
             "time_in_market_ratio": 0.0,
         }
+
+    def _maybe_family_filter_skip(self) -> BacktestResult | None:
+        if self.market_filter is None or not self.market_metadata:
+            return None
+        result = self.market_filter.evaluate_family_only(self.market_metadata)
+        if result.eligible:
+            return None
+        family_info = (result.metrics or {}).get("market_family") or {}
+        return BacktestResult(
+            starting_cash=self.starting_cash,
+            ending_cash=self.starting_cash,
+            realized_pnl=0.0,
+            mark_to_market_equity=self.starting_cash,
+            max_drawdown=0.0,
+            trades=[],
+            metadata={
+                "ending_inventory": 0.0,
+                "skipped_by_family_filter": True,
+                "family_filter_reason": result.reason,
+                "market_family": family_info.get("family"),
+                "metrics": self._empty_metrics(),
+                "cost_attribution": self._build_cost_attribution(trades=[], realized_pnl=0.0),
+                "execution_model": self._execution_model_metadata(),
+            },
+        )
 
     def _execution_model_metadata(self) -> dict[str, float | str | bool | int]:
         return {
