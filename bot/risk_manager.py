@@ -88,6 +88,15 @@ class RiskManager:
                 )
 
         if snapshot.best_bid is not None and snapshot.best_ask is not None and snapshot.mid_price > 0:
+            if snapshot.best_bid > snapshot.best_ask:
+                metrics["crossed_quote"] = True
+                metrics["best_bid"] = snapshot.best_bid
+                metrics["best_ask"] = snapshot.best_ask
+                return ExecutionGuardsResult(
+                    False,
+                    f"Live execution blocked: crossed quote (best_bid {snapshot.best_bid:.4f} > best_ask {snapshot.best_ask:.4f}); CLOB book race, do not trust this snapshot",
+                    metrics,
+                )
             spread_bps = ((snapshot.best_ask - snapshot.best_bid) / snapshot.mid_price) * 10_000
             metrics["spread_bps"] = spread_bps
             if spread_bps > self.config.max_spread_bps:

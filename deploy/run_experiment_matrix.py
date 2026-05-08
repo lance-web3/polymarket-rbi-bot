@@ -179,7 +179,6 @@ DEFAULT_EXPERIMENTS = [
             "strict_max_wide_spread_rate": 0.35,
             "min_hold_bars": 5,
             "min_buy_sell_score_gap": 0.45,
-            "estimated_round_trip_cost_bps": 95.0,
             "edge_cost_buffer_bps": 60.0,
             "strict_extended_hold_exit_gap": 0.22
         }
@@ -292,6 +291,7 @@ def experiment_score(*, net_return_pct: float, expectancy: float | None, round_t
 
 
 def build_engine_kwargs(args: argparse.Namespace, experiment: dict[str, Any]) -> dict[str, Any]:
+    env_config = BotConfig.from_env()
     kwargs = {
         "starting_cash": args.cash,
         "per_trade_size": args.size,
@@ -305,6 +305,9 @@ def build_engine_kwargs(args: argparse.Namespace, experiment: dict[str, Any]) ->
         "strict_exit_style": str(experiment.get("strict_exit_style", "upgraded")),
         "enable_maturity_gating": bool(experiment.get("enable_maturity_gating", True)),
         "enable_microstructure_gating": bool(experiment.get("enable_microstructure_gating", True)),
+        "estimated_round_trip_cost_bps": env_config.estimated_round_trip_cost_bps,
+        "edge_cost_buffer_bps": env_config.edge_cost_buffer_bps,
+        "min_expected_edge_bps": env_config.min_expected_edge_bps,
     }
     kwargs.update(experiment.get("engine_overrides", {}))
     return kwargs

@@ -29,8 +29,8 @@ from typing import Any
 DEFAULT_CHAMPIONSHIP_PATTERNS: dict[str, str] = {
     "NBA_FINALS_2026": r"win the 2026 NBA Finals\??$",
     "NHL_CUP_2026": r"win the 2026 NHL Stanley Cup\??$",
-    "MLB_WORLD_SERIES_2026": r"win the 2026 (MLB |World Series)",
-    "EPL_2025_26": r"win the 2025[-/]26 (English )?Premier League\??$",
+    "EPL_2025_26": r"win the 2025[-/\u2013]26 (English )?Premier League\??$",
+    # MLB World Series 2026 not yet listed on Polymarket as of 2026-04-25.
 }
 
 

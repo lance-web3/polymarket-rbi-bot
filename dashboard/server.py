@@ -23,6 +23,11 @@ try:
 except Exception:  # pragma: no cover - dashboard should still run without optional deps
     GammaMarketDiscoveryClient = None  # type: ignore
 
+try:
+    from deploy.collector_health import evaluate as _collector_evaluate
+except Exception:  # pragma: no cover
+    _collector_evaluate = None  # type: ignore
+
 
 # --------- Data loading helpers ---------
 
@@ -363,6 +368,39 @@ def build_summary(tail: int = 200) -> dict[str, Any]:
     except Exception:
         classifier_count = 0
 
+    def _collector_block(shortlist_path: Path | None = None, run_jsonl_path: Path | None = None) -> dict[str, Any]:
+        if _collector_evaluate is None:
+            return {"available": False}
+        try:
+            ns = argparse.Namespace(
+                window_hours=24.0,
+                dead_threshold_minutes=5.0,
+                shortlist_path=shortlist_path,
+                run_jsonl_path=run_jsonl_path,
+            )
+            code, h = _collector_evaluate(ns)
+            return {
+                "available": True,
+                "status_code": code,
+                "status_label": {0: "healthy", 1: "dead", 2: "silent_drops"}.get(code, "unknown"),
+                "watchlist_size": h.get("watchlist_size"),
+                "watchlist_seen_in_window": h.get("watchlist_seen_in_window"),
+                "silent_drops_count": h.get("silent_drops_count"),
+                "silent_drops": (h.get("silent_drops") or [])[:5],
+                "rows_in_window": (h.get("collector") or {}).get("rows_in_window"),
+                "rows_last_hour": (h.get("collector") or {}).get("rows_last_hour"),
+                "last_row_age_seconds": (h.get("collector") or {}).get("last_row_age_seconds"),
+                "last_row_ts": (h.get("collector") or {}).get("last_row_ts"),
+            }
+        except Exception as exc:  # noqa: BLE001
+            return {"available": False, "error": str(exc)}
+
+    collector_summary = _collector_block()
+    nonsports_run = DATA_DIR / "quote_collection" / "nonsports_run.jsonl"
+    nonsports_shortlist = DATA_DIR / "scan_shortlist_nonsports.json"
+    if nonsports_run.exists() and nonsports_shortlist.exists():
+        collector_summary["nonsports"] = _collector_block(nonsports_shortlist, nonsports_run)
+
     payload = {
         "generated_at": now.isoformat(),
         "sources": {
@@ -371,6 +409,7 @@ def build_summary(tail: int = 200) -> dict[str, Any]:
             "classifier_output": str(CLASSIFIER_OUTPUT_PATH),
         },
         "config": config_summary,
+        "collector": collector_summary,
         "pnl": {
             "realized": float(state.get("realized_pnl") or 0.0),
             "unrealized": round(float(unrealized_total), 4),
@@ -409,153 +448,322 @@ def build_summary(tail: int = 200) -> dict[str, Any]:
 
 # --------- HTTP server ---------
 
-INDEX_HTML = """
-<!doctype html>
+INDEX_HTML = r"""<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Polymarket RBI Bot - Local Dashboard</title>
+    <title>Polymarket RBI Bot — Dashboard</title>
     <style>
-      body { font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 16px; color: #222; }
-      h1 { margin: 0 0 8px 0; font-size: 20px; }
-      .meta { color: #666; font-size: 12px; margin-bottom: 12px; }
-      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 12px; }
-      .card { border: 1px solid #ddd; border-radius: 8px; padding: 12px; background: #fff; }
-      table { width: 100%; border-collapse: collapse; font-size: 13px; }
-      th, td { border-bottom: 1px solid #eee; padding: 6px 4px; text-align: left; }
-      th { background: #fafafa; position: sticky; top: 0; }
-      .pos { color: #0a7; }
-      .neg { color: #c33; }
-      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
-      .pill { display: inline-block; padding: 2px 6px; border-radius: 999px; background: #eee; font-size: 11px; }
-      .small { font-size: 12px; color: #555; }
+      :root {
+        --bg: #0b0d12;
+        --bg-card: #14171f;
+        --bg-card-hover: #1a1e28;
+        --bg-elevated: #1d212c;
+        --border: #232834;
+        --border-strong: #2e3441;
+        --text: #e6e9f0;
+        --text-dim: #9aa3b3;
+        --text-faint: #6b7384;
+        --accent: #6ea8ff;
+        --accent-dim: rgba(110, 168, 255, 0.15);
+        --pos: #4ade80;
+        --neg: #f87171;
+        --warn: #fbbf24;
+        --info: #60a5fa;
+        --pill-bg: #232834;
+        --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      }
+      * { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        font-size: 14px;
+        line-height: 1.45;
+      }
+      .container { max-width: 1600px; margin: 0 auto; padding: 20px 24px 64px; }
+      header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; gap: 16px; flex-wrap: wrap; }
+      header .title { display: flex; align-items: center; gap: 10px; }
+      header h1 { margin: 0; font-size: 16px; font-weight: 600; letter-spacing: 0.2px; }
+      header .badge { color: var(--text-dim); font-size: 11px; font-weight: 500; padding: 3px 8px; border: 1px solid var(--border); border-radius: 999px; }
+      header .meta { color: var(--text-faint); font-size: 11px; font-family: var(--mono); }
+
+      .section-label { font-size: 10px; font-weight: 700; letter-spacing: 1.2px; color: var(--text-faint); text-transform: uppercase; margin: 18px 0 10px; display: flex; align-items: center; gap: 8px; }
+      .section-label .count { background: var(--pill-bg); color: var(--text-dim); font-weight: 600; padding: 1px 7px; border-radius: 999px; font-size: 10px; letter-spacing: 0.4px; }
+
+      .grid { display: grid; gap: 12px; }
+      .grid-3 { grid-template-columns: repeat(3, 1fr); }
+      .grid-4 { grid-template-columns: repeat(4, 1fr); }
+      .grid-2 { grid-template-columns: repeat(2, 1fr); }
+      @media (max-width: 1100px) { .grid-4, .grid-3 { grid-template-columns: repeat(2, 1fr); } }
+      @media (max-width: 720px)  { .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; } }
+
+      .card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 14px 16px;
+        transition: background 0.15s ease, border-color 0.15s ease;
+      }
+      .card:hover { background: var(--bg-card-hover); border-color: var(--border-strong); }
+      .card .card-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+      .card .card-title { font-size: 11px; font-weight: 600; letter-spacing: 0.6px; text-transform: uppercase; color: var(--text-dim); }
+      .card .card-sub { font-size: 11px; color: var(--text-faint); font-family: var(--mono); }
+
+      .stat { display: flex; align-items: baseline; gap: 8px; }
+      .stat .num { font-size: 26px; font-weight: 600; letter-spacing: -0.3px; }
+      .stat .unit { color: var(--text-faint); font-size: 12px; }
+      .row { display: flex; align-items: center; justify-content: space-between; padding: 4px 0; }
+      .row .k { color: var(--text-dim); font-size: 12px; }
+      .row .v { font-family: var(--mono); font-size: 12px; }
+
+      .pos { color: var(--pos); }
+      .neg { color: var(--neg); }
+      .warn { color: var(--warn); }
+      .info { color: var(--info); }
+      .dim { color: var(--text-dim); }
+      .faint { color: var(--text-faint); }
+      .mono { font-family: var(--mono); }
+
+      .pill { display: inline-flex; align-items: center; gap: 6px; padding: 2px 8px; border-radius: 999px; background: var(--pill-bg); color: var(--text-dim); font-size: 11px; font-weight: 500; letter-spacing: 0.2px; }
+      .pill .dot { width: 6px; height: 6px; border-radius: 999px; background: var(--text-faint); }
+      .pill.ok { color: var(--pos); background: rgba(74, 222, 128, 0.12); } .pill.ok .dot { background: var(--pos); }
+      .pill.warn { color: var(--warn); background: rgba(251, 191, 36, 0.12); } .pill.warn .dot { background: var(--warn); }
+      .pill.bad { color: var(--neg); background: rgba(248, 113, 113, 0.12); } .pill.bad .dot { background: var(--neg); }
+      .pill.info { color: var(--info); background: rgba(96, 165, 250, 0.12); } .pill.info .dot { background: var(--info); }
+
+      table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+      th, td { border-bottom: 1px solid var(--border); padding: 7px 8px; text-align: left; vertical-align: top; }
+      th { background: transparent; color: var(--text-faint); font-weight: 600; font-size: 10px; text-transform: uppercase; letter-spacing: 0.6px; position: sticky; top: 0; z-index: 1; }
+      tbody tr:hover { background: var(--bg-elevated); }
+      td.mono, th.mono { font-family: var(--mono); font-size: 11.5px; color: var(--text-dim); }
+      td.right, th.right { text-align: right; }
+      tbody tr td:first-child { color: var(--text); }
+
+      .scroll-y { overflow-y: auto; }
+      .empty { color: var(--text-faint); font-size: 12px; padding: 12px 4px; text-align: center; }
+
+      .stripe { display: flex; align-items: center; gap: 12px; }
+      .stripe > * { white-space: nowrap; }
+
+      ::-webkit-scrollbar { width: 8px; height: 8px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 4px; }
+      ::-webkit-scrollbar-thumb:hover { background: #3b4252; }
     </style>
   </head>
   <body>
-    <h1>Polymarket RBI Bot — Local Dashboard</h1>
-    <div class="meta" id="meta"></div>
+    <div class="container">
+      <header>
+        <div class="title">
+          <h1>Polymarket RBI Bot</h1>
+          <span class="badge" id="modeBadge">—</span>
+          <span class="badge" id="phaseBadge">—</span>
+        </div>
+        <div class="meta" id="meta">Loading…</div>
+      </header>
 
-    <div class="grid">
-      <div class="card">
-        <h3>PnL</h3>
-        <div id="pnl"></div>
+      <div class="section-label">Overview</div>
+      <div class="grid grid-4">
+        <div class="card"><div class="card-head"><span class="card-title">PnL — Total</span><span id="pnlPill" class="pill"><span class="dot"></span>—</span></div><div class="stat"><span class="num" id="pnlTotal">—</span><span class="unit">USDC</span></div><div class="row"><span class="k">Realized</span><span class="v" id="pnlRealized">—</span></div><div class="row"><span class="k">Unrealized</span><span class="v" id="pnlUnrealized">—</span></div></div>
+        <div class="card"><div class="card-head"><span class="card-title">Quote Collector</span><span id="collectorPill" class="pill"><span class="dot"></span>—</span></div><div class="stat"><span class="num" id="collectorRowsHr">—</span><span class="unit">rows / 1h</span></div><div class="row"><span class="k">Watchlist seen</span><span class="v" id="collectorWatchlist">—</span></div><div class="row"><span class="k">Last row age</span><span class="v" id="collectorAge">—</span></div></div>
+        <div class="card"><div class="card-head"><span class="card-title">Live Health</span><span id="healthPill" class="pill"><span class="dot"></span>—</span></div><div class="row"><span class="k">Reconcile</span><span class="v" id="healthReconcile">—</span></div><div class="row"><span class="k">Last submit</span><span class="v" id="healthSubmit">—</span></div><div class="row"><span class="k">Last fill</span><span class="v" id="healthFill">—</span></div></div>
+        <div class="card"><div class="card-head"><span class="card-title">Activity</span><span id="activityPill" class="pill info"><span class="dot"></span>paper</span></div><div class="stat"><span class="num" id="activityCount">—</span><span class="unit">paper trades</span></div><div class="row"><span class="k">Open positions</span><span class="v" id="activityOpen">—</span></div><div class="row"><span class="k">Open orders</span><span class="v" id="activityOrders">—</span></div></div>
       </div>
-      <div class="card">
-        <h3>Health</h3>
-        <div id="health"></div>
-      </div>
-      <div class="card">
-        <h3>Config</h3>
-        <div id="config"></div>
-      </div>
-    </div>
 
-    <div class="card" style="margin-top:12px;">
-      <h3>Positions</h3>
-      <div id="positions"></div>
-    </div>
-
-    <div class="grid" style="margin-top:12px;">
+      <div class="section-label">Positions <span class="count" id="positionsCount">0</span></div>
       <div class="card">
-        <h3>Orders / Fills</h3>
-        <div id="orders"></div>
+        <div id="positions"></div>
       </div>
-      <div class="card">
-        <h3>Recent Paper Activity</h3>
-        <div id="paper"></div>
-      </div>
-    </div>
 
-    <div class="card" style="margin-top:12px;">
-      <h3>Decision Context</h3>
-      <div id="decision"></div>
+      <div class="grid grid-2" style="margin-top:14px;">
+        <div>
+          <div class="section-label">Orders <span class="count" id="openOrdersCount">0</span></div>
+          <div class="card"><div id="orders"></div></div>
+          <div class="section-label" style="margin-top:14px;">Recent Fills <span class="count" id="fillsCount">0</span></div>
+          <div class="card"><div id="fills"></div></div>
+        </div>
+        <div>
+          <div class="section-label">Paper Activity <span class="count" id="paperCount">0</span></div>
+          <div class="card"><div id="paperStatus" class="stripe" style="margin-bottom:8px;"></div><div id="paper"></div></div>
+        </div>
+      </div>
+
+      <div class="grid grid-2" style="margin-top:14px;">
+        <div>
+          <div class="section-label">Decision Context</div>
+          <div class="card"><div id="decision"></div></div>
+        </div>
+        <div>
+          <div class="section-label">Block Reasons</div>
+          <div class="card"><div id="blocks"></div></div>
+        </div>
+      </div>
+
+      <div class="grid grid-2" style="margin-top:14px;">
+        <div>
+          <div class="section-label">Collector Drops</div>
+          <div class="card"><div id="drops"></div></div>
+        </div>
+        <div>
+          <div class="section-label">Config</div>
+          <div class="card"><div id="config"></div></div>
+        </div>
+      </div>
     </div>
 
     <script>
-      async function fetchSummary() {
-        const res = await fetch('/api/summary');
-        return await res.json();
-      }
+      const $ = (id) => document.getElementById(id);
+      const fetchJson = async (url) => (await fetch(url)).json();
 
       function esc(x){ return (x==null?'' : String(x)).replace(/[&<>]/g, s=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[s])) }
-      function fmtPnL(v){ if(v==null) return '—'; const cls=v>=0?'pos':'neg'; return `<span class="${cls}">${v.toFixed(4)}</span>`; }
-      function fmtBps(v){ if(v==null) return '—'; const cls=v>=0?'pos':'neg'; return `<span class="${cls}">${v.toFixed(1)} bps</span>`; }
-      function fmtTs(ts){ if(!ts) return '—'; const d = new Date(ts); return d.toLocaleString(); }
+      function fmtNum(v, dp=4){ if(v==null||isNaN(v)) return '—'; return Number(v).toFixed(dp); }
+      function fmtSigned(v, dp=4){ if(v==null||isNaN(v)) return '<span class="dim">—</span>'; const n=Number(v); const cls=n>=0?'pos':'neg'; const sgn=n>=0?'+':''; return `<span class="${cls}">${sgn}${n.toFixed(dp)}</span>`; }
+      function fmtBps(v){ if(v==null||isNaN(v)) return '<span class="dim">—</span>'; const n=Number(v); const cls=n>=0?'pos':'neg'; const sgn=n>=0?'+':''; return `<span class="${cls}">${sgn}${n.toFixed(1)} bps</span>`; }
+      function fmtTs(ts){ if(!ts) return '—'; const d=new Date(ts); if (isNaN(d)) return '—'; const now=Date.now(); const sec=Math.round((now-d.getTime())/1000); if (sec<60) return sec+'s ago'; if (sec<3600) return Math.round(sec/60)+'m ago'; if (sec<86400) return Math.round(sec/3600)+'h ago'; return d.toLocaleString(); }
+      function fmtAgeS(s){ if(s==null) return '—'; if(s<60) return Math.round(s)+'s'; if(s<3600) return Math.round(s/60)+'m'; return Math.round(s/3600)+'h'; }
+      function pill(cls, text){ return `<span class="pill ${cls}"><span class="dot"></span>${esc(text)}</span>`; }
 
-      function render(summary){
-        document.getElementById('meta').innerHTML = `Generated at ${fmtTs(summary.generated_at)} • Sources: <span class=mono>${esc(summary.sources.live_state)}</span>, <span class=mono>${esc(summary.sources.paper_log)}</span>`;
-        document.getElementById('pnl').innerHTML = `
-          <div>Total: ${fmtPnL(summary.pnl.total)} | Realized: ${fmtPnL(summary.pnl.realized)} | Unrealized: ${fmtPnL(summary.pnl.unrealized)}</div>
-        `;
-        const h = summary.health;
-        document.getElementById('health').innerHTML = `
-          <div>Reconcile: <span class=pill>${esc(h.reconcile?.status||'unknown')}</span></div>
-          <div class=small>Message: ${esc(h.reconcile?.message||'')}</div>
-          <div class=small>Last submit: ${fmtTs(h.last_submission_at)} | Last fill: ${fmtTs(h.last_fill_at)}</div>
-          <div class=small>Last log age: ${h.last_log_age_seconds!=null? esc(h.last_log_age_seconds+'s') : '—'}</div>
-        `;
-        const cfg = summary.config;
-        document.getElementById('config').innerHTML = `
-          <div>Strict mode: <b>${cfg.strict_strategy_mode? 'ON':'OFF'}</b>; Buy-only: <b>${cfg.buy_only_mode? 'ON':'OFF'}</b></div>
-          <div class=small>Classifier path: <span class=mono>${esc(cfg.llm_market_classifier_path||'(none)')}</span></div>
-        `;
+      function renderOverview(s){
+        const cfg = s.config || {};
+        $('modeBadge').textContent = (cfg.strict_strategy_mode? 'STRICT MODE':'NORMAL MODE') + (cfg.buy_only_mode? ' • BUY-ONLY':'');
+        $('phaseBadge').textContent = 'PHASE 1 → 1.5';
+        $('meta').innerHTML = `Updated ${fmtTs(s.generated_at)} • <span class="mono">${esc(s.sources?.live_state||'')}</span>`;
 
-        const posRows = summary.positions.map(p=>`
+        const p = s.pnl || {};
+        const total = Number(p.total||0);
+        $('pnlTotal').innerHTML = fmtSigned(total, 4);
+        $('pnlRealized').innerHTML = fmtSigned(p.realized, 4);
+        $('pnlUnrealized').innerHTML = fmtSigned(p.unrealized, 4);
+        $('pnlPill').outerHTML = `<span id="pnlPill" class="pill ${total>0?'ok':total<0?'bad':''}"><span class="dot"></span>${total>0?'positive':total<0?'negative':'flat'}</span>`;
+
+        const c = s.collector || {};
+        const cls = c.status_label==='healthy'?'ok' : c.status_label==='dead'?'bad' : c.status_label==='silent_drops'?'warn' : '';
+        $('collectorPill').outerHTML = `<span id="collectorPill" class="pill ${cls}"><span class="dot"></span>${esc(c.status_label||'unknown')}</span>`;
+        $('collectorRowsHr').textContent = c.rows_last_hour!=null? c.rows_last_hour.toLocaleString() : '—';
+        $('collectorWatchlist').innerHTML = c.watchlist_size!=null? `${c.watchlist_seen_in_window||0}/${c.watchlist_size}` : '—';
+        $('collectorAge').textContent = fmtAgeS(c.last_row_age_seconds);
+
+        const h = s.health || {};
+        const recStatus = (h.reconcile && h.reconcile.status) || 'unknown';
+        const recCls = recStatus==='ok'?'ok':recStatus==='unknown'?'':'warn';
+        $('healthPill').outerHTML = `<span id="healthPill" class="pill ${recCls}"><span class="dot"></span>${esc(recStatus)}</span>`;
+        $('healthReconcile').innerHTML = esc((h.reconcile && h.reconcile.message) || '—');
+        $('healthSubmit').textContent = fmtTs(h.last_submission_at);
+        $('healthFill').textContent = fmtTs(h.last_fill_at);
+
+        $('activityCount').textContent = (s.activity?.paper_entries||0).toLocaleString();
+        $('activityOpen').textContent = (s.positions?.length||0);
+        $('activityOrders').textContent = (s.orders?.open_count||0);
+      }
+
+      function renderPositions(s){
+        const positions = s.positions || [];
+        $('positionsCount').textContent = positions.length;
+        if (!positions.length) { $('positions').innerHTML = '<div class="empty">No open positions</div>'; return; }
+        const rows = positions.map(p=>`
           <tr>
-            <td>${esc(p.market_label||p.question||p.token_id||'')}</td>
-            <td class=mono>${esc(p.token_id)}</td>
-            <td>${esc(p.quantity)}</td>
-            <td>${esc(p.average_price)}</td>
-            <td>${p.mid!=null? esc(p.mid): '—'}</td>
-            <td>${p.bid!=null? esc(p.bid): '—'}</td>
-            <td>${p.ask!=null? esc(p.ask): '—'}</td>
-            <td>${fmtBps(p.unrealized_pnl_bps)}</td>
-            <td>${p.minutes_since_entry!=null? esc(p.minutes_since_entry+'m'): '—'}</td>
-            <td>${esc(p.maturity?.time_to_resolution_hours!=null? p.maturity.time_to_resolution_hours.toFixed(1)+'h' : '—')}</td>
+            <td>${esc(p.market_label||p.question||'')}</td>
+            <td class="mono">${esc((p.token_id||'').slice(0,10))}…</td>
+            <td class="right">${esc(p.quantity)}</td>
+            <td class="right">${fmtNum(p.average_price,4)}</td>
+            <td class="right">${p.mid!=null?fmtNum(p.mid,4):'<span class="dim">—</span>'}</td>
+            <td class="right">${fmtBps(p.unrealized_pnl_bps)}</td>
+            <td class="right"><span class="dim">${p.minutes_since_entry!=null? p.minutes_since_entry+'m' : '—'}</span></td>
+            <td class="right"><span class="dim">${p.maturity?.time_to_resolution_hours!=null? p.maturity.time_to_resolution_hours.toFixed(1)+'h' : '—'}</span></td>
           </tr>`).join('');
-        document.getElementById('positions').innerHTML = `
-          <table>
-            <thead><tr><th>Market</th><th>Token</th><th>Qty</th><th>Avg</th><th>Mid</th><th>Bid</th><th>Ask</th><th>Unrlzd</th><th>Held</th><th>TTR</th></tr></thead>
-            <tbody>${posRows || '<tr><td colspan=10>No open positions</td></tr>'}</tbody>
-          </table>`;
+        $('positions').innerHTML = `<table><thead><tr><th>Market</th><th>Token</th><th class="right">Qty</th><th class="right">Avg</th><th class="right">Mid</th><th class="right">Unrlzd</th><th class="right">Held</th><th class="right">TTR</th></tr></thead><tbody>${rows}</tbody></table>`;
+      }
 
-        const o = summary.orders;
-        const openRows = (o.open||[]).map(x=>`<tr><td class=mono>${esc(x.order_id||x.id||'(id)')}</td><td>${esc(x.market_label||x.question||x.token_id||x.asset_id||x.market||'')}</td><td>${esc(x.side||'')}</td><td>${esc(x.price||'')}</td><td>${esc(x.size||'')}</td><td>${fmtTs(x.submitted_at||x.created_at)}</td></tr>`).join('');
-        const fillRows = (o.fills_recent||[]).map(x=>`<tr><td class=mono>${esc(x.fill_id||'')}</td><td>${esc(x.market_label||x.question||x.token_id||'')}</td><td>${esc(x.side||'')}</td><td>${esc(x.price||'')}</td><td>${esc(x.size||'')}</td><td>${fmtTs(x.timestamp)}</td></tr>`).join('');
-        document.getElementById('orders').innerHTML = `
-          <div class=small>Open orders: ${esc(o.open_count)} | Fills: ${esc(o.fills_count)}</div>
-          <div style="max-height:200px; overflow:auto; margin-top:6px;">
-            <table><thead><tr><th>Order</th><th>Market</th><th>Side</th><th>Price</th><th>Size</th><th>Time</th></tr></thead><tbody>${openRows || '<tr><td colspan=6>No open orders</td></tr>'}</tbody></table>
-            <div style="height:8px;"></div>
-            <table><thead><tr><th>Fill</th><th>Market</th><th>Side</th><th>Price</th><th>Size</th><th>Time</th></tr></thead><tbody>${fillRows || '<tr><td colspan=6>No fills</td></tr>'}</tbody></table>
-          </div>`;
+      function renderOrders(s){
+        const o = s.orders || {open:[], fills_recent:[]};
+        $('openOrdersCount').textContent = o.open_count||0;
+        $('fillsCount').textContent = o.fills_count||0;
+        const open = (o.open||[]).map(x=>`<tr><td class="mono">${esc((x.order_id||x.id||'').slice(0,10))}…</td><td>${esc(x.market_label||x.question||'')}</td><td>${pill('info', x.side||'')}</td><td class="right">${esc(x.price||'')}</td><td class="right">${esc(x.size||'')}</td><td class="dim">${fmtTs(x.submitted_at||x.created_at)}</td></tr>`).join('');
+        $('orders').innerHTML = open ? `<table><thead><tr><th>ID</th><th>Market</th><th>Side</th><th class="right">Px</th><th class="right">Size</th><th>Time</th></tr></thead><tbody>${open}</tbody></table>` : '<div class="empty">No open orders</div>';
+        const fills = (o.fills_recent||[]).map(x=>`<tr><td class="mono">${esc((x.fill_id||'').slice(0,10))}…</td><td>${esc(x.market_label||x.question||'')}</td><td>${pill(x.side==='BUY'?'ok':'bad', x.side||'')}</td><td class="right">${esc(x.price||'')}</td><td class="right">${esc(x.size||'')}</td><td class="dim">${fmtTs(x.timestamp)}</td></tr>`).join('');
+        $('fills').innerHTML = fills ? `<table><thead><tr><th>ID</th><th>Market</th><th>Side</th><th class="right">Px</th><th class="right">Size</th><th>Time</th></tr></thead><tbody>${fills}</tbody></table>` : '<div class="empty">No fills</div>';
+      }
 
-        const paperRows = (summary.activity.recent_paper||[]).slice().reverse().map(r=>`<tr><td>${fmtTs(r.timestamp)}</td><td><span class=pill>${esc(r.status)}</span></td><td>${esc(r.reason||'')}</td><td>${esc(r.side||'')}</td><td>${esc(r.price||'')}</td><td>${esc(r.market_label||r.question||r.token_id||'')}</td></tr>`).join('');
-        const probeRows = (summary.activity.recent_probes||[]).slice().reverse().map(r=>`<tr><td>${esc(r.probe_id ?? '')}</td><td>${esc(r.market_label||r.question||'')}</td><td>${esc(r.price ?? '')}</td><td>${esc(r.size ?? '')}</td><td>${esc(r.posted_notional ?? '')}</td><td>${esc(r.matched_size ?? '')}</td><td><span class=pill>${esc(r.final_status||'')}</span></td></tr>`).join('');
-        const sc = summary.activity.paper_status_counts || {};
-        const scText = Object.entries(sc).map(([k,v])=>`${k}:${v}`).join(' • ');
-        document.getElementById('paper').innerHTML = `
-          <div class=small>${esc(scText)}</div>
-          <div style="max-height:240px; overflow:auto; margin-top:6px;">
-          <table><thead><tr><th>Time</th><th>Status</th><th>Reason</th><th>Side</th><th>Price</th><th>Market</th></tr></thead><tbody>${paperRows || '<tr><td colspan=6>No recent entries</td></tr>'}</tbody></table>
-          <div style="height:8px;"></div>
-          <table><thead><tr><th>Probe</th><th>Market</th><th>Price</th><th>Size</th><th>Notional</th><th>Matched</th><th>Final</th></tr></thead><tbody>${probeRows || '<tr><td colspan=7>No recent probes</td></tr>'}</tbody></table>
-          </div>`;
+      function renderPaper(s){
+        const a = s.activity || {};
+        $('paperCount').textContent = a.paper_entries||0;
+        const sc = a.paper_status_counts || {};
+        const stripeHTML = Object.entries(sc).map(([k,v])=>{
+          const cls = k==='executed'||k==='filled'?'ok':k==='blocked'||k==='error'?'bad':k==='approved'?'info':'';
+          return `<span class="pill ${cls}"><span class="dot"></span>${esc(k)} ${v}</span>`;
+        }).join('');
+        $('paperStatus').innerHTML = stripeHTML || '<span class="faint">No status counts</span>';
+        const rows = (a.recent_paper||[]).slice().reverse().slice(0,18).map(r=>{
+          const stCls = r.status==='executed'||r.status==='filled'?'ok':r.status==='blocked'||r.status==='error'?'bad':'info';
+          return `<tr><td class="dim">${fmtTs(r.timestamp)}</td><td>${pill(stCls, r.status||'')}</td><td>${esc((r.reason||'').slice(0,60))}</td><td>${esc(r.side||'')}</td><td class="right">${esc(r.price||'')}</td><td>${esc(r.market_label||r.question||'')}</td></tr>`;
+        }).join('');
+        $('paper').innerHTML = rows ? `<div class="scroll-y" style="max-height:380px;"><table><thead><tr><th>Time</th><th>Status</th><th>Reason</th><th>Side</th><th class="right">Px</th><th>Market</th></tr></thead><tbody>${rows}</tbody></table></div>` : '<div class="empty">No recent activity</div>';
+      }
 
-        const dc = summary.decision_context || {};
-        const sigRows = (dc.signals||[]).map(s=>`<tr><td>${esc(s.strategy)}</td><td>${esc(s.side)}</td><td>${esc(s.confidence)}</td><td>${esc(s.reason||'')}</td></tr>`).join('');
-        document.getElementById('decision').innerHTML = `
-          <div class=small>Market: ${esc(dc.market_label||dc.question||'(latest)')} • <span class=mono>${esc(dc.token_id||'')}</span></div>
-          <div class=small>Buy: ${esc(dc.buy_score)} | Sell: ${esc(dc.sell_score)} | Edge: ${esc(dc.expected_edge_bps)}</div>
-          <div class=small>Spread: ${esc(dc.observed_spread_bps)} | Maturity TTR (h): ${esc(dc.maturity?.time_to_resolution_hours ?? '—')}</div>
-          <div style="max-height:200px; overflow:auto; margin-top:6px;">
-            <table><thead><tr><th>Strategy</th><th>Side</th><th>Conf</th><th>Reason</th></tr></thead><tbody>${sigRows || '<tr><td colspan=4>No signals in recent context</td></tr>'}</tbody></table>
-          </div>`;
+      function renderDecision(s){
+        const dc = s.decision_context || {};
+        if (!dc.token_id && !dc.signals) { $('decision').innerHTML = '<div class="empty">No recent decision context</div>'; return; }
+        const sigs = (dc.signals||[]).map(x=>`<tr><td>${esc(x.strategy)}</td><td>${pill(x.side==='BUY'?'ok':x.side==='SELL'?'bad':'info', x.side)}</td><td class="mono">${esc(x.confidence)}</td><td class="dim">${esc((x.reason||'').slice(0,80))}</td></tr>`).join('');
+        $('decision').innerHTML = `
+          <div class="row"><span class="k">Market</span><span class="v">${esc(dc.market_label||dc.question||'(latest)')}</span></div>
+          <div class="row"><span class="k">Buy / Sell score</span><span class="v"><span class="pos">${esc(dc.buy_score)}</span> / <span class="neg">${esc(dc.sell_score)}</span></span></div>
+          <div class="row"><span class="k">Expected edge</span><span class="v">${fmtBps(dc.expected_edge_bps)}</span></div>
+          <div class="row"><span class="k">Spread</span><span class="v">${fmtBps(dc.observed_spread_bps)}</span></div>
+          <div class="row"><span class="k">TTR (h)</span><span class="v">${esc(dc.maturity?.time_to_resolution_hours ?? '—')}</span></div>
+          <div style="margin-top:8px;"><table><thead><tr><th>Strategy</th><th>Side</th><th>Conf</th><th>Reason</th></tr></thead><tbody>${sigs || ''}</tbody></table></div>
+        `;
+      }
+
+      function renderBlocks(s){
+        const top = (s.activity?.top_block_reasons || []);
+        if (!top.length) { $('blocks').innerHTML = '<div class="empty">No blocks recorded</div>'; return; }
+        const max = Math.max(...top.map(([_,n])=>n));
+        const rows = top.map(([reason,n])=>{
+          const w = Math.round((n/max)*100);
+          return `<div style="margin:6px 0;"><div class="row"><span class="k">${esc(reason)}</span><span class="v">${n}</span></div><div style="background:var(--bg-elevated); height:4px; border-radius:2px; margin-top:2px;"><div style="background:var(--accent); height:100%; width:${w}%; border-radius:2px;"></div></div></div>`;
+        }).join('');
+        $('blocks').innerHTML = rows;
+      }
+
+      function renderDrops(s){
+        const c = s.collector || {};
+        if (!c.available) { $('drops').innerHTML = '<div class="empty">Collector module unavailable</div>'; return; }
+        if (!c.silent_drops_count) { $('drops').innerHTML = `<div class="row"><span class="k">Silent drops</span><span class="v"><span class="pos">0</span></span></div><div class="row"><span class="k">Watchlist size</span><span class="v">${c.watchlist_size||'—'}</span></div><div class="row"><span class="k">Rows in 24h</span><span class="v">${(c.rows_in_window||0).toLocaleString()}</span></div>`; return; }
+        const rows = (c.silent_drops||[]).map(d=>`<tr><td>${esc(d.question||'(no question)')}</td><td class="mono">${esc((d.condition_id||'').slice(0,12))}…</td></tr>`).join('');
+        $('drops').innerHTML = `<div class="row"><span class="k">Silent drops</span><span class="v"><span class="warn">${c.silent_drops_count}</span></span></div><table style="margin-top:8px;"><thead><tr><th>Question</th><th>Condition</th></tr></thead><tbody>${rows}</tbody></table>`;
+      }
+
+      function renderConfig(s){
+        const cfg = s.config || {};
+        const ksrc = s.sources || {};
+        $('config').innerHTML = `
+          <div class="row"><span class="k">Strict strategy mode</span><span class="v">${cfg.strict_strategy_mode? '<span class="pos">ON</span>' : '<span class="dim">OFF</span>'}</span></div>
+          <div class="row"><span class="k">Buy-only mode</span><span class="v">${cfg.buy_only_mode? '<span class="pos">ON</span>' : '<span class="dim">OFF</span>'}</span></div>
+          <div class="row"><span class="k">LLM classifier</span><span class="v"><span class="mono dim">${esc(cfg.llm_market_classifier_path||'(none)')}</span></span></div>
+          <div class="row"><span class="k">Live state</span><span class="v"><span class="mono dim">${esc(ksrc.live_state||'')}</span></span></div>
+          <div class="row"><span class="k">Paper log</span><span class="v"><span class="mono dim">${esc(ksrc.paper_log||'')}</span></span></div>
+        `;
       }
 
       async function tick(){
-        try { const s = await fetchSummary(); render(s); } catch (e) { console.error(e); }
+        try {
+          const s = await fetchJson('/api/summary');
+          renderOverview(s);
+          renderPositions(s);
+          renderOrders(s);
+          renderPaper(s);
+          renderDecision(s);
+          renderBlocks(s);
+          renderDrops(s);
+          renderConfig(s);
+        } catch (e) {
+          console.error(e);
+          $('meta').textContent = 'Error fetching summary: ' + (e?.message || e);
+        }
       }
       tick();
       setInterval(tick, 5000);

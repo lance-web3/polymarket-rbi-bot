@@ -5,15 +5,19 @@
     "ineligible_count": 187,
     "top_requested": 50,
     "last_outright_expansion": {
-      "new_entries": 17,
+      "new_entries": 5,
       "by_pattern": {
         "NHL_CUP_2026": {
           "matched": 16,
-          "added": 14
+          "added": 0
         },
         "NBA_FINALS_2026": {
           "matched": 16,
-          "added": 3
+          "added": 0
+        },
+        "EPL_2025_26": {
+          "matched": 5,
+          "added": 5
         }
       }
     }
@@ -1004,6 +1008,46 @@
       "liquidity": "389719.47867",
       "added_via": "expand_watchlist_outright",
       "championship_pattern": "NBA_FINALS_2026"
+    },
+    {
+      "condition_id": "0x65a2dd0af5f4155915a701e8fdbcdb2f547fb5925d0bcef0b373a8c39a16613e",
+      "question": "Will Liverpool win the 2025\u201326 English Premier League?",
+      "market_slug": "will-liverpool-win-the-202526-english-premier-league",
+      "liquidity": "1423437.01781",
+      "added_via": "expand_watchlist_outright",
+      "championship_pattern": "EPL_2025_26"
+    },
+    {
+      "condition_id": "0xcba24842ceac7a40d2a8b9adde1f4407999b6505193b9fd68156ae76fbffa706",
+      "question": "Will Arsenal win the 2025\u201326 English Premier League?",
+      "market_slug": "will-arsenal-win-the-202526-english-premier-league",
+      "liquidity": "186245.5357",
+      "added_via": "expand_watchlist_outright",
+      "championship_pattern": "EPL_2025_26"
+    },
+    {
+      "condition_id": "0xfb1835b887c33862f5749c619e612d1244ab6e66115f0ef43d373485dc3a1573",
+      "question": "Will Manchester City win the 2025\u201326 English Premier League?",
+      "market_slug": "will-manchester-city-win-the-202526-english-premier-league",
+      "liquidity": "342556.9132",
+      "added_via": "expand_watchlist_outright",
+      "championship_pattern": "EPL_2025_26"
+    },
+    {
+      "condition_id": "0x7cab9da787443beec1eb5e399afd46fffdc27b5f00e0293a1d6a9996c948ac52",
+      "question": "Will Manchester United win the 2025\u201326 English Premier League?",
+      "market_slug": "will-manchester-united-win-the-202526-english-premier-league",
+      "liquidity": "613911.98927",
+      "added_via": "expand_watchlist_outright",
+      "championship_pattern": "EPL_2025_26"
+    },
+    {
+      "condition_id": "0x2ca58175aa8080357d9706c535bb0be218ce7bb156dc48753e0d8b8ee6b56635",
+      "question": "Will Aston Villa win the 2025\u201326 English Premier League?",
+      "market_slug": "will-aston-villa-win-the-202526-english-premier-league",
+      "liquidity": "1102092.43149",
+      "added_via": "expand_watchlist_outright",
+      "championship_pattern": "EPL_2025_26"
     }
   ],
   "ranked_markets": [

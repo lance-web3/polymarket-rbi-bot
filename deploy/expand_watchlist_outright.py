@@ -36,9 +36,8 @@ from polymarket_rbi_bot.config import BotConfig
 DEFAULT_PATTERNS: dict[str, str] = {
     "NBA_FINALS_2026": r"win the 2026 NBA Finals\??$",
     "NHL_CUP_2026": r"win the 2026 NHL Stanley Cup\??$",
-    "MLB_WORLD_SERIES_2026": r"win the 2026 (MLB |World Series)",
-    "EPL_2025_26": r"win the 2025[-/]26 (English )?Premier League\??$",
-    "NCAA_FOOTBALL_2025_26": r"win the 2025[-/]26 (NCAA |college )football national championship",
+    "EPL_2025_26": r"win the 2025[-/\u2013]26 (English )?Premier League\??$",
+    # MLB World Series 2026 + NCAA football 2025-26 not yet listed on Polymarket — re-enable when available.
 }
 
 

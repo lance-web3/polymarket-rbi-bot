@@ -11,6 +11,7 @@ if __package__ in {None, ""}:
 from backtesting.engine import BacktestEngine
 from data.storage import save_rows_to_csv
 from data.polymarket_client import PolymarketHistoryClient
+from polymarket_rbi_bot.config import BotConfig
 from polymarket_rbi_bot.data import load_snapshots_from_csv
 from strategies.cvd_strategy import CVDStrategy
 from strategies.long_entry_strategy import LongEntryStrategy
@@ -19,6 +20,7 @@ from strategies.rsi_strategy import RSIStrategy
 
 
 def main() -> None:
+    env_config = BotConfig.from_env()
     parser = argparse.ArgumentParser(description="Run a Polymarket strategy backtest.")
     parser.add_argument("--csv", help="Path to OHLCV snapshot CSV.")
     parser.add_argument("--token-id", help="Polymarket token id to fetch from the price-history endpoint.")
@@ -80,9 +82,9 @@ def main() -> None:
     parser.add_argument("--strict-profit-giveback-bps", type=float, default=45.0, help="Strict mode: exit after this much giveback from the best open profit.")
     parser.add_argument("--strict-extended-hold-bars", type=int, default=8, help="Strict mode: after this many bars, allow a softer sell-minus-buy exit gap.")
     parser.add_argument("--strict-extended-hold-exit-gap", type=float, default=0.15, help="Strict mode: softened sell-minus-buy gap after extended holds.")
-    parser.add_argument("--estimated-round-trip-cost-bps", type=float, default=80.0, help="Strict mode: simple friction proxy used in edge gating.")
-    parser.add_argument("--min-expected-edge-bps", type=float, default=120.0, help="Strict mode: minimum expected edge before a BUY is allowed.")
-    parser.add_argument("--edge-cost-buffer-bps", type=float, default=30.0, help="Strict mode: extra safety margin over estimated cost.")
+    parser.add_argument("--estimated-round-trip-cost-bps", type=float, default=env_config.estimated_round_trip_cost_bps, help="Strict mode: simple friction proxy used in edge gating. Defaults from .env (ESTIMATED_ROUND_TRIP_COST_BPS).")
+    parser.add_argument("--min-expected-edge-bps", type=float, default=env_config.min_expected_edge_bps, help="Strict mode: minimum expected edge before a BUY is allowed. Defaults from .env.")
+    parser.add_argument("--edge-cost-buffer-bps", type=float, default=env_config.edge_cost_buffer_bps, help="Strict mode: extra safety margin over estimated cost. Defaults from .env.")
     # New: maturity + microstructure gating knobs
     parser.add_argument("--enable-maturity-gating", action="store_true", help="Enable maturity (time-to-resolution) gating in strict mode.")
     parser.add_argument("--enable-microstructure-gating", action="store_true", help="Enable microstructure gating in strict mode.")
