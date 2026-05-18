@@ -1,0 +1,4590 @@
+{
+  "params": {
+    "input": "data/quote_collection/run.jsonl",
+    "fill_window_minutes": 30.0,
+    "adverse_window_minutes": 15.0,
+    "max_records_per_token": 0,
+    "tick": 0.001
+  },
+  "n_tokens": 140,
+  "top_buy_maker": [
+    {
+      "condition_id": "0x9cd77217b2ab264fe4f6d302f662c0a91f349fe5798f1f98d70bb2311712791b",
+      "outcome": "Yes",
+      "question": "Will Tulsi Gabbard win the 2028 Republican presidential nomination?",
+      "slug": "will-tulsi-gabbard-win-the-2028-republican-presidential-nomination",
+      "records": 24377,
+      "avg_mid": 0.01379,
+      "avg_spread_bps": 935.29,
+      "buy_maker": {
+        "count": 57,
+        "fill_rate": 0.0023,
+        "avg_pnl_bps": 454.55,
+        "median_pnl_bps": 454.55,
+        "avg_pnl_dollars": 0.0005,
+        "avg_half_spread_captured_bps": 4124.1,
+        "avg_adverse_drift_bps": -3857.01
+      },
+      "sell_maker": {
+        "count": 11,
+        "fill_rate": 0.0005,
+        "avg_pnl_bps": -454.55,
+        "median_pnl_bps": -454.55,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 173.16,
+        "avg_adverse_drift_bps": -635.58
+      }
+    },
+    {
+      "condition_id": "0x13e1cc703a120883a709d3bb29707097952845d61ca6793ea2b4328bae2a7451",
+      "outcome": "No",
+      "question": "Will the Boston Celtics win the 2026 NBA Finals?",
+      "slug": "will-the-boston-celtics-win-the-2026-nba-finals",
+      "records": 18760,
+      "avg_mid": 0.86595,
+      "avg_spread_bps": 92.48,
+      "buy_maker": {
+        "count": 6132,
+        "fill_rate": 0.3269,
+        "avg_pnl_bps": 1.19,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -6e-05,
+        "avg_half_spread_captured_bps": 5.03,
+        "avg_adverse_drift_bps": -5.33
+      },
+      "sell_maker": {
+        "count": 6812,
+        "fill_rate": 0.3631,
+        "avg_pnl_bps": -6.22,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -0.000448,
+        "avg_half_spread_captured_bps": 4.84,
+        "avg_adverse_drift_bps": -12.24
+      }
+    },
+    {
+      "condition_id": "0xfb1835b887c33862f5749c619e612d1244ab6e66115f0ef43d373485dc3a1573",
+      "outcome": "Yes",
+      "question": "Will Manchester City win the 2025\u201326 English Premier League?",
+      "slug": "will-manchester-city-win-the-202526-english-premier-league",
+      "records": 12487,
+      "avg_mid": 0.33815,
+      "avg_spread_bps": 566.79,
+      "buy_maker": {
+        "count": 75,
+        "fill_rate": 0.006,
+        "avg_pnl_bps": 37.23,
+        "median_pnl_bps": 283.69,
+        "avg_pnl_dollars": -0.005,
+        "avg_half_spread_captured_bps": 228.38,
+        "avg_adverse_drift_bps": -194.62
+      },
+      "sell_maker": {
+        "count": 44,
+        "fill_rate": 0.0035,
+        "avg_pnl_bps": 20.46,
+        "median_pnl_bps": 80.16,
+        "avg_pnl_dollars": 0.001727,
+        "avg_half_spread_captured_bps": 90.6,
+        "avg_adverse_drift_bps": -70.4
+      }
+    },
+    {
+      "condition_id": "0xfb1835b887c33862f5749c619e612d1244ab6e66115f0ef43d373485dc3a1573",
+      "outcome": "No",
+      "question": "Will Manchester City win the 2025\u201326 English Premier League?",
+      "slug": "will-manchester-city-win-the-202526-english-premier-league",
+      "records": 12487,
+      "avg_mid": 0.66185,
+      "avg_spread_bps": 297.58,
+      "buy_maker": {
+        "count": 44,
+        "fill_rate": 0.0035,
+        "avg_pnl_bps": 36.75,
+        "median_pnl_bps": 79.84,
+        "avg_pnl_dollars": 0.001727,
+        "avg_half_spread_captured_bps": 77.71,
+        "avg_adverse_drift_bps": -41.26
+      },
+      "sell_maker": {
+        "count": 75,
+        "fill_rate": 0.006,
+        "avg_pnl_bps": -115.83,
+        "median_pnl_bps": 46.57,
+        "avg_pnl_dollars": -0.005,
+        "avg_half_spread_captured_bps": 59.13,
+        "avg_adverse_drift_bps": -176.48
+      }
+    },
+    {
+      "condition_id": "0x4405c62496c4fdd275d17ec31567a01534013c518c314ce61bb633b5e7cb6426",
+      "outcome": "No",
+      "question": "Will the Toronto Raptors win the 2026 NBA Finals?",
+      "slug": "will-the-toronto-raptors-win-the-2026-nba-finals",
+      "records": 17885,
+      "avg_mid": 0.99418,
+      "avg_spread_bps": 107.38,
+      "buy_maker": {
+        "count": 48,
+        "fill_rate": 0.0027,
+        "avg_pnl_bps": 8.83,
+        "median_pnl_bps": -5.03,
+        "avg_pnl_dollars": 0.000875,
+        "avg_half_spread_captured_bps": 2.62,
+        "avg_adverse_drift_bps": 6.2
+      },
+      "sell_maker": {
+        "count": 331,
+        "fill_rate": 0.0185,
+        "avg_pnl_bps": -5.82,
+        "median_pnl_bps": -5.03,
+        "avg_pnl_dollars": -0.000579,
+        "avg_half_spread_captured_bps": 1142.59,
+        "avg_adverse_drift_bps": -1148.98
+      }
+    },
+    {
+      "condition_id": "0x939eeb2dea216749bd409bedde483c3f2bfb0e24d4f2d34461c0b21c6e91f010",
+      "outcome": "No",
+      "question": "Will Roy Cooper win the 2028 Democratic presidential nomination?",
+      "slug": "will-roy-cooper-win-the-2028-democratic-presidential-nomination-286",
+      "records": 24377,
+      "avg_mid": 0.98676,
+      "avg_spread_bps": 97.62,
+      "buy_maker": {
+        "count": 1,
+        "fill_rate": 0.0,
+        "avg_pnl_bps": -5.06,
+        "median_pnl_bps": -5.06,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 0.0,
+        "avg_adverse_drift_bps": -5.06
+      },
+      "sell_maker": {
+        "count": 23,
+        "fill_rate": 0.0009,
+        "avg_pnl_bps": -5.06,
+        "median_pnl_bps": -5.06,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 6326.84,
+        "avg_adverse_drift_bps": -6335.1
+      }
+    },
+    {
+      "condition_id": "0xc720fcfa9e29346a976902f87e0f0f3bdc31d43af501b4fdef4f1780a30dd359",
+      "outcome": "No",
+      "question": "Will Chris Murphy win the 2028 Democratic presidential nomination?",
+      "slug": "will-chris-murphy-win-the-2028-democratic-presidential-nomination",
+      "records": 24377,
+      "avg_mid": 0.9906,
+      "avg_spread_bps": 88.94,
+      "buy_maker": {
+        "count": 1,
+        "fill_rate": 0.0,
+        "avg_pnl_bps": -5.03,
+        "median_pnl_bps": -5.03,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 20.08,
+        "avg_adverse_drift_bps": -25.1
+      },
+      "sell_maker": {
+        "count": 57,
+        "fill_rate": 0.0023,
+        "avg_pnl_bps": -66.75,
+        "median_pnl_bps": -65.86,
+        "avg_pnl_dollars": -0.006588,
+        "avg_half_spread_captured_bps": 9783.29,
+        "avg_adverse_drift_bps": -9915.34
+      }
+    },
+    {
+      "condition_id": "0x0189df05ed7bf84d799213b01a79571e305c03b2ac5359cfbb3a323448ba20fa",
+      "outcome": "No",
+      "question": "Will Japan win the 2026 FIFA World Cup?",
+      "slug": "will-japan-win-the-2026-fifa-world-cup-112",
+      "records": 24298,
+      "avg_mid": 0.97836,
+      "avg_spread_bps": 23.35,
+      "buy_maker": {
+        "count": 9,
+        "fill_rate": 0.0004,
+        "avg_pnl_bps": -5.11,
+        "median_pnl_bps": -5.11,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 32.04,
+        "avg_adverse_drift_bps": -37.13
+      },
+      "sell_maker": {
+        "count": 0,
+        "fill_rate": 0.0,
+        "avg_pnl_bps": null,
+        "median_pnl_bps": null,
+        "avg_half_spread_captured_bps": null,
+        "avg_adverse_drift_bps": null
+      }
+    },
+    {
+      "condition_id": "0x9cd77217b2ab264fe4f6d302f662c0a91f349fe5798f1f98d70bb2311712791b",
+      "outcome": "No",
+      "question": "Will Tulsi Gabbard win the 2028 Republican presidential nomination?",
+      "slug": "will-tulsi-gabbard-win-the-2028-republican-presidential-nomination",
+      "records": 24377,
+      "avg_mid": 0.98621,
+      "avg_spread_bps": 91.35,
+      "buy_maker": {
+        "count": 11,
+        "fill_rate": 0.0005,
+        "avg_pnl_bps": -5.06,
+        "median_pnl_bps": -5.06,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 1.84,
+        "avg_adverse_drift_bps": -6.89
+      },
+      "sell_maker": {
+        "count": 57,
+        "fill_rate": 0.0023,
+        "avg_pnl_bps": 5.06,
+        "median_pnl_bps": 5.06,
+        "avg_pnl_dollars": 0.0005,
+        "avg_half_spread_captured_bps": 3757.94,
+        "avg_adverse_drift_bps": -3750.99
+      }
+    },
+    {
+      "condition_id": "0xe2bdf6c18c8ab5ad5d3be5f95dd749e88d1dee7ac7c4dbf5101013a5c055e3df",
+      "outcome": "No",
+      "question": "Will Dwayne 'The Rock' Johnson win the 2028 US Presidential Election?",
+      "slug": "will-dwayne-the-rock-johnson-win-the-2028-us-presidential-election",
+      "records": 24377,
+      "avg_mid": 0.98075,
+      "avg_spread_bps": 92.12,
+      "buy_maker": {
+        "count": 136,
+        "fill_rate": 0.0056,
+        "avg_pnl_bps": -0.9,
+        "median_pnl_bps": -5.08,
+        "avg_pnl_dollars": -8.8e-05,
+        "avg_half_spread_captured_bps": 0.0,
+        "avg_adverse_drift_bps": -0.9
+      },
+      "sell_maker": {
+        "count": 91,
+        "fill_rate": 0.0037,
+        "avg_pnl_bps": -5.08,
+        "median_pnl_bps": -5.08,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 0.0,
+        "avg_adverse_drift_bps": -5.08
+      }
+    },
+    {
+      "condition_id": "0x139b893a7ae21eaec72e887ba88910831944b4662512428c122c4ad0a5c125ac",
+      "outcome": "No",
+      "question": "Will the Ottawa Senators win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-ottawa-senators-win-the-2026-nhl-stanley-cup",
+      "records": 752,
+      "avg_mid": 0.99511,
+      "avg_spread_bps": 24.51,
+      "buy_maker": {
+        "count": 1,
+        "fill_rate": 0.0013,
+        "avg_pnl_bps": -5.01,
+        "median_pnl_bps": -5.01,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 0.0,
+        "avg_adverse_drift_bps": -5.01
+      },
+      "sell_maker": {
+        "count": 56,
+        "fill_rate": 0.0745,
+        "avg_pnl_bps": -5.03,
+        "median_pnl_bps": -5.03,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 2.97,
+        "avg_adverse_drift_bps": -8.0
+      }
+    },
+    {
+      "condition_id": "0x61600d487069f99e775307a0655c1a79f26e4fc6d8d1ba66790c64d78d0beba2",
+      "outcome": "No",
+      "question": "Will Jon Ossoff win the 2028 US Presidential Election?",
+      "slug": "will-jon-ossoff-win-the-2028-us-presidential-election",
+      "records": 24377,
+      "avg_mid": 0.95931,
+      "avg_spread_bps": 99.7,
+      "buy_maker": {
+        "count": 405,
+        "fill_rate": 0.0166,
+        "avg_pnl_bps": -1.3,
+        "median_pnl_bps": -5.18,
+        "avg_pnl_dollars": -0.000125,
+        "avg_half_spread_captured_bps": 0.41,
+        "avg_adverse_drift_bps": -1.71
+      },
+      "sell_maker": {
+        "count": 453,
+        "fill_rate": 0.0186,
+        "avg_pnl_bps": -4.58,
+        "median_pnl_bps": -5.19,
+        "avg_pnl_dollars": -0.00044,
+        "avg_half_spread_captured_bps": 124.91,
+        "avg_adverse_drift_bps": -129.56
+      }
+    },
+    {
+      "condition_id": "0x1970bcce75e3674660917ae4685b433a9b1e0152d810a8d7c346dfd5e00694c2",
+      "outcome": "No",
+      "question": "Will Cory Booker win the 2028 Democratic presidential nomination?",
+      "slug": "will-corey-booker-win-the-2028-democratic-presidential-nomination-125",
+      "records": 24328,
+      "avg_mid": 0.98932,
+      "avg_spread_bps": 57.34,
+      "buy_maker": {
+        "count": 44,
+        "fill_rate": 0.0018,
+        "avg_pnl_bps": -14.89,
+        "median_pnl_bps": -15.12,
+        "avg_pnl_dollars": -0.001477,
+        "avg_half_spread_captured_bps": 13.71,
+        "avg_adverse_drift_bps": -28.58
+      },
+      "sell_maker": {
+        "count": 7,
+        "fill_rate": 0.0003,
+        "avg_pnl_bps": -35.39,
+        "median_pnl_bps": -35.39,
+        "avg_pnl_dollars": -0.0035,
+        "avg_half_spread_captured_bps": 9359.69,
+        "avg_adverse_drift_bps": -9428.2
+      }
+    },
+    {
+      "condition_id": "0x3367d22cd2a673014f1960742afdf8601040a8ad856dc0a98bd1a44ee99504e2",
+      "outcome": "No",
+      "question": "Will Ron DeSantis win the 2028 US Presidential Election?",
+      "slug": "will-ron-desantis-win-the-2028-us-presidential-election",
+      "records": 24377,
+      "avg_mid": 0.97951,
+      "avg_spread_bps": 90.86,
+      "buy_maker": {
+        "count": 159,
+        "fill_rate": 0.0065,
+        "avg_pnl_bps": -4.29,
+        "median_pnl_bps": -5.12,
+        "avg_pnl_dollars": -0.000418,
+        "avg_half_spread_captured_bps": 0.25,
+        "avg_adverse_drift_bps": -4.54
+      },
+      "sell_maker": {
+        "count": 361,
+        "fill_rate": 0.0148,
+        "avg_pnl_bps": -12.45,
+        "median_pnl_bps": -5.2,
+        "avg_pnl_dollars": -0.001193,
+        "avg_half_spread_captured_bps": 3.7,
+        "avg_adverse_drift_bps": -16.15
+      }
+    },
+    {
+      "condition_id": "0xefe6300fd8a053cca53df8f1bd536c5f571a136392c0516e7b16e39f1addecb0",
+      "outcome": "No",
+      "question": "Will JB Pritzker win the 2028 US Presidential Election?",
+      "slug": "will-jb-pritzker-win-the-2028-us-presidential-election",
+      "records": 24377,
+      "avg_mid": 0.98587,
+      "avg_spread_bps": 91.51,
+      "buy_maker": {
+        "count": 172,
+        "fill_rate": 0.0071,
+        "avg_pnl_bps": -4.34,
+        "median_pnl_bps": -5.07,
+        "avg_pnl_dollars": -0.00043,
+        "avg_half_spread_captured_bps": 2.1,
+        "avg_adverse_drift_bps": -6.44
+      },
+      "sell_maker": {
+        "count": 62,
+        "fill_rate": 0.0025,
+        "avg_pnl_bps": -28.71,
+        "median_pnl_bps": -30.43,
+        "avg_pnl_dollars": -0.002831,
+        "avg_half_spread_captured_bps": 8982.56,
+        "avg_adverse_drift_bps": -9038.6
+      }
+    }
+  ],
+  "top_sell_maker": [
+    {
+      "condition_id": "0x4405c62496c4fdd275d17ec31567a01534013c518c314ce61bb633b5e7cb6426",
+      "outcome": "Yes",
+      "question": "Will the Toronto Raptors win the 2026 NBA Finals?",
+      "slug": "will-the-toronto-raptors-win-the-2026-nba-finals",
+      "records": 17885,
+      "avg_mid": 0.00582,
+      "avg_spread_bps": 4052.43,
+      "buy_maker": {
+        "count": 332,
+        "fill_rate": 0.0186,
+        "avg_pnl_bps": -942.91,
+        "median_pnl_bps": -833.33,
+        "avg_pnl_dollars": -0.000593,
+        "avg_half_spread_captured_bps": 1234.25,
+        "avg_adverse_drift_bps": -2059.23
+      },
+      "sell_maker": {
+        "count": 48,
+        "fill_rate": 0.0027,
+        "avg_pnl_bps": 632.81,
+        "median_pnl_bps": -1000.0,
+        "avg_pnl_dollars": 0.000875,
+        "avg_half_spread_captured_bps": 363.1,
+        "avg_adverse_drift_bps": 428.57
+      }
+    },
+    {
+      "condition_id": "0xfb1835b887c33862f5749c619e612d1244ab6e66115f0ef43d373485dc3a1573",
+      "outcome": "Yes",
+      "question": "Will Manchester City win the 2025\u201326 English Premier League?",
+      "slug": "will-manchester-city-win-the-202526-english-premier-league",
+      "records": 12487,
+      "avg_mid": 0.33815,
+      "avg_spread_bps": 566.79,
+      "buy_maker": {
+        "count": 75,
+        "fill_rate": 0.006,
+        "avg_pnl_bps": 37.23,
+        "median_pnl_bps": 283.69,
+        "avg_pnl_dollars": -0.005,
+        "avg_half_spread_captured_bps": 228.38,
+        "avg_adverse_drift_bps": -194.62
+      },
+      "sell_maker": {
+        "count": 44,
+        "fill_rate": 0.0035,
+        "avg_pnl_bps": 20.46,
+        "median_pnl_bps": 80.16,
+        "avg_pnl_dollars": 0.001727,
+        "avg_half_spread_captured_bps": 90.6,
+        "avg_adverse_drift_bps": -70.4
+      }
+    },
+    {
+      "condition_id": "0x9cd77217b2ab264fe4f6d302f662c0a91f349fe5798f1f98d70bb2311712791b",
+      "outcome": "No",
+      "question": "Will Tulsi Gabbard win the 2028 Republican presidential nomination?",
+      "slug": "will-tulsi-gabbard-win-the-2028-republican-presidential-nomination",
+      "records": 24377,
+      "avg_mid": 0.98621,
+      "avg_spread_bps": 91.35,
+      "buy_maker": {
+        "count": 11,
+        "fill_rate": 0.0005,
+        "avg_pnl_bps": -5.06,
+        "median_pnl_bps": -5.06,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 1.84,
+        "avg_adverse_drift_bps": -6.89
+      },
+      "sell_maker": {
+        "count": 57,
+        "fill_rate": 0.0023,
+        "avg_pnl_bps": 5.06,
+        "median_pnl_bps": 5.06,
+        "avg_pnl_dollars": 0.0005,
+        "avg_half_spread_captured_bps": 3757.94,
+        "avg_adverse_drift_bps": -3750.99
+      }
+    },
+    {
+      "condition_id": "0x939eeb2dea216749bd409bedde483c3f2bfb0e24d4f2d34461c0b21c6e91f010",
+      "outcome": "Yes",
+      "question": "Will Roy Cooper win the 2028 Democratic presidential nomination?",
+      "slug": "will-roy-cooper-win-the-2028-democratic-presidential-nomination-286",
+      "records": 24377,
+      "avg_mid": 0.01324,
+      "avg_spread_bps": 1011.51,
+      "buy_maker": {
+        "count": 23,
+        "fill_rate": 0.0009,
+        "avg_pnl_bps": -416.67,
+        "median_pnl_bps": -416.67,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 7742.3,
+        "avg_adverse_drift_bps": -7836.37
+      },
+      "sell_maker": {
+        "count": 1,
+        "fill_rate": 0.0,
+        "avg_pnl_bps": -454.55,
+        "median_pnl_bps": -454.55,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 0.0,
+        "avg_adverse_drift_bps": -454.55
+      }
+    },
+    {
+      "condition_id": "0xc720fcfa9e29346a976902f87e0f0f3bdc31d43af501b4fdef4f1780a30dd359",
+      "outcome": "Yes",
+      "question": "Will Chris Murphy win the 2028 Democratic presidential nomination?",
+      "slug": "will-chris-murphy-win-the-2028-democratic-presidential-nomination",
+      "records": 24377,
+      "avg_mid": 0.0094,
+      "avg_spread_bps": 1435.22,
+      "buy_maker": {
+        "count": 57,
+        "fill_rate": 0.0023,
+        "avg_pnl_bps": -5031.33,
+        "median_pnl_bps": -5000.0,
+        "avg_pnl_dollars": -0.006588,
+        "avg_half_spread_captured_bps": 9738.82,
+        "avg_adverse_drift_bps": -9870.29
+      },
+      "sell_maker": {
+        "count": 1,
+        "fill_rate": 0.0,
+        "avg_pnl_bps": -833.33,
+        "median_pnl_bps": -833.33,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 5000.0,
+        "avg_adverse_drift_bps": -6250.0
+      }
+    },
+    {
+      "condition_id": "0x939eeb2dea216749bd409bedde483c3f2bfb0e24d4f2d34461c0b21c6e91f010",
+      "outcome": "No",
+      "question": "Will Roy Cooper win the 2028 Democratic presidential nomination?",
+      "slug": "will-roy-cooper-win-the-2028-democratic-presidential-nomination-286",
+      "records": 24377,
+      "avg_mid": 0.98676,
+      "avg_spread_bps": 97.62,
+      "buy_maker": {
+        "count": 1,
+        "fill_rate": 0.0,
+        "avg_pnl_bps": -5.06,
+        "median_pnl_bps": -5.06,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 0.0,
+        "avg_adverse_drift_bps": -5.06
+      },
+      "sell_maker": {
+        "count": 23,
+        "fill_rate": 0.0009,
+        "avg_pnl_bps": -5.06,
+        "median_pnl_bps": -5.06,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 6326.84,
+        "avg_adverse_drift_bps": -6335.1
+      }
+    },
+    {
+      "condition_id": "0x1970bcce75e3674660917ae4685b433a9b1e0152d810a8d7c346dfd5e00694c2",
+      "outcome": "No",
+      "question": "Will Cory Booker win the 2028 Democratic presidential nomination?",
+      "slug": "will-corey-booker-win-the-2028-democratic-presidential-nomination-125",
+      "records": 24328,
+      "avg_mid": 0.98932,
+      "avg_spread_bps": 57.34,
+      "buy_maker": {
+        "count": 44,
+        "fill_rate": 0.0018,
+        "avg_pnl_bps": -14.89,
+        "median_pnl_bps": -15.12,
+        "avg_pnl_dollars": -0.001477,
+        "avg_half_spread_captured_bps": 13.71,
+        "avg_adverse_drift_bps": -28.58
+      },
+      "sell_maker": {
+        "count": 7,
+        "fill_rate": 0.0003,
+        "avg_pnl_bps": -35.39,
+        "median_pnl_bps": -35.39,
+        "avg_pnl_dollars": -0.0035,
+        "avg_half_spread_captured_bps": 9359.69,
+        "avg_adverse_drift_bps": -9428.2
+      }
+    },
+    {
+      "condition_id": "0xb91be12388b3d4079c3ed9b5783cb42d8c33051d37746a49300227e0f45fc089",
+      "outcome": "No",
+      "question": "Will James Talarico win the 2028 Democratic presidential nomination?",
+      "slug": "will-james-talarico-win-the-2028-democratic-presidential-nomination",
+      "records": 24377,
+      "avg_mid": 0.9781,
+      "avg_spread_bps": 89.98,
+      "buy_maker": {
+        "count": 222,
+        "fill_rate": 0.0091,
+        "avg_pnl_bps": -5.1,
+        "median_pnl_bps": -5.1,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 0.0,
+        "avg_adverse_drift_bps": -5.1
+      },
+      "sell_maker": {
+        "count": 58,
+        "fill_rate": 0.0024,
+        "avg_pnl_bps": -5.1,
+        "median_pnl_bps": -5.1,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 3.17,
+        "avg_adverse_drift_bps": -8.27
+      }
+    },
+    {
+      "condition_id": "0x7976b8dbacf9077eb1453a62bcefd6ab2df199acd28aad276ff0d920d6992892",
+      "outcome": "No",
+      "question": "Will Spain win the 2026 FIFA World Cup?",
+      "slug": "will-spain-win-the-2026-fifa-world-cup-963",
+      "records": 24360,
+      "avg_mid": 0.84034,
+      "avg_spread_bps": 47.95,
+      "buy_maker": {
+        "count": 1006,
+        "fill_rate": 0.0413,
+        "avg_pnl_bps": -10.12,
+        "median_pnl_bps": -5.93,
+        "avg_pnl_dollars": -0.000899,
+        "avg_half_spread_captured_bps": 3.12,
+        "avg_adverse_drift_bps": -12.99
+      },
+      "sell_maker": {
+        "count": 938,
+        "fill_rate": 0.0385,
+        "avg_pnl_bps": -0.42,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -3.6e-05,
+        "avg_half_spread_captured_bps": 0.0,
+        "avg_adverse_drift_bps": -0.42
+      }
+    },
+    {
+      "condition_id": "0x375409bc5eeeff961e82b479caeccc20f33d15738e5bce1186d628aa3d9dfb1f",
+      "outcome": "No",
+      "question": "Will England win the 2026 FIFA World Cup?",
+      "slug": "will-england-win-the-2026-fifa-world-cup-937",
+      "records": 24377,
+      "avg_mid": 0.88795,
+      "avg_spread_bps": 55.82,
+      "buy_maker": {
+        "count": 1181,
+        "fill_rate": 0.0484,
+        "avg_pnl_bps": -1.01,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -9e-05,
+        "avg_half_spread_captured_bps": 0.24,
+        "avg_adverse_drift_bps": -1.25
+      },
+      "sell_maker": {
+        "count": 953,
+        "fill_rate": 0.0391,
+        "avg_pnl_bps": -0.48,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -4.1e-05,
+        "avg_half_spread_captured_bps": 0.77,
+        "avg_adverse_drift_bps": -1.25
+      }
+    },
+    {
+      "condition_id": "0xe2bdf6c18c8ab5ad5d3be5f95dd749e88d1dee7ac7c4dbf5101013a5c055e3df",
+      "outcome": "No",
+      "question": "Will Dwayne 'The Rock' Johnson win the 2028 US Presidential Election?",
+      "slug": "will-dwayne-the-rock-johnson-win-the-2028-us-presidential-election",
+      "records": 24377,
+      "avg_mid": 0.98075,
+      "avg_spread_bps": 92.12,
+      "buy_maker": {
+        "count": 136,
+        "fill_rate": 0.0056,
+        "avg_pnl_bps": -0.9,
+        "median_pnl_bps": -5.08,
+        "avg_pnl_dollars": -8.8e-05,
+        "avg_half_spread_captured_bps": 0.0,
+        "avg_adverse_drift_bps": -0.9
+      },
+      "sell_maker": {
+        "count": 91,
+        "fill_rate": 0.0037,
+        "avg_pnl_bps": -5.08,
+        "median_pnl_bps": -5.08,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 0.0,
+        "avg_adverse_drift_bps": -5.08
+      }
+    },
+    {
+      "condition_id": "0xe06a7e94cf2fa8dc2085b7610fe16e9be1cde6654f34d365c13da1149b276c61",
+      "outcome": "No",
+      "question": "Will Oprah Winfrey win the 2028 Democratic presidential nomination?",
+      "slug": "will-oprah-winfrey-win-the-2028-democratic-presidential-nomination",
+      "records": 24328,
+      "avg_mid": 0.9912,
+      "avg_spread_bps": 52.38,
+      "buy_maker": {
+        "count": 0,
+        "fill_rate": 0.0,
+        "avg_pnl_bps": null,
+        "median_pnl_bps": null,
+        "avg_half_spread_captured_bps": null,
+        "avg_adverse_drift_bps": null
+      },
+      "sell_maker": {
+        "count": 62,
+        "fill_rate": 0.0025,
+        "avg_pnl_bps": -7.89,
+        "median_pnl_bps": -5.04,
+        "avg_pnl_dollars": -0.000782,
+        "avg_half_spread_captured_bps": 606.19,
+        "avg_adverse_drift_bps": -616.53
+      }
+    },
+    {
+      "condition_id": "0xd94b47bdeba16ae948bfb147bda059f3543d6fca73291644dfff5268bba7a797",
+      "outcome": "No",
+      "question": "Will Tucker Carlson win the 2028 US Presidential Election?",
+      "slug": "will-tucker-carlson-win-the-2028-us-presidential-election",
+      "records": 24377,
+      "avg_mid": 0.97365,
+      "avg_spread_bps": 90.31,
+      "buy_maker": {
+        "count": 179,
+        "fill_rate": 0.0073,
+        "avg_pnl_bps": -5.07,
+        "median_pnl_bps": -5.13,
+        "avg_pnl_dollars": -0.000494,
+        "avg_half_spread_captured_bps": 0.57,
+        "avg_adverse_drift_bps": -5.64
+      },
+      "sell_maker": {
+        "count": 183,
+        "fill_rate": 0.0075,
+        "avg_pnl_bps": -5.07,
+        "median_pnl_bps": -5.12,
+        "avg_pnl_dollars": -0.000495,
+        "avg_half_spread_captured_bps": 0.17,
+        "avg_adverse_drift_bps": -5.24
+      }
+    },
+    {
+      "condition_id": "0x64d31a2af85518c6718a5757a35b840f08eca20c1e22c0eb1e96ec01cc55b8b6",
+      "outcome": "No",
+      "question": "Will Ron DeSantis win the 2028 Republican presidential nomination?",
+      "slug": "will-ron-desantis-win-the-2028-republican-presidential-nomination",
+      "records": 24377,
+      "avg_mid": 0.97019,
+      "avg_spread_bps": 90.94,
+      "buy_maker": {
+        "count": 414,
+        "fill_rate": 0.017,
+        "avg_pnl_bps": -3.15,
+        "median_pnl_bps": -5.13,
+        "avg_pnl_dollars": -0.000307,
+        "avg_half_spread_captured_bps": 0.0,
+        "avg_adverse_drift_bps": -3.15
+      },
+      "sell_maker": {
+        "count": 1298,
+        "fill_rate": 0.0532,
+        "avg_pnl_bps": -0.79,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -7.7e-05,
+        "avg_half_spread_captured_bps": 0.03,
+        "avg_adverse_drift_bps": -0.82
+      }
+    },
+    {
+      "condition_id": "0x36db77c539bcc8c7bf0686c1b99f30c5a5eed1f53d3b3a27a071550c81f83701",
+      "outcome": "No",
+      "question": "Will Mark Kelly win the 2028 Democratic presidential nomination?",
+      "slug": "will-mark-kelly-win-the-2028-democratic-presidential-nomination-479",
+      "records": 24377,
+      "avg_mid": 0.97211,
+      "avg_spread_bps": 97.79,
+      "buy_maker": {
+        "count": 239,
+        "fill_rate": 0.0098,
+        "avg_pnl_bps": -3.91,
+        "median_pnl_bps": -5.13,
+        "avg_pnl_dollars": -0.000381,
+        "avg_half_spread_captured_bps": 0.0,
+        "avg_adverse_drift_bps": -3.91
+      },
+      "sell_maker": {
+        "count": 262,
+        "fill_rate": 0.0107,
+        "avg_pnl_bps": -4.23,
+        "median_pnl_bps": -5.13,
+        "avg_pnl_dollars": -0.000412,
+        "avg_half_spread_captured_bps": 0.51,
+        "avg_adverse_drift_bps": -4.74
+      }
+    }
+  ],
+  "per_token": {
+    "0xbdd688664b4f3cf7ec4ec011607934fe8ae720c08353fc14a6e9dfbf6bbcf11a::Yes": {
+      "condition_id": "0xbdd688664b4f3cf7ec4ec011607934fe8ae720c08353fc14a6e9dfbf6bbcf11a",
+      "outcome": "Yes",
+      "question": "Will the Tampa Bay Lightning win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-tampa-bay-lightning-win-the-2026-nhl-stanley-cup",
+      "records": 18568,
+      "avg_mid": 0.09676,
+      "avg_spread_bps": 513.74,
+      "buy_maker": {
+        "count": 2125,
+        "fill_rate": 0.1144,
+        "avg_pnl_bps": -179.53,
+        "median_pnl_bps": -112.36,
+        "avg_pnl_dollars": -0.001802,
+        "avg_half_spread_captured_bps": 100.33,
+        "avg_adverse_drift_bps": -277.4
+      },
+      "sell_maker": {
+        "count": 1615,
+        "fill_rate": 0.087,
+        "avg_pnl_bps": -360.91,
+        "median_pnl_bps": -60.24,
+        "avg_pnl_dollars": -0.002982,
+        "avg_half_spread_captured_bps": 91.76,
+        "avg_adverse_drift_bps": -455.74
+      }
+    },
+    "0xbdd688664b4f3cf7ec4ec011607934fe8ae720c08353fc14a6e9dfbf6bbcf11a::No": {
+      "condition_id": "0xbdd688664b4f3cf7ec4ec011607934fe8ae720c08353fc14a6e9dfbf6bbcf11a",
+      "outcome": "No",
+      "question": "Will the Tampa Bay Lightning win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-tampa-bay-lightning-win-the-2026-nhl-stanley-cup",
+      "records": 18568,
+      "avg_mid": 0.90324,
+      "avg_spread_bps": 110.83,
+      "buy_maker": {
+        "count": 1615,
+        "fill_rate": 0.087,
+        "avg_pnl_bps": -32.59,
+        "median_pnl_bps": -5.59,
+        "avg_pnl_dollars": -0.002982,
+        "avg_half_spread_captured_bps": 9.0,
+        "avg_adverse_drift_bps": -41.56
+      },
+      "sell_maker": {
+        "count": 2124,
+        "fill_rate": 0.1144,
+        "avg_pnl_bps": -20.05,
+        "median_pnl_bps": -10.98,
+        "avg_pnl_dollars": -0.001802,
+        "avg_half_spread_captured_bps": 10.56,
+        "avg_adverse_drift_bps": -30.65
+      }
+    },
+    "0xd66cbb60c333c2eed61717370755c18bc7e494fed90cb507cd9b49c77100951d::Yes": {
+      "condition_id": "0xd66cbb60c333c2eed61717370755c18bc7e494fed90cb507cd9b49c77100951d",
+      "outcome": "Yes",
+      "question": "Will the Philadelphia Flyers win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-philadelphia-flyers-win-the-2026-nhl-stanley-cup",
+      "records": 18741,
+      "avg_mid": 0.032,
+      "avg_spread_bps": 864.3,
+      "buy_maker": {
+        "count": 2598,
+        "fill_rate": 0.1386,
+        "avg_pnl_bps": -223.53,
+        "median_pnl_bps": -178.57,
+        "avg_pnl_dollars": -0.000674,
+        "avg_half_spread_captured_bps": 154.61,
+        "avg_adverse_drift_bps": -375.86
+      },
+      "sell_maker": {
+        "count": 1471,
+        "fill_rate": 0.0785,
+        "avg_pnl_bps": -716.94,
+        "median_pnl_bps": -454.55,
+        "avg_pnl_dollars": -0.001932,
+        "avg_half_spread_captured_bps": 156.67,
+        "avg_adverse_drift_bps": -892.32
+      }
+    },
+    "0xd66cbb60c333c2eed61717370755c18bc7e494fed90cb507cd9b49c77100951d::No": {
+      "condition_id": "0xd66cbb60c333c2eed61717370755c18bc7e494fed90cb507cd9b49c77100951d",
+      "outcome": "No",
+      "question": "Will the Philadelphia Flyers win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-philadelphia-flyers-win-the-2026-nhl-stanley-cup",
+      "records": 18741,
+      "avg_mid": 0.968,
+      "avg_spread_bps": 28.58,
+      "buy_maker": {
+        "count": 1471,
+        "fill_rate": 0.0785,
+        "avg_pnl_bps": -19.89,
+        "median_pnl_bps": -15.54,
+        "avg_pnl_dollars": -0.001932,
+        "avg_half_spread_captured_bps": 4.55,
+        "avg_adverse_drift_bps": -24.43
+      },
+      "sell_maker": {
+        "count": 2598,
+        "fill_rate": 0.1386,
+        "avg_pnl_bps": -6.96,
+        "median_pnl_bps": -5.18,
+        "avg_pnl_dollars": -0.000674,
+        "avg_half_spread_captured_bps": 4.87,
+        "avg_adverse_drift_bps": -11.83
+      }
+    },
+    "0x22e7b5e35423e76842dd3a5e1a21d13793811080d5e7b2896d0c001bd5e97d54::Yes": {
+      "condition_id": "0x22e7b5e35423e76842dd3a5e1a21d13793811080d5e7b2896d0c001bd5e97d54",
+      "outcome": "Yes",
+      "question": "Will the Oklahoma City Thunder win the 2026 NBA Finals?",
+      "slug": "will-the-oklahoma-city-thunder-win-the-2026-nba-finals",
+      "records": 24207,
+      "avg_mid": 0.53243,
+      "avg_spread_bps": 211.99,
+      "buy_maker": {
+        "count": 590,
+        "fill_rate": 0.0244,
+        "avg_pnl_bps": -78.5,
+        "median_pnl_bps": -115.16,
+        "avg_pnl_dollars": -0.004305,
+        "avg_half_spread_captured_bps": 74.12,
+        "avg_adverse_drift_bps": -152.06
+      },
+      "sell_maker": {
+        "count": 723,
+        "fill_rate": 0.0299,
+        "avg_pnl_bps": -71.8,
+        "median_pnl_bps": -115.61,
+        "avg_pnl_dollars": -0.003676,
+        "avg_half_spread_captured_bps": 132.78,
+        "avg_adverse_drift_bps": -205.78
+      }
+    },
+    "0x22e7b5e35423e76842dd3a5e1a21d13793811080d5e7b2896d0c001bd5e97d54::No": {
+      "condition_id": "0x22e7b5e35423e76842dd3a5e1a21d13793811080d5e7b2896d0c001bd5e97d54",
+      "outcome": "No",
+      "question": "Will the Oklahoma City Thunder win the 2026 NBA Finals?",
+      "slug": "will-the-oklahoma-city-thunder-win-the-2026-nba-finals",
+      "records": 24207,
+      "avg_mid": 0.46757,
+      "avg_spread_bps": 225.93,
+      "buy_maker": {
+        "count": 723,
+        "fill_rate": 0.0299,
+        "avg_pnl_bps": -75.4,
+        "median_pnl_bps": -122.2,
+        "avg_pnl_dollars": -0.003676,
+        "avg_half_spread_captured_bps": 102.4,
+        "avg_adverse_drift_bps": -176.93
+      },
+      "sell_maker": {
+        "count": 590,
+        "fill_rate": 0.0244,
+        "avg_pnl_bps": -96.96,
+        "median_pnl_bps": -125.26,
+        "avg_pnl_dollars": -0.004305,
+        "avg_half_spread_captured_bps": 88.33,
+        "avg_adverse_drift_bps": -186.18
+      }
+    },
+    "0x6b44bd667fad6cb5b3b68d8bd1055a038c77d9176dbd51f123879797cc3368a7::Yes": {
+      "condition_id": "0x6b44bd667fad6cb5b3b68d8bd1055a038c77d9176dbd51f123879797cc3368a7",
+      "outcome": "Yes",
+      "question": "Will the Cleveland Cavaliers win the 2026 NBA Finals?",
+      "slug": "will-the-cleveland-cavaliers-win-the-2026-nba-finals",
+      "records": 24323,
+      "avg_mid": 0.04078,
+      "avg_spread_bps": 370.23,
+      "buy_maker": {
+        "count": 4962,
+        "fill_rate": 0.204,
+        "avg_pnl_bps": -47.75,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -0.000221,
+        "avg_half_spread_captured_bps": 5.48,
+        "avg_adverse_drift_bps": -52.36
+      },
+      "sell_maker": {
+        "count": 4765,
+        "fill_rate": 0.1959,
+        "avg_pnl_bps": -108.38,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -0.000307,
+        "avg_half_spread_captured_bps": 3.58,
+        "avg_adverse_drift_bps": -112.04
+      }
+    },
+    "0x6b44bd667fad6cb5b3b68d8bd1055a038c77d9176dbd51f123879797cc3368a7::No": {
+      "condition_id": "0x6b44bd667fad6cb5b3b68d8bd1055a038c77d9176dbd51f123879797cc3368a7",
+      "outcome": "No",
+      "question": "Will the Cleveland Cavaliers win the 2026 NBA Finals?",
+      "slug": "will-the-cleveland-cavaliers-win-the-2026-nba-finals",
+      "records": 24323,
+      "avg_mid": 0.95922,
+      "avg_spread_bps": 42.45,
+      "buy_maker": {
+        "count": 4763,
+        "fill_rate": 0.1958,
+        "avg_pnl_bps": -3.15,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -0.000303,
+        "avg_half_spread_captured_bps": 0.16,
+        "avg_adverse_drift_bps": -3.31
+      },
+      "sell_maker": {
+        "count": 4964,
+        "fill_rate": 0.2041,
+        "avg_pnl_bps": -2.31,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -0.00022,
+        "avg_half_spread_captured_bps": 2.16,
+        "avg_adverse_drift_bps": -4.51
+      }
+    },
+    "0x9b56568af78dd036b03c641e0673729d72cd7d63578eb0119cd23eb1f94f1b56::Yes": {
+      "condition_id": "0x9b56568af78dd036b03c641e0673729d72cd7d63578eb0119cd23eb1f94f1b56",
+      "outcome": "Yes",
+      "question": "Will the Houston Rockets win the 2026 NBA Finals?",
+      "slug": "will-the-houston-rockets-win-the-2026-nba-finals",
+      "records": 18626,
+      "avg_mid": 0.00455,
+      "avg_spread_bps": 3409.62,
+      "buy_maker": {
+        "count": 829,
+        "fill_rate": 0.0445,
+        "avg_pnl_bps": -1029.15,
+        "median_pnl_bps": -1000.0,
+        "avg_pnl_dollars": -0.000691,
+        "avg_half_spread_captured_bps": -53.35,
+        "avg_adverse_drift_bps": -984.03
+      },
+      "sell_maker": {
+        "count": 476,
+        "fill_rate": 0.0256,
+        "avg_pnl_bps": -402.95,
+        "median_pnl_bps": -833.33,
+        "avg_pnl_dollars": -0.000225,
+        "avg_half_spread_captured_bps": -36.9,
+        "avg_adverse_drift_bps": -357.41
+      }
+    },
+    "0x9b56568af78dd036b03c641e0673729d72cd7d63578eb0119cd23eb1f94f1b56::No": {
+      "condition_id": "0x9b56568af78dd036b03c641e0673729d72cd7d63578eb0119cd23eb1f94f1b56",
+      "outcome": "No",
+      "question": "Will the Houston Rockets win the 2026 NBA Finals?",
+      "slug": "will-the-houston-rockets-win-the-2026-nba-finals",
+      "records": 18626,
+      "avg_mid": 0.99545,
+      "avg_spread_bps": 11.05,
+      "buy_maker": {
+        "count": 505,
+        "fill_rate": 0.0271,
+        "avg_pnl_bps": -1.14,
+        "median_pnl_bps": -5.03,
+        "avg_pnl_dollars": -0.000114,
+        "avg_half_spread_captured_bps": 0.16,
+        "avg_adverse_drift_bps": -1.3
+      },
+      "sell_maker": {
+        "count": 735,
+        "fill_rate": 0.0395,
+        "avg_pnl_bps": -5.76,
+        "median_pnl_bps": -5.03,
+        "avg_pnl_dollars": -0.000571,
+        "avg_half_spread_captured_bps": 0.07,
+        "avg_adverse_drift_bps": -5.82
+      }
+    },
+    "0x13e1cc703a120883a709d3bb29707097952845d61ca6793ea2b4328bae2a7451::Yes": {
+      "condition_id": "0x13e1cc703a120883a709d3bb29707097952845d61ca6793ea2b4328bae2a7451",
+      "outcome": "Yes",
+      "question": "Will the Boston Celtics win the 2026 NBA Finals?",
+      "slug": "will-the-boston-celtics-win-the-2026-nba-finals",
+      "records": 18760,
+      "avg_mid": 0.13405,
+      "avg_spread_bps": 220.09,
+      "buy_maker": {
+        "count": 6811,
+        "fill_rate": 0.3631,
+        "avg_pnl_bps": -26.18,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -0.000448,
+        "avg_half_spread_captured_bps": 21.68,
+        "avg_adverse_drift_bps": -47.29
+      },
+      "sell_maker": {
+        "count": 6131,
+        "fill_rate": 0.3268,
+        "avg_pnl_bps": -18.03,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -5.7e-05,
+        "avg_half_spread_captured_bps": 24.79,
+        "avg_adverse_drift_bps": -37.38
+      }
+    },
+    "0x13e1cc703a120883a709d3bb29707097952845d61ca6793ea2b4328bae2a7451::No": {
+      "condition_id": "0x13e1cc703a120883a709d3bb29707097952845d61ca6793ea2b4328bae2a7451",
+      "outcome": "No",
+      "question": "Will the Boston Celtics win the 2026 NBA Finals?",
+      "slug": "will-the-boston-celtics-win-the-2026-nba-finals",
+      "records": 18760,
+      "avg_mid": 0.86595,
+      "avg_spread_bps": 92.48,
+      "buy_maker": {
+        "count": 6132,
+        "fill_rate": 0.3269,
+        "avg_pnl_bps": 1.19,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -6e-05,
+        "avg_half_spread_captured_bps": 5.03,
+        "avg_adverse_drift_bps": -5.33
+      },
+      "sell_maker": {
+        "count": 6812,
+        "fill_rate": 0.3631,
+        "avg_pnl_bps": -6.22,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -0.000448,
+        "avg_half_spread_captured_bps": 4.84,
+        "avg_adverse_drift_bps": -12.24
+      }
+    },
+    "0x7338d9dea0de820ed621abdff3de2d4b07a573bc0c1a6f7128941f4d0c5606e3::Yes": {
+      "condition_id": "0x7338d9dea0de820ed621abdff3de2d4b07a573bc0c1a6f7128941f4d0c5606e3",
+      "outcome": "Yes",
+      "question": "Will the Orlando Magic win the 2026 NBA Finals?",
+      "slug": "will-the-orlando-magic-win-the-2026-nba-finals",
+      "records": 18751,
+      "avg_mid": 0.00866,
+      "avg_spread_bps": 2110.75,
+      "buy_maker": {
+        "count": 1467,
+        "fill_rate": 0.0782,
+        "avg_pnl_bps": -589.27,
+        "median_pnl_bps": -714.29,
+        "avg_pnl_dollars": -0.000596,
+        "avg_half_spread_captured_bps": 188.51,
+        "avg_adverse_drift_bps": -766.17
+      },
+      "sell_maker": {
+        "count": 533,
+        "fill_rate": 0.0284,
+        "avg_pnl_bps": -1282.96,
+        "median_pnl_bps": -833.33,
+        "avg_pnl_dollars": -0.00122,
+        "avg_half_spread_captured_bps": -109.33,
+        "avg_adverse_drift_bps": -1135.05
+      }
+    },
+    "0x7338d9dea0de820ed621abdff3de2d4b07a573bc0c1a6f7128941f4d0c5606e3::No": {
+      "condition_id": "0x7338d9dea0de820ed621abdff3de2d4b07a573bc0c1a6f7128941f4d0c5606e3",
+      "outcome": "No",
+      "question": "Will the Orlando Magic win the 2026 NBA Finals?",
+      "slug": "will-the-orlando-magic-win-the-2026-nba-finals",
+      "records": 18751,
+      "avg_mid": 0.99134,
+      "avg_spread_bps": 109.39,
+      "buy_maker": {
+        "count": 497,
+        "fill_rate": 0.0265,
+        "avg_pnl_bps": -6.66,
+        "median_pnl_bps": -5.03,
+        "avg_pnl_dollars": -0.000659,
+        "avg_half_spread_captured_bps": 0.85,
+        "avg_adverse_drift_bps": -7.51
+      },
+      "sell_maker": {
+        "count": 1195,
+        "fill_rate": 0.0637,
+        "avg_pnl_bps": -3.63,
+        "median_pnl_bps": -5.04,
+        "avg_pnl_dollars": -0.000358,
+        "avg_half_spread_captured_bps": 225.3,
+        "avg_adverse_drift_bps": -229.26
+      }
+    },
+    "0x4e65282819c98c6aed529f357fbf5983b1ae9407a3c25bd50fe97b2906df68f9::Yes": {
+      "condition_id": "0x4e65282819c98c6aed529f357fbf5983b1ae9407a3c25bd50fe97b2906df68f9",
+      "outcome": "Yes",
+      "question": "Will the Denver Nuggets win the 2026 NBA Finals?",
+      "slug": "will-the-denver-nuggets-win-the-2026-nba-finals",
+      "records": 18491,
+      "avg_mid": 0.06439,
+      "avg_spread_bps": 1034.74,
+      "buy_maker": {
+        "count": 1661,
+        "fill_rate": 0.0898,
+        "avg_pnl_bps": -370.35,
+        "median_pnl_bps": -151.52,
+        "avg_pnl_dollars": -0.00233,
+        "avg_half_spread_captured_bps": 225.8,
+        "avg_adverse_drift_bps": -581.76
+      },
+      "sell_maker": {
+        "count": 1317,
+        "fill_rate": 0.0712,
+        "avg_pnl_bps": -263.99,
+        "median_pnl_bps": -312.5,
+        "avg_pnl_dollars": -0.001613,
+        "avg_half_spread_captured_bps": 359.17,
+        "avg_adverse_drift_bps": -632.83
+      }
+    },
+    "0x4e65282819c98c6aed529f357fbf5983b1ae9407a3c25bd50fe97b2906df68f9::No": {
+      "condition_id": "0x4e65282819c98c6aed529f357fbf5983b1ae9407a3c25bd50fe97b2906df68f9",
+      "outcome": "No",
+      "question": "Will the Denver Nuggets win the 2026 NBA Finals?",
+      "slug": "will-the-denver-nuggets-win-the-2026-nba-finals",
+      "records": 18491,
+      "avg_mid": 0.93561,
+      "avg_spread_bps": 103.98,
+      "buy_maker": {
+        "count": 1317,
+        "fill_rate": 0.0712,
+        "avg_pnl_bps": -17.31,
+        "median_pnl_bps": -10.44,
+        "avg_pnl_dollars": -0.001613,
+        "avg_half_spread_captured_bps": 23.99,
+        "avg_adverse_drift_bps": -41.25
+      },
+      "sell_maker": {
+        "count": 1661,
+        "fill_rate": 0.0898,
+        "avg_pnl_bps": -25.01,
+        "median_pnl_bps": -5.22,
+        "avg_pnl_dollars": -0.00233,
+        "avg_half_spread_captured_bps": 17.67,
+        "avg_adverse_drift_bps": -42.77
+      }
+    },
+    "0xb6b3d7a2037b3faa7e1306d741840d453432902d73cc9a146a035e40271eae73::Yes": {
+      "condition_id": "0xb6b3d7a2037b3faa7e1306d741840d453432902d73cc9a146a035e40271eae73",
+      "outcome": "Yes",
+      "question": "Will the San Antonio Spurs win the 2026 NBA Finals?",
+      "slug": "will-the-san-antonio-spurs-win-the-2026-nba-finals",
+      "records": 24223,
+      "avg_mid": 0.15173,
+      "avg_spread_bps": 170.13,
+      "buy_maker": {
+        "count": 6588,
+        "fill_rate": 0.272,
+        "avg_pnl_bps": -28.7,
+        "median_pnl_bps": -24.27,
+        "avg_pnl_dollars": -0.000478,
+        "avg_half_spread_captured_bps": 16.46,
+        "avg_adverse_drift_bps": -45.14
+      },
+      "sell_maker": {
+        "count": 6382,
+        "fill_rate": 0.2635,
+        "avg_pnl_bps": -43.41,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -0.000616,
+        "avg_half_spread_captured_bps": 16.14,
+        "avg_adverse_drift_bps": -59.71
+      }
+    },
+    "0xb6b3d7a2037b3faa7e1306d741840d453432902d73cc9a146a035e40271eae73::No": {
+      "condition_id": "0xb6b3d7a2037b3faa7e1306d741840d453432902d73cc9a146a035e40271eae73",
+      "outcome": "No",
+      "question": "Will the San Antonio Spurs win the 2026 NBA Finals?",
+      "slug": "will-the-san-antonio-spurs-win-the-2026-nba-finals",
+      "records": 24223,
+      "avg_mid": 0.84827,
+      "avg_spread_bps": 67.0,
+      "buy_maker": {
+        "count": 6381,
+        "fill_rate": 0.2634,
+        "avg_pnl_bps": -7.26,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -0.000616,
+        "avg_half_spread_captured_bps": 2.63,
+        "avg_adverse_drift_bps": -9.89
+      },
+      "sell_maker": {
+        "count": 6587,
+        "fill_rate": 0.2719,
+        "avg_pnl_bps": -5.74,
+        "median_pnl_bps": -5.62,
+        "avg_pnl_dollars": -0.000478,
+        "avg_half_spread_captured_bps": 2.75,
+        "avg_adverse_drift_bps": -8.49
+      }
+    },
+    "0x567f1ff714731fafa702d454a105b064a7ec4d10f6fb71ad3221f4918681c709::Yes": {
+      "condition_id": "0x567f1ff714731fafa702d454a105b064a7ec4d10f6fb71ad3221f4918681c709",
+      "outcome": "Yes",
+      "question": "Will the Philadelphia 76ers win the 2026 NBA Finals?",
+      "slug": "will-the-philadelphia-76ers-win-the-2026-nba-finals",
+      "records": 13822,
+      "avg_mid": 0.00467,
+      "avg_spread_bps": 3210.57,
+      "buy_maker": {
+        "count": 703,
+        "fill_rate": 0.0509,
+        "avg_pnl_bps": -1095.09,
+        "median_pnl_bps": -714.29,
+        "avg_pnl_dollars": -0.000633,
+        "avg_half_spread_captured_bps": 181.53,
+        "avg_adverse_drift_bps": -1249.05
+      },
+      "sell_maker": {
+        "count": 362,
+        "fill_rate": 0.0262,
+        "avg_pnl_bps": -339.04,
+        "median_pnl_bps": -555.56,
+        "avg_pnl_dollars": -0.000309,
+        "avg_half_spread_captured_bps": 17.14,
+        "avg_adverse_drift_bps": -339.23
+      }
+    },
+    "0x567f1ff714731fafa702d454a105b064a7ec4d10f6fb71ad3221f4918681c709::No": {
+      "condition_id": "0x567f1ff714731fafa702d454a105b064a7ec4d10f6fb71ad3221f4918681c709",
+      "outcome": "No",
+      "question": "Will the Philadelphia 76ers win the 2026 NBA Finals?",
+      "slug": "will-the-philadelphia-76ers-win-the-2026-nba-finals",
+      "records": 13822,
+      "avg_mid": 0.99533,
+      "avg_spread_bps": 11.19,
+      "buy_maker": {
+        "count": 306,
+        "fill_rate": 0.0221,
+        "avg_pnl_bps": -2.69,
+        "median_pnl_bps": -5.04,
+        "avg_pnl_dollars": -0.000266,
+        "avg_half_spread_captured_bps": 0.49,
+        "avg_adverse_drift_bps": -3.18
+      },
+      "sell_maker": {
+        "count": 642,
+        "fill_rate": 0.0464,
+        "avg_pnl_bps": -6.41,
+        "median_pnl_bps": -5.04,
+        "avg_pnl_dollars": -0.000636,
+        "avg_half_spread_captured_bps": 1.38,
+        "avg_adverse_drift_bps": -7.79
+      }
+    },
+    "0xe202539dfbeced92dc4112f134a205c80ca6cf4db32bd82f05b291c297219fd8::Yes": {
+      "condition_id": "0xe202539dfbeced92dc4112f134a205c80ca6cf4db32bd82f05b291c297219fd8",
+      "outcome": "Yes",
+      "question": "Will the Detroit Pistons win the 2026 NBA Finals?",
+      "slug": "will-the-detroit-pistons-win-the-2026-nba-finals",
+      "records": 24283,
+      "avg_mid": 0.02939,
+      "avg_spread_bps": 532.08,
+      "buy_maker": {
+        "count": 4213,
+        "fill_rate": 0.1735,
+        "avg_pnl_bps": -126.76,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -0.000353,
+        "avg_half_spread_captured_bps": 13.42,
+        "avg_adverse_drift_bps": -139.93
+      },
+      "sell_maker": {
+        "count": 4703,
+        "fill_rate": 0.1937,
+        "avg_pnl_bps": -171.7,
+        "median_pnl_bps": -108.7,
+        "avg_pnl_dollars": -0.000323,
+        "avg_half_spread_captured_bps": 6.92,
+        "avg_adverse_drift_bps": -176.84
+      }
+    },
+    "0xe202539dfbeced92dc4112f134a205c80ca6cf4db32bd82f05b291c297219fd8::No": {
+      "condition_id": "0xe202539dfbeced92dc4112f134a205c80ca6cf4db32bd82f05b291c297219fd8",
+      "outcome": "No",
+      "question": "Will the Detroit Pistons win the 2026 NBA Finals?",
+      "slug": "will-the-detroit-pistons-win-the-2026-nba-finals",
+      "records": 24283,
+      "avg_mid": 0.97061,
+      "avg_spread_bps": 18.68,
+      "buy_maker": {
+        "count": 4476,
+        "fill_rate": 0.1843,
+        "avg_pnl_bps": -2.68,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -0.000261,
+        "avg_half_spread_captured_bps": 0.79,
+        "avg_adverse_drift_bps": -3.47
+      },
+      "sell_maker": {
+        "count": 4153,
+        "fill_rate": 0.171,
+        "avg_pnl_bps": -3.71,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -0.000359,
+        "avg_half_spread_captured_bps": 0.84,
+        "avg_adverse_drift_bps": -4.55
+      }
+    },
+    "0x4405c62496c4fdd275d17ec31567a01534013c518c314ce61bb633b5e7cb6426::Yes": {
+      "condition_id": "0x4405c62496c4fdd275d17ec31567a01534013c518c314ce61bb633b5e7cb6426",
+      "outcome": "Yes",
+      "question": "Will the Toronto Raptors win the 2026 NBA Finals?",
+      "slug": "will-the-toronto-raptors-win-the-2026-nba-finals",
+      "records": 17885,
+      "avg_mid": 0.00582,
+      "avg_spread_bps": 4052.43,
+      "buy_maker": {
+        "count": 332,
+        "fill_rate": 0.0186,
+        "avg_pnl_bps": -942.91,
+        "median_pnl_bps": -833.33,
+        "avg_pnl_dollars": -0.000593,
+        "avg_half_spread_captured_bps": 1234.25,
+        "avg_adverse_drift_bps": -2059.23
+      },
+      "sell_maker": {
+        "count": 48,
+        "fill_rate": 0.0027,
+        "avg_pnl_bps": 632.81,
+        "median_pnl_bps": -1000.0,
+        "avg_pnl_dollars": 0.000875,
+        "avg_half_spread_captured_bps": 363.1,
+        "avg_adverse_drift_bps": 428.57
+      }
+    },
+    "0x4405c62496c4fdd275d17ec31567a01534013c518c314ce61bb633b5e7cb6426::No": {
+      "condition_id": "0x4405c62496c4fdd275d17ec31567a01534013c518c314ce61bb633b5e7cb6426",
+      "outcome": "No",
+      "question": "Will the Toronto Raptors win the 2026 NBA Finals?",
+      "slug": "will-the-toronto-raptors-win-the-2026-nba-finals",
+      "records": 17885,
+      "avg_mid": 0.99418,
+      "avg_spread_bps": 107.38,
+      "buy_maker": {
+        "count": 48,
+        "fill_rate": 0.0027,
+        "avg_pnl_bps": 8.83,
+        "median_pnl_bps": -5.03,
+        "avg_pnl_dollars": 0.000875,
+        "avg_half_spread_captured_bps": 2.62,
+        "avg_adverse_drift_bps": 6.2
+      },
+      "sell_maker": {
+        "count": 331,
+        "fill_rate": 0.0185,
+        "avg_pnl_bps": -5.82,
+        "median_pnl_bps": -5.03,
+        "avg_pnl_dollars": -0.000579,
+        "avg_half_spread_captured_bps": 1142.59,
+        "avg_adverse_drift_bps": -1148.98
+      }
+    },
+    "0xa49fc89bfb87bb302bfc43567709850565161bdaed5bc506bff4b85fd3c5c2ee::Yes": {
+      "condition_id": "0xa49fc89bfb87bb302bfc43567709850565161bdaed5bc506bff4b85fd3c5c2ee",
+      "outcome": "Yes",
+      "question": "Will the Phoenix Suns win the 2026 NBA Finals?",
+      "slug": "will-the-phoenix-suns-win-the-2026-nba-finals",
+      "records": 5236,
+      "avg_mid": 0.0015,
+      "avg_spread_bps": 6666.67,
+      "buy_maker": {
+        "count": 0,
+        "fill_rate": 0.0,
+        "avg_pnl_bps": null,
+        "median_pnl_bps": null,
+        "avg_half_spread_captured_bps": null,
+        "avg_adverse_drift_bps": null
+      },
+      "sell_maker": {
+        "count": 0,
+        "fill_rate": 0.0,
+        "avg_pnl_bps": null,
+        "median_pnl_bps": null,
+        "avg_half_spread_captured_bps": null,
+        "avg_adverse_drift_bps": null
+      }
+    },
+    "0xa49fc89bfb87bb302bfc43567709850565161bdaed5bc506bff4b85fd3c5c2ee::No": {
+      "condition_id": "0xa49fc89bfb87bb302bfc43567709850565161bdaed5bc506bff4b85fd3c5c2ee",
+      "outcome": "No",
+      "question": "Will the Phoenix Suns win the 2026 NBA Finals?",
+      "slug": "will-the-phoenix-suns-win-the-2026-nba-finals",
+      "records": 5236,
+      "avg_mid": 0.9985,
+      "avg_spread_bps": 10.02,
+      "buy_maker": {
+        "count": 0,
+        "fill_rate": 0.0,
+        "avg_pnl_bps": null,
+        "median_pnl_bps": null,
+        "avg_half_spread_captured_bps": null,
+        "avg_adverse_drift_bps": null
+      },
+      "sell_maker": {
+        "count": 0,
+        "fill_rate": 0.0,
+        "avg_pnl_bps": null,
+        "median_pnl_bps": null,
+        "avg_half_spread_captured_bps": null,
+        "avg_adverse_drift_bps": null
+      }
+    },
+    "0x6331a779482df72d904c3c1e12b6409ff836bc06f8c97945cba9b25ada2c605c::Yes": {
+      "condition_id": "0x6331a779482df72d904c3c1e12b6409ff836bc06f8c97945cba9b25ada2c605c",
+      "outcome": "Yes",
+      "question": "Will the Portland Trail Blazers win the 2026 NBA Finals?",
+      "slug": "will-the-portland-trail-blazers-win-the-2026-nba-finals",
+      "records": 12230,
+      "avg_mid": 0.00375,
+      "avg_spread_bps": 3973.68,
+      "buy_maker": {
+        "count": 406,
+        "fill_rate": 0.0332,
+        "avg_pnl_bps": -896.79,
+        "median_pnl_bps": -1000.0,
+        "avg_pnl_dollars": -0.000491,
+        "avg_half_spread_captured_bps": 60.5,
+        "avg_adverse_drift_bps": -968.38
+      },
+      "sell_maker": {
+        "count": 376,
+        "fill_rate": 0.0307,
+        "avg_pnl_bps": -1101.32,
+        "median_pnl_bps": -1000.0,
+        "avg_pnl_dollars": -0.000461,
+        "avg_half_spread_captured_bps": 0.0,
+        "avg_adverse_drift_bps": -1101.32
+      }
+    },
+    "0x6331a779482df72d904c3c1e12b6409ff836bc06f8c97945cba9b25ada2c605c::No": {
+      "condition_id": "0x6331a779482df72d904c3c1e12b6409ff836bc06f8c97945cba9b25ada2c605c",
+      "outcome": "No",
+      "question": "Will the Portland Trail Blazers win the 2026 NBA Finals?",
+      "slug": "will-the-portland-trail-blazers-win-the-2026-nba-finals",
+      "records": 12230,
+      "avg_mid": 0.99625,
+      "avg_spread_bps": 11.6,
+      "buy_maker": {
+        "count": 376,
+        "fill_rate": 0.0307,
+        "avg_pnl_bps": -4.64,
+        "median_pnl_bps": -5.03,
+        "avg_pnl_dollars": -0.000461,
+        "avg_half_spread_captured_bps": 0.0,
+        "avg_adverse_drift_bps": -4.64
+      },
+      "sell_maker": {
+        "count": 406,
+        "fill_rate": 0.0332,
+        "avg_pnl_bps": -4.94,
+        "median_pnl_bps": -5.03,
+        "avg_pnl_dollars": -0.000491,
+        "avg_half_spread_captured_bps": 0.23,
+        "avg_adverse_drift_bps": -5.18
+      }
+    },
+    "0xfda648d24cdad32dfe959195bd75ef4c81fbea5130eb6c7a4a0c18607a11ce63::Yes": {
+      "condition_id": "0xfda648d24cdad32dfe959195bd75ef4c81fbea5130eb6c7a4a0c18607a11ce63",
+      "outcome": "Yes",
+      "question": "Will the Atlanta Hawks win the 2026 NBA Finals?",
+      "slug": "will-the-atlanta-hawks-win-the-2026-nba-finals",
+      "records": 18689,
+      "avg_mid": 0.00725,
+      "avg_spread_bps": 2901.71,
+      "buy_maker": {
+        "count": 1222,
+        "fill_rate": 0.0654,
+        "avg_pnl_bps": -836.24,
+        "median_pnl_bps": -1000.0,
+        "avg_pnl_dollars": -0.00066,
+        "avg_half_spread_captured_bps": 141.42,
+        "avg_adverse_drift_bps": -935.08
+      },
+      "sell_maker": {
+        "count": 891,
+        "fill_rate": 0.0477,
+        "avg_pnl_bps": -697.55,
+        "median_pnl_bps": -454.55,
+        "avg_pnl_dollars": -0.000522,
+        "avg_half_spread_captured_bps": 48.93,
+        "avg_adverse_drift_bps": -731.63
+      }
+    },
+    "0xfda648d24cdad32dfe959195bd75ef4c81fbea5130eb6c7a4a0c18607a11ce63::No": {
+      "condition_id": "0xfda648d24cdad32dfe959195bd75ef4c81fbea5130eb6c7a4a0c18607a11ce63",
+      "outcome": "No",
+      "question": "Will the Atlanta Hawks win the 2026 NBA Finals?",
+      "slug": "will-the-atlanta-hawks-win-the-2026-nba-finals",
+      "records": 18689,
+      "avg_mid": 0.99275,
+      "avg_spread_bps": 98.56,
+      "buy_maker": {
+        "count": 869,
+        "fill_rate": 0.0465,
+        "avg_pnl_bps": -2.82,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -0.00028,
+        "avg_half_spread_captured_bps": 1.41,
+        "avg_adverse_drift_bps": -4.24
+      },
+      "sell_maker": {
+        "count": 1213,
+        "fill_rate": 0.0649,
+        "avg_pnl_bps": -4.97,
+        "median_pnl_bps": -5.03,
+        "avg_pnl_dollars": -0.000493,
+        "avg_half_spread_captured_bps": 17.7,
+        "avg_adverse_drift_bps": -22.77
+      }
+    },
+    "0xe459d1b598da754c9fd5fc155b6efe3a144aa80abbc7d041fce7d35d903d3c8e::Yes": {
+      "condition_id": "0xe459d1b598da754c9fd5fc155b6efe3a144aa80abbc7d041fce7d35d903d3c8e",
+      "outcome": "Yes",
+      "question": "Will MegaETH perform an airdrop by June 30? ",
+      "slug": "will-megaeth-perform-an-airdrop-by-june-30-143-229-513-574-212-254",
+      "records": 24377,
+      "avg_mid": 0.51827,
+      "avg_spread_bps": 939.44,
+      "buy_maker": {
+        "count": 1309,
+        "fill_rate": 0.0537,
+        "avg_pnl_bps": -230.1,
+        "median_pnl_bps": -174.77,
+        "avg_pnl_dollars": -0.013336,
+        "avg_half_spread_captured_bps": 205.9,
+        "avg_adverse_drift_bps": -429.99
+      },
+      "sell_maker": {
+        "count": 1001,
+        "fill_rate": 0.0411,
+        "avg_pnl_bps": -276.86,
+        "median_pnl_bps": -240.64,
+        "avg_pnl_dollars": -0.014475,
+        "avg_half_spread_captured_bps": 238.53,
+        "avg_adverse_drift_bps": -519.05
+      }
+    },
+    "0xe459d1b598da754c9fd5fc155b6efe3a144aa80abbc7d041fce7d35d903d3c8e::No": {
+      "condition_id": "0xe459d1b598da754c9fd5fc155b6efe3a144aa80abbc7d041fce7d35d903d3c8e",
+      "outcome": "No",
+      "question": "Will MegaETH perform an airdrop by June 30? ",
+      "slug": "will-megaeth-perform-an-airdrop-by-june-30-143-229-513-574-212-254",
+      "records": 24377,
+      "avg_mid": 0.48173,
+      "avg_spread_bps": 1143.02,
+      "buy_maker": {
+        "count": 1001,
+        "fill_rate": 0.0411,
+        "avg_pnl_bps": -320.38,
+        "median_pnl_bps": -313.23,
+        "avg_pnl_dollars": -0.014475,
+        "avg_half_spread_captured_bps": 311.29,
+        "avg_adverse_drift_bps": -624.39
+      },
+      "sell_maker": {
+        "count": 1309,
+        "fill_rate": 0.0537,
+        "avg_pnl_bps": -319.24,
+        "median_pnl_bps": -220.44,
+        "avg_pnl_dollars": -0.013336,
+        "avg_half_spread_captured_bps": 293.58,
+        "avg_adverse_drift_bps": -625.45
+      }
+    },
+    "0x7976b8dbacf9077eb1453a62bcefd6ab2df199acd28aad276ff0d920d6992892::Yes": {
+      "condition_id": "0x7976b8dbacf9077eb1453a62bcefd6ab2df199acd28aad276ff0d920d6992892",
+      "outcome": "Yes",
+      "question": "Will Spain win the 2026 FIFA World Cup?",
+      "slug": "will-spain-win-the-2026-fifa-world-cup-963",
+      "records": 24360,
+      "avg_mid": 0.15966,
+      "avg_spread_bps": 110.27,
+      "buy_maker": {
+        "count": 938,
+        "fill_rate": 0.0385,
+        "avg_pnl_bps": -2.36,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -3.6e-05,
+        "avg_half_spread_captured_bps": 0.0,
+        "avg_adverse_drift_bps": -2.36
+      },
+      "sell_maker": {
+        "count": 1006,
+        "fill_rate": 0.0413,
+        "avg_pnl_bps": -88.73,
+        "median_pnl_bps": -31.25,
+        "avg_pnl_dollars": -0.000899,
+        "avg_half_spread_captured_bps": 61.42,
+        "avg_adverse_drift_bps": -203.67
+      }
+    },
+    "0x7976b8dbacf9077eb1453a62bcefd6ab2df199acd28aad276ff0d920d6992892::No": {
+      "condition_id": "0x7976b8dbacf9077eb1453a62bcefd6ab2df199acd28aad276ff0d920d6992892",
+      "outcome": "No",
+      "question": "Will Spain win the 2026 FIFA World Cup?",
+      "slug": "will-spain-win-the-2026-fifa-world-cup-963",
+      "records": 24360,
+      "avg_mid": 0.84034,
+      "avg_spread_bps": 47.95,
+      "buy_maker": {
+        "count": 1006,
+        "fill_rate": 0.0413,
+        "avg_pnl_bps": -10.12,
+        "median_pnl_bps": -5.93,
+        "avg_pnl_dollars": -0.000899,
+        "avg_half_spread_captured_bps": 3.12,
+        "avg_adverse_drift_bps": -12.99
+      },
+      "sell_maker": {
+        "count": 938,
+        "fill_rate": 0.0385,
+        "avg_pnl_bps": -0.42,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -3.6e-05,
+        "avg_half_spread_captured_bps": 0.0,
+        "avg_adverse_drift_bps": -0.42
+      }
+    },
+    "0x375409bc5eeeff961e82b479caeccc20f33d15738e5bce1186d628aa3d9dfb1f::Yes": {
+      "condition_id": "0x375409bc5eeeff961e82b479caeccc20f33d15738e5bce1186d628aa3d9dfb1f",
+      "outcome": "Yes",
+      "question": "Will England win the 2026 FIFA World Cup?",
+      "slug": "will-england-win-the-2026-fifa-world-cup-937",
+      "records": 24377,
+      "avg_mid": 0.11205,
+      "avg_spread_bps": 145.07,
+      "buy_maker": {
+        "count": 953,
+        "fill_rate": 0.0391,
+        "avg_pnl_bps": -2.58,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -4.1e-05,
+        "avg_half_spread_captured_bps": 6.3,
+        "avg_adverse_drift_bps": -9.43
+      },
+      "sell_maker": {
+        "count": 1181,
+        "fill_rate": 0.0484,
+        "avg_pnl_bps": -8.23,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -9e-05,
+        "avg_half_spread_captured_bps": 2.05,
+        "avg_adverse_drift_bps": -10.34
+      }
+    },
+    "0x375409bc5eeeff961e82b479caeccc20f33d15738e5bce1186d628aa3d9dfb1f::No": {
+      "condition_id": "0x375409bc5eeeff961e82b479caeccc20f33d15738e5bce1186d628aa3d9dfb1f",
+      "outcome": "No",
+      "question": "Will England win the 2026 FIFA World Cup?",
+      "slug": "will-england-win-the-2026-fifa-world-cup-937",
+      "records": 24377,
+      "avg_mid": 0.88795,
+      "avg_spread_bps": 55.82,
+      "buy_maker": {
+        "count": 1181,
+        "fill_rate": 0.0484,
+        "avg_pnl_bps": -1.01,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -9e-05,
+        "avg_half_spread_captured_bps": 0.24,
+        "avg_adverse_drift_bps": -1.25
+      },
+      "sell_maker": {
+        "count": 953,
+        "fill_rate": 0.0391,
+        "avg_pnl_bps": -0.48,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -4.1e-05,
+        "avg_half_spread_captured_bps": 0.77,
+        "avg_adverse_drift_bps": -1.25
+      }
+    },
+    "0x9b6fef249040fd17e9c107955b37ac2c3e923509b6b0ff01cc463a331ddeb894::Yes": {
+      "condition_id": "0x9b6fef249040fd17e9c107955b37ac2c3e923509b6b0ff01cc463a331ddeb894",
+      "outcome": "Yes",
+      "question": "Will France win the 2026 FIFA World Cup?",
+      "slug": "will-france-win-the-2026-fifa-world-cup-924",
+      "records": 24360,
+      "avg_mid": 0.16742,
+      "avg_spread_bps": 103.48,
+      "buy_maker": {
+        "count": 1892,
+        "fill_rate": 0.0777,
+        "avg_pnl_bps": -10.1,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -0.000169,
+        "avg_half_spread_captured_bps": 11.78,
+        "avg_adverse_drift_bps": -21.89
+      },
+      "sell_maker": {
+        "count": 1979,
+        "fill_rate": 0.0812,
+        "avg_pnl_bps": -7.41,
+        "median_pnl_bps": -27.17,
+        "avg_pnl_dollars": -0.000119,
+        "avg_half_spread_captured_bps": 9.78,
+        "avg_adverse_drift_bps": -17.19
+      }
+    },
+    "0x9b6fef249040fd17e9c107955b37ac2c3e923509b6b0ff01cc463a331ddeb894::No": {
+      "condition_id": "0x9b6fef249040fd17e9c107955b37ac2c3e923509b6b0ff01cc463a331ddeb894",
+      "outcome": "No",
+      "question": "Will France win the 2026 FIFA World Cup?",
+      "slug": "will-france-win-the-2026-fifa-world-cup-924",
+      "records": 24360,
+      "avg_mid": 0.83258,
+      "avg_spread_bps": 57.01,
+      "buy_maker": {
+        "count": 1979,
+        "fill_rate": 0.0812,
+        "avg_pnl_bps": -1.42,
+        "median_pnl_bps": -5.93,
+        "avg_pnl_dollars": -0.000119,
+        "avg_half_spread_captured_bps": 1.85,
+        "avg_adverse_drift_bps": -3.27
+      },
+      "sell_maker": {
+        "count": 1892,
+        "fill_rate": 0.0777,
+        "avg_pnl_bps": -2.02,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -0.000169,
+        "avg_half_spread_captured_bps": 2.28,
+        "avg_adverse_drift_bps": -4.31
+      }
+    },
+    "0x4f3421fb2daf5cca7430ed8d8132463963081572d75434393a1808fdb8829fe8::Yes": {
+      "condition_id": "0x4f3421fb2daf5cca7430ed8d8132463963081572d75434393a1808fdb8829fe8",
+      "outcome": "Yes",
+      "question": "Will Portugal win the 2026 FIFA World Cup?",
+      "slug": "will-portugal-win-the-2026-fifa-world-cup-912",
+      "records": 24341,
+      "avg_mid": 0.07772,
+      "avg_spread_bps": 209.75,
+      "buy_maker": {
+        "count": 3533,
+        "fill_rate": 0.1451,
+        "avg_pnl_bps": -18.42,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -0.000148,
+        "avg_half_spread_captured_bps": 8.78,
+        "avg_adverse_drift_bps": -27.22
+      },
+      "sell_maker": {
+        "count": 2556,
+        "fill_rate": 0.105,
+        "avg_pnl_bps": -46.57,
+        "median_pnl_bps": -62.5,
+        "avg_pnl_dollars": -0.000357,
+        "avg_half_spread_captured_bps": 7.85,
+        "avg_adverse_drift_bps": -54.5
+      }
+    },
+    "0x4f3421fb2daf5cca7430ed8d8132463963081572d75434393a1808fdb8829fe8::No": {
+      "condition_id": "0x4f3421fb2daf5cca7430ed8d8132463963081572d75434393a1808fdb8829fe8",
+      "outcome": "No",
+      "question": "Will Portugal win the 2026 FIFA World Cup?",
+      "slug": "will-portugal-win-the-2026-fifa-world-cup-912",
+      "records": 24341,
+      "avg_mid": 0.92228,
+      "avg_spread_bps": 46.63,
+      "buy_maker": {
+        "count": 2556,
+        "fill_rate": 0.105,
+        "avg_pnl_bps": -3.87,
+        "median_pnl_bps": -5.41,
+        "avg_pnl_dollars": -0.000357,
+        "avg_half_spread_captured_bps": 0.65,
+        "avg_adverse_drift_bps": -4.52
+      },
+      "sell_maker": {
+        "count": 3533,
+        "fill_rate": 0.1451,
+        "avg_pnl_bps": -1.61,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -0.000148,
+        "avg_half_spread_captured_bps": 0.73,
+        "avg_adverse_drift_bps": -2.34
+      }
+    },
+    "0x0189df05ed7bf84d799213b01a79571e305c03b2ac5359cfbb3a323448ba20fa::Yes": {
+      "condition_id": "0x0189df05ed7bf84d799213b01a79571e305c03b2ac5359cfbb3a323448ba20fa",
+      "outcome": "Yes",
+      "question": "Will Japan win the 2026 FIFA World Cup?",
+      "slug": "will-japan-win-the-2026-fifa-world-cup-112",
+      "records": 24298,
+      "avg_mid": 0.02164,
+      "avg_spread_bps": 484.27,
+      "buy_maker": {
+        "count": 0,
+        "fill_rate": 0.0,
+        "avg_pnl_bps": null,
+        "median_pnl_bps": null,
+        "avg_half_spread_captured_bps": null,
+        "avg_adverse_drift_bps": null
+      },
+      "sell_maker": {
+        "count": 9,
+        "fill_rate": 0.0004,
+        "avg_pnl_bps": -238.1,
+        "median_pnl_bps": -238.1,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 2753.62,
+        "avg_adverse_drift_bps": -3057.28
+      }
+    },
+    "0x0189df05ed7bf84d799213b01a79571e305c03b2ac5359cfbb3a323448ba20fa::No": {
+      "condition_id": "0x0189df05ed7bf84d799213b01a79571e305c03b2ac5359cfbb3a323448ba20fa",
+      "outcome": "No",
+      "question": "Will Japan win the 2026 FIFA World Cup?",
+      "slug": "will-japan-win-the-2026-fifa-world-cup-112",
+      "records": 24298,
+      "avg_mid": 0.97836,
+      "avg_spread_bps": 23.35,
+      "buy_maker": {
+        "count": 9,
+        "fill_rate": 0.0004,
+        "avg_pnl_bps": -5.11,
+        "median_pnl_bps": -5.11,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 32.04,
+        "avg_adverse_drift_bps": -37.13
+      },
+      "sell_maker": {
+        "count": 0,
+        "fill_rate": 0.0,
+        "avg_pnl_bps": null,
+        "median_pnl_bps": null,
+        "avg_half_spread_captured_bps": null,
+        "avg_adverse_drift_bps": null
+      }
+    },
+    "0x4c325469d9b516ef4e6b8f73a81a12607dec075e3c2fd454f91765aaeafc4760::Yes": {
+      "condition_id": "0x4c325469d9b516ef4e6b8f73a81a12607dec075e3c2fd454f91765aaeafc4760",
+      "outcome": "Yes",
+      "question": "Will Pete Buttigieg win the 2028 Democratic presidential nomination?",
+      "slug": "will-pete-buttigieg-win-the-2028-democratic-presidential-nomination-687",
+      "records": 24377,
+      "avg_mid": 0.04373,
+      "avg_spread_bps": 350.44,
+      "buy_maker": {
+        "count": 216,
+        "fill_rate": 0.0089,
+        "avg_pnl_bps": -175.61,
+        "median_pnl_bps": -125.0,
+        "avg_pnl_dollars": -0.000722,
+        "avg_half_spread_captured_bps": 579.48,
+        "avg_adverse_drift_bps": -735.79
+      },
+      "sell_maker": {
+        "count": 205,
+        "fill_rate": 0.0084,
+        "avg_pnl_bps": -156.47,
+        "median_pnl_bps": -121.95,
+        "avg_pnl_dollars": -0.000637,
+        "avg_half_spread_captured_bps": 0.59,
+        "avg_adverse_drift_bps": -157.06
+      }
+    },
+    "0x4c325469d9b516ef4e6b8f73a81a12607dec075e3c2fd454f91765aaeafc4760::No": {
+      "condition_id": "0x4c325469d9b516ef4e6b8f73a81a12607dec075e3c2fd454f91765aaeafc4760",
+      "outcome": "No",
+      "question": "Will Pete Buttigieg win the 2028 Democratic presidential nomination?",
+      "slug": "will-pete-buttigieg-win-the-2028-democratic-presidential-nomination-687",
+      "records": 24377,
+      "avg_mid": 0.95627,
+      "avg_spread_bps": 95.16,
+      "buy_maker": {
+        "count": 205,
+        "fill_rate": 0.0084,
+        "avg_pnl_bps": -6.64,
+        "median_pnl_bps": -5.22,
+        "avg_pnl_dollars": -0.000637,
+        "avg_half_spread_captured_bps": 0.03,
+        "avg_adverse_drift_bps": -6.66
+      },
+      "sell_maker": {
+        "count": 216,
+        "fill_rate": 0.0089,
+        "avg_pnl_bps": -7.53,
+        "median_pnl_bps": -5.21,
+        "avg_pnl_dollars": -0.000722,
+        "avg_half_spread_captured_bps": 489.2,
+        "avg_adverse_drift_bps": -497.5
+      }
+    },
+    "0x909659c9436228e2be56d5582ba6188166f2f8bf3c596335512c8f2e380d01ec::Yes": {
+      "condition_id": "0x909659c9436228e2be56d5582ba6188166f2f8bf3c596335512c8f2e380d01ec",
+      "outcome": "Yes",
+      "question": "Will Kamala Harris win the 2028 Democratic presidential nomination?",
+      "slug": "will-kamala-harris-win-the-2028-democratic-presidential-nomination-641",
+      "records": 24377,
+      "avg_mid": 0.07813,
+      "avg_spread_bps": 265.96,
+      "buy_maker": {
+        "count": 1516,
+        "fill_rate": 0.0622,
+        "avg_pnl_bps": -119.44,
+        "median_pnl_bps": -76.92,
+        "avg_pnl_dollars": -0.000962,
+        "avg_half_spread_captured_bps": 34.08,
+        "avg_adverse_drift_bps": -153.2
+      },
+      "sell_maker": {
+        "count": 1472,
+        "fill_rate": 0.0604,
+        "avg_pnl_bps": -110.89,
+        "median_pnl_bps": -78.13,
+        "avg_pnl_dollars": -0.000853,
+        "avg_half_spread_captured_bps": 2.02,
+        "avg_adverse_drift_bps": -112.93
+      }
+    },
+    "0x909659c9436228e2be56d5582ba6188166f2f8bf3c596335512c8f2e380d01ec::No": {
+      "condition_id": "0x909659c9436228e2be56d5582ba6188166f2f8bf3c596335512c8f2e380d01ec",
+      "outcome": "No",
+      "question": "Will Kamala Harris win the 2028 Democratic presidential nomination?",
+      "slug": "will-kamala-harris-win-the-2028-democratic-presidential-nomination-641",
+      "records": 24377,
+      "avg_mid": 0.92187,
+      "avg_spread_bps": 106.53,
+      "buy_maker": {
+        "count": 1472,
+        "fill_rate": 0.0604,
+        "avg_pnl_bps": -9.24,
+        "median_pnl_bps": -5.47,
+        "avg_pnl_dollars": -0.000853,
+        "avg_half_spread_captured_bps": 0.17,
+        "avg_adverse_drift_bps": -9.41
+      },
+      "sell_maker": {
+        "count": 1516,
+        "fill_rate": 0.0622,
+        "avg_pnl_bps": -10.46,
+        "median_pnl_bps": -5.49,
+        "avg_pnl_dollars": -0.000962,
+        "avg_half_spread_captured_bps": 8.69,
+        "avg_adverse_drift_bps": -19.18
+      }
+    },
+    "0x1d519b87999e3d4e90e1e8f57b5eee73a0ba488ff3fdb70867f294733aba84a9::Yes": {
+      "condition_id": "0x1d519b87999e3d4e90e1e8f57b5eee73a0ba488ff3fdb70867f294733aba84a9",
+      "outcome": "Yes",
+      "question": "Will Andy Beshear win the 2028 Democratic presidential nomination?",
+      "slug": "will-andy-beshear-win-the-2028-democratic-presidential-nomination-832",
+      "records": 24377,
+      "avg_mid": 0.02637,
+      "avg_spread_bps": 582.67,
+      "buy_maker": {
+        "count": 174,
+        "fill_rate": 0.0071,
+        "avg_pnl_bps": -299.33,
+        "median_pnl_bps": -227.27,
+        "avg_pnl_dollars": -0.000741,
+        "avg_half_spread_captured_bps": 1.17,
+        "avg_adverse_drift_bps": -300.47
+      },
+      "sell_maker": {
+        "count": 350,
+        "fill_rate": 0.0144,
+        "avg_pnl_bps": -216.9,
+        "median_pnl_bps": -227.27,
+        "avg_pnl_dollars": -0.00048,
+        "avg_half_spread_captured_bps": 92.13,
+        "avg_adverse_drift_bps": -311.9
+      }
+    },
+    "0x1d519b87999e3d4e90e1e8f57b5eee73a0ba488ff3fdb70867f294733aba84a9::No": {
+      "condition_id": "0x1d519b87999e3d4e90e1e8f57b5eee73a0ba488ff3fdb70867f294733aba84a9",
+      "outcome": "No",
+      "question": "Will Andy Beshear win the 2028 Democratic presidential nomination?",
+      "slug": "will-andy-beshear-win-the-2028-democratic-presidential-nomination-832",
+      "records": 24377,
+      "avg_mid": 0.97363,
+      "avg_spread_bps": 89.69,
+      "buy_maker": {
+        "count": 350,
+        "fill_rate": 0.0144,
+        "avg_pnl_bps": -4.91,
+        "median_pnl_bps": -5.11,
+        "avg_pnl_dollars": -0.00048,
+        "avg_half_spread_captured_bps": 1.94,
+        "avg_adverse_drift_bps": -6.85
+      },
+      "sell_maker": {
+        "count": 174,
+        "fill_rate": 0.0071,
+        "avg_pnl_bps": -7.6,
+        "median_pnl_bps": -5.14,
+        "avg_pnl_dollars": -0.000741,
+        "avg_half_spread_captured_bps": 0.03,
+        "avg_adverse_drift_bps": -7.63
+      }
+    },
+    "0x74dba1ce1ae9dd535414e85f2d9ab5ea32c0fb1acc9b7130b67e6d91217e24e1::Yes": {
+      "condition_id": "0x74dba1ce1ae9dd535414e85f2d9ab5ea32c0fb1acc9b7130b67e6d91217e24e1",
+      "outcome": "Yes",
+      "question": "Will Jon Ossoff win the 2028 Democratic presidential nomination?",
+      "slug": "will-jon-ossoff-win-the-2028-democratic-presidential-nomination-885",
+      "records": 24377,
+      "avg_mid": 0.06572,
+      "avg_spread_bps": 299.1,
+      "buy_maker": {
+        "count": 2921,
+        "fill_rate": 0.1198,
+        "avg_pnl_bps": -39.25,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -0.000294,
+        "avg_half_spread_captured_bps": 13.59,
+        "avg_adverse_drift_bps": -52.88
+      },
+      "sell_maker": {
+        "count": 2514,
+        "fill_rate": 0.1031,
+        "avg_pnl_bps": -72.99,
+        "median_pnl_bps": -73.53,
+        "avg_pnl_dollars": -0.000474,
+        "avg_half_spread_captured_bps": 25.18,
+        "avg_adverse_drift_bps": -98.68
+      }
+    },
+    "0x74dba1ce1ae9dd535414e85f2d9ab5ea32c0fb1acc9b7130b67e6d91217e24e1::No": {
+      "condition_id": "0x74dba1ce1ae9dd535414e85f2d9ab5ea32c0fb1acc9b7130b67e6d91217e24e1",
+      "outcome": "No",
+      "question": "Will Jon Ossoff win the 2028 Democratic presidential nomination?",
+      "slug": "will-jon-ossoff-win-the-2028-democratic-presidential-nomination-885",
+      "records": 24377,
+      "avg_mid": 0.93428,
+      "avg_spread_bps": 87.1,
+      "buy_maker": {
+        "count": 2514,
+        "fill_rate": 0.1031,
+        "avg_pnl_bps": -5.08,
+        "median_pnl_bps": -5.29,
+        "avg_pnl_dollars": -0.000474,
+        "avg_half_spread_captured_bps": 1.71,
+        "avg_adverse_drift_bps": -6.79
+      },
+      "sell_maker": {
+        "count": 2921,
+        "fill_rate": 0.1198,
+        "avg_pnl_bps": -3.18,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -0.000294,
+        "avg_half_spread_captured_bps": 0.96,
+        "avg_adverse_drift_bps": -4.14
+      }
+    },
+    "0x1970bcce75e3674660917ae4685b433a9b1e0152d810a8d7c346dfd5e00694c2::Yes": {
+      "condition_id": "0x1970bcce75e3674660917ae4685b433a9b1e0152d810a8d7c346dfd5e00694c2",
+      "outcome": "Yes",
+      "question": "Will Cory Booker win the 2028 Democratic presidential nomination?",
+      "slug": "will-corey-booker-win-the-2028-democratic-presidential-nomination-125",
+      "records": 24328,
+      "avg_mid": 0.01068,
+      "avg_spread_bps": 1110.64,
+      "buy_maker": {
+        "count": 7,
+        "fill_rate": 0.0003,
+        "avg_pnl_bps": -3181.82,
+        "median_pnl_bps": -3181.82,
+        "avg_pnl_dollars": -0.0035,
+        "avg_half_spread_captured_bps": 9775.12,
+        "avg_adverse_drift_bps": -9846.67
+      },
+      "sell_maker": {
+        "count": 98,
+        "fill_rate": 0.004,
+        "avg_pnl_bps": -308249.01,
+        "median_pnl_bps": -547777.78,
+        "avg_pnl_dollars": -0.277342,
+        "avg_half_spread_captured_bps": 779.45,
+        "avg_adverse_drift_bps": -293049.66
+      }
+    },
+    "0x1970bcce75e3674660917ae4685b433a9b1e0152d810a8d7c346dfd5e00694c2::No": {
+      "condition_id": "0x1970bcce75e3674660917ae4685b433a9b1e0152d810a8d7c346dfd5e00694c2",
+      "outcome": "No",
+      "question": "Will Cory Booker win the 2028 Democratic presidential nomination?",
+      "slug": "will-corey-booker-win-the-2028-democratic-presidential-nomination-125",
+      "records": 24328,
+      "avg_mid": 0.98932,
+      "avg_spread_bps": 57.34,
+      "buy_maker": {
+        "count": 44,
+        "fill_rate": 0.0018,
+        "avg_pnl_bps": -14.89,
+        "median_pnl_bps": -15.12,
+        "avg_pnl_dollars": -0.001477,
+        "avg_half_spread_captured_bps": 13.71,
+        "avg_adverse_drift_bps": -28.58
+      },
+      "sell_maker": {
+        "count": 7,
+        "fill_rate": 0.0003,
+        "avg_pnl_bps": -35.39,
+        "median_pnl_bps": -35.39,
+        "avg_pnl_dollars": -0.0035,
+        "avg_half_spread_captured_bps": 9359.69,
+        "avg_adverse_drift_bps": -9428.2
+      }
+    },
+    "0x36db77c539bcc8c7bf0686c1b99f30c5a5eed1f53d3b3a27a071550c81f83701::Yes": {
+      "condition_id": "0x36db77c539bcc8c7bf0686c1b99f30c5a5eed1f53d3b3a27a071550c81f83701",
+      "outcome": "Yes",
+      "question": "Will Mark Kelly win the 2028 Democratic presidential nomination?",
+      "slug": "will-mark-kelly-win-the-2028-democratic-presidential-nomination-479",
+      "records": 24377,
+      "avg_mid": 0.02789,
+      "avg_spread_bps": 536.43,
+      "buy_maker": {
+        "count": 262,
+        "fill_rate": 0.0107,
+        "avg_pnl_bps": -159.89,
+        "median_pnl_bps": -185.19,
+        "avg_pnl_dollars": -0.000412,
+        "avg_half_spread_captured_bps": 16.46,
+        "avg_adverse_drift_bps": -175.94
+      },
+      "sell_maker": {
+        "count": 239,
+        "fill_rate": 0.0098,
+        "avg_pnl_bps": -146.47,
+        "median_pnl_bps": -192.31,
+        "avg_pnl_dollars": -0.000381,
+        "avg_half_spread_captured_bps": -0.0,
+        "avg_adverse_drift_bps": -146.47
+      }
+    },
+    "0x36db77c539bcc8c7bf0686c1b99f30c5a5eed1f53d3b3a27a071550c81f83701::No": {
+      "condition_id": "0x36db77c539bcc8c7bf0686c1b99f30c5a5eed1f53d3b3a27a071550c81f83701",
+      "outcome": "No",
+      "question": "Will Mark Kelly win the 2028 Democratic presidential nomination?",
+      "slug": "will-mark-kelly-win-the-2028-democratic-presidential-nomination-479",
+      "records": 24377,
+      "avg_mid": 0.97211,
+      "avg_spread_bps": 97.79,
+      "buy_maker": {
+        "count": 239,
+        "fill_rate": 0.0098,
+        "avg_pnl_bps": -3.91,
+        "median_pnl_bps": -5.13,
+        "avg_pnl_dollars": -0.000381,
+        "avg_half_spread_captured_bps": 0.0,
+        "avg_adverse_drift_bps": -3.91
+      },
+      "sell_maker": {
+        "count": 262,
+        "fill_rate": 0.0107,
+        "avg_pnl_bps": -4.23,
+        "median_pnl_bps": -5.13,
+        "avg_pnl_dollars": -0.000412,
+        "avg_half_spread_captured_bps": 0.51,
+        "avg_adverse_drift_bps": -4.74
+      }
+    },
+    "0x3dc47a72ac6bb265e9cefebd2a2eeed00966394cb2d07245b5c94138b60e82a3::Yes": {
+      "condition_id": "0x3dc47a72ac6bb265e9cefebd2a2eeed00966394cb2d07245b5c94138b60e82a3",
+      "outcome": "Yes",
+      "question": "Will Rahm Emanuel win the 2028 Democratic presidential nomination?",
+      "slug": "will-rahm-emanuel-win-the-2028-democratic-presidential-nomination-299",
+      "records": 24377,
+      "avg_mid": 0.01922,
+      "avg_spread_bps": 747.12,
+      "buy_maker": {
+        "count": 357,
+        "fill_rate": 0.0146,
+        "avg_pnl_bps": -504.72,
+        "median_pnl_bps": -227.27,
+        "avg_pnl_dollars": -0.000905,
+        "avg_half_spread_captured_bps": 1331.24,
+        "avg_adverse_drift_bps": -1667.47
+      },
+      "sell_maker": {
+        "count": 476,
+        "fill_rate": 0.0195,
+        "avg_pnl_bps": -246.58,
+        "median_pnl_bps": -238.1,
+        "avg_pnl_dollars": -0.000502,
+        "avg_half_spread_captured_bps": 27.98,
+        "avg_adverse_drift_bps": -274.58
+      }
+    },
+    "0x3dc47a72ac6bb265e9cefebd2a2eeed00966394cb2d07245b5c94138b60e82a3::No": {
+      "condition_id": "0x3dc47a72ac6bb265e9cefebd2a2eeed00966394cb2d07245b5c94138b60e82a3",
+      "outcome": "No",
+      "question": "Will Rahm Emanuel win the 2028 Democratic presidential nomination?",
+      "slug": "will-rahm-emanuel-win-the-2028-democratic-presidential-nomination-299",
+      "records": 24377,
+      "avg_mid": 0.98078,
+      "avg_spread_bps": 58.16,
+      "buy_maker": {
+        "count": 552,
+        "fill_rate": 0.0226,
+        "avg_pnl_bps": -5.1,
+        "median_pnl_bps": -5.1,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 0.53,
+        "avg_adverse_drift_bps": -5.63
+      },
+      "sell_maker": {
+        "count": 343,
+        "fill_rate": 0.0141,
+        "avg_pnl_bps": -8.98,
+        "median_pnl_bps": -5.12,
+        "avg_pnl_dollars": -0.00088,
+        "avg_half_spread_captured_bps": 1400.08,
+        "avg_adverse_drift_bps": -1411.19
+      }
+    },
+    "0x939eeb2dea216749bd409bedde483c3f2bfb0e24d4f2d34461c0b21c6e91f010::Yes": {
+      "condition_id": "0x939eeb2dea216749bd409bedde483c3f2bfb0e24d4f2d34461c0b21c6e91f010",
+      "outcome": "Yes",
+      "question": "Will Roy Cooper win the 2028 Democratic presidential nomination?",
+      "slug": "will-roy-cooper-win-the-2028-democratic-presidential-nomination-286",
+      "records": 24377,
+      "avg_mid": 0.01324,
+      "avg_spread_bps": 1011.51,
+      "buy_maker": {
+        "count": 23,
+        "fill_rate": 0.0009,
+        "avg_pnl_bps": -416.67,
+        "median_pnl_bps": -416.67,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 7742.3,
+        "avg_adverse_drift_bps": -7836.37
+      },
+      "sell_maker": {
+        "count": 1,
+        "fill_rate": 0.0,
+        "avg_pnl_bps": -454.55,
+        "median_pnl_bps": -454.55,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 0.0,
+        "avg_adverse_drift_bps": -454.55
+      }
+    },
+    "0x939eeb2dea216749bd409bedde483c3f2bfb0e24d4f2d34461c0b21c6e91f010::No": {
+      "condition_id": "0x939eeb2dea216749bd409bedde483c3f2bfb0e24d4f2d34461c0b21c6e91f010",
+      "outcome": "No",
+      "question": "Will Roy Cooper win the 2028 Democratic presidential nomination?",
+      "slug": "will-roy-cooper-win-the-2028-democratic-presidential-nomination-286",
+      "records": 24377,
+      "avg_mid": 0.98676,
+      "avg_spread_bps": 97.62,
+      "buy_maker": {
+        "count": 1,
+        "fill_rate": 0.0,
+        "avg_pnl_bps": -5.06,
+        "median_pnl_bps": -5.06,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 0.0,
+        "avg_adverse_drift_bps": -5.06
+      },
+      "sell_maker": {
+        "count": 23,
+        "fill_rate": 0.0009,
+        "avg_pnl_bps": -5.06,
+        "median_pnl_bps": -5.06,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 6326.84,
+        "avg_adverse_drift_bps": -6335.1
+      }
+    },
+    "0xe06a7e94cf2fa8dc2085b7610fe16e9be1cde6654f34d365c13da1149b276c61::Yes": {
+      "condition_id": "0xe06a7e94cf2fa8dc2085b7610fe16e9be1cde6654f34d365c13da1149b276c61",
+      "outcome": "Yes",
+      "question": "Will Oprah Winfrey win the 2028 Democratic presidential nomination?",
+      "slug": "will-oprah-winfrey-win-the-2028-democratic-presidential-nomination",
+      "records": 24328,
+      "avg_mid": 0.0088,
+      "avg_spread_bps": 1351.5,
+      "buy_maker": {
+        "count": 62,
+        "fill_rate": 0.0025,
+        "avg_pnl_bps": -949.94,
+        "median_pnl_bps": -714.29,
+        "avg_pnl_dollars": -0.000782,
+        "avg_half_spread_captured_bps": 650.03,
+        "avg_adverse_drift_bps": -1363.59
+      },
+      "sell_maker": {
+        "count": 0,
+        "fill_rate": 0.0,
+        "avg_pnl_bps": null,
+        "median_pnl_bps": null,
+        "avg_half_spread_captured_bps": null,
+        "avg_adverse_drift_bps": null
+      }
+    },
+    "0xe06a7e94cf2fa8dc2085b7610fe16e9be1cde6654f34d365c13da1149b276c61::No": {
+      "condition_id": "0xe06a7e94cf2fa8dc2085b7610fe16e9be1cde6654f34d365c13da1149b276c61",
+      "outcome": "No",
+      "question": "Will Oprah Winfrey win the 2028 Democratic presidential nomination?",
+      "slug": "will-oprah-winfrey-win-the-2028-democratic-presidential-nomination",
+      "records": 24328,
+      "avg_mid": 0.9912,
+      "avg_spread_bps": 52.38,
+      "buy_maker": {
+        "count": 0,
+        "fill_rate": 0.0,
+        "avg_pnl_bps": null,
+        "median_pnl_bps": null,
+        "avg_half_spread_captured_bps": null,
+        "avg_adverse_drift_bps": null
+      },
+      "sell_maker": {
+        "count": 62,
+        "fill_rate": 0.0025,
+        "avg_pnl_bps": -7.89,
+        "median_pnl_bps": -5.04,
+        "avg_pnl_dollars": -0.000782,
+        "avg_half_spread_captured_bps": 606.19,
+        "avg_adverse_drift_bps": -616.53
+      }
+    },
+    "0xc720fcfa9e29346a976902f87e0f0f3bdc31d43af501b4fdef4f1780a30dd359::Yes": {
+      "condition_id": "0xc720fcfa9e29346a976902f87e0f0f3bdc31d43af501b4fdef4f1780a30dd359",
+      "outcome": "Yes",
+      "question": "Will Chris Murphy win the 2028 Democratic presidential nomination?",
+      "slug": "will-chris-murphy-win-the-2028-democratic-presidential-nomination",
+      "records": 24377,
+      "avg_mid": 0.0094,
+      "avg_spread_bps": 1435.22,
+      "buy_maker": {
+        "count": 57,
+        "fill_rate": 0.0023,
+        "avg_pnl_bps": -5031.33,
+        "median_pnl_bps": -5000.0,
+        "avg_pnl_dollars": -0.006588,
+        "avg_half_spread_captured_bps": 9738.82,
+        "avg_adverse_drift_bps": -9870.29
+      },
+      "sell_maker": {
+        "count": 1,
+        "fill_rate": 0.0,
+        "avg_pnl_bps": -833.33,
+        "median_pnl_bps": -833.33,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 5000.0,
+        "avg_adverse_drift_bps": -6250.0
+      }
+    },
+    "0xc720fcfa9e29346a976902f87e0f0f3bdc31d43af501b4fdef4f1780a30dd359::No": {
+      "condition_id": "0xc720fcfa9e29346a976902f87e0f0f3bdc31d43af501b4fdef4f1780a30dd359",
+      "outcome": "No",
+      "question": "Will Chris Murphy win the 2028 Democratic presidential nomination?",
+      "slug": "will-chris-murphy-win-the-2028-democratic-presidential-nomination",
+      "records": 24377,
+      "avg_mid": 0.9906,
+      "avg_spread_bps": 88.94,
+      "buy_maker": {
+        "count": 1,
+        "fill_rate": 0.0,
+        "avg_pnl_bps": -5.03,
+        "median_pnl_bps": -5.03,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 20.08,
+        "avg_adverse_drift_bps": -25.1
+      },
+      "sell_maker": {
+        "count": 57,
+        "fill_rate": 0.0023,
+        "avg_pnl_bps": -66.75,
+        "median_pnl_bps": -65.86,
+        "avg_pnl_dollars": -0.006588,
+        "avg_half_spread_captured_bps": 9783.29,
+        "avg_adverse_drift_bps": -9915.34
+      }
+    },
+    "0xb91be12388b3d4079c3ed9b5783cb42d8c33051d37746a49300227e0f45fc089::Yes": {
+      "condition_id": "0xb91be12388b3d4079c3ed9b5783cb42d8c33051d37746a49300227e0f45fc089",
+      "outcome": "Yes",
+      "question": "Will James Talarico win the 2028 Democratic presidential nomination?",
+      "slug": "will-james-talarico-win-the-2028-democratic-presidential-nomination",
+      "records": 24377,
+      "avg_mid": 0.0219,
+      "avg_spread_bps": 624.55,
+      "buy_maker": {
+        "count": 58,
+        "fill_rate": 0.0024,
+        "avg_pnl_bps": -250.0,
+        "median_pnl_bps": -250.0,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 151.39,
+        "avg_adverse_drift_bps": -397.6
+      },
+      "sell_maker": {
+        "count": 222,
+        "fill_rate": 0.0091,
+        "avg_pnl_bps": -249.79,
+        "median_pnl_bps": -250.0,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 0.0,
+        "avg_adverse_drift_bps": -249.79
+      }
+    },
+    "0xb91be12388b3d4079c3ed9b5783cb42d8c33051d37746a49300227e0f45fc089::No": {
+      "condition_id": "0xb91be12388b3d4079c3ed9b5783cb42d8c33051d37746a49300227e0f45fc089",
+      "outcome": "No",
+      "question": "Will James Talarico win the 2028 Democratic presidential nomination?",
+      "slug": "will-james-talarico-win-the-2028-democratic-presidential-nomination",
+      "records": 24377,
+      "avg_mid": 0.9781,
+      "avg_spread_bps": 89.98,
+      "buy_maker": {
+        "count": 222,
+        "fill_rate": 0.0091,
+        "avg_pnl_bps": -5.1,
+        "median_pnl_bps": -5.1,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 0.0,
+        "avg_adverse_drift_bps": -5.1
+      },
+      "sell_maker": {
+        "count": 58,
+        "fill_rate": 0.0024,
+        "avg_pnl_bps": -5.1,
+        "median_pnl_bps": -5.1,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 3.17,
+        "avg_adverse_drift_bps": -8.27
+      }
+    },
+    "0x6bd56627aa21311850825edb27e53434a0e17a4f782be0086bc07f71eee00d0d::Yes": {
+      "condition_id": "0x6bd56627aa21311850825edb27e53434a0e17a4f782be0086bc07f71eee00d0d",
+      "outcome": "Yes",
+      "question": "Putin out as President of Russia by December 31, 2026?",
+      "slug": "putin-out-before-2027",
+      "records": 24377,
+      "avg_mid": 0.10982,
+      "avg_spread_bps": 1051.75,
+      "buy_maker": {
+        "count": 427,
+        "fill_rate": 0.0175,
+        "avg_pnl_bps": -388.52,
+        "median_pnl_bps": -540.54,
+        "avg_pnl_dollars": -0.004232,
+        "avg_half_spread_captured_bps": 352.33,
+        "avg_adverse_drift_bps": -727.06
+      },
+      "sell_maker": {
+        "count": 302,
+        "fill_rate": 0.0124,
+        "avg_pnl_bps": -501.35,
+        "median_pnl_bps": -550.46,
+        "avg_pnl_dollars": -0.005354,
+        "avg_half_spread_captured_bps": 388.26,
+        "avg_adverse_drift_bps": -909.14
+      }
+    },
+    "0x6bd56627aa21311850825edb27e53434a0e17a4f782be0086bc07f71eee00d0d::No": {
+      "condition_id": "0x6bd56627aa21311850825edb27e53434a0e17a4f782be0086bc07f71eee00d0d",
+      "outcome": "No",
+      "question": "Putin out as President of Russia by December 31, 2026?",
+      "slug": "putin-out-before-2027",
+      "records": 24377,
+      "avg_mid": 0.89018,
+      "avg_spread_bps": 194.93,
+      "buy_maker": {
+        "count": 302,
+        "fill_rate": 0.0124,
+        "avg_pnl_bps": -59.96,
+        "median_pnl_bps": -67.34,
+        "avg_pnl_dollars": -0.005354,
+        "avg_half_spread_captured_bps": 44.6,
+        "avg_adverse_drift_bps": -104.29
+      },
+      "sell_maker": {
+        "count": 427,
+        "fill_rate": 0.0175,
+        "avg_pnl_bps": -47.5,
+        "median_pnl_bps": -67.49,
+        "avg_pnl_dollars": -0.004232,
+        "avg_half_spread_captured_bps": 45.13,
+        "avg_adverse_drift_bps": -92.84
+      }
+    },
+    "0x7ad403c3508f8e3912940fd1a913f227591145ca0614074208e0b962d5fcc422::Yes": {
+      "condition_id": "0x7ad403c3508f8e3912940fd1a913f227591145ca0614074208e0b962d5fcc422",
+      "outcome": "Yes",
+      "question": "Will JD Vance win the 2028 US Presidential Election?",
+      "slug": "will-jd-vance-win-the-2028-us-presidential-election",
+      "records": 24377,
+      "avg_mid": 0.18879,
+      "avg_spread_bps": 114.53,
+      "buy_maker": {
+        "count": 990,
+        "fill_rate": 0.0406,
+        "avg_pnl_bps": -27.48,
+        "median_pnl_bps": -26.46,
+        "avg_pnl_dollars": -0.000519,
+        "avg_half_spread_captured_bps": 3.43,
+        "avg_adverse_drift_bps": -30.91
+      },
+      "sell_maker": {
+        "count": 642,
+        "fill_rate": 0.0263,
+        "avg_pnl_bps": -24.22,
+        "median_pnl_bps": -26.6,
+        "avg_pnl_dollars": -0.000449,
+        "avg_half_spread_captured_bps": 0.64,
+        "avg_adverse_drift_bps": -24.85
+      }
+    },
+    "0x7ad403c3508f8e3912940fd1a913f227591145ca0614074208e0b962d5fcc422::No": {
+      "condition_id": "0x7ad403c3508f8e3912940fd1a913f227591145ca0614074208e0b962d5fcc422",
+      "outcome": "No",
+      "question": "Will JD Vance win the 2028 US Presidential Election?",
+      "slug": "will-jd-vance-win-the-2028-us-presidential-election",
+      "records": 24377,
+      "avg_mid": 0.81121,
+      "avg_spread_bps": 91.98,
+      "buy_maker": {
+        "count": 642,
+        "fill_rate": 0.0263,
+        "avg_pnl_bps": -5.52,
+        "median_pnl_bps": -6.13,
+        "avg_pnl_dollars": -0.000449,
+        "avg_half_spread_captured_bps": 0.14,
+        "avg_adverse_drift_bps": -5.66
+      },
+      "sell_maker": {
+        "count": 990,
+        "fill_rate": 0.0406,
+        "avg_pnl_bps": -6.4,
+        "median_pnl_bps": -6.17,
+        "avg_pnl_dollars": -0.000519,
+        "avg_half_spread_captured_bps": 0.85,
+        "avg_adverse_drift_bps": -7.25
+      }
+    },
+    "0x4567b275e6b667a6217f5cb4f06a797d3a1eaf1d0281fb5bc8c75e2046ae7e57::Yes": {
+      "condition_id": "0x4567b275e6b667a6217f5cb4f06a797d3a1eaf1d0281fb5bc8c75e2046ae7e57",
+      "outcome": "Yes",
+      "question": "Will Gavin Newsom win the 2028 US Presidential Election?",
+      "slug": "will-gavin-newsom-win-the-2028-us-presidential-election",
+      "records": 24377,
+      "avg_mid": 0.17596,
+      "avg_spread_bps": 150.45,
+      "buy_maker": {
+        "count": 1645,
+        "fill_rate": 0.0675,
+        "avg_pnl_bps": -43.79,
+        "median_pnl_bps": -27.78,
+        "avg_pnl_dollars": -0.00079,
+        "avg_half_spread_captured_bps": 4.68,
+        "avg_adverse_drift_bps": -48.43
+      },
+      "sell_maker": {
+        "count": 1091,
+        "fill_rate": 0.0448,
+        "avg_pnl_bps": -16.98,
+        "median_pnl_bps": -27.78,
+        "avg_pnl_dollars": -0.000298,
+        "avg_half_spread_captured_bps": 3.46,
+        "avg_adverse_drift_bps": -20.44
+      }
+    },
+    "0x4567b275e6b667a6217f5cb4f06a797d3a1eaf1d0281fb5bc8c75e2046ae7e57::No": {
+      "condition_id": "0x4567b275e6b667a6217f5cb4f06a797d3a1eaf1d0281fb5bc8c75e2046ae7e57",
+      "outcome": "No",
+      "question": "Will Gavin Newsom win the 2028 US Presidential Election?",
+      "slug": "will-gavin-newsom-win-the-2028-us-presidential-election",
+      "records": 24377,
+      "avg_mid": 0.82404,
+      "avg_spread_bps": 90.41,
+      "buy_maker": {
+        "count": 1091,
+        "fill_rate": 0.0448,
+        "avg_pnl_bps": -3.61,
+        "median_pnl_bps": -6.08,
+        "avg_pnl_dollars": -0.000298,
+        "avg_half_spread_captured_bps": 0.76,
+        "avg_adverse_drift_bps": -4.37
+      },
+      "sell_maker": {
+        "count": 1645,
+        "fill_rate": 0.0675,
+        "avg_pnl_bps": -9.63,
+        "median_pnl_bps": -6.08,
+        "avg_pnl_dollars": -0.00079,
+        "avg_half_spread_captured_bps": 1.03,
+        "avg_adverse_drift_bps": -10.67
+      }
+    },
+    "0xf232b565995e4b3a3e7fa6cef775eeff1cecd20ad7c013cb9fc8dadabfe279a9::Yes": {
+      "condition_id": "0xf232b565995e4b3a3e7fa6cef775eeff1cecd20ad7c013cb9fc8dadabfe279a9",
+      "outcome": "Yes",
+      "question": "Will Alexandria Ocasio-Cortez win the 2028 US Presidential Election?",
+      "slug": "will-alexandria-ocasio-cortez-win-the-2028-us-presidential-election",
+      "records": 24377,
+      "avg_mid": 0.06043,
+      "avg_spread_bps": 307.87,
+      "buy_maker": {
+        "count": 1098,
+        "fill_rate": 0.045,
+        "avg_pnl_bps": -113.45,
+        "median_pnl_bps": -84.75,
+        "avg_pnl_dollars": -0.000697,
+        "avg_half_spread_captured_bps": 8.49,
+        "avg_adverse_drift_bps": -121.78
+      },
+      "sell_maker": {
+        "count": 1686,
+        "fill_rate": 0.0692,
+        "avg_pnl_bps": -126.56,
+        "median_pnl_bps": -87.72,
+        "avg_pnl_dollars": -0.000759,
+        "avg_half_spread_captured_bps": 5.63,
+        "avg_adverse_drift_bps": -132.29
+      }
+    },
+    "0xf232b565995e4b3a3e7fa6cef775eeff1cecd20ad7c013cb9fc8dadabfe279a9::No": {
+      "condition_id": "0xf232b565995e4b3a3e7fa6cef775eeff1cecd20ad7c013cb9fc8dadabfe279a9",
+      "outcome": "No",
+      "question": "Will Alexandria Ocasio-Cortez win the 2028 US Presidential Election?",
+      "slug": "will-alexandria-ocasio-cortez-win-the-2028-us-presidential-election",
+      "records": 24377,
+      "avg_mid": 0.93957,
+      "avg_spread_bps": 92.01,
+      "buy_maker": {
+        "count": 1686,
+        "fill_rate": 0.0692,
+        "avg_pnl_bps": -8.07,
+        "median_pnl_bps": -5.32,
+        "avg_pnl_dollars": -0.000759,
+        "avg_half_spread_captured_bps": 0.36,
+        "avg_adverse_drift_bps": -8.43
+      },
+      "sell_maker": {
+        "count": 1098,
+        "fill_rate": 0.045,
+        "avg_pnl_bps": -7.42,
+        "median_pnl_bps": -5.31,
+        "avg_pnl_dollars": -0.000697,
+        "avg_half_spread_captured_bps": 0.56,
+        "avg_adverse_drift_bps": -7.99
+      }
+    },
+    "0x2053d8515f1b8cbeea4ccdb56e60e89c2617e43a8660d95166b8e71d27865277::Yes": {
+      "condition_id": "0x2053d8515f1b8cbeea4ccdb56e60e89c2617e43a8660d95166b8e71d27865277",
+      "outcome": "Yes",
+      "question": "Will Marco Rubio win the 2028 US Presidential Election?",
+      "slug": "will-marco-rubio-win-the-2028-us-presidential-election",
+      "records": 24377,
+      "avg_mid": 0.11511,
+      "avg_spread_bps": 192.73,
+      "buy_maker": {
+        "count": 1509,
+        "fill_rate": 0.0619,
+        "avg_pnl_bps": -43.62,
+        "median_pnl_bps": -42.02,
+        "avg_pnl_dollars": -0.000556,
+        "avg_half_spread_captured_bps": 5.77,
+        "avg_adverse_drift_bps": -49.42
+      },
+      "sell_maker": {
+        "count": 1491,
+        "fill_rate": 0.0612,
+        "avg_pnl_bps": -25.19,
+        "median_pnl_bps": -46.3,
+        "avg_pnl_dollars": -0.000245,
+        "avg_half_spread_captured_bps": 5.7,
+        "avg_adverse_drift_bps": -30.93
+      }
+    },
+    "0x2053d8515f1b8cbeea4ccdb56e60e89c2617e43a8660d95166b8e71d27865277::No": {
+      "condition_id": "0x2053d8515f1b8cbeea4ccdb56e60e89c2617e43a8660d95166b8e71d27865277",
+      "outcome": "No",
+      "question": "Will Marco Rubio win the 2028 US Presidential Election?",
+      "slug": "will-marco-rubio-win-the-2028-us-presidential-election",
+      "records": 24377,
+      "avg_mid": 0.88489,
+      "avg_spread_bps": 94.74,
+      "buy_maker": {
+        "count": 1491,
+        "fill_rate": 0.0612,
+        "avg_pnl_bps": -2.69,
+        "median_pnl_bps": -5.6,
+        "avg_pnl_dollars": -0.000245,
+        "avg_half_spread_captured_bps": 0.8,
+        "avg_adverse_drift_bps": -3.49
+      },
+      "sell_maker": {
+        "count": 1509,
+        "fill_rate": 0.0619,
+        "avg_pnl_bps": -6.39,
+        "median_pnl_bps": -5.57,
+        "avg_pnl_dollars": -0.000556,
+        "avg_half_spread_captured_bps": 0.74,
+        "avg_adverse_drift_bps": -7.12
+      }
+    },
+    "0xefe6300fd8a053cca53df8f1bd536c5f571a136392c0516e7b16e39f1addecb0::Yes": {
+      "condition_id": "0xefe6300fd8a053cca53df8f1bd536c5f571a136392c0516e7b16e39f1addecb0",
+      "outcome": "Yes",
+      "question": "Will JB Pritzker win the 2028 US Presidential Election?",
+      "slug": "will-jb-pritzker-win-the-2028-us-presidential-election",
+      "records": 24377,
+      "avg_mid": 0.01413,
+      "avg_spread_bps": 934.15,
+      "buy_maker": {
+        "count": 32,
+        "fill_rate": 0.0013,
+        "avg_pnl_bps": -1732.7,
+        "median_pnl_bps": -1785.71,
+        "avg_pnl_dollars": -0.002437,
+        "avg_half_spread_captured_bps": 8797.44,
+        "avg_adverse_drift_bps": -8959.17
+      },
+      "sell_maker": {
+        "count": 257,
+        "fill_rate": 0.0105,
+        "avg_pnl_bps": -1112.14,
+        "median_pnl_bps": -1153.85,
+        "avg_pnl_dollars": -0.001383,
+        "avg_half_spread_captured_bps": -85.07,
+        "avg_adverse_drift_bps": -990.79
+      }
+    },
+    "0xefe6300fd8a053cca53df8f1bd536c5f571a136392c0516e7b16e39f1addecb0::No": {
+      "condition_id": "0xefe6300fd8a053cca53df8f1bd536c5f571a136392c0516e7b16e39f1addecb0",
+      "outcome": "No",
+      "question": "Will JB Pritzker win the 2028 US Presidential Election?",
+      "slug": "will-jb-pritzker-win-the-2028-us-presidential-election",
+      "records": 24377,
+      "avg_mid": 0.98587,
+      "avg_spread_bps": 91.51,
+      "buy_maker": {
+        "count": 172,
+        "fill_rate": 0.0071,
+        "avg_pnl_bps": -4.34,
+        "median_pnl_bps": -5.07,
+        "avg_pnl_dollars": -0.00043,
+        "avg_half_spread_captured_bps": 2.1,
+        "avg_adverse_drift_bps": -6.44
+      },
+      "sell_maker": {
+        "count": 62,
+        "fill_rate": 0.0025,
+        "avg_pnl_bps": -28.71,
+        "median_pnl_bps": -30.43,
+        "avg_pnl_dollars": -0.002831,
+        "avg_half_spread_captured_bps": 8982.56,
+        "avg_adverse_drift_bps": -9038.6
+      }
+    },
+    "0xce9a5fa30fe74e323b4a8f15afbb0b7a41a537aa880779ddf7dee22223b2f34a::Yes": {
+      "condition_id": "0xce9a5fa30fe74e323b4a8f15afbb0b7a41a537aa880779ddf7dee22223b2f34a",
+      "outcome": "Yes",
+      "question": "Will Donald Trump win the 2028 US Presidential Election?",
+      "slug": "will-donald-trump-win-the-2028-us-presidential-election",
+      "records": 24377,
+      "avg_mid": 0.03258,
+      "avg_spread_bps": 442.17,
+      "buy_maker": {
+        "count": 794,
+        "fill_rate": 0.0326,
+        "avg_pnl_bps": -181.16,
+        "median_pnl_bps": -151.52,
+        "avg_pnl_dollars": -0.000617,
+        "avg_half_spread_captured_bps": 45.67,
+        "avg_adverse_drift_bps": -224.68
+      },
+      "sell_maker": {
+        "count": 754,
+        "fill_rate": 0.0309,
+        "avg_pnl_bps": -129.24,
+        "median_pnl_bps": -156.25,
+        "avg_pnl_dollars": -0.000362,
+        "avg_half_spread_captured_bps": 3.9,
+        "avg_adverse_drift_bps": -133.06
+      }
+    },
+    "0xce9a5fa30fe74e323b4a8f15afbb0b7a41a537aa880779ddf7dee22223b2f34a::No": {
+      "condition_id": "0xce9a5fa30fe74e323b4a8f15afbb0b7a41a537aa880779ddf7dee22223b2f34a",
+      "outcome": "No",
+      "question": "Will Donald Trump win the 2028 US Presidential Election?",
+      "slug": "will-donald-trump-win-the-2028-us-presidential-election",
+      "records": 24377,
+      "avg_mid": 0.96742,
+      "avg_spread_bps": 88.1,
+      "buy_maker": {
+        "count": 754,
+        "fill_rate": 0.0309,
+        "avg_pnl_bps": -3.73,
+        "median_pnl_bps": -5.12,
+        "avg_pnl_dollars": -0.000362,
+        "avg_half_spread_captured_bps": 0.17,
+        "avg_adverse_drift_bps": -3.9
+      },
+      "sell_maker": {
+        "count": 794,
+        "fill_rate": 0.0326,
+        "avg_pnl_bps": -6.4,
+        "median_pnl_bps": -5.17,
+        "avg_pnl_dollars": -0.000617,
+        "avg_half_spread_captured_bps": 1.58,
+        "avg_adverse_drift_bps": -7.98
+      }
+    },
+    "0x3367d22cd2a673014f1960742afdf8601040a8ad856dc0a98bd1a44ee99504e2::Yes": {
+      "condition_id": "0x3367d22cd2a673014f1960742afdf8601040a8ad856dc0a98bd1a44ee99504e2",
+      "outcome": "Yes",
+      "question": "Will Ron DeSantis win the 2028 US Presidential Election?",
+      "slug": "will-ron-desantis-win-the-2028-us-presidential-election",
+      "records": 24377,
+      "avg_mid": 0.02049,
+      "avg_spread_bps": 702.23,
+      "buy_maker": {
+        "count": 361,
+        "fill_rate": 0.0148,
+        "avg_pnl_bps": -305.96,
+        "median_pnl_bps": -135.14,
+        "avg_pnl_dollars": -0.001193,
+        "avg_half_spread_captured_bps": 85.75,
+        "avg_adverse_drift_bps": -388.66
+      },
+      "sell_maker": {
+        "count": 157,
+        "fill_rate": 0.0064,
+        "avg_pnl_bps": -197.04,
+        "median_pnl_bps": -200.0,
+        "avg_pnl_dollars": -0.000417,
+        "avg_half_spread_captured_bps": 22.15,
+        "avg_adverse_drift_bps": -219.19
+      }
+    },
+    "0x3367d22cd2a673014f1960742afdf8601040a8ad856dc0a98bd1a44ee99504e2::No": {
+      "condition_id": "0x3367d22cd2a673014f1960742afdf8601040a8ad856dc0a98bd1a44ee99504e2",
+      "outcome": "No",
+      "question": "Will Ron DeSantis win the 2028 US Presidential Election?",
+      "slug": "will-ron-desantis-win-the-2028-us-presidential-election",
+      "records": 24377,
+      "avg_mid": 0.97951,
+      "avg_spread_bps": 90.86,
+      "buy_maker": {
+        "count": 159,
+        "fill_rate": 0.0065,
+        "avg_pnl_bps": -4.29,
+        "median_pnl_bps": -5.12,
+        "avg_pnl_dollars": -0.000418,
+        "avg_half_spread_captured_bps": 0.25,
+        "avg_adverse_drift_bps": -4.54
+      },
+      "sell_maker": {
+        "count": 361,
+        "fill_rate": 0.0148,
+        "avg_pnl_bps": -12.45,
+        "median_pnl_bps": -5.2,
+        "avg_pnl_dollars": -0.001193,
+        "avg_half_spread_captured_bps": 3.7,
+        "avg_adverse_drift_bps": -16.15
+      }
+    },
+    "0xe2bdf6c18c8ab5ad5d3be5f95dd749e88d1dee7ac7c4dbf5101013a5c055e3df::Yes": {
+      "condition_id": "0xe2bdf6c18c8ab5ad5d3be5f95dd749e88d1dee7ac7c4dbf5101013a5c055e3df",
+      "outcome": "Yes",
+      "question": "Will Dwayne 'The Rock' Johnson win the 2028 US Presidential Election?",
+      "slug": "will-dwayne-the-rock-johnson-win-the-2028-us-presidential-election",
+      "records": 24377,
+      "avg_mid": 0.01925,
+      "avg_spread_bps": 753.37,
+      "buy_maker": {
+        "count": 91,
+        "fill_rate": 0.0037,
+        "avg_pnl_bps": -305.18,
+        "median_pnl_bps": -312.5,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 0.0,
+        "avg_adverse_drift_bps": -305.18
+      },
+      "sell_maker": {
+        "count": 136,
+        "fill_rate": 0.0056,
+        "avg_pnl_bps": -42.61,
+        "median_pnl_bps": -227.27,
+        "avg_pnl_dollars": -8.8e-05,
+        "avg_half_spread_captured_bps": 0.0,
+        "avg_adverse_drift_bps": -42.61
+      }
+    },
+    "0xe2bdf6c18c8ab5ad5d3be5f95dd749e88d1dee7ac7c4dbf5101013a5c055e3df::No": {
+      "condition_id": "0xe2bdf6c18c8ab5ad5d3be5f95dd749e88d1dee7ac7c4dbf5101013a5c055e3df",
+      "outcome": "No",
+      "question": "Will Dwayne 'The Rock' Johnson win the 2028 US Presidential Election?",
+      "slug": "will-dwayne-the-rock-johnson-win-the-2028-us-presidential-election",
+      "records": 24377,
+      "avg_mid": 0.98075,
+      "avg_spread_bps": 92.12,
+      "buy_maker": {
+        "count": 136,
+        "fill_rate": 0.0056,
+        "avg_pnl_bps": -0.9,
+        "median_pnl_bps": -5.08,
+        "avg_pnl_dollars": -8.8e-05,
+        "avg_half_spread_captured_bps": 0.0,
+        "avg_adverse_drift_bps": -0.9
+      },
+      "sell_maker": {
+        "count": 91,
+        "fill_rate": 0.0037,
+        "avg_pnl_bps": -5.08,
+        "median_pnl_bps": -5.08,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 0.0,
+        "avg_adverse_drift_bps": -5.08
+      }
+    },
+    "0xd94b47bdeba16ae948bfb147bda059f3543d6fca73291644dfff5268bba7a797::Yes": {
+      "condition_id": "0xd94b47bdeba16ae948bfb147bda059f3543d6fca73291644dfff5268bba7a797",
+      "outcome": "Yes",
+      "question": "Will Tucker Carlson win the 2028 US Presidential Election?",
+      "slug": "will-tucker-carlson-win-the-2028-us-presidential-election",
+      "records": 24377,
+      "avg_mid": 0.02635,
+      "avg_spread_bps": 538.11,
+      "buy_maker": {
+        "count": 183,
+        "fill_rate": 0.0075,
+        "avg_pnl_bps": -201.36,
+        "median_pnl_bps": -200.0,
+        "avg_pnl_dollars": -0.000495,
+        "avg_half_spread_captured_bps": 7.35,
+        "avg_adverse_drift_bps": -208.51
+      },
+      "sell_maker": {
+        "count": 179,
+        "fill_rate": 0.0073,
+        "avg_pnl_bps": -198.4,
+        "median_pnl_bps": -200.0,
+        "avg_pnl_dollars": -0.000494,
+        "avg_half_spread_captured_bps": 24.67,
+        "avg_adverse_drift_bps": -223.7
+      }
+    },
+    "0xd94b47bdeba16ae948bfb147bda059f3543d6fca73291644dfff5268bba7a797::No": {
+      "condition_id": "0xd94b47bdeba16ae948bfb147bda059f3543d6fca73291644dfff5268bba7a797",
+      "outcome": "No",
+      "question": "Will Tucker Carlson win the 2028 US Presidential Election?",
+      "slug": "will-tucker-carlson-win-the-2028-us-presidential-election",
+      "records": 24377,
+      "avg_mid": 0.97365,
+      "avg_spread_bps": 90.31,
+      "buy_maker": {
+        "count": 179,
+        "fill_rate": 0.0073,
+        "avg_pnl_bps": -5.07,
+        "median_pnl_bps": -5.13,
+        "avg_pnl_dollars": -0.000494,
+        "avg_half_spread_captured_bps": 0.57,
+        "avg_adverse_drift_bps": -5.64
+      },
+      "sell_maker": {
+        "count": 183,
+        "fill_rate": 0.0075,
+        "avg_pnl_bps": -5.07,
+        "median_pnl_bps": -5.12,
+        "avg_pnl_dollars": -0.000495,
+        "avg_half_spread_captured_bps": 0.17,
+        "avg_adverse_drift_bps": -5.24
+      }
+    },
+    "0x32903694997a5c09afee30904970f9fab2a5fb4ec45f572f194341185574f1a4::Yes": {
+      "condition_id": "0x32903694997a5c09afee30904970f9fab2a5fb4ec45f572f194341185574f1a4",
+      "outcome": "Yes",
+      "question": "Will Thomas Massie win the 2028 US Presidential Election?",
+      "slug": "will-thomas-massie-win-the-2028-us-presidential-election",
+      "records": 24377,
+      "avg_mid": 0.01251,
+      "avg_spread_bps": 1048.37,
+      "buy_maker": {
+        "count": 82,
+        "fill_rate": 0.0034,
+        "avg_pnl_bps": -2760.53,
+        "median_pnl_bps": -3750.0,
+        "avg_pnl_dollars": -0.003256,
+        "avg_half_spread_captured_bps": 5804.58,
+        "avg_adverse_drift_bps": -6410.22
+      },
+      "sell_maker": {
+        "count": 71,
+        "fill_rate": 0.0029,
+        "avg_pnl_bps": -380503.52,
+        "median_pnl_bps": -491000.0,
+        "avg_pnl_dollars": -0.380493,
+        "avg_half_spread_captured_bps": 18.78,
+        "avg_adverse_drift_bps": -380525.82
+      }
+    },
+    "0x32903694997a5c09afee30904970f9fab2a5fb4ec45f572f194341185574f1a4::No": {
+      "condition_id": "0x32903694997a5c09afee30904970f9fab2a5fb4ec45f572f194341185574f1a4",
+      "outcome": "No",
+      "question": "Will Thomas Massie win the 2028 US Presidential Election?",
+      "slug": "will-thomas-massie-win-the-2028-us-presidential-election",
+      "records": 24377,
+      "avg_mid": 0.98749,
+      "avg_spread_bps": 92.18,
+      "buy_maker": {
+        "count": 80,
+        "fill_rate": 0.0033,
+        "avg_pnl_bps": -3411.55,
+        "median_pnl_bps": -4959.6,
+        "avg_pnl_dollars": -0.337744,
+        "avg_half_spread_captured_bps": 2.08,
+        "avg_adverse_drift_bps": -3413.63
+      },
+      "sell_maker": {
+        "count": 82,
+        "fill_rate": 0.0034,
+        "avg_pnl_bps": -32.95,
+        "median_pnl_bps": -45.55,
+        "avg_pnl_dollars": -0.003256,
+        "avg_half_spread_captured_bps": 5711.15,
+        "avg_adverse_drift_bps": -5770.11
+      }
+    },
+    "0x61600d487069f99e775307a0655c1a79f26e4fc6d8d1ba66790c64d78d0beba2::Yes": {
+      "condition_id": "0x61600d487069f99e775307a0655c1a79f26e4fc6d8d1ba66790c64d78d0beba2",
+      "outcome": "Yes",
+      "question": "Will Jon Ossoff win the 2028 US Presidential Election?",
+      "slug": "will-jon-ossoff-win-the-2028-us-presidential-election",
+      "records": 24377,
+      "avg_mid": 0.04069,
+      "avg_spread_bps": 377.69,
+      "buy_maker": {
+        "count": 453,
+        "fill_rate": 0.0186,
+        "avg_pnl_bps": -115.92,
+        "median_pnl_bps": -135.14,
+        "avg_pnl_dollars": -0.00044,
+        "avg_half_spread_captured_bps": 133.85,
+        "avg_adverse_drift_bps": -248.2
+      },
+      "sell_maker": {
+        "count": 405,
+        "fill_rate": 0.0166,
+        "avg_pnl_bps": -32.23,
+        "median_pnl_bps": -116.28,
+        "avg_pnl_dollars": -0.000125,
+        "avg_half_spread_captured_bps": 9.3,
+        "avg_adverse_drift_bps": -41.63
+      }
+    },
+    "0x61600d487069f99e775307a0655c1a79f26e4fc6d8d1ba66790c64d78d0beba2::No": {
+      "condition_id": "0x61600d487069f99e775307a0655c1a79f26e4fc6d8d1ba66790c64d78d0beba2",
+      "outcome": "No",
+      "question": "Will Jon Ossoff win the 2028 US Presidential Election?",
+      "slug": "will-jon-ossoff-win-the-2028-us-presidential-election",
+      "records": 24377,
+      "avg_mid": 0.95931,
+      "avg_spread_bps": 99.7,
+      "buy_maker": {
+        "count": 405,
+        "fill_rate": 0.0166,
+        "avg_pnl_bps": -1.3,
+        "median_pnl_bps": -5.18,
+        "avg_pnl_dollars": -0.000125,
+        "avg_half_spread_captured_bps": 0.41,
+        "avg_adverse_drift_bps": -1.71
+      },
+      "sell_maker": {
+        "count": 453,
+        "fill_rate": 0.0186,
+        "avg_pnl_bps": -4.58,
+        "median_pnl_bps": -5.19,
+        "avg_pnl_dollars": -0.00044,
+        "avg_half_spread_captured_bps": 124.91,
+        "avg_adverse_drift_bps": -129.56
+      }
+    },
+    "0x9fe87b4bec41ca0b2e5f09b79e59f9aba6a88feab636db30b70fa103c1b54e5a::Yes": {
+      "condition_id": "0x9fe87b4bec41ca0b2e5f09b79e59f9aba6a88feab636db30b70fa103c1b54e5a",
+      "outcome": "Yes",
+      "question": "Will Kon Knueppel win the 2025\u201326 NBA Rookie of the Year award?",
+      "slug": "will-kon-knueppel-win-the-202526-nba-rookie-of-the-year-award",
+      "records": 14460,
+      "avg_mid": 0.27056,
+      "avg_spread_bps": 766.62,
+      "buy_maker": {
+        "count": 1622,
+        "fill_rate": 0.1122,
+        "avg_pnl_bps": -917.09,
+        "median_pnl_bps": -287.01,
+        "avg_pnl_dollars": -0.021099,
+        "avg_half_spread_captured_bps": 329.79,
+        "avg_adverse_drift_bps": -1172.46
+      },
+      "sell_maker": {
+        "count": 1713,
+        "fill_rate": 0.1185,
+        "avg_pnl_bps": -510.69,
+        "median_pnl_bps": -224.22,
+        "avg_pnl_dollars": -0.010349,
+        "avg_half_spread_captured_bps": 315.86,
+        "avg_adverse_drift_bps": -846.8
+      }
+    },
+    "0x9fe87b4bec41ca0b2e5f09b79e59f9aba6a88feab636db30b70fa103c1b54e5a::No": {
+      "condition_id": "0x9fe87b4bec41ca0b2e5f09b79e59f9aba6a88feab636db30b70fa103c1b54e5a",
+      "outcome": "No",
+      "question": "Will Kon Knueppel win the 2025\u201326 NBA Rookie of the Year award?",
+      "slug": "will-kon-knueppel-win-the-202526-nba-rookie-of-the-year-award",
+      "records": 14460,
+      "avg_mid": 0.72944,
+      "avg_spread_bps": 272.45,
+      "buy_maker": {
+        "count": 1713,
+        "fill_rate": 0.1185,
+        "avg_pnl_bps": -131.88,
+        "median_pnl_bps": -64.35,
+        "avg_pnl_dollars": -0.010349,
+        "avg_half_spread_captured_bps": 97.37,
+        "avg_adverse_drift_bps": -227.89
+      },
+      "sell_maker": {
+        "count": 1622,
+        "fill_rate": 0.1122,
+        "avg_pnl_bps": -283.27,
+        "median_pnl_bps": -101.74,
+        "avg_pnl_dollars": -0.021099,
+        "avg_half_spread_captured_bps": 105.93,
+        "avg_adverse_drift_bps": -395.09
+      }
+    },
+    "0x18b1c135d0a40c5894da9412e77311827d9caf16cf4cd6591b247a34730af919::Yes": {
+      "condition_id": "0x18b1c135d0a40c5894da9412e77311827d9caf16cf4cd6591b247a34730af919",
+      "outcome": "Yes",
+      "question": "Will J.D. Vance win the 2028 Republican presidential nomination?",
+      "slug": "will-jd-vance-win-the-2028-republican-presidential-nomination",
+      "records": 24377,
+      "avg_mid": 0.38602,
+      "avg_spread_bps": 49.2,
+      "buy_maker": {
+        "count": 983,
+        "fill_rate": 0.0403,
+        "avg_pnl_bps": -56.67,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -0.002721,
+        "avg_half_spread_captured_bps": 8.13,
+        "avg_adverse_drift_bps": -63.3
+      },
+      "sell_maker": {
+        "count": 885,
+        "fill_rate": 0.0363,
+        "avg_pnl_bps": -4.16,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -0.000163,
+        "avg_half_spread_captured_bps": 0.07,
+        "avg_adverse_drift_bps": -4.23
+      }
+    },
+    "0x18b1c135d0a40c5894da9412e77311827d9caf16cf4cd6591b247a34730af919::No": {
+      "condition_id": "0x18b1c135d0a40c5894da9412e77311827d9caf16cf4cd6591b247a34730af919",
+      "outcome": "No",
+      "question": "Will J.D. Vance win the 2028 Republican presidential nomination?",
+      "slug": "will-jd-vance-win-the-2028-republican-presidential-nomination",
+      "records": 24377,
+      "avg_mid": 0.61398,
+      "avg_spread_bps": 34.51,
+      "buy_maker": {
+        "count": 885,
+        "fill_rate": 0.0363,
+        "avg_pnl_bps": -2.67,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -0.000163,
+        "avg_half_spread_captured_bps": 0.05,
+        "avg_adverse_drift_bps": -2.72
+      },
+      "sell_maker": {
+        "count": 983,
+        "fill_rate": 0.0403,
+        "avg_pnl_bps": -52.54,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -0.002721,
+        "avg_half_spread_captured_bps": 7.88,
+        "avg_adverse_drift_bps": -61.83
+      }
+    },
+    "0x21ad31a46bfaa51650766eff6dc69c866959e32d965ffb116020e37694b6317d::Yes": {
+      "condition_id": "0x21ad31a46bfaa51650766eff6dc69c866959e32d965ffb116020e37694b6317d",
+      "outcome": "Yes",
+      "question": "Will Marco Rubio win the 2028 Republican presidential nomination?",
+      "slug": "will-marco-rubio-win-the-2028-republican-presidential-nomination",
+      "records": 24377,
+      "avg_mid": 0.21705,
+      "avg_spread_bps": 138.25,
+      "buy_maker": {
+        "count": 1320,
+        "fill_rate": 0.0541,
+        "avg_pnl_bps": -12.12,
+        "median_pnl_bps": -22.94,
+        "avg_pnl_dollars": -0.000254,
+        "avg_half_spread_captured_bps": 1.95,
+        "avg_adverse_drift_bps": -14.07
+      },
+      "sell_maker": {
+        "count": 1040,
+        "fill_rate": 0.0427,
+        "avg_pnl_bps": -13.72,
+        "median_pnl_bps": -0.0,
+        "avg_pnl_dollars": -0.000288,
+        "avg_half_spread_captured_bps": 1.2,
+        "avg_adverse_drift_bps": -14.92
+      }
+    },
+    "0x21ad31a46bfaa51650766eff6dc69c866959e32d965ffb116020e37694b6317d::No": {
+      "condition_id": "0x21ad31a46bfaa51650766eff6dc69c866959e32d965ffb116020e37694b6317d",
+      "outcome": "No",
+      "question": "Will Marco Rubio win the 2028 Republican presidential nomination?",
+      "slug": "will-marco-rubio-win-the-2028-republican-presidential-nomination",
+      "records": 24377,
+      "avg_mid": 0.78295,
+      "avg_spread_bps": 97.62,
+      "buy_maker": {
+        "count": 1040,
+        "fill_rate": 0.0427,
+        "avg_pnl_bps": -3.64,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -0.000287,
+        "avg_half_spread_captured_bps": 0.31,
+        "avg_adverse_drift_bps": -3.95
+      },
+      "sell_maker": {
+        "count": 1320,
+        "fill_rate": 0.0541,
+        "avg_pnl_bps": -3.21,
+        "median_pnl_bps": -6.18,
+        "avg_pnl_dollars": -0.000254,
+        "avg_half_spread_captured_bps": 0.51,
+        "avg_adverse_drift_bps": -3.72
+      }
+    },
+    "0x9cd77217b2ab264fe4f6d302f662c0a91f349fe5798f1f98d70bb2311712791b::Yes": {
+      "condition_id": "0x9cd77217b2ab264fe4f6d302f662c0a91f349fe5798f1f98d70bb2311712791b",
+      "outcome": "Yes",
+      "question": "Will Tulsi Gabbard win the 2028 Republican presidential nomination?",
+      "slug": "will-tulsi-gabbard-win-the-2028-republican-presidential-nomination",
+      "records": 24377,
+      "avg_mid": 0.01379,
+      "avg_spread_bps": 935.29,
+      "buy_maker": {
+        "count": 57,
+        "fill_rate": 0.0023,
+        "avg_pnl_bps": 454.55,
+        "median_pnl_bps": 454.55,
+        "avg_pnl_dollars": 0.0005,
+        "avg_half_spread_captured_bps": 4124.1,
+        "avg_adverse_drift_bps": -3857.01
+      },
+      "sell_maker": {
+        "count": 11,
+        "fill_rate": 0.0005,
+        "avg_pnl_bps": -454.55,
+        "median_pnl_bps": -454.55,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 173.16,
+        "avg_adverse_drift_bps": -635.58
+      }
+    },
+    "0x9cd77217b2ab264fe4f6d302f662c0a91f349fe5798f1f98d70bb2311712791b::No": {
+      "condition_id": "0x9cd77217b2ab264fe4f6d302f662c0a91f349fe5798f1f98d70bb2311712791b",
+      "outcome": "No",
+      "question": "Will Tulsi Gabbard win the 2028 Republican presidential nomination?",
+      "slug": "will-tulsi-gabbard-win-the-2028-republican-presidential-nomination",
+      "records": 24377,
+      "avg_mid": 0.98621,
+      "avg_spread_bps": 91.35,
+      "buy_maker": {
+        "count": 11,
+        "fill_rate": 0.0005,
+        "avg_pnl_bps": -5.06,
+        "median_pnl_bps": -5.06,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 1.84,
+        "avg_adverse_drift_bps": -6.89
+      },
+      "sell_maker": {
+        "count": 57,
+        "fill_rate": 0.0023,
+        "avg_pnl_bps": 5.06,
+        "median_pnl_bps": 5.06,
+        "avg_pnl_dollars": 0.0005,
+        "avg_half_spread_captured_bps": 3757.94,
+        "avg_adverse_drift_bps": -3750.99
+      }
+    },
+    "0x4a9d58d4da874e26708f5bdb014eb07a06aeebb927068d169d43831595386557::Yes": {
+      "condition_id": "0x4a9d58d4da874e26708f5bdb014eb07a06aeebb927068d169d43831595386557",
+      "outcome": "Yes",
+      "question": "Will Donald Trump Jr. win the 2028 Republican presidential nomination?",
+      "slug": "will-donald-trump-jr-win-the-2028-republican-presidential-nomination",
+      "records": 24377,
+      "avg_mid": 0.02529,
+      "avg_spread_bps": 635.24,
+      "buy_maker": {
+        "count": 752,
+        "fill_rate": 0.0308,
+        "avg_pnl_bps": -114.0,
+        "median_pnl_bps": -200.0,
+        "avg_pnl_dollars": -0.000289,
+        "avg_half_spread_captured_bps": 121.58,
+        "avg_adverse_drift_bps": -236.25
+      },
+      "sell_maker": {
+        "count": 622,
+        "fill_rate": 0.0255,
+        "avg_pnl_bps": -312.38,
+        "median_pnl_bps": -238.1,
+        "avg_pnl_dollars": -0.000662,
+        "avg_half_spread_captured_bps": 40.71,
+        "avg_adverse_drift_bps": -350.3
+      }
+    },
+    "0x4a9d58d4da874e26708f5bdb014eb07a06aeebb927068d169d43831595386557::No": {
+      "condition_id": "0x4a9d58d4da874e26708f5bdb014eb07a06aeebb927068d169d43831595386557",
+      "outcome": "No",
+      "question": "Will Donald Trump Jr. win the 2028 Republican presidential nomination?",
+      "slug": "will-donald-trump-jr-win-the-2028-republican-presidential-nomination",
+      "records": 24377,
+      "avg_mid": 0.97471,
+      "avg_spread_bps": 104.01,
+      "buy_maker": {
+        "count": 622,
+        "fill_rate": 0.0255,
+        "avg_pnl_bps": -6.77,
+        "median_pnl_bps": -5.13,
+        "avg_pnl_dollars": -0.000662,
+        "avg_half_spread_captured_bps": 1.06,
+        "avg_adverse_drift_bps": -7.82
+      },
+      "sell_maker": {
+        "count": 752,
+        "fill_rate": 0.0308,
+        "avg_pnl_bps": -2.96,
+        "median_pnl_bps": -5.12,
+        "avg_pnl_dollars": -0.000289,
+        "avg_half_spread_captured_bps": 3.19,
+        "avg_adverse_drift_bps": -6.15
+      }
+    },
+    "0x64d31a2af85518c6718a5757a35b840f08eca20c1e22c0eb1e96ec01cc55b8b6::Yes": {
+      "condition_id": "0x64d31a2af85518c6718a5757a35b840f08eca20c1e22c0eb1e96ec01cc55b8b6",
+      "outcome": "Yes",
+      "question": "Will Ron DeSantis win the 2028 Republican presidential nomination?",
+      "slug": "will-ron-desantis-win-the-2028-republican-presidential-nomination",
+      "records": 24377,
+      "avg_mid": 0.02981,
+      "avg_spread_bps": 512.68,
+      "buy_maker": {
+        "count": 1298,
+        "fill_rate": 0.0532,
+        "avg_pnl_bps": -24.02,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -7.7e-05,
+        "avg_half_spread_captured_bps": 0.9,
+        "avg_adverse_drift_bps": -24.86
+      },
+      "sell_maker": {
+        "count": 414,
+        "fill_rate": 0.017,
+        "avg_pnl_bps": -122.09,
+        "median_pnl_bps": -200.0,
+        "avg_pnl_dollars": -0.000307,
+        "avg_half_spread_captured_bps": -0.0,
+        "avg_adverse_drift_bps": -122.09
+      }
+    },
+    "0x64d31a2af85518c6718a5757a35b840f08eca20c1e22c0eb1e96ec01cc55b8b6::No": {
+      "condition_id": "0x64d31a2af85518c6718a5757a35b840f08eca20c1e22c0eb1e96ec01cc55b8b6",
+      "outcome": "No",
+      "question": "Will Ron DeSantis win the 2028 Republican presidential nomination?",
+      "slug": "will-ron-desantis-win-the-2028-republican-presidential-nomination",
+      "records": 24377,
+      "avg_mid": 0.97019,
+      "avg_spread_bps": 90.94,
+      "buy_maker": {
+        "count": 414,
+        "fill_rate": 0.017,
+        "avg_pnl_bps": -3.15,
+        "median_pnl_bps": -5.13,
+        "avg_pnl_dollars": -0.000307,
+        "avg_half_spread_captured_bps": 0.0,
+        "avg_adverse_drift_bps": -3.15
+      },
+      "sell_maker": {
+        "count": 1298,
+        "fill_rate": 0.0532,
+        "avg_pnl_bps": -0.79,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -7.7e-05,
+        "avg_half_spread_captured_bps": 0.03,
+        "avg_adverse_drift_bps": -0.82
+      }
+    },
+    "0xf7b5491e70b477d451afe7d9c1fde4bf1a927e69ff289d294b96df164f6c10f0::Yes": {
+      "condition_id": "0xf7b5491e70b477d451afe7d9c1fde4bf1a927e69ff289d294b96df164f6c10f0",
+      "outcome": "Yes",
+      "question": "Will the Carolina Hurricanes win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-carolina-hurricanes-win-the-2026-nhl-stanley-cup",
+      "records": 13151,
+      "avg_mid": 0.29092,
+      "avg_spread_bps": 538.29,
+      "buy_maker": {
+        "count": 480,
+        "fill_rate": 0.0365,
+        "avg_pnl_bps": -132.69,
+        "median_pnl_bps": -166.2,
+        "avg_pnl_dollars": -0.003656,
+        "avg_half_spread_captured_bps": 153.62,
+        "avg_adverse_drift_bps": -284.04
+      },
+      "sell_maker": {
+        "count": 598,
+        "fill_rate": 0.0455,
+        "avg_pnl_bps": -160.62,
+        "median_pnl_bps": -167.13,
+        "avg_pnl_dollars": -0.004637,
+        "avg_half_spread_captured_bps": 143.86,
+        "avg_adverse_drift_bps": -306.83
+      }
+    },
+    "0xf7b5491e70b477d451afe7d9c1fde4bf1a927e69ff289d294b96df164f6c10f0::No": {
+      "condition_id": "0xf7b5491e70b477d451afe7d9c1fde4bf1a927e69ff289d294b96df164f6c10f0",
+      "outcome": "No",
+      "question": "Will the Carolina Hurricanes win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-carolina-hurricanes-win-the-2026-nhl-stanley-cup",
+      "records": 13151,
+      "avg_mid": 0.70907,
+      "avg_spread_bps": 295.62,
+      "buy_maker": {
+        "count": 598,
+        "fill_rate": 0.0455,
+        "avg_pnl_bps": -66.81,
+        "median_pnl_bps": -79.89,
+        "avg_pnl_dollars": -0.004637,
+        "avg_half_spread_captured_bps": 56.83,
+        "avg_adverse_drift_bps": -123.26
+      },
+      "sell_maker": {
+        "count": 480,
+        "fill_rate": 0.0365,
+        "avg_pnl_bps": -51.67,
+        "median_pnl_bps": -78.02,
+        "avg_pnl_dollars": -0.003656,
+        "avg_half_spread_captured_bps": 76.31,
+        "avg_adverse_drift_bps": -128.42
+      }
+    },
+    "0x4a67e1270a2ed86be8fc524b6114640e41b0c56303ecaa9584deacd62402650a::Yes": {
+      "condition_id": "0x4a67e1270a2ed86be8fc524b6114640e41b0c56303ecaa9584deacd62402650a",
+      "outcome": "Yes",
+      "question": "Will the Edmonton Oilers win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-edmonton-oilers-win-the-2026-nhl-stanley-cup",
+      "records": 7403,
+      "avg_mid": 0.03697,
+      "avg_spread_bps": 2206.08,
+      "buy_maker": {
+        "count": 1202,
+        "fill_rate": 0.1624,
+        "avg_pnl_bps": -245.61,
+        "median_pnl_bps": -56.82,
+        "avg_pnl_dollars": -0.001966,
+        "avg_half_spread_captured_bps": 687.67,
+        "avg_adverse_drift_bps": -945.76
+      },
+      "sell_maker": {
+        "count": 728,
+        "fill_rate": 0.0983,
+        "avg_pnl_bps": -1458.14,
+        "median_pnl_bps": -921.05,
+        "avg_pnl_dollars": -0.005287,
+        "avg_half_spread_captured_bps": 678.16,
+        "avg_adverse_drift_bps": -2218.66
+      }
+    },
+    "0x4a67e1270a2ed86be8fc524b6114640e41b0c56303ecaa9584deacd62402650a::No": {
+      "condition_id": "0x4a67e1270a2ed86be8fc524b6114640e41b0c56303ecaa9584deacd62402650a",
+      "outcome": "No",
+      "question": "Will the Edmonton Oilers win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-edmonton-oilers-win-the-2026-nhl-stanley-cup",
+      "records": 7403,
+      "avg_mid": 0.96303,
+      "avg_spread_bps": 129.93,
+      "buy_maker": {
+        "count": 728,
+        "fill_rate": 0.0983,
+        "avg_pnl_bps": -55.28,
+        "median_pnl_bps": -31.32,
+        "avg_pnl_dollars": -0.005287,
+        "avg_half_spread_captured_bps": 20.0,
+        "avg_adverse_drift_bps": -75.17
+      },
+      "sell_maker": {
+        "count": 1202,
+        "fill_rate": 0.1624,
+        "avg_pnl_bps": -21.14,
+        "median_pnl_bps": -2.56,
+        "avg_pnl_dollars": -0.001966,
+        "avg_half_spread_captured_bps": 32.8,
+        "avg_adverse_drift_bps": -54.05
+      }
+    },
+    "0x44887f53abbfe7531b1384420b185a5f10ee42a4e6c9441d5883abd4f3c1e5ef::Yes": {
+      "condition_id": "0x44887f53abbfe7531b1384420b185a5f10ee42a4e6c9441d5883abd4f3c1e5ef",
+      "outcome": "Yes",
+      "question": "Will the Dallas Stars win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-dallas-stars-win-the-2026-nhl-stanley-cup",
+      "records": 7423,
+      "avg_mid": 0.05025,
+      "avg_spread_bps": 911.15,
+      "buy_maker": {
+        "count": 630,
+        "fill_rate": 0.0849,
+        "avg_pnl_bps": -886.09,
+        "median_pnl_bps": -111.11,
+        "avg_pnl_dollars": -0.002971,
+        "avg_half_spread_captured_bps": 220.89,
+        "avg_adverse_drift_bps": -1055.48
+      },
+      "sell_maker": {
+        "count": 835,
+        "fill_rate": 0.1125,
+        "avg_pnl_bps": -182.49,
+        "median_pnl_bps": -89.29,
+        "avg_pnl_dollars": -0.000687,
+        "avg_half_spread_captured_bps": 246.53,
+        "avg_adverse_drift_bps": -434.07
+      }
+    },
+    "0x44887f53abbfe7531b1384420b185a5f10ee42a4e6c9441d5883abd4f3c1e5ef::No": {
+      "condition_id": "0x44887f53abbfe7531b1384420b185a5f10ee42a4e6c9441d5883abd4f3c1e5ef",
+      "outcome": "No",
+      "question": "Will the Dallas Stars win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-dallas-stars-win-the-2026-nhl-stanley-cup",
+      "records": 7423,
+      "avg_mid": 0.94975,
+      "avg_spread_bps": 137.9,
+      "buy_maker": {
+        "count": 835,
+        "fill_rate": 0.1125,
+        "avg_pnl_bps": -7.2,
+        "median_pnl_bps": -5.08,
+        "avg_pnl_dollars": -0.000687,
+        "avg_half_spread_captured_bps": 5.84,
+        "avg_adverse_drift_bps": -13.04
+      },
+      "sell_maker": {
+        "count": 685,
+        "fill_rate": 0.0923,
+        "avg_pnl_bps": -28.79,
+        "median_pnl_bps": -5.41,
+        "avg_pnl_dollars": -0.002772,
+        "avg_half_spread_captured_bps": 8.04,
+        "avg_adverse_drift_bps": -36.88
+      }
+    },
+    "0xf8f63bb47b2a7c2e0c1be3cedf4075079b11c07476d76a9469065b0c4791961a::Yes": {
+      "condition_id": "0xf8f63bb47b2a7c2e0c1be3cedf4075079b11c07476d76a9469065b0c4791961a",
+      "outcome": "Yes",
+      "question": "Will the Colorado Avalanche win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-colorado-avalanche-win-the-2026-nhl-stanley-cup",
+      "records": 13151,
+      "avg_mid": 0.32971,
+      "avg_spread_bps": 241.41,
+      "buy_maker": {
+        "count": 968,
+        "fill_rate": 0.0736,
+        "avg_pnl_bps": -28.42,
+        "median_pnl_bps": -16.61,
+        "avg_pnl_dollars": -0.001093,
+        "avg_half_spread_captured_bps": 47.9,
+        "avg_adverse_drift_bps": -76.36
+      },
+      "sell_maker": {
+        "count": 974,
+        "fill_rate": 0.0741,
+        "avg_pnl_bps": -114.83,
+        "median_pnl_bps": -25.25,
+        "avg_pnl_dollars": -0.003509,
+        "avg_half_spread_captured_bps": 27.92,
+        "avg_adverse_drift_bps": -143.47
+      }
+    },
+    "0xf8f63bb47b2a7c2e0c1be3cedf4075079b11c07476d76a9469065b0c4791961a::No": {
+      "condition_id": "0xf8f63bb47b2a7c2e0c1be3cedf4075079b11c07476d76a9469065b0c4791961a",
+      "outcome": "No",
+      "question": "Will the Colorado Avalanche win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-colorado-avalanche-win-the-2026-nhl-stanley-cup",
+      "records": 13151,
+      "avg_mid": 0.67029,
+      "avg_spread_bps": 167.45,
+      "buy_maker": {
+        "count": 974,
+        "fill_rate": 0.0741,
+        "avg_pnl_bps": -51.24,
+        "median_pnl_bps": -13.44,
+        "avg_pnl_dollars": -0.003509,
+        "avg_half_spread_captured_bps": 12.67,
+        "avg_adverse_drift_bps": -63.76
+      },
+      "sell_maker": {
+        "count": 968,
+        "fill_rate": 0.0736,
+        "avg_pnl_bps": -17.59,
+        "median_pnl_bps": -8.32,
+        "avg_pnl_dollars": -0.001093,
+        "avg_half_spread_captured_bps": 25.41,
+        "avg_adverse_drift_bps": -43.0
+      }
+    },
+    "0x89389a6b1439856a8d366234c795d72865c927a1aa3cf9d4cc04a3a400defde1::Yes": {
+      "condition_id": "0x89389a6b1439856a8d366234c795d72865c927a1aa3cf9d4cc04a3a400defde1",
+      "outcome": "Yes",
+      "question": "Will the Vegas Golden Knights win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-vegas-golden-knights-win-the-2026-nhl-stanley-cup",
+      "records": 13093,
+      "avg_mid": 0.07246,
+      "avg_spread_bps": 639.81,
+      "buy_maker": {
+        "count": 1313,
+        "fill_rate": 0.1003,
+        "avg_pnl_bps": -379.24,
+        "median_pnl_bps": -81.97,
+        "avg_pnl_dollars": -0.003968,
+        "avg_half_spread_captured_bps": 57.55,
+        "avg_adverse_drift_bps": -429.49
+      },
+      "sell_maker": {
+        "count": 894,
+        "fill_rate": 0.0683,
+        "avg_pnl_bps": -839.05,
+        "median_pnl_bps": -289.86,
+        "avg_pnl_dollars": -0.004525,
+        "avg_half_spread_captured_bps": 337.66,
+        "avg_adverse_drift_bps": -1212.4
+      }
+    },
+    "0x89389a6b1439856a8d366234c795d72865c927a1aa3cf9d4cc04a3a400defde1::No": {
+      "condition_id": "0x89389a6b1439856a8d366234c795d72865c927a1aa3cf9d4cc04a3a400defde1",
+      "outcome": "No",
+      "question": "Will the Vegas Golden Knights win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-vegas-golden-knights-win-the-2026-nhl-stanley-cup",
+      "records": 13093,
+      "avg_mid": 0.92754,
+      "avg_spread_bps": 152.93,
+      "buy_maker": {
+        "count": 894,
+        "fill_rate": 0.0683,
+        "avg_pnl_bps": -44.48,
+        "median_pnl_bps": -16.15,
+        "avg_pnl_dollars": -0.004525,
+        "avg_half_spread_captured_bps": 19.59,
+        "avg_adverse_drift_bps": -64.61
+      },
+      "sell_maker": {
+        "count": 1313,
+        "fill_rate": 0.1003,
+        "avg_pnl_bps": -57.27,
+        "median_pnl_bps": -5.45,
+        "avg_pnl_dollars": -0.003968,
+        "avg_half_spread_captured_bps": 13.99,
+        "avg_adverse_drift_bps": -79.58
+      }
+    },
+    "0x3b6cdd4f72cef7f29ff7e054444095564dc582266b7230be3c2b5f194d89f37d::Yes": {
+      "condition_id": "0x3b6cdd4f72cef7f29ff7e054444095564dc582266b7230be3c2b5f194d89f37d",
+      "outcome": "Yes",
+      "question": "Will the Los Angeles Kings win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-los-angeles-kings-win-the-2026-nhl-stanley-cup",
+      "records": 807,
+      "avg_mid": 0.00154,
+      "avg_spread_bps": 6935.15,
+      "buy_maker": {
+        "count": 0,
+        "fill_rate": 0.0,
+        "avg_pnl_bps": null,
+        "median_pnl_bps": null,
+        "avg_half_spread_captured_bps": null,
+        "avg_adverse_drift_bps": null
+      },
+      "sell_maker": {
+        "count": 0,
+        "fill_rate": 0.0,
+        "avg_pnl_bps": null,
+        "median_pnl_bps": null,
+        "avg_half_spread_captured_bps": null,
+        "avg_adverse_drift_bps": null
+      }
+    },
+    "0x3b6cdd4f72cef7f29ff7e054444095564dc582266b7230be3c2b5f194d89f37d::No": {
+      "condition_id": "0x3b6cdd4f72cef7f29ff7e054444095564dc582266b7230be3c2b5f194d89f37d",
+      "outcome": "No",
+      "question": "Will the Los Angeles Kings win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-los-angeles-kings-win-the-2026-nhl-stanley-cup",
+      "records": 807,
+      "avg_mid": 0.99846,
+      "avg_spread_bps": 10.82,
+      "buy_maker": {
+        "count": 0,
+        "fill_rate": 0.0,
+        "avg_pnl_bps": null,
+        "median_pnl_bps": null,
+        "avg_half_spread_captured_bps": null,
+        "avg_adverse_drift_bps": null
+      },
+      "sell_maker": {
+        "count": 0,
+        "fill_rate": 0.0,
+        "avg_pnl_bps": null,
+        "median_pnl_bps": null,
+        "avg_half_spread_captured_bps": null,
+        "avg_adverse_drift_bps": null
+      }
+    },
+    "0x139b893a7ae21eaec72e887ba88910831944b4662512428c122c4ad0a5c125ac::Yes": {
+      "condition_id": "0x139b893a7ae21eaec72e887ba88910831944b4662512428c122c4ad0a5c125ac",
+      "outcome": "Yes",
+      "question": "Will the Ottawa Senators win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-ottawa-senators-win-the-2026-nhl-stanley-cup",
+      "records": 752,
+      "avg_mid": 0.00489,
+      "avg_spread_bps": 5100.91,
+      "buy_maker": {
+        "count": 56,
+        "fill_rate": 0.0745,
+        "avg_pnl_bps": -833.33,
+        "median_pnl_bps": -833.33,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 453.3,
+        "avg_adverse_drift_bps": -1248.86
+      },
+      "sell_maker": {
+        "count": 1,
+        "fill_rate": 0.0013,
+        "avg_pnl_bps": -2500.0,
+        "median_pnl_bps": -2500.0,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 0.0,
+        "avg_adverse_drift_bps": -2500.0
+      }
+    },
+    "0x139b893a7ae21eaec72e887ba88910831944b4662512428c122c4ad0a5c125ac::No": {
+      "condition_id": "0x139b893a7ae21eaec72e887ba88910831944b4662512428c122c4ad0a5c125ac",
+      "outcome": "No",
+      "question": "Will the Ottawa Senators win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-ottawa-senators-win-the-2026-nhl-stanley-cup",
+      "records": 752,
+      "avg_mid": 0.99511,
+      "avg_spread_bps": 24.51,
+      "buy_maker": {
+        "count": 1,
+        "fill_rate": 0.0013,
+        "avg_pnl_bps": -5.01,
+        "median_pnl_bps": -5.01,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 0.0,
+        "avg_adverse_drift_bps": -5.01
+      },
+      "sell_maker": {
+        "count": 56,
+        "fill_rate": 0.0745,
+        "avg_pnl_bps": -5.03,
+        "median_pnl_bps": -5.03,
+        "avg_pnl_dollars": -0.0005,
+        "avg_half_spread_captured_bps": 2.97,
+        "avg_adverse_drift_bps": -8.0
+      }
+    },
+    "0x0d082a85f48a5226b1205acdb6e95ead2fe373acabcf6c471f5895f86f42a276::Yes": {
+      "condition_id": "0x0d082a85f48a5226b1205acdb6e95ead2fe373acabcf6c471f5895f86f42a276",
+      "outcome": "Yes",
+      "question": "Will the Minnesota Wild win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-minnesota-wild-win-the-2026-nhl-stanley-cup",
+      "records": 13080,
+      "avg_mid": 0.03831,
+      "avg_spread_bps": 1034.01,
+      "buy_maker": {
+        "count": 981,
+        "fill_rate": 0.075,
+        "avg_pnl_bps": -727.35,
+        "median_pnl_bps": -277.78,
+        "avg_pnl_dollars": -0.003036,
+        "avg_half_spread_captured_bps": 229.81,
+        "avg_adverse_drift_bps": -907.86
+      },
+      "sell_maker": {
+        "count": 1155,
+        "fill_rate": 0.0883,
+        "avg_pnl_bps": -767.92,
+        "median_pnl_bps": -408.16,
+        "avg_pnl_dollars": -0.002484,
+        "avg_half_spread_captured_bps": 187.55,
+        "avg_adverse_drift_bps": -979.38
+      }
+    },
+    "0x0d082a85f48a5226b1205acdb6e95ead2fe373acabcf6c471f5895f86f42a276::No": {
+      "condition_id": "0x0d082a85f48a5226b1205acdb6e95ead2fe373acabcf6c471f5895f86f42a276",
+      "outcome": "No",
+      "question": "Will the Minnesota Wild win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-minnesota-wild-win-the-2026-nhl-stanley-cup",
+      "records": 13080,
+      "avg_mid": 0.96169,
+      "avg_spread_bps": 122.91,
+      "buy_maker": {
+        "count": 1163,
+        "fill_rate": 0.0889,
+        "avg_pnl_bps": -25.86,
+        "median_pnl_bps": -21.03,
+        "avg_pnl_dollars": -0.002484,
+        "avg_half_spread_captured_bps": 7.61,
+        "avg_adverse_drift_bps": -33.44
+      },
+      "sell_maker": {
+        "count": 985,
+        "fill_rate": 0.0753,
+        "avg_pnl_bps": -31.77,
+        "median_pnl_bps": -5.27,
+        "avg_pnl_dollars": -0.003026,
+        "avg_half_spread_captured_bps": 11.27,
+        "avg_adverse_drift_bps": -43.15
+      }
+    },
+    "0xfdc1041ba84bfd8f741eee0bdafce8b1887626c83afd017d18ee9b1f77008b9f::Yes": {
+      "condition_id": "0xfdc1041ba84bfd8f741eee0bdafce8b1887626c83afd017d18ee9b1f77008b9f",
+      "outcome": "Yes",
+      "question": "Will the Utah Mammoth win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-utah-mammoth-win-the-2026-nhl-stanley-cup",
+      "records": 7391,
+      "avg_mid": 0.03103,
+      "avg_spread_bps": 1120.42,
+      "buy_maker": {
+        "count": 446,
+        "fill_rate": 0.0603,
+        "avg_pnl_bps": -456.42,
+        "median_pnl_bps": -652.17,
+        "avg_pnl_dollars": -0.001668,
+        "avg_half_spread_captured_bps": 114.26,
+        "avg_adverse_drift_bps": -559.0
+      },
+      "sell_maker": {
+        "count": 298,
+        "fill_rate": 0.0403,
+        "avg_pnl_bps": -2037.73,
+        "median_pnl_bps": -250.0,
+        "avg_pnl_dollars": -0.004621,
+        "avg_half_spread_captured_bps": 268.65,
+        "avg_adverse_drift_bps": -2354.94
+      }
+    },
+    "0xfdc1041ba84bfd8f741eee0bdafce8b1887626c83afd017d18ee9b1f77008b9f::No": {
+      "condition_id": "0xfdc1041ba84bfd8f741eee0bdafce8b1887626c83afd017d18ee9b1f77008b9f",
+      "outcome": "No",
+      "question": "Will the Utah Mammoth win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-utah-mammoth-win-the-2026-nhl-stanley-cup",
+      "records": 7391,
+      "avg_mid": 0.96897,
+      "avg_spread_bps": 34.1,
+      "buy_maker": {
+        "count": 298,
+        "fill_rate": 0.0403,
+        "avg_pnl_bps": -47.27,
+        "median_pnl_bps": -5.21,
+        "avg_pnl_dollars": -0.004621,
+        "avg_half_spread_captured_bps": 6.79,
+        "avg_adverse_drift_bps": -54.03
+      },
+      "sell_maker": {
+        "count": 446,
+        "fill_rate": 0.0603,
+        "avg_pnl_bps": -17.34,
+        "median_pnl_bps": -15.35,
+        "avg_pnl_dollars": -0.001668,
+        "avg_half_spread_captured_bps": 3.45,
+        "avg_adverse_drift_bps": -20.8
+      }
+    },
+    "0xceb5e0c99a9195da148d79693f3c6819d44d4d3d7e5be77931e174a3eebe4a85::Yes": {
+      "condition_id": "0xceb5e0c99a9195da148d79693f3c6819d44d4d3d7e5be77931e174a3eebe4a85",
+      "outcome": "Yes",
+      "question": "Will the Anaheim Ducks win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-anaheim-ducks-win-the-2026-nhl-stanley-cup",
+      "records": 13041,
+      "avg_mid": 0.03057,
+      "avg_spread_bps": 866.85,
+      "buy_maker": {
+        "count": 1363,
+        "fill_rate": 0.1045,
+        "avg_pnl_bps": -401.37,
+        "median_pnl_bps": -178.57,
+        "avg_pnl_dollars": -0.001231,
+        "avg_half_spread_captured_bps": 173.73,
+        "avg_adverse_drift_bps": -559.88
+      },
+      "sell_maker": {
+        "count": 746,
+        "fill_rate": 0.0572,
+        "avg_pnl_bps": -1079.43,
+        "median_pnl_bps": -454.55,
+        "avg_pnl_dollars": -0.002032,
+        "avg_half_spread_captured_bps": 353.94,
+        "avg_adverse_drift_bps": -1460.93
+      }
+    },
+    "0xceb5e0c99a9195da148d79693f3c6819d44d4d3d7e5be77931e174a3eebe4a85::No": {
+      "condition_id": "0xceb5e0c99a9195da148d79693f3c6819d44d4d3d7e5be77931e174a3eebe4a85",
+      "outcome": "No",
+      "question": "Will the Anaheim Ducks win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-anaheim-ducks-win-the-2026-nhl-stanley-cup",
+      "records": 13041,
+      "avg_mid": 0.96943,
+      "avg_spread_bps": 62.24,
+      "buy_maker": {
+        "count": 744,
+        "fill_rate": 0.0571,
+        "avg_pnl_bps": -20.75,
+        "median_pnl_bps": -15.51,
+        "avg_pnl_dollars": -0.002032,
+        "avg_half_spread_captured_bps": 9.83,
+        "avg_adverse_drift_bps": -30.57
+      },
+      "sell_maker": {
+        "count": 1355,
+        "fill_rate": 0.1039,
+        "avg_pnl_bps": -12.62,
+        "median_pnl_bps": -5.18,
+        "avg_pnl_dollars": -0.00122,
+        "avg_half_spread_captured_bps": 5.77,
+        "avg_adverse_drift_bps": -18.41
+      }
+    },
+    "0x52847ca1413b76a5570b97c0c432e38dbe61b0140f9d45e912604591b08f6fca::Yes": {
+      "condition_id": "0x52847ca1413b76a5570b97c0c432e38dbe61b0140f9d45e912604591b08f6fca",
+      "outcome": "Yes",
+      "question": "Will the Montreal Canadiens win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-montreal-canadiens-win-the-2026-nhl-stanley-cup",
+      "records": 13095,
+      "avg_mid": 0.0629,
+      "avg_spread_bps": 956.41,
+      "buy_maker": {
+        "count": 1338,
+        "fill_rate": 0.1022,
+        "avg_pnl_bps": -213.54,
+        "median_pnl_bps": -68.49,
+        "avg_pnl_dollars": -0.001647,
+        "avg_half_spread_captured_bps": 200.66,
+        "avg_adverse_drift_bps": -406.2
+      },
+      "sell_maker": {
+        "count": 793,
+        "fill_rate": 0.0606,
+        "avg_pnl_bps": -489.44,
+        "median_pnl_bps": -73.53,
+        "avg_pnl_dollars": -0.00319,
+        "avg_half_spread_captured_bps": 235.32,
+        "avg_adverse_drift_bps": -746.56
+      }
+    },
+    "0x52847ca1413b76a5570b97c0c432e38dbe61b0140f9d45e912604591b08f6fca::No": {
+      "condition_id": "0x52847ca1413b76a5570b97c0c432e38dbe61b0140f9d45e912604591b08f6fca",
+      "outcome": "No",
+      "question": "Will the Montreal Canadiens win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-montreal-canadiens-win-the-2026-nhl-stanley-cup",
+      "records": 13095,
+      "avg_mid": 0.9371,
+      "avg_spread_bps": 103.88,
+      "buy_maker": {
+        "count": 793,
+        "fill_rate": 0.0606,
+        "avg_pnl_bps": -34.55,
+        "median_pnl_bps": -5.52,
+        "avg_pnl_dollars": -0.00319,
+        "avg_half_spread_captured_bps": 13.79,
+        "avg_adverse_drift_bps": -48.28
+      },
+      "sell_maker": {
+        "count": 1338,
+        "fill_rate": 0.1022,
+        "avg_pnl_bps": -18.12,
+        "median_pnl_bps": -5.39,
+        "avg_pnl_dollars": -0.001647,
+        "avg_half_spread_captured_bps": 12.54,
+        "avg_adverse_drift_bps": -30.72
+      }
+    },
+    "0x82d8c535c037a779ffbd2eb94704b093a5341350b49ca68128fc1c16a0901e4a::Yes": {
+      "condition_id": "0x82d8c535c037a779ffbd2eb94704b093a5341350b49ca68128fc1c16a0901e4a",
+      "outcome": "Yes",
+      "question": "Will the Boston Bruins win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-boston-bruins-win-the-2026-nhl-stanley-cup",
+      "records": 7398,
+      "avg_mid": 0.00681,
+      "avg_spread_bps": 4306.26,
+      "buy_maker": {
+        "count": 655,
+        "fill_rate": 0.0885,
+        "avg_pnl_bps": -604.95,
+        "median_pnl_bps": -454.55,
+        "avg_pnl_dollars": -0.00045,
+        "avg_half_spread_captured_bps": 333.37,
+        "avg_adverse_drift_bps": -778.41
+      },
+      "sell_maker": {
+        "count": 374,
+        "fill_rate": 0.0506,
+        "avg_pnl_bps": -1173.57,
+        "median_pnl_bps": -1666.67,
+        "avg_pnl_dollars": -0.000382,
+        "avg_half_spread_captured_bps": 347.59,
+        "avg_adverse_drift_bps": -1526.42
+      }
+    },
+    "0x82d8c535c037a779ffbd2eb94704b093a5341350b49ca68128fc1c16a0901e4a::No": {
+      "condition_id": "0x82d8c535c037a779ffbd2eb94704b093a5341350b49ca68128fc1c16a0901e4a",
+      "outcome": "No",
+      "question": "Will the Boston Bruins win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-boston-bruins-win-the-2026-nhl-stanley-cup",
+      "records": 7398,
+      "avg_mid": 0.99319,
+      "avg_spread_bps": 90.82,
+      "buy_maker": {
+        "count": 374,
+        "fill_rate": 0.0506,
+        "avg_pnl_bps": -3.84,
+        "median_pnl_bps": -5.02,
+        "avg_pnl_dollars": -0.000382,
+        "avg_half_spread_captured_bps": 1.22,
+        "avg_adverse_drift_bps": -5.06
+      },
+      "sell_maker": {
+        "count": 655,
+        "fill_rate": 0.0885,
+        "avg_pnl_bps": -4.55,
+        "median_pnl_bps": -5.02,
+        "avg_pnl_dollars": -0.00045,
+        "avg_half_spread_captured_bps": 232.92,
+        "avg_adverse_drift_bps": -238.88
+      }
+    },
+    "0xbefea6668e49e328db4d5c792bc15cea309bbc06101dfd6ced1e0556ad3ea301::Yes": {
+      "condition_id": "0xbefea6668e49e328db4d5c792bc15cea309bbc06101dfd6ced1e0556ad3ea301",
+      "outcome": "Yes",
+      "question": "Will the Buffalo Sabres win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-buffalo-sabres-win-the-2026-nhl-stanley-cup",
+      "records": 13114,
+      "avg_mid": 0.06267,
+      "avg_spread_bps": 634.56,
+      "buy_maker": {
+        "count": 1317,
+        "fill_rate": 0.1004,
+        "avg_pnl_bps": -93.49,
+        "median_pnl_bps": -119.05,
+        "avg_pnl_dollars": -0.000734,
+        "avg_half_spread_captured_bps": 68.04,
+        "avg_adverse_drift_bps": -157.3
+      },
+      "sell_maker": {
+        "count": 808,
+        "fill_rate": 0.0616,
+        "avg_pnl_bps": -957.5,
+        "median_pnl_bps": -83.33,
+        "avg_pnl_dollars": -0.003585,
+        "avg_half_spread_captured_bps": 252.15,
+        "avg_adverse_drift_bps": -1327.38
+      }
+    },
+    "0xbefea6668e49e328db4d5c792bc15cea309bbc06101dfd6ced1e0556ad3ea301::No": {
+      "condition_id": "0xbefea6668e49e328db4d5c792bc15cea309bbc06101dfd6ced1e0556ad3ea301",
+      "outcome": "No",
+      "question": "Will the Buffalo Sabres win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-buffalo-sabres-win-the-2026-nhl-stanley-cup",
+      "records": 13114,
+      "avg_mid": 0.93733,
+      "avg_spread_bps": 162.12,
+      "buy_maker": {
+        "count": 808,
+        "fill_rate": 0.0616,
+        "avg_pnl_bps": -37.37,
+        "median_pnl_bps": -5.41,
+        "avg_pnl_dollars": -0.003585,
+        "avg_half_spread_captured_bps": 9.64,
+        "avg_adverse_drift_bps": -46.93
+      },
+      "sell_maker": {
+        "count": 1317,
+        "fill_rate": 0.1004,
+        "avg_pnl_bps": -7.91,
+        "median_pnl_bps": -5.34,
+        "avg_pnl_dollars": -0.000734,
+        "avg_half_spread_captured_bps": 4.33,
+        "avg_adverse_drift_bps": -12.26
+      }
+    },
+    "0x9e54856d758cd7de25b75c97273a38d711642f16eacad57e61982028f2791206::Yes": {
+      "condition_id": "0x9e54856d758cd7de25b75c97273a38d711642f16eacad57e61982028f2791206",
+      "outcome": "Yes",
+      "question": "Will the Pittsburgh Penguins win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-pittsburgh-penguins-win-the-2026-nhl-stanley-cup",
+      "records": 7362,
+      "avg_mid": 0.0084,
+      "avg_spread_bps": 3846.83,
+      "buy_maker": {
+        "count": 515,
+        "fill_rate": 0.07,
+        "avg_pnl_bps": -407.54,
+        "median_pnl_bps": -833.33,
+        "avg_pnl_dollars": -0.000203,
+        "avg_half_spread_captured_bps": 357.41,
+        "avg_adverse_drift_bps": -811.22
+      },
+      "sell_maker": {
+        "count": 246,
+        "fill_rate": 0.0334,
+        "avg_pnl_bps": -3078.09,
+        "median_pnl_bps": -1000.0,
+        "avg_pnl_dollars": -0.002626,
+        "avg_half_spread_captured_bps": 124.91,
+        "avg_adverse_drift_bps": -3283.6
+      }
+    },
+    "0x9e54856d758cd7de25b75c97273a38d711642f16eacad57e61982028f2791206::No": {
+      "condition_id": "0x9e54856d758cd7de25b75c97273a38d711642f16eacad57e61982028f2791206",
+      "outcome": "No",
+      "question": "Will the Pittsburgh Penguins win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-pittsburgh-penguins-win-the-2026-nhl-stanley-cup",
+      "records": 7362,
+      "avg_mid": 0.9916,
+      "avg_spread_bps": 41.0,
+      "buy_maker": {
+        "count": 270,
+        "fill_rate": 0.0367,
+        "avg_pnl_bps": -23.27,
+        "median_pnl_bps": -5.06,
+        "avg_pnl_dollars": -0.002304,
+        "avg_half_spread_captured_bps": 2.26,
+        "avg_adverse_drift_bps": -25.53
+      },
+      "sell_maker": {
+        "count": 515,
+        "fill_rate": 0.07,
+        "avg_pnl_bps": -2.05,
+        "median_pnl_bps": -5.02,
+        "avg_pnl_dollars": -0.000203,
+        "avg_half_spread_captured_bps": 21.56,
+        "avg_adverse_drift_bps": -23.61
+      }
+    },
+    "0x713641f745d71f6ec61f906237ffca3c8583f251e49384429a63ceb0ccdb2d37::Yes": {
+      "condition_id": "0x713641f745d71f6ec61f906237ffca3c8583f251e49384429a63ceb0ccdb2d37",
+      "outcome": "Yes",
+      "question": "Will the New York Knicks win the 2026 NBA Finals?",
+      "slug": "will-the-new-york-knicks-win-the-2026-nba-finals",
+      "records": 13097,
+      "avg_mid": 0.07553,
+      "avg_spread_bps": 355.39,
+      "buy_maker": {
+        "count": 1135,
+        "fill_rate": 0.0867,
+        "avg_pnl_bps": -155.94,
+        "median_pnl_bps": -156.25,
+        "avg_pnl_dollars": -0.000738,
+        "avg_half_spread_captured_bps": 21.57,
+        "avg_adverse_drift_bps": -176.72
+      },
+      "sell_maker": {
+        "count": 1180,
+        "fill_rate": 0.0901,
+        "avg_pnl_bps": -153.8,
+        "median_pnl_bps": -71.94,
+        "avg_pnl_dollars": -0.000611,
+        "avg_half_spread_captured_bps": 16.67,
+        "avg_adverse_drift_bps": -170.37
+      }
+    },
+    "0x713641f745d71f6ec61f906237ffca3c8583f251e49384429a63ceb0ccdb2d37::No": {
+      "condition_id": "0x713641f745d71f6ec61f906237ffca3c8583f251e49384429a63ceb0ccdb2d37",
+      "outcome": "No",
+      "question": "Will the New York Knicks win the 2026 NBA Finals?",
+      "slug": "will-the-new-york-knicks-win-the-2026-nba-finals",
+      "records": 13097,
+      "avg_mid": 0.92447,
+      "avg_spread_bps": 66.53,
+      "buy_maker": {
+        "count": 1180,
+        "fill_rate": 0.0901,
+        "avg_pnl_bps": -6.53,
+        "median_pnl_bps": -5.17,
+        "avg_pnl_dollars": -0.000611,
+        "avg_half_spread_captured_bps": 2.12,
+        "avg_adverse_drift_bps": -8.65
+      },
+      "sell_maker": {
+        "count": 1135,
+        "fill_rate": 0.0867,
+        "avg_pnl_bps": -7.99,
+        "median_pnl_bps": -5.8,
+        "avg_pnl_dollars": -0.000738,
+        "avg_half_spread_captured_bps": 1.19,
+        "avg_adverse_drift_bps": -9.18
+      }
+    },
+    "0x649ad05a2868343271fe82ea692031d567ca1af652e3529788933157e94aa088::Yes": {
+      "condition_id": "0x649ad05a2868343271fe82ea692031d567ca1af652e3529788933157e94aa088",
+      "outcome": "Yes",
+      "question": "Will the Minnesota Timberwolves win the 2026 NBA Finals?",
+      "slug": "will-the-minnesota-timberwolves-win-the-2026-nba-finals",
+      "records": 13127,
+      "avg_mid": 0.01509,
+      "avg_spread_bps": 1380.99,
+      "buy_maker": {
+        "count": 1284,
+        "fill_rate": 0.0978,
+        "avg_pnl_bps": -402.88,
+        "median_pnl_bps": -312.5,
+        "avg_pnl_dollars": -0.000541,
+        "avg_half_spread_captured_bps": -39.05,
+        "avg_adverse_drift_bps": -373.45
+      },
+      "sell_maker": {
+        "count": 1116,
+        "fill_rate": 0.085,
+        "avg_pnl_bps": -463.54,
+        "median_pnl_bps": -208.33,
+        "avg_pnl_dollars": -0.000466,
+        "avg_half_spread_captured_bps": 20.75,
+        "avg_adverse_drift_bps": -480.0
+      }
+    },
+    "0x649ad05a2868343271fe82ea692031d567ca1af652e3529788933157e94aa088::No": {
+      "condition_id": "0x649ad05a2868343271fe82ea692031d567ca1af652e3529788933157e94aa088",
+      "outcome": "No",
+      "question": "Will the Minnesota Timberwolves win the 2026 NBA Finals?",
+      "slug": "will-the-minnesota-timberwolves-win-the-2026-nba-finals",
+      "records": 13127,
+      "avg_mid": 0.98491,
+      "avg_spread_bps": 126.34,
+      "buy_maker": {
+        "count": 1093,
+        "fill_rate": 0.0833,
+        "avg_pnl_bps": -3.89,
+        "median_pnl_bps": -5.04,
+        "avg_pnl_dollars": -0.000384,
+        "avg_half_spread_captured_bps": 0.55,
+        "avg_adverse_drift_bps": -4.44
+      },
+      "sell_maker": {
+        "count": 1240,
+        "fill_rate": 0.0945,
+        "avg_pnl_bps": -3.36,
+        "median_pnl_bps": -5.05,
+        "avg_pnl_dollars": -0.00033,
+        "avg_half_spread_captured_bps": 0.51,
+        "avg_adverse_drift_bps": -3.87
+      }
+    },
+    "0x796e791e7058571e460278814fc7a3183752285338f1400087b98bef3c447908::Yes": {
+      "condition_id": "0x796e791e7058571e460278814fc7a3183752285338f1400087b98bef3c447908",
+      "outcome": "Yes",
+      "question": "Will the Los Angeles Lakers win the 2026 NBA Finals?",
+      "slug": "will-the-los-angeles-lakers-win-the-2026-nba-finals",
+      "records": 9152,
+      "avg_mid": 0.03347,
+      "avg_spread_bps": 1410.7,
+      "buy_maker": {
+        "count": 1422,
+        "fill_rate": 0.1554,
+        "avg_pnl_bps": -310.51,
+        "median_pnl_bps": -138.89,
+        "avg_pnl_dollars": -0.000876,
+        "avg_half_spread_captured_bps": 41.12,
+        "avg_adverse_drift_bps": -351.98
+      },
+      "sell_maker": {
+        "count": 928,
+        "fill_rate": 0.1014,
+        "avg_pnl_bps": -34.49,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -0.000153,
+        "avg_half_spread_captured_bps": 11.35,
+        "avg_adverse_drift_bps": -45.2
+      }
+    },
+    "0x796e791e7058571e460278814fc7a3183752285338f1400087b98bef3c447908::No": {
+      "condition_id": "0x796e791e7058571e460278814fc7a3183752285338f1400087b98bef3c447908",
+      "outcome": "No",
+      "question": "Will the Los Angeles Lakers win the 2026 NBA Finals?",
+      "slug": "will-the-los-angeles-lakers-win-the-2026-nba-finals",
+      "records": 9152,
+      "avg_mid": 0.96653,
+      "avg_spread_bps": 180.23,
+      "buy_maker": {
+        "count": 928,
+        "fill_rate": 0.1014,
+        "avg_pnl_bps": -1.56,
+        "median_pnl_bps": 0.0,
+        "avg_pnl_dollars": -0.000153,
+        "avg_half_spread_captured_bps": 0.46,
+        "avg_adverse_drift_bps": -2.02
+      },
+      "sell_maker": {
+        "count": 1422,
+        "fill_rate": 0.1554,
+        "avg_pnl_bps": -9.09,
+        "median_pnl_bps": -5.19,
+        "avg_pnl_dollars": -0.000876,
+        "avg_half_spread_captured_bps": 1.91,
+        "avg_adverse_drift_bps": -11.0
+      }
+    },
+    "0xcba24842ceac7a40d2a8b9adde1f4407999b6505193b9fd68156ae76fbffa706::Yes": {
+      "condition_id": "0xcba24842ceac7a40d2a8b9adde1f4407999b6505193b9fd68156ae76fbffa706",
+      "outcome": "Yes",
+      "question": "Will Arsenal win the 2025\u201326 English Premier League?",
+      "slug": "will-arsenal-win-the-202526-english-premier-league",
+      "records": 12487,
+      "avg_mid": 0.66384,
+      "avg_spread_bps": 275.13,
+      "buy_maker": {
+        "count": 71,
+        "fill_rate": 0.0057,
+        "avg_pnl_bps": -78.85,
+        "median_pnl_bps": -69.69,
+        "avg_pnl_dollars": -0.006,
+        "avg_half_spread_captured_bps": 105.51,
+        "avg_adverse_drift_bps": -183.29
+      },
+      "sell_maker": {
+        "count": 141,
+        "fill_rate": 0.0113,
+        "avg_pnl_bps": -205.24,
+        "median_pnl_bps": -117.88,
+        "avg_pnl_dollars": -0.010539,
+        "avg_half_spread_captured_bps": 82.4,
+        "avg_adverse_drift_bps": -289.47
+      }
+    },
+    "0xcba24842ceac7a40d2a8b9adde1f4407999b6505193b9fd68156ae76fbffa706::No": {
+      "condition_id": "0xcba24842ceac7a40d2a8b9adde1f4407999b6505193b9fd68156ae76fbffa706",
+      "outcome": "No",
+      "question": "Will Arsenal win the 2025\u201326 English Premier League?",
+      "slug": "will-arsenal-win-the-202526-english-premier-league",
+      "records": 12487,
+      "avg_mid": 0.33615,
+      "avg_spread_bps": 550.46,
+      "buy_maker": {
+        "count": 141,
+        "fill_rate": 0.0113,
+        "avg_pnl_bps": -217.35,
+        "median_pnl_bps": -122.2,
+        "avg_pnl_dollars": -0.010539,
+        "avg_half_spread_captured_bps": 85.2,
+        "avg_adverse_drift_bps": -300.46
+      },
+      "sell_maker": {
+        "count": 71,
+        "fill_rate": 0.0057,
+        "avg_pnl_bps": -374.64,
+        "median_pnl_bps": -431.65,
+        "avg_pnl_dollars": -0.006,
+        "avg_half_spread_captured_bps": 399.16,
+        "avg_adverse_drift_bps": -786.14
+      }
+    },
+    "0xfb1835b887c33862f5749c619e612d1244ab6e66115f0ef43d373485dc3a1573::Yes": {
+      "condition_id": "0xfb1835b887c33862f5749c619e612d1244ab6e66115f0ef43d373485dc3a1573",
+      "outcome": "Yes",
+      "question": "Will Manchester City win the 2025\u201326 English Premier League?",
+      "slug": "will-manchester-city-win-the-202526-english-premier-league",
+      "records": 12487,
+      "avg_mid": 0.33815,
+      "avg_spread_bps": 566.79,
+      "buy_maker": {
+        "count": 75,
+        "fill_rate": 0.006,
+        "avg_pnl_bps": 37.23,
+        "median_pnl_bps": 283.69,
+        "avg_pnl_dollars": -0.005,
+        "avg_half_spread_captured_bps": 228.38,
+        "avg_adverse_drift_bps": -194.62
+      },
+      "sell_maker": {
+        "count": 44,
+        "fill_rate": 0.0035,
+        "avg_pnl_bps": 20.46,
+        "median_pnl_bps": 80.16,
+        "avg_pnl_dollars": 0.001727,
+        "avg_half_spread_captured_bps": 90.6,
+        "avg_adverse_drift_bps": -70.4
+      }
+    },
+    "0xfb1835b887c33862f5749c619e612d1244ab6e66115f0ef43d373485dc3a1573::No": {
+      "condition_id": "0xfb1835b887c33862f5749c619e612d1244ab6e66115f0ef43d373485dc3a1573",
+      "outcome": "No",
+      "question": "Will Manchester City win the 2025\u201326 English Premier League?",
+      "slug": "will-manchester-city-win-the-202526-english-premier-league",
+      "records": 12487,
+      "avg_mid": 0.66185,
+      "avg_spread_bps": 297.58,
+      "buy_maker": {
+        "count": 44,
+        "fill_rate": 0.0035,
+        "avg_pnl_bps": 36.75,
+        "median_pnl_bps": 79.84,
+        "avg_pnl_dollars": 0.001727,
+        "avg_half_spread_captured_bps": 77.71,
+        "avg_adverse_drift_bps": -41.26
+      },
+      "sell_maker": {
+        "count": 75,
+        "fill_rate": 0.006,
+        "avg_pnl_bps": -115.83,
+        "median_pnl_bps": 46.57,
+        "avg_pnl_dollars": -0.005,
+        "avg_half_spread_captured_bps": 59.13,
+        "avg_adverse_drift_bps": -176.48
+      }
+    },
+    "0x7cab9da787443beec1eb5e399afd46fffdc27b5f00e0293a1d6a9996c948ac52::Yes": {
+      "condition_id": "0x7cab9da787443beec1eb5e399afd46fffdc27b5f00e0293a1d6a9996c948ac52",
+      "outcome": "Yes",
+      "question": "Will Manchester United win the 2025\u201326 English Premier League?",
+      "slug": "will-manchester-united-win-the-202526-english-premier-league",
+      "records": 18,
+      "avg_mid": 0.21378,
+      "avg_spread_bps": 16667.09,
+      "buy_maker": {
+        "count": 16,
+        "fill_rate": 0.8889,
+        "avg_pnl_bps": -6399.15,
+        "median_pnl_bps": -8750.0,
+        "avg_pnl_dollars": -0.006688,
+        "avg_half_spread_captured_bps": 8181.97,
+        "avg_adverse_drift_bps": -8835.09
+      },
+      "sell_maker": {
+        "count": 0,
+        "fill_rate": 0.0,
+        "avg_pnl_bps": null,
+        "median_pnl_bps": null,
+        "avg_half_spread_captured_bps": null,
+        "avg_adverse_drift_bps": null
+      }
+    },
+    "0x7cab9da787443beec1eb5e399afd46fffdc27b5f00e0293a1d6a9996c948ac52::No": {
+      "condition_id": "0x7cab9da787443beec1eb5e399afd46fffdc27b5f00e0293a1d6a9996c948ac52",
+      "outcome": "No",
+      "question": "Will Manchester United win the 2025\u201326 English Premier League?",
+      "slug": "will-manchester-united-win-the-202526-english-premier-league",
+      "records": 18,
+      "avg_mid": 0.78622,
+      "avg_spread_bps": 7987.02,
+      "buy_maker": {
+        "count": 0,
+        "fill_rate": 0.0,
+        "avg_pnl_bps": null,
+        "median_pnl_bps": null,
+        "avg_half_spread_captured_bps": null,
+        "avg_adverse_drift_bps": null
+      },
+      "sell_maker": {
+        "count": 16,
+        "fill_rate": 0.8889,
+        "avg_pnl_bps": -67.66,
+        "median_pnl_bps": -106.28,
+        "avg_pnl_dollars": -0.006687,
+        "avg_half_spread_captured_bps": 4477.46,
+        "avg_adverse_drift_bps": -4591.97
+      }
+    }
+  }
+}

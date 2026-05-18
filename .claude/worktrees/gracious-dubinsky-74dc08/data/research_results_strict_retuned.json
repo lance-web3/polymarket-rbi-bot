@@ -1,0 +1,214 @@
+{
+  "summary": {
+    "markets_scanned": 50,
+    "eligible_count": 5,
+    "backtested": 10,
+    "errors": 0,
+    "positive_net_returns": 0,
+    "positive_expectancy": 0,
+    "zero_trade_runs": 9
+  },
+  "results": [
+    {
+      "rank": 1,
+      "question": "Will Harvey Weinstein be sentenced to no prison time?",
+      "eligible": true,
+      "reason": "Eligible",
+      "quality_score": 85.4,
+      "net_return_pct": -0.1293,
+      "expectancy": -0.12927051106608412,
+      "round_trip_count": 1,
+      "trade_count": 2,
+      "max_drawdown_pct": 0.4194,
+      "blocked_entries": {
+        "signal_count": 0,
+        "buy_score": 183,
+        "score_gap": 0,
+        "lead_confidence": 0,
+        "edge_vs_cost": 0,
+        "cooldown": 0
+      }
+    },
+    {
+      "rank": 2,
+      "question": "Will Harvey Weinstein be sentenced to between 20 and 30 years in prison?",
+      "eligible": true,
+      "reason": "Eligible",
+      "quality_score": 84.5,
+      "net_return_pct": 0.0,
+      "expectancy": null,
+      "round_trip_count": 0,
+      "trade_count": 0,
+      "max_drawdown_pct": 0.0,
+      "blocked_entries": {
+        "signal_count": 0,
+        "buy_score": 180,
+        "score_gap": 0,
+        "lead_confidence": 0,
+        "edge_vs_cost": 0,
+        "cooldown": 0
+      }
+    },
+    {
+      "rank": 3,
+      "question": "Will Harvey Weinstein be sentenced to between 10 and 20 years in prison?",
+      "eligible": true,
+      "reason": "Eligible",
+      "quality_score": 81.5,
+      "net_return_pct": 0.0,
+      "expectancy": null,
+      "round_trip_count": 0,
+      "trade_count": 0,
+      "max_drawdown_pct": 0.0,
+      "blocked_entries": {
+        "signal_count": 0,
+        "buy_score": 241,
+        "score_gap": 0,
+        "lead_confidence": 0,
+        "edge_vs_cost": 0,
+        "cooldown": 0
+      }
+    },
+    {
+      "rank": 4,
+      "question": "Will the Oklahoma City Thunder win the 2026 NBA Finals?",
+      "eligible": true,
+      "reason": "Eligible",
+      "quality_score": 78.2,
+      "net_return_pct": 0.0,
+      "expectancy": null,
+      "round_trip_count": 0,
+      "trade_count": 0,
+      "max_drawdown_pct": 0.0,
+      "blocked_entries": {
+        "signal_count": 0,
+        "buy_score": 174,
+        "score_gap": 0,
+        "lead_confidence": 0,
+        "edge_vs_cost": 0,
+        "cooldown": 0
+      }
+    },
+    {
+      "rank": 5,
+      "question": "Will the Colorado Avalanche win the 2026 NHL Stanley Cup?",
+      "eligible": true,
+      "reason": "Eligible",
+      "quality_score": 77.1,
+      "net_return_pct": 0.0,
+      "expectancy": null,
+      "round_trip_count": 0,
+      "trade_count": 0,
+      "max_drawdown_pct": 0.0,
+      "blocked_entries": {
+        "signal_count": 0,
+        "buy_score": 247,
+        "score_gap": 0,
+        "lead_confidence": 0,
+        "edge_vs_cost": 0,
+        "cooldown": 0
+      }
+    },
+    {
+      "rank": 6,
+      "question": "Will the Dallas Stars win the 2026 NHL Stanley Cup?",
+      "eligible": false,
+      "reason": "Current price outside configured range",
+      "quality_score": 93.3,
+      "net_return_pct": 0.0,
+      "expectancy": null,
+      "round_trip_count": 0,
+      "trade_count": 0,
+      "max_drawdown_pct": 0.0,
+      "blocked_entries": {
+        "signal_count": 0,
+        "buy_score": 195,
+        "score_gap": 0,
+        "lead_confidence": 0,
+        "edge_vs_cost": 0,
+        "cooldown": 0
+      }
+    },
+    {
+      "rank": 7,
+      "question": "Will the Boston Celtics win the 2026 NBA Finals?",
+      "eligible": false,
+      "reason": "Current price outside configured range",
+      "quality_score": 87.4,
+      "net_return_pct": 0.0,
+      "expectancy": null,
+      "round_trip_count": 0,
+      "trade_count": 0,
+      "max_drawdown_pct": 0.0,
+      "blocked_entries": {
+        "signal_count": 0,
+        "buy_score": 232,
+        "score_gap": 0,
+        "lead_confidence": 0,
+        "edge_vs_cost": 0,
+        "cooldown": 0
+      }
+    },
+    {
+      "rank": 8,
+      "question": "Will the New York Knicks win the 2026 NBA Finals?",
+      "eligible": false,
+      "reason": "Current price outside configured range",
+      "quality_score": 85.9,
+      "net_return_pct": 0.0,
+      "expectancy": null,
+      "round_trip_count": 0,
+      "trade_count": 0,
+      "max_drawdown_pct": 0.0,
+      "blocked_entries": {
+        "signal_count": 0,
+        "buy_score": 209,
+        "score_gap": 0,
+        "lead_confidence": 0,
+        "edge_vs_cost": 0,
+        "cooldown": 0
+      }
+    },
+    {
+      "rank": 9,
+      "question": "Will the Vegas Golden Knights win the 2026 NHL Stanley Cup?",
+      "eligible": false,
+      "reason": "Current price outside configured range",
+      "quality_score": 85.6,
+      "net_return_pct": 0.0,
+      "expectancy": null,
+      "round_trip_count": 0,
+      "trade_count": 0,
+      "max_drawdown_pct": 0.0,
+      "blocked_entries": {
+        "signal_count": 0,
+        "buy_score": 166,
+        "score_gap": 0,
+        "lead_confidence": 0,
+        "edge_vs_cost": 0,
+        "cooldown": 0
+      }
+    },
+    {
+      "rank": 10,
+      "question": "Will the Buffalo Sabres win the 2026 NHL Stanley Cup?",
+      "eligible": false,
+      "reason": "Current price outside configured range",
+      "quality_score": 85.5,
+      "net_return_pct": 0.0,
+      "expectancy": null,
+      "round_trip_count": 0,
+      "trade_count": 0,
+      "max_drawdown_pct": 0.0,
+      "blocked_entries": {
+        "signal_count": 0,
+        "buy_score": 243,
+        "score_gap": 0,
+        "lead_confidence": 0,
+        "edge_vs_cost": 0,
+        "cooldown": 0
+      }
+    }
+  ],
+  "errors": []
+}

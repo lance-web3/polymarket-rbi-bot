@@ -1,0 +1,235 @@
+{
+  "per_niche": {
+    "awards_entertainment": {
+      "n": 68,
+      "brier_llm": 0.1063,
+      "brier_market_p_t7": 0.1269,
+      "brier_base_rate": 0.1148,
+      "brier_always_p_half": 0.25,
+      "base_rate_yes": 0.1324,
+      "mean_confidence_llm": 0.354,
+      "llm_minus_market_brier": -0.0206,
+      "calibration_curve_llm": [
+        {
+          "bin_lo": 0.0,
+          "bin_hi": 0.2,
+          "count": 39,
+          "mean_pred": 0.08294871794871794,
+          "empirical_freq": 0.05128205128205128
+        },
+        {
+          "bin_lo": 0.2,
+          "bin_hi": 0.4,
+          "count": 19,
+          "mean_pred": 0.261578947368421,
+          "empirical_freq": 0.15789473684210525
+        },
+        {
+          "bin_lo": 0.4,
+          "bin_hi": 0.6,
+          "count": 3,
+          "mean_pred": 0.5333333333333333,
+          "empirical_freq": 0.0
+        },
+        {
+          "bin_lo": 0.6,
+          "bin_hi": 0.8,
+          "count": 3,
+          "mean_pred": 0.65,
+          "empirical_freq": 0.3333333333333333
+        },
+        {
+          "bin_lo": 0.8,
+          "bin_hi": 1.0,
+          "count": 4,
+          "mean_pred": 0.835,
+          "empirical_freq": 0.75
+        }
+      ]
+    },
+    "breaking_news": {
+      "n": 2,
+      "skipped": "below min_n"
+    },
+    "corporate_event": {
+      "n": 10,
+      "brier_llm": 0.1298,
+      "brier_market_p_t7": 0.0802,
+      "brier_base_rate": 0.16,
+      "brier_always_p_half": 0.25,
+      "base_rate_yes": 0.2,
+      "mean_confidence_llm": 0.51,
+      "llm_minus_market_brier": 0.0496,
+      "calibration_curve_llm": [
+        {
+          "bin_lo": 0.0,
+          "bin_hi": 0.2,
+          "count": 7,
+          "mean_pred": 0.08285714285714285,
+          "empirical_freq": 0.14285714285714285
+        },
+        {
+          "bin_lo": 0.2,
+          "bin_hi": 0.4,
+          "count": 1,
+          "mean_pred": 0.35,
+          "empirical_freq": 0.0
+        },
+        {
+          "bin_lo": 0.4,
+          "bin_hi": 0.6,
+          "count": 1,
+          "mean_pred": 0.55,
+          "empirical_freq": 0.0
+        },
+        {
+          "bin_lo": 0.6,
+          "bin_hi": 0.8,
+          "count": 1,
+          "mean_pred": 0.68,
+          "empirical_freq": 1.0
+        },
+        {
+          "bin_lo": 0.8,
+          "bin_hi": 1.0,
+          "count": 0,
+          "mean_pred": null,
+          "empirical_freq": null
+        }
+      ]
+    },
+    "crypto": {
+      "n": 1,
+      "skipped": "below min_n"
+    },
+    "politics_election": {
+      "n": 1,
+      "skipped": "below min_n"
+    },
+    "regulatory_policy": {
+      "n": 1,
+      "skipped": "below min_n"
+    },
+    "scheduled_event": {
+      "n": 75,
+      "brier_llm": 0.1551,
+      "brier_market_p_t7": 0.0988,
+      "brier_base_rate": 0.1824,
+      "brier_always_p_half": 0.25,
+      "base_rate_yes": 0.24,
+      "mean_confidence_llm": 0.367,
+      "llm_minus_market_brier": 0.0563,
+      "calibration_curve_llm": [
+        {
+          "bin_lo": 0.0,
+          "bin_hi": 0.2,
+          "count": 36,
+          "mean_pred": 0.08986111111111111,
+          "empirical_freq": 0.05555555555555555
+        },
+        {
+          "bin_lo": 0.2,
+          "bin_hi": 0.4,
+          "count": 9,
+          "mean_pred": 0.2955555555555555,
+          "empirical_freq": 0.3333333333333333
+        },
+        {
+          "bin_lo": 0.4,
+          "bin_hi": 0.6,
+          "count": 16,
+          "mean_pred": 0.504375,
+          "empirical_freq": 0.375
+        },
+        {
+          "bin_lo": 0.6,
+          "bin_hi": 0.8,
+          "count": 9,
+          "mean_pred": 0.69,
+          "empirical_freq": 0.2222222222222222
+        },
+        {
+          "bin_lo": 0.8,
+          "bin_hi": 1.0,
+          "count": 5,
+          "mean_pred": 0.8779999999999999,
+          "empirical_freq": 1.0
+        }
+      ]
+    },
+    "sports_outright": {
+      "n": 82,
+      "brier_llm": 0.1955,
+      "brier_market_p_t7": 0.1949,
+      "brier_base_rate": 0.207,
+      "brier_always_p_half": 0.25,
+      "base_rate_yes": 0.2927,
+      "mean_confidence_llm": 0.363,
+      "llm_minus_market_brier": 0.0006,
+      "calibration_curve_llm": [
+        {
+          "bin_lo": 0.0,
+          "bin_hi": 0.2,
+          "count": 25,
+          "mean_pred": 0.0726,
+          "empirical_freq": 0.16
+        },
+        {
+          "bin_lo": 0.2,
+          "bin_hi": 0.4,
+          "count": 30,
+          "mean_pred": 0.30366666666666664,
+          "empirical_freq": 0.3
+        },
+        {
+          "bin_lo": 0.4,
+          "bin_hi": 0.6,
+          "count": 27,
+          "mean_pred": 0.44703703703703707,
+          "empirical_freq": 0.4074074074074074
+        },
+        {
+          "bin_lo": 0.6,
+          "bin_hi": 0.8,
+          "count": 0,
+          "mean_pred": null,
+          "empirical_freq": null
+        },
+        {
+          "bin_lo": 0.8,
+          "bin_hi": 1.0,
+          "count": 0,
+          "mean_pred": null,
+          "empirical_freq": null
+        }
+      ]
+    }
+  },
+  "overall": {
+    "n": 240,
+    "brier_llm": 0.1514,
+    "brier_market_p_t7": 0.1369,
+    "brier_base_rate": 0.1766,
+    "brier_always_p_half": 0.25,
+    "base_rate_yes": 0.2292,
+    "niche_counts": {
+      "sports_outright": 82,
+      "awards_entertainment": 68,
+      "scheduled_event": 75,
+      "politics_election": 1,
+      "corporate_event": 10,
+      "regulatory_policy": 1,
+      "crypto": 1,
+      "breaking_news": 2
+    }
+  },
+  "gate": {
+    "gate_min_n": 20,
+    "gate_brier_improvement": 0.005,
+    "gate_brier_absolute": 0.22,
+    "passing_niches": [
+      "awards_entertainment"
+    ],
+    "verdict": "GO"
+  }
+}

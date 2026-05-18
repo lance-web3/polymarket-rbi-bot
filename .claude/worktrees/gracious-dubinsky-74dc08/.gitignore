@@ -1,0 +1,13 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+dist/
+build/
+data/live_state.json
+data/quote_collection/run.jsonl
+data/*.jsondata/quote_collection/*.jsonl
+data/**/*.jsonl

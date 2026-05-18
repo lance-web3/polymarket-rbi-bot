@@ -1,0 +1,4655 @@
+{
+  "config": {
+    "inputs": [
+      "data/quote_collection/run.jsonl"
+    ],
+    "horizons_bars": [
+      1,
+      4,
+      20,
+      80
+    ],
+    "momentum_lookback_bars": 24,
+    "strict_mode": true,
+    "signal_version": "v2",
+    "exclude_tail": false,
+    "min_bars": 120
+  },
+  "aggregate": {
+    "markets_total": 144,
+    "markets_active": 136,
+    "markets_skipped": 8,
+    "skip_reasons": {
+      "flat": 4,
+      "too short": 4
+    },
+    "total_signal_sides": {
+      "BUY": 46,
+      "SELL": 0,
+      "HOLD": 2768810
+    },
+    "total_buy_signals": 46,
+    "Q1_raw_momentum_exists": {
+      "h1": {
+        "n": 2765456,
+        "avg_pearson_past_vs_fwd": -0.012
+      },
+      "h4": {
+        "n": 2765048,
+        "avg_pearson_past_vs_fwd": -0.0158
+      },
+      "h20": {
+        "n": 2762872,
+        "avg_pearson_past_vs_fwd": -0.0204
+      },
+      "h80": {
+        "n": 2754712,
+        "avg_pearson_past_vs_fwd": -0.0754
+      }
+    },
+    "Q2_executable_returns_on_buys": {
+      "h1": {
+        "n": 46,
+        "mean_executable_bps": -718.13,
+        "median_executable_bps": -633.27,
+        "mean_mid_to_mid_bps": -29.53,
+        "spread_drag_bps": 688.6,
+        "win_rate_executable": 0.0217
+      },
+      "h4": {
+        "n": 46,
+        "mean_executable_bps": -700.62,
+        "median_executable_bps": -561.33,
+        "mean_mid_to_mid_bps": -19.38,
+        "spread_drag_bps": 681.24,
+        "win_rate_executable": 0.0217
+      },
+      "h20": {
+        "n": 46,
+        "mean_executable_bps": -696.74,
+        "median_executable_bps": -582.87,
+        "mean_mid_to_mid_bps": -29.89,
+        "spread_drag_bps": 666.85,
+        "win_rate_executable": 0.0435
+      },
+      "h80": {
+        "n": 46,
+        "mean_executable_bps": -657.24,
+        "median_executable_bps": -470.02,
+        "mean_mid_to_mid_bps": 20.48,
+        "spread_drag_bps": 677.72,
+        "win_rate_executable": 0.0435
+      }
+    },
+    "Q3_score_predicts_return": {
+      "h1": {
+        "confidence_vs_return_spearman": 0.0102,
+        "confidence_n": 46,
+        "expected_edge_vs_return_spearman": 0.0501,
+        "expected_edge_n": 46
+      },
+      "h4": {
+        "confidence_vs_return_spearman": 0.1755,
+        "confidence_n": 46,
+        "expected_edge_vs_return_spearman": 0.1904,
+        "expected_edge_n": 46
+      },
+      "h20": {
+        "confidence_vs_return_spearman": 0.1577,
+        "confidence_n": 46,
+        "expected_edge_vs_return_spearman": 0.1553,
+        "expected_edge_n": 46
+      },
+      "h80": {
+        "confidence_vs_return_spearman": -0.1994,
+        "confidence_n": 46,
+        "expected_edge_vs_return_spearman": -0.1003,
+        "expected_edge_n": 46
+      }
+    }
+  },
+  "verdict": [
+    "Q1 (h20): raw momentum correlation is -0.0204 - effectively zero. These markets show no usable momentum; a momentum signal cannot have edge here by construction.",
+    "Q2 (h20): mean executable return on BUY signals is -696.74 bps (NEGATIVE or flat); mid-to-mid would have looked like -29.89 bps. The gap is the spread you pay. Executable win rate 0.0435 (n=46).",
+    "       -> after spread, the BUY signal does not make money on this sample. Fix the signal, not the exits. Note how win rate can look fine while the mean return is negative - that is exactly the Reddit '71% win rate' trap.",
+    "Q3 (h20): confidence vs realized return rank-correlation is 0.1577 - the score carries some signal; worth keeping and sharpening."
+  ],
+  "per_market": [
+    {
+      "csv": "will-the-tampa-bay-lightning-win-the-2026-nhl-stanley-cup|Yes",
+      "skipped": false,
+      "bars": 18790,
+      "quote_ratio": 0.996,
+      "last_close": 0.0005,
+      "price_range": 0.504,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 18790
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 18765,
+          "pearson_past_vs_fwd": 0.0014
+        },
+        "h4": {
+          "n": 18762,
+          "pearson_past_vs_fwd": 0.0063
+        },
+        "h20": {
+          "n": 18746,
+          "pearson_past_vs_fwd": -0.0037
+        },
+        "h80": {
+          "n": 18686,
+          "pearson_past_vs_fwd": -0.0769
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-tampa-bay-lightning-win-the-2026-nhl-stanley-cup|No",
+      "skipped": false,
+      "bars": 18790,
+      "quote_ratio": 0.996,
+      "last_close": 0.9995,
+      "price_range": 0.504,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 18790
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 18765,
+          "pearson_past_vs_fwd": 0.0361
+        },
+        "h4": {
+          "n": 18762,
+          "pearson_past_vs_fwd": 0.0697
+        },
+        "h20": {
+          "n": 18746,
+          "pearson_past_vs_fwd": 0.0254
+        },
+        "h80": {
+          "n": 18686,
+          "pearson_past_vs_fwd": -0.1744
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-philadelphia-flyers-win-the-2026-nhl-stanley-cup|Yes",
+      "skipped": false,
+      "bars": 18790,
+      "quote_ratio": 0.997,
+      "last_close": 0.017,
+      "price_range": 0.4845,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 18790
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 18765,
+          "pearson_past_vs_fwd": -0.009
+        },
+        "h4": {
+          "n": 18762,
+          "pearson_past_vs_fwd": -0.018
+        },
+        "h20": {
+          "n": 18746,
+          "pearson_past_vs_fwd": -0.0395
+        },
+        "h80": {
+          "n": 18686,
+          "pearson_past_vs_fwd": -0.0468
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-philadelphia-flyers-win-the-2026-nhl-stanley-cup|No",
+      "skipped": false,
+      "bars": 18790,
+      "quote_ratio": 0.997,
+      "last_close": 0.983,
+      "price_range": 0.4845,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 18790
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 18765,
+          "pearson_past_vs_fwd": -0.0904
+        },
+        "h4": {
+          "n": 18762,
+          "pearson_past_vs_fwd": -0.1807
+        },
+        "h20": {
+          "n": 18746,
+          "pearson_past_vs_fwd": -0.4039
+        },
+        "h80": {
+          "n": 18686,
+          "pearson_past_vs_fwd": -0.3856
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-oklahoma-city-thunder-win-the-2026-nba-finals|Yes",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 0.999,
+      "last_close": 0.595,
+      "price_range": 0.37,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": -0.0562
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": -0.0306
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": -0.2288
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": -0.3239
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-oklahoma-city-thunder-win-the-2026-nba-finals|No",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 0.999,
+      "last_close": 0.405,
+      "price_range": 0.37,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": -0.0557
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": -0.0328
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": -0.2228
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": -0.2931
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-cleveland-cavaliers-win-the-2026-nba-finals|Yes",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 0.997,
+      "last_close": 0.0355,
+      "price_range": 0.507,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": -0.0095
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": -0.0056
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": -0.0021
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": -0.037
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-cleveland-cavaliers-win-the-2026-nba-finals|No",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 0.997,
+      "last_close": 0.9645,
+      "price_range": 0.507,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": -0.0605
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": -0.0373
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": -0.0009
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": -0.1741
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-houston-rockets-win-the-2026-nba-finals|Yes",
+      "skipped": false,
+      "bars": 18724,
+      "quote_ratio": 0.995,
+      "last_close": 0.0045,
+      "price_range": 0.498,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 18724
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 18699,
+          "pearson_past_vs_fwd": -0.0003
+        },
+        "h4": {
+          "n": 18696,
+          "pearson_past_vs_fwd": -0.0005
+        },
+        "h20": {
+          "n": 18680,
+          "pearson_past_vs_fwd": -0.0012
+        },
+        "h80": {
+          "n": 18620,
+          "pearson_past_vs_fwd": -0.0036
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-houston-rockets-win-the-2026-nba-finals|No",
+      "skipped": false,
+      "bars": 18724,
+      "quote_ratio": 0.995,
+      "last_close": 0.9955,
+      "price_range": 0.498,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 18724
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 18699,
+          "pearson_past_vs_fwd": 0.0001
+        },
+        "h4": {
+          "n": 18696,
+          "pearson_past_vs_fwd": 0.0008
+        },
+        "h20": {
+          "n": 18680,
+          "pearson_past_vs_fwd": 0.0024
+        },
+        "h80": {
+          "n": 18620,
+          "pearson_past_vs_fwd": -0.1635
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-boston-celtics-win-the-2026-nba-finals|Yes",
+      "skipped": false,
+      "bars": 18772,
+      "quote_ratio": 0.999,
+      "last_close": 0.0815,
+      "price_range": 0.6035,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 18772
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 18747,
+          "pearson_past_vs_fwd": -0.0267
+        },
+        "h4": {
+          "n": 18744,
+          "pearson_past_vs_fwd": -0.0382
+        },
+        "h20": {
+          "n": 18728,
+          "pearson_past_vs_fwd": -0.0862
+        },
+        "h80": {
+          "n": 18668,
+          "pearson_past_vs_fwd": -0.163
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-boston-celtics-win-the-2026-nba-finals|No",
+      "skipped": false,
+      "bars": 18772,
+      "quote_ratio": 0.999,
+      "last_close": 0.9185,
+      "price_range": 0.6035,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 18772
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 18747,
+          "pearson_past_vs_fwd": -0.0953
+        },
+        "h4": {
+          "n": 18744,
+          "pearson_past_vs_fwd": -0.1297
+        },
+        "h20": {
+          "n": 18728,
+          "pearson_past_vs_fwd": -0.2008
+        },
+        "h80": {
+          "n": 18668,
+          "pearson_past_vs_fwd": -0.2701
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-orlando-magic-win-the-2026-nba-finals|Yes",
+      "skipped": false,
+      "bars": 18772,
+      "quote_ratio": 0.999,
+      "last_close": 0.0045,
+      "price_range": 0.501,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 18772
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 18747,
+          "pearson_past_vs_fwd": -0.0004
+        },
+        "h4": {
+          "n": 18744,
+          "pearson_past_vs_fwd": -0.0008
+        },
+        "h20": {
+          "n": 18728,
+          "pearson_past_vs_fwd": -0.0017
+        },
+        "h80": {
+          "n": 18668,
+          "pearson_past_vs_fwd": -0.0068
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-orlando-magic-win-the-2026-nba-finals|No",
+      "skipped": false,
+      "bars": 18772,
+      "quote_ratio": 0.999,
+      "last_close": 0.9955,
+      "price_range": 0.501,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 18772
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 18747,
+          "pearson_past_vs_fwd": 0.0057
+        },
+        "h4": {
+          "n": 18744,
+          "pearson_past_vs_fwd": 0.0096
+        },
+        "h20": {
+          "n": 18728,
+          "pearson_past_vs_fwd": 0.0059
+        },
+        "h80": {
+          "n": 18668,
+          "pearson_past_vs_fwd": -0.0637
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-denver-nuggets-win-the-2026-nba-finals|Yes",
+      "skipped": false,
+      "bars": 18714,
+      "quote_ratio": 0.996,
+      "last_close": 0.0365,
+      "price_range": 0.478,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 18714
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 18689,
+          "pearson_past_vs_fwd": -0.0006
+        },
+        "h4": {
+          "n": 18686,
+          "pearson_past_vs_fwd": -0.0008
+        },
+        "h20": {
+          "n": 18670,
+          "pearson_past_vs_fwd": -0.0013
+        },
+        "h80": {
+          "n": 18610,
+          "pearson_past_vs_fwd": -0.043
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-denver-nuggets-win-the-2026-nba-finals|No",
+      "skipped": false,
+      "bars": 18714,
+      "quote_ratio": 0.996,
+      "last_close": 0.9635,
+      "price_range": 0.478,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 18714
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 18689,
+          "pearson_past_vs_fwd": -0.0014
+        },
+        "h4": {
+          "n": 18686,
+          "pearson_past_vs_fwd": -0.0028
+        },
+        "h20": {
+          "n": 18670,
+          "pearson_past_vs_fwd": -0.0053
+        },
+        "h80": {
+          "n": 18610,
+          "pearson_past_vs_fwd": -0.2308
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-san-antonio-spurs-win-the-2026-nba-finals|Yes",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 1.0,
+      "last_close": 0.2205,
+      "price_range": 0.4595,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 1,
+        "SELL": 0,
+        "HOLD": 25895
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": -0.024
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": -0.0539
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": -0.1061
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": -0.1949
+        }
+      },
+      "buy_signal_count": 1
+    },
+    {
+      "csv": "will-the-san-antonio-spurs-win-the-2026-nba-finals|No",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 1.0,
+      "last_close": 0.7795,
+      "price_range": 0.4595,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": -0.0589
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": -0.1173
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": -0.2044
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": -0.3071
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-philadelphia-76ers-win-the-2026-nba-finals|Yes",
+      "skipped": false,
+      "bars": 18790,
+      "quote_ratio": 0.736,
+      "last_close": 0.0275,
+      "price_range": 0.499,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 18790
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 18765,
+          "pearson_past_vs_fwd": -0.0003
+        },
+        "h4": {
+          "n": 18762,
+          "pearson_past_vs_fwd": -0.0005
+        },
+        "h20": {
+          "n": 18746,
+          "pearson_past_vs_fwd": -0.0012
+        },
+        "h80": {
+          "n": 18686,
+          "pearson_past_vs_fwd": -0.0027
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-philadelphia-76ers-win-the-2026-nba-finals|No",
+      "skipped": false,
+      "bars": 18790,
+      "quote_ratio": 0.736,
+      "last_close": 0.9725,
+      "price_range": 0.499,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 18790
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 18765,
+          "pearson_past_vs_fwd": 0.0003
+        },
+        "h4": {
+          "n": 18762,
+          "pearson_past_vs_fwd": 0.0007
+        },
+        "h20": {
+          "n": 18746,
+          "pearson_past_vs_fwd": 0.1722
+        },
+        "h80": {
+          "n": 18686,
+          "pearson_past_vs_fwd": -0.115
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-detroit-pistons-win-the-2026-nba-finals|Yes",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 0.996,
+      "last_close": 0.0175,
+      "price_range": 0.492,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": -0.0003
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": -0.0004
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": -0.001
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": -0.0056
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-detroit-pistons-win-the-2026-nba-finals|No",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 0.996,
+      "last_close": 0.9825,
+      "price_range": 0.492,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": 0.0133
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": 0.0119
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": 0.004
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": -0.0731
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-toronto-raptors-win-the-2026-nba-finals|Yes",
+      "skipped": false,
+      "bars": 18790,
+      "quote_ratio": 0.952,
+      "last_close": 0.0005,
+      "price_range": 0.5015,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 18790
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 18765,
+          "pearson_past_vs_fwd": -0.0005
+        },
+        "h4": {
+          "n": 18762,
+          "pearson_past_vs_fwd": -0.0008
+        },
+        "h20": {
+          "n": 18746,
+          "pearson_past_vs_fwd": -0.0015
+        },
+        "h80": {
+          "n": 18686,
+          "pearson_past_vs_fwd": -0.0068
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-toronto-raptors-win-the-2026-nba-finals|No",
+      "skipped": false,
+      "bars": 18790,
+      "quote_ratio": 0.952,
+      "last_close": 0.9995,
+      "price_range": 0.5015,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 18790
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 18765,
+          "pearson_past_vs_fwd": 0.0027
+        },
+        "h4": {
+          "n": 18762,
+          "pearson_past_vs_fwd": 0.0056
+        },
+        "h20": {
+          "n": 18746,
+          "pearson_past_vs_fwd": 0.0026
+        },
+        "h80": {
+          "n": 18686,
+          "pearson_past_vs_fwd": -0.146
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-phoenix-suns-win-the-2026-nba-finals|Yes",
+      "skipped": true,
+      "reason": "flat (range 0.0010)",
+      "bars": 15474,
+      "last_close": 0.0005
+    },
+    {
+      "csv": "will-the-phoenix-suns-win-the-2026-nba-finals|No",
+      "skipped": true,
+      "reason": "flat (range 0.0010)",
+      "bars": 15474,
+      "last_close": 0.9995
+    },
+    {
+      "csv": "will-the-portland-trail-blazers-win-the-2026-nba-finals|Yes",
+      "skipped": false,
+      "bars": 18218,
+      "quote_ratio": 0.671,
+      "last_close": 0.0005,
+      "price_range": 0.499,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 18218
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 18193,
+          "pearson_past_vs_fwd": -0.0003
+        },
+        "h4": {
+          "n": 18190,
+          "pearson_past_vs_fwd": -0.0005
+        },
+        "h20": {
+          "n": 18174,
+          "pearson_past_vs_fwd": -0.0012
+        },
+        "h80": {
+          "n": 18114,
+          "pearson_past_vs_fwd": -0.0026
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-portland-trail-blazers-win-the-2026-nba-finals|No",
+      "skipped": false,
+      "bars": 18218,
+      "quote_ratio": 0.671,
+      "last_close": 0.9995,
+      "price_range": 0.499,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 18218
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 18193,
+          "pearson_past_vs_fwd": 0.0049
+        },
+        "h4": {
+          "n": 18190,
+          "pearson_past_vs_fwd": 0.0097
+        },
+        "h20": {
+          "n": 18174,
+          "pearson_past_vs_fwd": 0.0081
+        },
+        "h80": {
+          "n": 18114,
+          "pearson_past_vs_fwd": -0.0647
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-atlanta-hawks-win-the-2026-nba-finals|Yes",
+      "skipped": false,
+      "bars": 18714,
+      "quote_ratio": 0.999,
+      "last_close": 0.0015,
+      "price_range": 0.5,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 18714
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 18689,
+          "pearson_past_vs_fwd": -0.0004
+        },
+        "h4": {
+          "n": 18686,
+          "pearson_past_vs_fwd": -0.0007
+        },
+        "h20": {
+          "n": 18670,
+          "pearson_past_vs_fwd": -0.0014
+        },
+        "h80": {
+          "n": 18610,
+          "pearson_past_vs_fwd": -0.0057
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-atlanta-hawks-win-the-2026-nba-finals|No",
+      "skipped": false,
+      "bars": 18714,
+      "quote_ratio": 0.999,
+      "last_close": 0.9985,
+      "price_range": 0.5,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 18714
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 18689,
+          "pearson_past_vs_fwd": 0.0429
+        },
+        "h4": {
+          "n": 18686,
+          "pearson_past_vs_fwd": 0.0857
+        },
+        "h20": {
+          "n": 18670,
+          "pearson_past_vs_fwd": 0.0516
+        },
+        "h80": {
+          "n": 18610,
+          "pearson_past_vs_fwd": -0.1023
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-megaeth-perform-an-airdrop-by-june-30-143-229-513-574-212-254|Yes",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 1.0,
+      "last_close": 0.297,
+      "price_range": 0.537,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 12,
+        "SELL": 0,
+        "HOLD": 25884
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": -0.0933
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": -0.1392
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": -0.1902
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": -0.0323
+        }
+      },
+      "buy_signal_count": 12
+    },
+    {
+      "csv": "will-megaeth-perform-an-airdrop-by-june-30-143-229-513-574-212-254|No",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 1.0,
+      "last_close": 0.703,
+      "price_range": 0.537,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 11,
+        "SELL": 0,
+        "HOLD": 25885
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": -0.0522
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": -0.0839
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": -0.1523
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": -0.0196
+        }
+      },
+      "buy_signal_count": 11
+    },
+    {
+      "csv": "will-spain-win-the-2026-fifa-world-cup-963|Yes",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 0.999,
+      "last_close": 0.1655,
+      "price_range": 0.522,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": -0.093
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": -0.1352
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": -0.1363
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": -0.2317
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-spain-win-the-2026-fifa-world-cup-963|No",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 0.999,
+      "last_close": 0.8345,
+      "price_range": 0.522,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": -0.1198
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": -0.1638
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": -0.1161
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": -0.3237
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-england-win-the-2026-fifa-world-cup-937|Yes",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 1.0,
+      "last_close": 0.1135,
+      "price_range": 0.4395,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": -0.0013
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": -0.0117
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": -0.0099
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": -0.151
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-england-win-the-2026-fifa-world-cup-937|No",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 1.0,
+      "last_close": 0.8865,
+      "price_range": 0.4395,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": 0.0095
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": 0.0007
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": -0.0057
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": -0.2903
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-france-win-the-2026-fifa-world-cup-924|Yes",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 0.999,
+      "last_close": 0.1735,
+      "price_range": 0.4295,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": -0.0006
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": -0.001
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": -0.0015
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": -0.1652
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-france-win-the-2026-fifa-world-cup-924|No",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 0.999,
+      "last_close": 0.8265,
+      "price_range": 0.4295,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": -0.0003
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": -0.0009
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": -0.0011
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": -0.262
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-portugal-win-the-2026-fifa-world-cup-912|Yes",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 0.998,
+      "last_close": 0.0815,
+      "price_range": 0.434,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": -0.0004
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": -0.0009
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": -0.0028
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": -0.0966
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-portugal-win-the-2026-fifa-world-cup-912|No",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 0.998,
+      "last_close": 0.9185,
+      "price_range": 0.434,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": -0.0005
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": -0.0011
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": -0.0069
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": -0.2632
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-japan-win-the-2026-fifa-world-cup-112|Yes",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 0.996,
+      "last_close": 0.0205,
+      "price_range": 0.4885,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": -0.0005
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": -0.0009
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": -0.001
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": -0.0145
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-japan-win-the-2026-fifa-world-cup-112|No",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 0.996,
+      "last_close": 0.9795,
+      "price_range": 0.4885,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": -0.0006
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": -0.0019
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": -0.0021
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": -0.1216
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-pete-buttigieg-win-the-2028-democratic-presidential-nomination-687|Yes",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 1.0,
+      "last_close": 0.042,
+      "price_range": 0.4785,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": 0.0007
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": 0.0009
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": 0.0002
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": -0.0012
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-pete-buttigieg-win-the-2028-democratic-presidential-nomination-687|No",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 1.0,
+      "last_close": 0.958,
+      "price_range": 0.4785,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": 0.0391
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": 0.0325
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": 0.0096
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": 0.0033
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-kamala-harris-win-the-2028-democratic-presidential-nomination-641|Yes",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 1.0,
+      "last_close": 0.0895,
+      "price_range": 0.461,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": -0.0083
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": 0.0009
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": -0.0002
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": -0.0029
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-kamala-harris-win-the-2028-democratic-presidential-nomination-641|No",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 1.0,
+      "last_close": 0.9105,
+      "price_range": 0.461,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": -0.0174
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": 0.0158
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": 0.0162
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": 0.0083
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-andy-beshear-win-the-2028-democratic-presidential-nomination-832|Yes",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 1.0,
+      "last_close": 0.0275,
+      "price_range": 0.4855,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": -0.0001
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": -0.0003
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": -0.0009
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": -0.0102
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-andy-beshear-win-the-2028-democratic-presidential-nomination-832|No",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 1.0,
+      "last_close": 0.9725,
+      "price_range": 0.4855,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": 0.0006
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": 0.0004
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": -0.0009
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": -0.0758
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-jon-ossoff-win-the-2028-democratic-presidential-nomination-885|Yes",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 1.0,
+      "last_close": 0.063,
+      "price_range": 0.4535,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": -0.0005
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": -0.0009
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": -0.0019
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": -0.0447
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-jon-ossoff-win-the-2028-democratic-presidential-nomination-885|No",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 1.0,
+      "last_close": 0.937,
+      "price_range": 0.4535,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": -0.0006
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": -0.0013
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": -0.0042
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": -0.1551
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-corey-booker-win-the-2028-democratic-presidential-nomination-125|Yes",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 0.998,
+      "last_close": 0.0095,
+      "price_range": 0.497,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": -0.0002
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": -0.0004
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": -0.0009
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": -0.002
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-corey-booker-win-the-2028-democratic-presidential-nomination-125|No",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 0.998,
+      "last_close": 0.9905,
+      "price_range": 0.497,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": 0.0024
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": 0.0037
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": 0.0052
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": 0.003
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-mark-kelly-win-the-2028-democratic-presidential-nomination-479|Yes",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 1.0,
+      "last_close": 0.0225,
+      "price_range": 0.4785,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": -0.0001
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": -0.0003
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": -0.0006
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": -0.0015
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-mark-kelly-win-the-2028-democratic-presidential-nomination-479|No",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 1.0,
+      "last_close": 0.9775,
+      "price_range": 0.4785,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": 0.0021
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": 0.0038
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": 0.0074
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": 0.0031
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-rahm-emanuel-win-the-2028-democratic-presidential-nomination-299|Yes",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 1.0,
+      "last_close": 0.0255,
+      "price_range": 0.4905,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": -0.0052
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": -0.0104
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": -0.0194
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": -0.0274
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-rahm-emanuel-win-the-2028-democratic-presidential-nomination-299|No",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 1.0,
+      "last_close": 0.9745,
+      "price_range": 0.4905,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": -0.0487
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": -0.0993
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": -0.1605
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": -0.2497
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-roy-cooper-win-the-2028-democratic-presidential-nomination-286|Yes",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 1.0,
+      "last_close": 0.0105,
+      "price_range": 0.4915,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": -0.0001
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": -0.0001
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": -0.0005
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": -0.0015
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-roy-cooper-win-the-2028-democratic-presidential-nomination-286|No",
+      "skipped": false,
+      "bars": 25896,
+      "quote_ratio": 1.0,
+      "last_close": 0.9895,
+      "price_range": 0.4915,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25896
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25871,
+          "pearson_past_vs_fwd": 0.0442
+        },
+        "h4": {
+          "n": 25868,
+          "pearson_past_vs_fwd": 0.0882
+        },
+        "h20": {
+          "n": 25852,
+          "pearson_past_vs_fwd": 0.0579
+        },
+        "h80": {
+          "n": 25792,
+          "pearson_past_vs_fwd": 0.0273
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-oprah-winfrey-win-the-2028-democratic-presidential-nomination|Yes",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 0.998,
+      "last_close": 0.0075,
+      "price_range": 0.5005,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": -0.0002
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": -0.0004
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": -0.0009
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.0029
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-oprah-winfrey-win-the-2028-democratic-presidential-nomination|No",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 0.998,
+      "last_close": 0.9925,
+      "price_range": 0.5005,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": 0.0037
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": 0.0069
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": 0.0036
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.0246
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-chris-murphy-win-the-2028-democratic-presidential-nomination|Yes",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.0075,
+      "price_range": 0.4975,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": -0.0002
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": -0.0004
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": -0.0009
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.0035
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-chris-murphy-win-the-2028-democratic-presidential-nomination|No",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.9925,
+      "price_range": 0.4975,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": 0.003
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": 0.0028
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": 0.0007
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.0555
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-james-talarico-win-the-2028-democratic-presidential-nomination|Yes",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.0185,
+      "price_range": 0.4855,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": -0.0002
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": -0.0004
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": -0.001
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.0073
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-james-talarico-win-the-2028-democratic-presidential-nomination|No",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.9815,
+      "price_range": 0.4855,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": 0.0036
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": 0.0032
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": 0.0002
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.0557
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "putin-out-before-2027|Yes",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.095,
+      "price_range": 0.43,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": -0.0056
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": -0.0063
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": -0.0047
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.0356
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "putin-out-before-2027|No",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.905,
+      "price_range": 0.43,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": -0.0109
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": -0.0132
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": -0.0002
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.0619
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-jd-vance-win-the-2028-us-presidential-election|Yes",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.1875,
+      "price_range": 0.404,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": 0.0017
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": 0.0028
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": 0.0025
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.0396
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-jd-vance-win-the-2028-us-presidential-election|No",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.8125,
+      "price_range": 0.404,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": 0.0061
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": 0.006
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": 0.0042
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.0537
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-gavin-newsom-win-the-2028-us-presidential-election|Yes",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.1665,
+      "price_range": 0.3945,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": -0.0211
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": -0.0432
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": -0.0321
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.1025
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-gavin-newsom-win-the-2028-us-presidential-election|No",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.8335,
+      "price_range": 0.3945,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": -0.0169
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": -0.0336
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": -0.0269
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.1332
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-alexandria-ocasio-cortez-win-the-2028-us-presidential-election|Yes",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.0555,
+      "price_range": 0.4665,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": -0.0018
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": -0.0035
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": -0.004
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.0295
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-alexandria-ocasio-cortez-win-the-2028-us-presidential-election|No",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.9445,
+      "price_range": 0.4665,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": -0.0032
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": -0.0065
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": -0.0071
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.0909
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-marco-rubio-win-the-2028-us-presidential-election|Yes",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.1395,
+      "price_range": 0.405,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": 0.0032
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": 0.0013
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": -0.0006
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.0169
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-marco-rubio-win-the-2028-us-presidential-election|No",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.8605,
+      "price_range": 0.405,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": 0.038
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": 0.0153
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": 0.0056
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.0317
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-jb-pritzker-win-the-2028-us-presidential-election|Yes",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.0135,
+      "price_range": 0.4915,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": -0.0002
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": -0.0004
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": -0.0008
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.0033
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-jb-pritzker-win-the-2028-us-presidential-election|No",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.9865,
+      "price_range": 0.4915,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": 0.0037
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": 0.007
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": 0.0035
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.028
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-donald-trump-win-the-2028-us-presidential-election|Yes",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.0255,
+      "price_range": 0.4805,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": -0.0
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": -0.0003
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": -0.0005
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.0128
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-donald-trump-win-the-2028-us-presidential-election|No",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.9745,
+      "price_range": 0.4805,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": 0.0382
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": 0.0143
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": 0.0073
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.0754
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-ron-desantis-win-the-2028-us-presidential-election|Yes",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.0265,
+      "price_range": 0.4895,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": -0.0002
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": -0.0003
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": -0.0008
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.0055
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-ron-desantis-win-the-2028-us-presidential-election|No",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.9735,
+      "price_range": 0.4895,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": 0.0036
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": 0.0037
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": 0.0016
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.046
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-dwayne-the-rock-johnson-win-the-2028-us-presidential-election|Yes",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.0225,
+      "price_range": 0.4875,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": -0.0
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": -0.0001
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": -0.0006
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.0046
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-dwayne-the-rock-johnson-win-the-2028-us-presidential-election|No",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.9775,
+      "price_range": 0.4875,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": 0.0065
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": 0.0112
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": 0.0077
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.0338
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-tucker-carlson-win-the-2028-us-presidential-election|Yes",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.0305,
+      "price_range": 0.4855,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": 0.0004
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": 0.0004
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": -0.0007
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.0082
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-tucker-carlson-win-the-2028-us-presidential-election|No",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.9695,
+      "price_range": 0.4855,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": 0.0469
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": 0.0282
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": 0.0111
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.0449
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-thomas-massie-win-the-2028-us-presidential-election|Yes",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.0115,
+      "price_range": 0.4945,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": -0.0002
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": -0.0004
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": -0.0008
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.0026
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-thomas-massie-win-the-2028-us-presidential-election|No",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.9885,
+      "price_range": 0.4945,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": 0.0038
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": 0.0074
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": 0.0056
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.017
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-jon-ossoff-win-the-2028-us-presidential-election|Yes",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.0385,
+      "price_range": 0.4845,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": 0.0006
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": 0.0001
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": -0.0005
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.0012
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-jon-ossoff-win-the-2028-us-presidential-election|No",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.9615,
+      "price_range": 0.4845,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": 0.008
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": 0.0021
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": -0.0057
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.002
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-kon-knueppel-win-the-202526-nba-rookie-of-the-year-award|Yes",
+      "skipped": false,
+      "bars": 14904,
+      "quote_ratio": 0.97,
+      "last_close": 0.0005,
+      "price_range": 0.4425,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 10,
+        "SELL": 0,
+        "HOLD": 14894
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 14879,
+          "pearson_past_vs_fwd": -0.1542
+        },
+        "h4": {
+          "n": 14876,
+          "pearson_past_vs_fwd": -0.1194
+        },
+        "h20": {
+          "n": 14860,
+          "pearson_past_vs_fwd": 0.2877
+        },
+        "h80": {
+          "n": 14800,
+          "pearson_past_vs_fwd": 0.1308
+        }
+      },
+      "buy_signal_count": 10
+    },
+    {
+      "csv": "will-kon-knueppel-win-the-202526-nba-rookie-of-the-year-award|No",
+      "skipped": false,
+      "bars": 14904,
+      "quote_ratio": 0.97,
+      "last_close": 0.9995,
+      "price_range": 0.4425,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 4,
+        "SELL": 0,
+        "HOLD": 14900
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 14879,
+          "pearson_past_vs_fwd": -0.0771
+        },
+        "h4": {
+          "n": 14876,
+          "pearson_past_vs_fwd": -0.045
+        },
+        "h20": {
+          "n": 14860,
+          "pearson_past_vs_fwd": 0.0496
+        },
+        "h80": {
+          "n": 14800,
+          "pearson_past_vs_fwd": -0.0222
+        }
+      },
+      "buy_signal_count": 4
+    },
+    {
+      "csv": "will-jd-vance-win-the-2028-republican-presidential-nomination|Yes",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.3625,
+      "price_range": 0.296,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": -0.1085
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": -0.0764
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": -0.074
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.3349
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-jd-vance-win-the-2028-republican-presidential-nomination|No",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.6375,
+      "price_range": 0.296,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": -0.1157
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": -0.089
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": -0.0811
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.3279
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-marco-rubio-win-the-2028-republican-presidential-nomination|Yes",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.2535,
+      "price_range": 0.3785,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 2,
+        "SELL": 0,
+        "HOLD": 25210
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": -0.0329
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": -0.0644
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": -0.0559
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.0289
+        }
+      },
+      "buy_signal_count": 2
+    },
+    {
+      "csv": "will-marco-rubio-win-the-2028-republican-presidential-nomination|No",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.7465,
+      "price_range": 0.3785,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": -0.0201
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": -0.0395
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": -0.0499
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.0263
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-tulsi-gabbard-win-the-2028-republican-presidential-nomination|Yes",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.0105,
+      "price_range": 0.49,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": -0.0002
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": -0.0004
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": -0.0008
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.0033
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-tulsi-gabbard-win-the-2028-republican-presidential-nomination|No",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.9895,
+      "price_range": 0.49,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": 0.0035
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": 0.0071
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": 0.0034
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.0272
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-donald-trump-jr-win-the-2028-republican-presidential-nomination|Yes",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.0245,
+      "price_range": 0.4815,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": -0.0002
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": -0.0004
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": -0.0009
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.0018
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-donald-trump-jr-win-the-2028-republican-presidential-nomination|No",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.9755,
+      "price_range": 0.4815,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": 0.0048
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": 0.01
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": 0.0169
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": 0.0073
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-ron-desantis-win-the-2028-republican-presidential-nomination|Yes",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.0385,
+      "price_range": 0.481,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": -0.0003
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": -0.0006
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": -0.001
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.0085
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-ron-desantis-win-the-2028-republican-presidential-nomination|No",
+      "skipped": false,
+      "bars": 25212,
+      "quote_ratio": 1.0,
+      "last_close": 0.9615,
+      "price_range": 0.481,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 25212
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 25187,
+          "pearson_past_vs_fwd": 0.0028
+        },
+        "h4": {
+          "n": 25184,
+          "pearson_past_vs_fwd": 0.0009
+        },
+        "h20": {
+          "n": 25168,
+          "pearson_past_vs_fwd": -0.0004
+        },
+        "h80": {
+          "n": 25108,
+          "pearson_past_vs_fwd": -0.0562
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-carolina-hurricanes-win-the-2026-nhl-stanley-cup|Yes",
+      "skipped": false,
+      "bars": 14669,
+      "quote_ratio": 0.999,
+      "last_close": 0.375,
+      "price_range": 0.405,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 14669
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 14644,
+          "pearson_past_vs_fwd": -0.0137
+        },
+        "h4": {
+          "n": 14641,
+          "pearson_past_vs_fwd": -0.0046
+        },
+        "h20": {
+          "n": 14625,
+          "pearson_past_vs_fwd": 0.0099
+        },
+        "h80": {
+          "n": 14565,
+          "pearson_past_vs_fwd": -0.0637
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-carolina-hurricanes-win-the-2026-nhl-stanley-cup|No",
+      "skipped": false,
+      "bars": 14669,
+      "quote_ratio": 0.999,
+      "last_close": 0.625,
+      "price_range": 0.405,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 14669
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 14644,
+          "pearson_past_vs_fwd": -0.0557
+        },
+        "h4": {
+          "n": 14641,
+          "pearson_past_vs_fwd": -0.0331
+        },
+        "h20": {
+          "n": 14625,
+          "pearson_past_vs_fwd": -0.0027
+        },
+        "h80": {
+          "n": 14565,
+          "pearson_past_vs_fwd": -0.0882
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-edmonton-oilers-win-the-2026-nhl-stanley-cup|Yes",
+      "skipped": false,
+      "bars": 7487,
+      "quote_ratio": 0.989,
+      "last_close": 0.048,
+      "price_range": 0.4855,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 7487
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 7462,
+          "pearson_past_vs_fwd": -0.0018
+        },
+        "h4": {
+          "n": 7459,
+          "pearson_past_vs_fwd": -0.0029
+        },
+        "h20": {
+          "n": 7443,
+          "pearson_past_vs_fwd": -0.003
+        },
+        "h80": {
+          "n": 7383,
+          "pearson_past_vs_fwd": -0.0306
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-edmonton-oilers-win-the-2026-nhl-stanley-cup|No",
+      "skipped": false,
+      "bars": 7487,
+      "quote_ratio": 0.989,
+      "last_close": 0.952,
+      "price_range": 0.4855,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 7487
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 7462,
+          "pearson_past_vs_fwd": 0.0386
+        },
+        "h4": {
+          "n": 7459,
+          "pearson_past_vs_fwd": 0.0753
+        },
+        "h20": {
+          "n": 7443,
+          "pearson_past_vs_fwd": 0.1122
+        },
+        "h80": {
+          "n": 7383,
+          "pearson_past_vs_fwd": -0.1331
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-dallas-stars-win-the-2026-nhl-stanley-cup|Yes",
+      "skipped": false,
+      "bars": 7487,
+      "quote_ratio": 0.991,
+      "last_close": 0.0215,
+      "price_range": 0.489,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 7487
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 7462,
+          "pearson_past_vs_fwd": -0.0067
+        },
+        "h4": {
+          "n": 7459,
+          "pearson_past_vs_fwd": -0.0055
+        },
+        "h20": {
+          "n": 7443,
+          "pearson_past_vs_fwd": -0.0083
+        },
+        "h80": {
+          "n": 7383,
+          "pearson_past_vs_fwd": -0.0448
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-dallas-stars-win-the-2026-nhl-stanley-cup|No",
+      "skipped": false,
+      "bars": 7487,
+      "quote_ratio": 0.991,
+      "last_close": 0.9785,
+      "price_range": 0.489,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 7487
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 7462,
+          "pearson_past_vs_fwd": -0.0251
+        },
+        "h4": {
+          "n": 7459,
+          "pearson_past_vs_fwd": -0.051
+        },
+        "h20": {
+          "n": 7443,
+          "pearson_past_vs_fwd": -0.0955
+        },
+        "h80": {
+          "n": 7383,
+          "pearson_past_vs_fwd": -0.162
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-colorado-avalanche-win-the-2026-nhl-stanley-cup|Yes",
+      "skipped": false,
+      "bars": 14669,
+      "quote_ratio": 0.999,
+      "last_close": 0.3885,
+      "price_range": 0.325,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 5,
+        "SELL": 0,
+        "HOLD": 14664
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 14644,
+          "pearson_past_vs_fwd": -0.0694
+        },
+        "h4": {
+          "n": 14641,
+          "pearson_past_vs_fwd": -0.1263
+        },
+        "h20": {
+          "n": 14625,
+          "pearson_past_vs_fwd": -0.0617
+        },
+        "h80": {
+          "n": 14565,
+          "pearson_past_vs_fwd": -0.2541
+        }
+      },
+      "buy_signal_count": 5
+    },
+    {
+      "csv": "will-the-colorado-avalanche-win-the-2026-nhl-stanley-cup|No",
+      "skipped": false,
+      "bars": 14669,
+      "quote_ratio": 0.999,
+      "last_close": 0.6115,
+      "price_range": 0.325,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 14669
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 14644,
+          "pearson_past_vs_fwd": -0.0334
+        },
+        "h4": {
+          "n": 14641,
+          "pearson_past_vs_fwd": -0.0613
+        },
+        "h20": {
+          "n": 14625,
+          "pearson_past_vs_fwd": -0.0234
+        },
+        "h80": {
+          "n": 14565,
+          "pearson_past_vs_fwd": -0.2466
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-vegas-golden-knights-win-the-2026-nhl-stanley-cup|Yes",
+      "skipped": false,
+      "bars": 14669,
+      "quote_ratio": 0.995,
+      "last_close": 0.1325,
+      "price_range": 0.683,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 14669
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 14644,
+          "pearson_past_vs_fwd": -0.0007
+        },
+        "h4": {
+          "n": 14641,
+          "pearson_past_vs_fwd": -0.0008
+        },
+        "h20": {
+          "n": 14625,
+          "pearson_past_vs_fwd": -0.0026
+        },
+        "h80": {
+          "n": 14565,
+          "pearson_past_vs_fwd": -0.0073
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-vegas-golden-knights-win-the-2026-nhl-stanley-cup|No",
+      "skipped": false,
+      "bars": 14669,
+      "quote_ratio": 0.995,
+      "last_close": 0.8675,
+      "price_range": 0.683,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 14669
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 14644,
+          "pearson_past_vs_fwd": -0.0435
+        },
+        "h4": {
+          "n": 14641,
+          "pearson_past_vs_fwd": -0.0494
+        },
+        "h20": {
+          "n": 14625,
+          "pearson_past_vs_fwd": -0.0483
+        },
+        "h80": {
+          "n": 14565,
+          "pearson_past_vs_fwd": -0.0531
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-los-angeles-kings-win-the-2026-nhl-stanley-cup|Yes",
+      "skipped": true,
+      "reason": "flat (range 0.0015)",
+      "bars": 881,
+      "last_close": 0.0005
+    },
+    {
+      "csv": "will-the-los-angeles-kings-win-the-2026-nhl-stanley-cup|No",
+      "skipped": true,
+      "reason": "flat (range 0.0015)",
+      "bars": 881,
+      "last_close": 0.9995
+    },
+    {
+      "csv": "will-the-ottawa-senators-win-the-2026-nhl-stanley-cup|Yes",
+      "skipped": false,
+      "bars": 758,
+      "quote_ratio": 0.992,
+      "last_close": 0.0005,
+      "price_range": 0.006,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 758
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 733,
+          "pearson_past_vs_fwd": 0.2034
+        },
+        "h4": {
+          "n": 730,
+          "pearson_past_vs_fwd": 0.4359
+        },
+        "h20": {
+          "n": 714,
+          "pearson_past_vs_fwd": -0.0433
+        },
+        "h80": {
+          "n": 654,
+          "pearson_past_vs_fwd": 0.0336
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-ottawa-senators-win-the-2026-nhl-stanley-cup|No",
+      "skipped": false,
+      "bars": 758,
+      "quote_ratio": 0.992,
+      "last_close": 0.9995,
+      "price_range": 0.006,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 758
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 733,
+          "pearson_past_vs_fwd": 0.1384
+        },
+        "h4": {
+          "n": 730,
+          "pearson_past_vs_fwd": 0.2925
+        },
+        "h20": {
+          "n": 714,
+          "pearson_past_vs_fwd": -0.0244
+        },
+        "h80": {
+          "n": 654,
+          "pearson_past_vs_fwd": 0.0977
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-minnesota-wild-win-the-2026-nhl-stanley-cup|Yes",
+      "skipped": false,
+      "bars": 13985,
+      "quote_ratio": 0.994,
+      "last_close": 0.0155,
+      "price_range": 0.493,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 13985
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 13960,
+          "pearson_past_vs_fwd": -0.0011
+        },
+        "h4": {
+          "n": 13957,
+          "pearson_past_vs_fwd": -0.0014
+        },
+        "h20": {
+          "n": 13941,
+          "pearson_past_vs_fwd": -0.0005
+        },
+        "h80": {
+          "n": 13881,
+          "pearson_past_vs_fwd": -0.0037
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-minnesota-wild-win-the-2026-nhl-stanley-cup|No",
+      "skipped": false,
+      "bars": 13985,
+      "quote_ratio": 0.994,
+      "last_close": 0.9845,
+      "price_range": 0.493,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 13985
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 13960,
+          "pearson_past_vs_fwd": -0.0023
+        },
+        "h4": {
+          "n": 13957,
+          "pearson_past_vs_fwd": -0.0046
+        },
+        "h20": {
+          "n": 13941,
+          "pearson_past_vs_fwd": 0.01
+        },
+        "h80": {
+          "n": 13881,
+          "pearson_past_vs_fwd": 0.0018
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-utah-mammoth-win-the-2026-nhl-stanley-cup|Yes",
+      "skipped": false,
+      "bars": 7497,
+      "quote_ratio": 0.986,
+      "last_close": 0.0105,
+      "price_range": 0.489,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 7497
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 7472,
+          "pearson_past_vs_fwd": -0.0006
+        },
+        "h4": {
+          "n": 7469,
+          "pearson_past_vs_fwd": -0.0011
+        },
+        "h20": {
+          "n": 7453,
+          "pearson_past_vs_fwd": -0.0025
+        },
+        "h80": {
+          "n": 7393,
+          "pearson_past_vs_fwd": -0.0226
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-utah-mammoth-win-the-2026-nhl-stanley-cup|No",
+      "skipped": false,
+      "bars": 7497,
+      "quote_ratio": 0.986,
+      "last_close": 0.9895,
+      "price_range": 0.489,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 7497
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 7472,
+          "pearson_past_vs_fwd": 0.0032
+        },
+        "h4": {
+          "n": 7469,
+          "pearson_past_vs_fwd": 0.0031
+        },
+        "h20": {
+          "n": 7453,
+          "pearson_past_vs_fwd": 0.001
+        },
+        "h80": {
+          "n": 7393,
+          "pearson_past_vs_fwd": -0.1482
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-anaheim-ducks-win-the-2026-nhl-stanley-cup|Yes",
+      "skipped": false,
+      "bars": 13985,
+      "quote_ratio": 0.991,
+      "last_close": 0.0145,
+      "price_range": 0.488,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 13985
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 13960,
+          "pearson_past_vs_fwd": -0.0005
+        },
+        "h4": {
+          "n": 13957,
+          "pearson_past_vs_fwd": -0.001
+        },
+        "h20": {
+          "n": 13941,
+          "pearson_past_vs_fwd": -0.003
+        },
+        "h80": {
+          "n": 13881,
+          "pearson_past_vs_fwd": -0.0043
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-anaheim-ducks-win-the-2026-nhl-stanley-cup|No",
+      "skipped": false,
+      "bars": 13985,
+      "quote_ratio": 0.991,
+      "last_close": 0.9855,
+      "price_range": 0.488,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 13985
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 13960,
+          "pearson_past_vs_fwd": 0.0002
+        },
+        "h4": {
+          "n": 13957,
+          "pearson_past_vs_fwd": 0.0018
+        },
+        "h20": {
+          "n": 13941,
+          "pearson_past_vs_fwd": 0.0061
+        },
+        "h80": {
+          "n": 13881,
+          "pearson_past_vs_fwd": 0.0046
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-montreal-canadiens-win-the-2026-nhl-stanley-cup|Yes",
+      "skipped": false,
+      "bars": 14669,
+      "quote_ratio": 0.995,
+      "last_close": 0.0935,
+      "price_range": 0.488,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 14669
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 14644,
+          "pearson_past_vs_fwd": 0.0004
+        },
+        "h4": {
+          "n": 14641,
+          "pearson_past_vs_fwd": 0.0015
+        },
+        "h20": {
+          "n": 14625,
+          "pearson_past_vs_fwd": -0.0004
+        },
+        "h80": {
+          "n": 14565,
+          "pearson_past_vs_fwd": -0.0391
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-montreal-canadiens-win-the-2026-nhl-stanley-cup|No",
+      "skipped": false,
+      "bars": 14669,
+      "quote_ratio": 0.995,
+      "last_close": 0.9065,
+      "price_range": 0.488,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 14669
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 14644,
+          "pearson_past_vs_fwd": 0.043
+        },
+        "h4": {
+          "n": 14641,
+          "pearson_past_vs_fwd": 0.0833
+        },
+        "h20": {
+          "n": 14625,
+          "pearson_past_vs_fwd": 0.0494
+        },
+        "h80": {
+          "n": 14565,
+          "pearson_past_vs_fwd": -0.1696
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-boston-bruins-win-the-2026-nhl-stanley-cup|Yes",
+      "skipped": false,
+      "bars": 7497,
+      "quote_ratio": 0.987,
+      "last_close": 0.011,
+      "price_range": 0.4975,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 7497
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 7472,
+          "pearson_past_vs_fwd": -0.0007
+        },
+        "h4": {
+          "n": 7469,
+          "pearson_past_vs_fwd": -0.0013
+        },
+        "h20": {
+          "n": 7453,
+          "pearson_past_vs_fwd": -0.0029
+        },
+        "h80": {
+          "n": 7393,
+          "pearson_past_vs_fwd": -0.0064
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-boston-bruins-win-the-2026-nhl-stanley-cup|No",
+      "skipped": false,
+      "bars": 7497,
+      "quote_ratio": 0.987,
+      "last_close": 0.989,
+      "price_range": 0.4975,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 7497
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 7472,
+          "pearson_past_vs_fwd": 0.0528
+        },
+        "h4": {
+          "n": 7469,
+          "pearson_past_vs_fwd": 0.1059
+        },
+        "h20": {
+          "n": 7453,
+          "pearson_past_vs_fwd": 0.1892
+        },
+        "h80": {
+          "n": 7393,
+          "pearson_past_vs_fwd": 0.0527
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-buffalo-sabres-win-the-2026-nhl-stanley-cup|Yes",
+      "skipped": false,
+      "bars": 14669,
+      "quote_ratio": 0.997,
+      "last_close": 0.0205,
+      "price_range": 0.4865,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 14669
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 14644,
+          "pearson_past_vs_fwd": -0.0031
+        },
+        "h4": {
+          "n": 14641,
+          "pearson_past_vs_fwd": -0.0082
+        },
+        "h20": {
+          "n": 14625,
+          "pearson_past_vs_fwd": -0.0175
+        },
+        "h80": {
+          "n": 14565,
+          "pearson_past_vs_fwd": -0.0282
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-buffalo-sabres-win-the-2026-nhl-stanley-cup|No",
+      "skipped": false,
+      "bars": 14669,
+      "quote_ratio": 0.997,
+      "last_close": 0.9795,
+      "price_range": 0.4865,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 14669
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 14644,
+          "pearson_past_vs_fwd": -0.0348
+        },
+        "h4": {
+          "n": 14641,
+          "pearson_past_vs_fwd": -0.0696
+        },
+        "h20": {
+          "n": 14625,
+          "pearson_past_vs_fwd": -0.077
+        },
+        "h80": {
+          "n": 14565,
+          "pearson_past_vs_fwd": -0.0408
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-pittsburgh-penguins-win-the-2026-nhl-stanley-cup|Yes",
+      "skipped": false,
+      "bars": 7478,
+      "quote_ratio": 0.984,
+      "last_close": 0.0005,
+      "price_range": 0.499,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 7478
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 7453,
+          "pearson_past_vs_fwd": -0.0078
+        },
+        "h4": {
+          "n": 7450,
+          "pearson_past_vs_fwd": -0.0016
+        },
+        "h20": {
+          "n": 7434,
+          "pearson_past_vs_fwd": -0.0052
+        },
+        "h80": {
+          "n": 7374,
+          "pearson_past_vs_fwd": -0.0255
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-pittsburgh-penguins-win-the-2026-nhl-stanley-cup|No",
+      "skipped": false,
+      "bars": 7478,
+      "quote_ratio": 0.984,
+      "last_close": 0.9995,
+      "price_range": 0.499,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 7478
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 7453,
+          "pearson_past_vs_fwd": -0.0555
+        },
+        "h4": {
+          "n": 7450,
+          "pearson_past_vs_fwd": 0.0026
+        },
+        "h20": {
+          "n": 7434,
+          "pearson_past_vs_fwd": -0.0009
+        },
+        "h80": {
+          "n": 7374,
+          "pearson_past_vs_fwd": -0.1665
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-new-york-knicks-win-the-2026-nba-finals|Yes",
+      "skipped": false,
+      "bars": 14669,
+      "quote_ratio": 0.996,
+      "last_close": 0.1415,
+      "price_range": 0.488,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 14669
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 14644,
+          "pearson_past_vs_fwd": -0.0001
+        },
+        "h4": {
+          "n": 14641,
+          "pearson_past_vs_fwd": -0.0001
+        },
+        "h20": {
+          "n": 14625,
+          "pearson_past_vs_fwd": -0.0005
+        },
+        "h80": {
+          "n": 14565,
+          "pearson_past_vs_fwd": -0.0356
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-new-york-knicks-win-the-2026-nba-finals|No",
+      "skipped": false,
+      "bars": 14669,
+      "quote_ratio": 0.996,
+      "last_close": 0.8585,
+      "price_range": 0.488,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 14669
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 14644,
+          "pearson_past_vs_fwd": -0.001
+        },
+        "h4": {
+          "n": 14641,
+          "pearson_past_vs_fwd": -0.0007
+        },
+        "h20": {
+          "n": 14625,
+          "pearson_past_vs_fwd": 0.001
+        },
+        "h80": {
+          "n": 14565,
+          "pearson_past_vs_fwd": -0.2281
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-minnesota-timberwolves-win-the-2026-nba-finals|Yes",
+      "skipped": false,
+      "bars": 14669,
+      "quote_ratio": 0.998,
+      "last_close": 0.0065,
+      "price_range": 0.4985,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 14669
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 14644,
+          "pearson_past_vs_fwd": -0.0004
+        },
+        "h4": {
+          "n": 14641,
+          "pearson_past_vs_fwd": -0.0008
+        },
+        "h20": {
+          "n": 14625,
+          "pearson_past_vs_fwd": -0.0018
+        },
+        "h80": {
+          "n": 14565,
+          "pearson_past_vs_fwd": -0.0098
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-minnesota-timberwolves-win-the-2026-nba-finals|No",
+      "skipped": false,
+      "bars": 14669,
+      "quote_ratio": 0.998,
+      "last_close": 0.9935,
+      "price_range": 0.4985,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 14669
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 14644,
+          "pearson_past_vs_fwd": 0.0005
+        },
+        "h4": {
+          "n": 14641,
+          "pearson_past_vs_fwd": 0.0012
+        },
+        "h20": {
+          "n": 14625,
+          "pearson_past_vs_fwd": -0.0011
+        },
+        "h80": {
+          "n": 14565,
+          "pearson_past_vs_fwd": -0.1472
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-los-angeles-lakers-win-the-2026-nba-finals|Yes",
+      "skipped": false,
+      "bars": 9702,
+      "quote_ratio": 0.943,
+      "last_close": 0.0005,
+      "price_range": 0.5105,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 9702
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 9677,
+          "pearson_past_vs_fwd": -0.0011
+        },
+        "h4": {
+          "n": 9674,
+          "pearson_past_vs_fwd": -0.0024
+        },
+        "h20": {
+          "n": 9658,
+          "pearson_past_vs_fwd": 0.0003
+        },
+        "h80": {
+          "n": 9598,
+          "pearson_past_vs_fwd": -0.0359
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-the-los-angeles-lakers-win-the-2026-nba-finals|No",
+      "skipped": false,
+      "bars": 9702,
+      "quote_ratio": 0.943,
+      "last_close": 0.9995,
+      "price_range": 0.5115,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 9702
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 9677,
+          "pearson_past_vs_fwd": 0.0033
+        },
+        "h4": {
+          "n": 9674,
+          "pearson_past_vs_fwd": 0.0056
+        },
+        "h20": {
+          "n": 9658,
+          "pearson_past_vs_fwd": 0.0061
+        },
+        "h80": {
+          "n": 9598,
+          "pearson_past_vs_fwd": -0.1888
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-liverpool-win-the-202526-english-premier-league|Yes",
+      "skipped": true,
+      "reason": "too short (90 < 120 bars)"
+    },
+    {
+      "csv": "will-liverpool-win-the-202526-english-premier-league|No",
+      "skipped": true,
+      "reason": "too short (90 < 120 bars)"
+    },
+    {
+      "csv": "will-arsenal-win-the-202526-english-premier-league|Yes",
+      "skipped": false,
+      "bars": 13321,
+      "quote_ratio": 0.999,
+      "last_close": 0.815,
+      "price_range": 0.44,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 1,
+        "SELL": 0,
+        "HOLD": 13320
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 13296,
+          "pearson_past_vs_fwd": -0.078
+        },
+        "h4": {
+          "n": 13293,
+          "pearson_past_vs_fwd": -0.1296
+        },
+        "h20": {
+          "n": 13277,
+          "pearson_past_vs_fwd": -0.0915
+        },
+        "h80": {
+          "n": 13217,
+          "pearson_past_vs_fwd": 0.1103
+        }
+      },
+      "buy_signal_count": 1
+    },
+    {
+      "csv": "will-arsenal-win-the-202526-english-premier-league|No",
+      "skipped": false,
+      "bars": 13321,
+      "quote_ratio": 0.999,
+      "last_close": 0.185,
+      "price_range": 0.44,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 13321
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 13296,
+          "pearson_past_vs_fwd": -0.0904
+        },
+        "h4": {
+          "n": 13293,
+          "pearson_past_vs_fwd": -0.1521
+        },
+        "h20": {
+          "n": 13277,
+          "pearson_past_vs_fwd": -0.1191
+        },
+        "h80": {
+          "n": 13217,
+          "pearson_past_vs_fwd": 0.0672
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-manchester-city-win-the-202526-english-premier-league|Yes",
+      "skipped": false,
+      "bars": 13321,
+      "quote_ratio": 0.999,
+      "last_close": 0.185,
+      "price_range": 0.43,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 13321
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 13296,
+          "pearson_past_vs_fwd": -0.0893
+        },
+        "h4": {
+          "n": 13293,
+          "pearson_past_vs_fwd": -0.1493
+        },
+        "h20": {
+          "n": 13277,
+          "pearson_past_vs_fwd": -0.1294
+        },
+        "h80": {
+          "n": 13217,
+          "pearson_past_vs_fwd": 0.0776
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-manchester-city-win-the-202526-english-premier-league|No",
+      "skipped": false,
+      "bars": 13321,
+      "quote_ratio": 0.999,
+      "last_close": 0.815,
+      "price_range": 0.43,
+      "is_tail": false,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 13321
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 13296,
+          "pearson_past_vs_fwd": -0.0791
+        },
+        "h4": {
+          "n": 13293,
+          "pearson_past_vs_fwd": -0.1301
+        },
+        "h20": {
+          "n": 13277,
+          "pearson_past_vs_fwd": -0.0931
+        },
+        "h80": {
+          "n": 13217,
+          "pearson_past_vs_fwd": 0.1216
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-manchester-united-win-the-202526-english-premier-league|Yes",
+      "skipped": false,
+      "bars": 6881,
+      "quote_ratio": 0.003,
+      "last_close": 0.0005,
+      "price_range": 0.503,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 6881
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 6856,
+          "pearson_past_vs_fwd": -0.001
+        },
+        "h4": {
+          "n": 6853,
+          "pearson_past_vs_fwd": -0.0018
+        },
+        "h20": {
+          "n": 6837,
+          "pearson_past_vs_fwd": -0.0032
+        },
+        "h80": {
+          "n": 6777,
+          "pearson_past_vs_fwd": -0.0068
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-manchester-united-win-the-202526-english-premier-league|No",
+      "skipped": false,
+      "bars": 6881,
+      "quote_ratio": 0.003,
+      "last_close": 0.9995,
+      "price_range": 0.503,
+      "is_tail": true,
+      "signal_sides": {
+        "BUY": 0,
+        "SELL": 0,
+        "HOLD": 6881
+      },
+      "raw_momentum": {
+        "h1": {
+          "n": 6856,
+          "pearson_past_vs_fwd": -0.0701
+        },
+        "h4": {
+          "n": 6853,
+          "pearson_past_vs_fwd": -0.2023
+        },
+        "h20": {
+          "n": 6837,
+          "pearson_past_vs_fwd": -0.0273
+        },
+        "h80": {
+          "n": 6777,
+          "pearson_past_vs_fwd": -0.1259
+        }
+      },
+      "buy_signal_count": 0
+    },
+    {
+      "csv": "will-aston-villa-win-the-202526-english-premier-league|Yes",
+      "skipped": true,
+      "reason": "too short (90 < 120 bars)"
+    },
+    {
+      "csv": "will-aston-villa-win-the-202526-english-premier-league|No",
+      "skipped": true,
+      "reason": "too short (90 < 120 bars)"
+    }
+  ]
+}

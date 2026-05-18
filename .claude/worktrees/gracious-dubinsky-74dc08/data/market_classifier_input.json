@@ -1,0 +1,2051 @@
+{
+  "exported_at": "2026-04-06T08:07:29.989273+00:00",
+  "source": "deploy.export_market_classifier_input",
+  "summary": {
+    "markets_scanned": 50,
+    "markets_exported": 25,
+    "eligible_exported": 4,
+    "limit_requested": 50,
+    "top_requested": 25
+  },
+  "classification_guidance": {
+    "goal": "Classify market structure and regime fit for this bot, not predict event truth.",
+    "decision_labels": [
+      "allow",
+      "avoid",
+      "review"
+    ],
+    "recommended_focus": [
+      "Does this look like a gradual repricing market versus a discrete jump/news market?",
+      "Is the market family a good fit for the current bot logic?",
+      "Are there structural/risk reasons to avoid or manually review it?"
+    ]
+  },
+  "markets": [
+    {
+      "condition_id": "0xbdd688664b4f3cf7ec4ec011607934fe8ae720c08353fc14a6e9dfbf6bbcf11a",
+      "token_id": "35573117698117780238142713946749692621043319879346349609080985768472429209643",
+      "slug": "will-the-tampa-bay-lightning-win-the-2026-nhl-stanley-cup",
+      "question": "Will the Tampa Bay Lightning win the 2026 NHL Stanley Cup?",
+      "description": "This market will resolve to \u201cYes\u201d if the Tampa Bay Lightning win the 2026 NHL Stanley Cup. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2026 NHL Stanley Cup based off the rules of the NHL.\n\nThe resolution source for this market will be information from the NHL.\n",
+      "category": null,
+      "subcategory": null,
+      "end_date_iso": "2026-06-30T00:00:00Z",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_prices": [
+        "0.15",
+        "0.85"
+      ],
+      "yes_outcome": "Yes",
+      "yes_price": 0.15,
+      "liquidity": 85892.98493,
+      "best_bid": 0.148,
+      "best_ask": 0.152,
+      "spread_bps": 266.7,
+      "history_points": 710,
+      "abs_return_bps_24h": 600.7,
+      "realized_volatility_bps": 176.1,
+      "movement_consistency": 0.339,
+      "quality_score": 86.6,
+      "quality_tier": "A",
+      "score_breakdown": {
+        "liquidity": {
+          "score": 25.0,
+          "max_score": 25.0,
+          "value": 85892.98,
+          "explanation": "More liquidity usually means easier entry/exit and less slippage."
+        },
+        "history": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 710,
+          "explanation": "Longer history makes the strategy test less fragile."
+        },
+        "recent_move": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 600.7,
+          "explanation": "Some recent movement is useful; dead markets are hard to trade."
+        },
+        "volatility": {
+          "score": 10.6,
+          "max_score": 15.0,
+          "value": 176.1,
+          "explanation": "Intraday volatility can create signals, up to a capped score."
+        },
+        "quote_quality": {
+          "score": 4.7,
+          "max_score": 10.0,
+          "value": 266.7,
+          "explanation": "Tighter spread is better when quote data is available."
+        },
+        "price_zone": {
+          "score": 1.5,
+          "max_score": 5.0,
+          "value": 0.15,
+          "explanation": "Prices away from 0/1 are often more tradable than near-certain outcomes."
+        },
+        "movement_consistency": {
+          "score": 4.8,
+          "max_score": 5.0,
+          "value": 0.339,
+          "explanation": "A bit of back-and-forth suggests the market is actually moving, not frozen."
+        }
+      },
+      "eligibility_reason": "Eligible",
+      "eligible_now": true,
+      "heuristic_family": "sports_outright",
+      "current_family": "sports_outright",
+      "current_classifier_decision": "allow",
+      "current_classifier_reason": "Heuristic family: sports outright / repricing-friendly market | No external classifier configured",
+      "tags": []
+    },
+    {
+      "condition_id": "0x13e1cc703a120883a709d3bb29707097952845d61ca6793ea2b4328bae2a7451",
+      "token_id": "98951343420969493497594761179562691809954416596888138302255086663562042936451",
+      "slug": "will-the-boston-celtics-win-the-2026-nba-finals",
+      "question": "Will the Boston Celtics win the 2026 NBA Finals?",
+      "description": "This market will resolve to \u201cYes\u201d if the Boston Celtics win the 2026 NBA Finals. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2026 NBA Finals based off the rules of the NBA.\n\nThe resolution source for this market will be information from the NBA.",
+      "category": null,
+      "subcategory": null,
+      "end_date_iso": "2026-07-01T00:00:00Z",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_prices": [
+        "0.118",
+        "0.882"
+      ],
+      "yes_outcome": "Yes",
+      "yes_price": 0.118,
+      "liquidity": 165026.41028,
+      "best_bid": 0.116,
+      "best_ask": 0.12,
+      "spread_bps": 339.0,
+      "history_points": 667,
+      "abs_return_bps_24h": 442.5,
+      "realized_volatility_bps": 187.8,
+      "movement_consistency": 0.38,
+      "quality_score": 85.7,
+      "quality_tier": "A",
+      "score_breakdown": {
+        "liquidity": {
+          "score": 25.0,
+          "max_score": 25.0,
+          "value": 165026.41,
+          "explanation": "More liquidity usually means easier entry/exit and less slippage."
+        },
+        "history": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 667,
+          "explanation": "Longer history makes the strategy test less fragile."
+        },
+        "recent_move": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 442.5,
+          "explanation": "Some recent movement is useful; dead markets are hard to trade."
+        },
+        "volatility": {
+          "score": 11.3,
+          "max_score": 15.0,
+          "value": 187.8,
+          "explanation": "Intraday volatility can create signals, up to a capped score."
+        },
+        "quote_quality": {
+          "score": 3.2,
+          "max_score": 10.0,
+          "value": 339.0,
+          "explanation": "Tighter spread is better when quote data is available."
+        },
+        "price_zone": {
+          "score": 1.2,
+          "max_score": 5.0,
+          "value": 0.118,
+          "explanation": "Prices away from 0/1 are often more tradable than near-certain outcomes."
+        },
+        "movement_consistency": {
+          "score": 5.0,
+          "max_score": 5.0,
+          "value": 0.38,
+          "explanation": "A bit of back-and-forth suggests the market is actually moving, not frozen."
+        }
+      },
+      "eligibility_reason": "Eligible",
+      "eligible_now": true,
+      "heuristic_family": "sports_outright",
+      "current_family": "sports_outright",
+      "current_classifier_decision": "allow",
+      "current_classifier_reason": "Heuristic family: sports outright / repricing-friendly market | No external classifier configured",
+      "tags": []
+    },
+    {
+      "condition_id": "0xf8f63bb47b2a7c2e0c1be3cedf4075079b11c07476d76a9469065b0c4791961a",
+      "token_id": "101738487887518832481587379955535423775326921556438741919099866785354159699479",
+      "slug": "will-the-colorado-avalanche-win-the-2026-nhl-stanley-cup",
+      "question": "Will the Colorado Avalanche win the 2026 NHL Stanley Cup?",
+      "description": "This market will resolve to \u201cYes\u201d if the Colorado Avalanche win the 2026 NHL Stanley Cup. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2026 NHL Stanley Cup based off the rules of the NHL.\n\nThe resolution source for this market will be information from the NHL.\n",
+      "category": null,
+      "subcategory": null,
+      "end_date_iso": "2026-06-30T00:00:00Z",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_prices": [
+        "0.2005",
+        "0.7995"
+      ],
+      "yes_outcome": "Yes",
+      "yes_price": 0.2005,
+      "liquidity": 108022.55432,
+      "best_bid": 0.196,
+      "best_ask": 0.205,
+      "spread_bps": 448.9,
+      "history_points": 678,
+      "abs_return_bps_24h": 256.4,
+      "realized_volatility_bps": 175.1,
+      "movement_consistency": 0.452,
+      "quality_score": 80.6,
+      "quality_tier": "A",
+      "score_breakdown": {
+        "liquidity": {
+          "score": 25.0,
+          "max_score": 25.0,
+          "value": 108022.55,
+          "explanation": "More liquidity usually means easier entry/exit and less slippage."
+        },
+        "history": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 678,
+          "explanation": "Longer history makes the strategy test less fragile."
+        },
+        "recent_move": {
+          "score": 17.1,
+          "max_score": 20.0,
+          "value": 256.4,
+          "explanation": "Some recent movement is useful; dead markets are hard to trade."
+        },
+        "volatility": {
+          "score": 10.5,
+          "max_score": 15.0,
+          "value": 175.1,
+          "explanation": "Intraday volatility can create signals, up to a capped score."
+        },
+        "quote_quality": {
+          "score": 1.0,
+          "max_score": 10.0,
+          "value": 448.9,
+          "explanation": "Tighter spread is better when quote data is available."
+        },
+        "price_zone": {
+          "score": 2.0,
+          "max_score": 5.0,
+          "value": 0.2005,
+          "explanation": "Prices away from 0/1 are often more tradable than near-certain outcomes."
+        },
+        "movement_consistency": {
+          "score": 5.0,
+          "max_score": 5.0,
+          "value": 0.452,
+          "explanation": "A bit of back-and-forth suggests the market is actually moving, not frozen."
+        }
+      },
+      "eligibility_reason": "Eligible",
+      "eligible_now": true,
+      "heuristic_family": "sports_outright",
+      "current_family": "sports_outright",
+      "current_classifier_decision": "allow",
+      "current_classifier_reason": "Heuristic family: sports outright / repricing-friendly market | No external classifier configured",
+      "tags": []
+    },
+    {
+      "condition_id": "0x22e7b5e35423e76842dd3a5e1a21d13793811080d5e7b2896d0c001bd5e97d54",
+      "token_id": "49500299856831034491021962156746701298730459370557900271970866855042624695770",
+      "slug": "will-the-oklahoma-city-thunder-win-the-2026-nba-finals",
+      "question": "Will the Oklahoma City Thunder win the 2026 NBA Finals?",
+      "description": "This market will resolve to \u201cYes\u201d if the Oklahoma City Thunder win the 2026 NBA Finals. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2026 NBA Finals based off the rules of the NBA.\n\nThe resolution source for this market will be information from the NBA.",
+      "category": null,
+      "subcategory": null,
+      "end_date_iso": "2026-07-01T00:00:00Z",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_prices": [
+        "0.385",
+        "0.615"
+      ],
+      "yes_outcome": "Yes",
+      "yes_price": 0.385,
+      "liquidity": 259549.1671,
+      "best_bid": 0.38,
+      "best_ask": 0.39,
+      "spread_bps": 259.7,
+      "history_points": 602,
+      "abs_return_bps_24h": 266.7,
+      "realized_volatility_bps": 89.2,
+      "movement_consistency": 0.1,
+      "quality_score": 78.3,
+      "quality_tier": "A",
+      "score_breakdown": {
+        "liquidity": {
+          "score": 25.0,
+          "max_score": 25.0,
+          "value": 259549.17,
+          "explanation": "More liquidity usually means easier entry/exit and less slippage."
+        },
+        "history": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 602,
+          "explanation": "Longer history makes the strategy test less fragile."
+        },
+        "recent_move": {
+          "score": 17.8,
+          "max_score": 20.0,
+          "value": 266.7,
+          "explanation": "Some recent movement is useful; dead markets are hard to trade."
+        },
+        "volatility": {
+          "score": 5.4,
+          "max_score": 15.0,
+          "value": 89.2,
+          "explanation": "Intraday volatility can create signals, up to a capped score."
+        },
+        "quote_quality": {
+          "score": 4.8,
+          "max_score": 10.0,
+          "value": 259.7,
+          "explanation": "Tighter spread is better when quote data is available."
+        },
+        "price_zone": {
+          "score": 3.9,
+          "max_score": 5.0,
+          "value": 0.385,
+          "explanation": "Prices away from 0/1 are often more tradable than near-certain outcomes."
+        },
+        "movement_consistency": {
+          "score": 1.4,
+          "max_score": 5.0,
+          "value": 0.1,
+          "explanation": "A bit of back-and-forth suggests the market is actually moving, not frozen."
+        }
+      },
+      "eligibility_reason": "Eligible",
+      "eligible_now": true,
+      "heuristic_family": "sports_outright",
+      "current_family": "sports_outright",
+      "current_classifier_decision": "allow",
+      "current_classifier_reason": "Heuristic family: sports outright / repricing-friendly market | No external classifier configured",
+      "tags": []
+    },
+    {
+      "condition_id": "0x44887f53abbfe7531b1384420b185a5f10ee42a4e6c9441d5883abd4f3c1e5ef",
+      "token_id": "17581551835670188629115760053820570516688258623733228909199148495084738589631",
+      "slug": "will-the-dallas-stars-win-the-2026-nhl-stanley-cup",
+      "question": "Will the Dallas Stars win the 2026 NHL Stanley Cup?",
+      "description": "This market will resolve to \u201cYes\u201d if the Dallas Stars win the 2026 NHL Stanley Cup. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2026 NHL Stanley Cup based off the rules of the NHL.\n\nThe resolution source for this market will be information from the NHL.\n",
+      "category": null,
+      "subcategory": null,
+      "end_date_iso": "2026-06-30T00:00:00Z",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_prices": [
+        "0.0805",
+        "0.9195"
+      ],
+      "yes_outcome": "Yes",
+      "yes_price": 0.0805,
+      "liquidity": 94686.81371,
+      "best_bid": 0.08,
+      "best_ask": 0.081,
+      "spread_bps": 124.2,
+      "history_points": 654,
+      "abs_return_bps_24h": 387.1,
+      "realized_volatility_bps": 399.9,
+      "movement_consistency": 0.423,
+      "quality_score": 93.3,
+      "quality_tier": "A",
+      "score_breakdown": {
+        "liquidity": {
+          "score": 25.0,
+          "max_score": 25.0,
+          "value": 94686.81,
+          "explanation": "More liquidity usually means easier entry/exit and less slippage."
+        },
+        "history": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 654,
+          "explanation": "Longer history makes the strategy test less fragile."
+        },
+        "recent_move": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 387.1,
+          "explanation": "Some recent movement is useful; dead markets are hard to trade."
+        },
+        "volatility": {
+          "score": 15.0,
+          "max_score": 15.0,
+          "value": 399.9,
+          "explanation": "Intraday volatility can create signals, up to a capped score."
+        },
+        "quote_quality": {
+          "score": 7.5,
+          "max_score": 10.0,
+          "value": 124.2,
+          "explanation": "Tighter spread is better when quote data is available."
+        },
+        "price_zone": {
+          "score": 0.8,
+          "max_score": 5.0,
+          "value": 0.0805,
+          "explanation": "Prices away from 0/1 are often more tradable than near-certain outcomes."
+        },
+        "movement_consistency": {
+          "score": 5.0,
+          "max_score": 5.0,
+          "value": 0.423,
+          "explanation": "A bit of back-and-forth suggests the market is actually moving, not frozen."
+        }
+      },
+      "eligibility_reason": "Current price outside configured range",
+      "eligible_now": false,
+      "heuristic_family": "sports_outright",
+      "current_family": "sports_outright",
+      "current_classifier_decision": "allow",
+      "current_classifier_reason": "Heuristic family: sports outright / repricing-friendly market | No external classifier configured",
+      "tags": []
+    },
+    {
+      "condition_id": "0x89389a6b1439856a8d366234c795d72865c927a1aa3cf9d4cc04a3a400defde1",
+      "token_id": "68803485030073596962715540294172682212192134248970512695855620898253368033218",
+      "slug": "will-the-vegas-golden-knights-win-the-2026-nhl-stanley-cup",
+      "question": "Will the Vegas Golden Knights win the 2026 NHL Stanley Cup?",
+      "description": "This market will resolve to \u201cYes\u201d if the Vegas Golden Knights win the 2026 NHL Stanley Cup. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2026 NHL Stanley Cup based off the rules of the NHL.\n\nThe resolution source for this market will be information from the NHL.\n",
+      "category": null,
+      "subcategory": null,
+      "end_date_iso": "2026-06-30T00:00:00Z",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_prices": [
+        "0.0615",
+        "0.9385"
+      ],
+      "yes_outcome": "Yes",
+      "yes_price": 0.0615,
+      "liquidity": 95310.67766,
+      "best_bid": 0.061,
+      "best_ask": 0.062,
+      "spread_bps": 162.6,
+      "history_points": 565,
+      "abs_return_bps_24h": 5000.0,
+      "realized_volatility_bps": 491.6,
+      "movement_consistency": 0.427,
+      "quality_score": 92.3,
+      "quality_tier": "A",
+      "score_breakdown": {
+        "liquidity": {
+          "score": 25.0,
+          "max_score": 25.0,
+          "value": 95310.68,
+          "explanation": "More liquidity usually means easier entry/exit and less slippage."
+        },
+        "history": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 565,
+          "explanation": "Longer history makes the strategy test less fragile."
+        },
+        "recent_move": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 5000.0,
+          "explanation": "Some recent movement is useful; dead markets are hard to trade."
+        },
+        "volatility": {
+          "score": 15.0,
+          "max_score": 15.0,
+          "value": 491.6,
+          "explanation": "Intraday volatility can create signals, up to a capped score."
+        },
+        "quote_quality": {
+          "score": 6.7,
+          "max_score": 10.0,
+          "value": 162.6,
+          "explanation": "Tighter spread is better when quote data is available."
+        },
+        "price_zone": {
+          "score": 0.6,
+          "max_score": 5.0,
+          "value": 0.0615,
+          "explanation": "Prices away from 0/1 are often more tradable than near-certain outcomes."
+        },
+        "movement_consistency": {
+          "score": 5.0,
+          "max_score": 5.0,
+          "value": 0.427,
+          "explanation": "A bit of back-and-forth suggests the market is actually moving, not frozen."
+        }
+      },
+      "eligibility_reason": "Current price outside configured range",
+      "eligible_now": false,
+      "heuristic_family": "sports_outright",
+      "current_family": "sports_outright",
+      "current_classifier_decision": "allow",
+      "current_classifier_reason": "Heuristic family: sports outright / repricing-friendly market | No external classifier configured",
+      "tags": []
+    },
+    {
+      "condition_id": "0xfdc1041ba84bfd8f741eee0bdafce8b1887626c83afd017d18ee9b1f77008b9f",
+      "token_id": "77381084121703585434442737895792916741546405992903866299069398776973629407962",
+      "slug": "will-the-utah-mammoth-win-the-2026-nhl-stanley-cup",
+      "question": "Will the Utah Mammoth win the 2026 NHL Stanley Cup?",
+      "description": "This market will resolve to \u201cYes\u201d if the Utah Mammoth win the 2026 NHL Stanley Cup. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2026 NHL Stanley Cup based off the rules of the NHL.\n\nThe resolution source for this market will be information from the NHL.\n",
+      "category": null,
+      "subcategory": null,
+      "end_date_iso": "2026-06-30T00:00:00Z",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_prices": [
+        "0.0275",
+        "0.9725"
+      ],
+      "yes_outcome": "Yes",
+      "yes_price": 0.0275,
+      "liquidity": 156070.01342,
+      "best_bid": 0.027,
+      "best_ask": 0.028,
+      "spread_bps": 363.6,
+      "history_points": 699,
+      "abs_return_bps_24h": 1702.1,
+      "realized_volatility_bps": 475.5,
+      "movement_consistency": 0.277,
+      "quality_score": 87.0,
+      "quality_tier": "A",
+      "score_breakdown": {
+        "liquidity": {
+          "score": 25.0,
+          "max_score": 25.0,
+          "value": 156070.01,
+          "explanation": "More liquidity usually means easier entry/exit and less slippage."
+        },
+        "history": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 699,
+          "explanation": "Longer history makes the strategy test less fragile."
+        },
+        "recent_move": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 1702.1,
+          "explanation": "Some recent movement is useful; dead markets are hard to trade."
+        },
+        "volatility": {
+          "score": 15.0,
+          "max_score": 15.0,
+          "value": 475.5,
+          "explanation": "Intraday volatility can create signals, up to a capped score."
+        },
+        "quote_quality": {
+          "score": 2.7,
+          "max_score": 10.0,
+          "value": 363.6,
+          "explanation": "Tighter spread is better when quote data is available."
+        },
+        "price_zone": {
+          "score": 0.3,
+          "max_score": 5.0,
+          "value": 0.0275,
+          "explanation": "Prices away from 0/1 are often more tradable than near-certain outcomes."
+        },
+        "movement_consistency": {
+          "score": 4.0,
+          "max_score": 5.0,
+          "value": 0.277,
+          "explanation": "A bit of back-and-forth suggests the market is actually moving, not frozen."
+        }
+      },
+      "eligibility_reason": "Current price outside configured range",
+      "eligible_now": false,
+      "heuristic_family": "sports_outright",
+      "current_family": "sports_outright",
+      "current_classifier_decision": "allow",
+      "current_classifier_reason": "Heuristic family: sports outright / repricing-friendly market | No external classifier configured",
+      "tags": []
+    },
+    {
+      "condition_id": "0x713641f745d71f6ec61f906237ffca3c8583f251e49384429a63ceb0ccdb2d37",
+      "token_id": "20257190540739490630509657713144742134547949967093643458458133445357169845406",
+      "slug": "will-the-new-york-knicks-win-the-2026-nba-finals",
+      "question": "Will the New York Knicks win the 2026 NBA Finals?",
+      "description": "This market will resolve to \u201cYes\u201d if the New York Knicks win the 2026 NBA Finals. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2026 NBA Finals based off the rules of the NBA.\n\nThe resolution source for this market will be information from the NBA.",
+      "category": null,
+      "subcategory": null,
+      "end_date_iso": "2026-07-01T00:00:00Z",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_prices": [
+        "0.0415",
+        "0.9585"
+      ],
+      "yes_outcome": "Yes",
+      "yes_price": 0.0415,
+      "liquidity": 377838.62791,
+      "best_bid": 0.041,
+      "best_ask": 0.042,
+      "spread_bps": 241.0,
+      "history_points": 606,
+      "abs_return_bps_24h": 459.8,
+      "realized_volatility_bps": 175.9,
+      "movement_consistency": 0.329,
+      "quality_score": 85.9,
+      "quality_tier": "A",
+      "score_breakdown": {
+        "liquidity": {
+          "score": 25.0,
+          "max_score": 25.0,
+          "value": 377838.63,
+          "explanation": "More liquidity usually means easier entry/exit and less slippage."
+        },
+        "history": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 606,
+          "explanation": "Longer history makes the strategy test less fragile."
+        },
+        "recent_move": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 459.8,
+          "explanation": "Some recent movement is useful; dead markets are hard to trade."
+        },
+        "volatility": {
+          "score": 10.6,
+          "max_score": 15.0,
+          "value": 175.9,
+          "explanation": "Intraday volatility can create signals, up to a capped score."
+        },
+        "quote_quality": {
+          "score": 5.2,
+          "max_score": 10.0,
+          "value": 241.0,
+          "explanation": "Tighter spread is better when quote data is available."
+        },
+        "price_zone": {
+          "score": 0.4,
+          "max_score": 5.0,
+          "value": 0.0415,
+          "explanation": "Prices away from 0/1 are often more tradable than near-certain outcomes."
+        },
+        "movement_consistency": {
+          "score": 4.7,
+          "max_score": 5.0,
+          "value": 0.329,
+          "explanation": "A bit of back-and-forth suggests the market is actually moving, not frozen."
+        }
+      },
+      "eligibility_reason": "Current price outside configured range",
+      "eligible_now": false,
+      "heuristic_family": "sports_outright",
+      "current_family": "sports_outright",
+      "current_classifier_decision": "allow",
+      "current_classifier_reason": "Heuristic family: sports outright / repricing-friendly market | No external classifier configured",
+      "tags": []
+    },
+    {
+      "condition_id": "0x9e54856d758cd7de25b75c97273a38d711642f16eacad57e61982028f2791206",
+      "token_id": "8851645587670338204652278122922654341568030658294043049798551516787478126093",
+      "slug": "will-the-pittsburgh-penguins-win-the-2026-nhl-stanley-cup",
+      "question": "Will the Pittsburgh Penguins win the 2026 NHL Stanley Cup?",
+      "description": "This market will resolve to \u201cYes\u201d if the Pittsburgh Penguins win the 2026 NHL Stanley Cup. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2026 NHL Stanley Cup based off the rules of the NHL.\n\nThe resolution source for this market will be information from the NHL.\n",
+      "category": null,
+      "subcategory": null,
+      "end_date_iso": "2026-06-30T00:00:00Z",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_prices": [
+        "0.043",
+        "0.957"
+      ],
+      "yes_outcome": "Yes",
+      "yes_price": 0.043,
+      "liquidity": 113837.99322,
+      "best_bid": 0.042,
+      "best_ask": 0.044,
+      "spread_bps": 465.1,
+      "history_points": 608,
+      "abs_return_bps_24h": 2686.6,
+      "realized_volatility_bps": 676.7,
+      "movement_consistency": 0.318,
+      "quality_score": 85.6,
+      "quality_tier": "A",
+      "score_breakdown": {
+        "liquidity": {
+          "score": 25.0,
+          "max_score": 25.0,
+          "value": 113837.99,
+          "explanation": "More liquidity usually means easier entry/exit and less slippage."
+        },
+        "history": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 608,
+          "explanation": "Longer history makes the strategy test less fragile."
+        },
+        "recent_move": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 2686.6,
+          "explanation": "Some recent movement is useful; dead markets are hard to trade."
+        },
+        "volatility": {
+          "score": 15.0,
+          "max_score": 15.0,
+          "value": 676.7,
+          "explanation": "Intraday volatility can create signals, up to a capped score."
+        },
+        "quote_quality": {
+          "score": 0.7,
+          "max_score": 10.0,
+          "value": 465.1,
+          "explanation": "Tighter spread is better when quote data is available."
+        },
+        "price_zone": {
+          "score": 0.4,
+          "max_score": 5.0,
+          "value": 0.043,
+          "explanation": "Prices away from 0/1 are often more tradable than near-certain outcomes."
+        },
+        "movement_consistency": {
+          "score": 4.5,
+          "max_score": 5.0,
+          "value": 0.318,
+          "explanation": "A bit of back-and-forth suggests the market is actually moving, not frozen."
+        }
+      },
+      "eligibility_reason": "Current price outside configured range",
+      "eligible_now": false,
+      "heuristic_family": "sports_outright",
+      "current_family": "sports_outright",
+      "current_classifier_decision": "allow",
+      "current_classifier_reason": "Heuristic family: sports outright / repricing-friendly market | No external classifier configured",
+      "tags": []
+    },
+    {
+      "condition_id": "0x0d082a85f48a5226b1205acdb6e95ead2fe373acabcf6c471f5895f86f42a276",
+      "token_id": "52393600221905688380980180540161090876971894580569515967716227210336633318551",
+      "slug": "will-the-minnesota-wild-win-the-2026-nhl-stanley-cup",
+      "question": "Will the Minnesota Wild win the 2026 NHL Stanley Cup?",
+      "description": "This market will resolve to \u201cYes\u201d if the Minnesota Wild win the 2026 NHL Stanley Cup. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2026 NHL Stanley Cup based off the rules of the NHL.\n\nThe resolution source for this market will be information from the NHL.\n",
+      "category": null,
+      "subcategory": null,
+      "end_date_iso": "2026-06-30T00:00:00Z",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_prices": [
+        "0.0465",
+        "0.9535"
+      ],
+      "yes_outcome": "Yes",
+      "yes_price": 0.0465,
+      "liquidity": 118791.74579,
+      "best_bid": 0.044,
+      "best_ask": 0.049,
+      "spread_bps": 1075.3,
+      "history_points": 698,
+      "abs_return_bps_24h": 970.9,
+      "realized_volatility_bps": 506.2,
+      "movement_consistency": 0.459,
+      "quality_score": 85.5,
+      "quality_tier": "A",
+      "score_breakdown": {
+        "liquidity": {
+          "score": 25.0,
+          "max_score": 25.0,
+          "value": 118791.75,
+          "explanation": "More liquidity usually means easier entry/exit and less slippage."
+        },
+        "history": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 698,
+          "explanation": "Longer history makes the strategy test less fragile."
+        },
+        "recent_move": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 970.9,
+          "explanation": "Some recent movement is useful; dead markets are hard to trade."
+        },
+        "volatility": {
+          "score": 15.0,
+          "max_score": 15.0,
+          "value": 506.2,
+          "explanation": "Intraday volatility can create signals, up to a capped score."
+        },
+        "quote_quality": {
+          "score": 0.0,
+          "max_score": 10.0,
+          "value": 1075.3,
+          "explanation": "Tighter spread is better when quote data is available."
+        },
+        "price_zone": {
+          "score": 0.5,
+          "max_score": 5.0,
+          "value": 0.0465,
+          "explanation": "Prices away from 0/1 are often more tradable than near-certain outcomes."
+        },
+        "movement_consistency": {
+          "score": 5.0,
+          "max_score": 5.0,
+          "value": 0.459,
+          "explanation": "A bit of back-and-forth suggests the market is actually moving, not frozen."
+        }
+      },
+      "eligibility_reason": "Current price outside configured range",
+      "eligible_now": false,
+      "heuristic_family": "sports_outright",
+      "current_family": "sports_outright",
+      "current_classifier_decision": "allow",
+      "current_classifier_reason": "Heuristic family: sports outright / repricing-friendly market | No external classifier configured",
+      "tags": []
+    },
+    {
+      "condition_id": "0xbefea6668e49e328db4d5c792bc15cea309bbc06101dfd6ced1e0556ad3ea301",
+      "token_id": "86989765000750155883097827320609652927052275812009422751609183177638176999827",
+      "slug": "will-the-buffalo-sabres-win-the-2026-nhl-stanley-cup",
+      "question": "Will the Buffalo Sabres win the 2026 NHL Stanley Cup?",
+      "description": "This market will resolve to \u201cYes\u201d if the Buffalo Sabres win the 2026 NHL Stanley Cup. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2026 NHL Stanley Cup based off the rules of the NHL.\n\nThe resolution source for this market will be information from the NHL.\n",
+      "category": null,
+      "subcategory": null,
+      "end_date_iso": "2026-06-30T00:00:00Z",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_prices": [
+        "0.046",
+        "0.954"
+      ],
+      "yes_outcome": "Yes",
+      "yes_price": 0.046,
+      "liquidity": 116937.70858,
+      "best_bid": 0.044,
+      "best_ask": 0.048,
+      "spread_bps": 869.6,
+      "history_points": 661,
+      "abs_return_bps_24h": 1068.0,
+      "realized_volatility_bps": 559.4,
+      "movement_consistency": 0.411,
+      "quality_score": 85.5,
+      "quality_tier": "A",
+      "score_breakdown": {
+        "liquidity": {
+          "score": 25.0,
+          "max_score": 25.0,
+          "value": 116937.71,
+          "explanation": "More liquidity usually means easier entry/exit and less slippage."
+        },
+        "history": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 661,
+          "explanation": "Longer history makes the strategy test less fragile."
+        },
+        "recent_move": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 1068.0,
+          "explanation": "Some recent movement is useful; dead markets are hard to trade."
+        },
+        "volatility": {
+          "score": 15.0,
+          "max_score": 15.0,
+          "value": 559.4,
+          "explanation": "Intraday volatility can create signals, up to a capped score."
+        },
+        "quote_quality": {
+          "score": 0.0,
+          "max_score": 10.0,
+          "value": 869.6,
+          "explanation": "Tighter spread is better when quote data is available."
+        },
+        "price_zone": {
+          "score": 0.5,
+          "max_score": 5.0,
+          "value": 0.046,
+          "explanation": "Prices away from 0/1 are often more tradable than near-certain outcomes."
+        },
+        "movement_consistency": {
+          "score": 5.0,
+          "max_score": 5.0,
+          "value": 0.411,
+          "explanation": "A bit of back-and-forth suggests the market is actually moving, not frozen."
+        }
+      },
+      "eligibility_reason": "Current price outside configured range",
+      "eligible_now": false,
+      "heuristic_family": "sports_outright",
+      "current_family": "sports_outright",
+      "current_classifier_decision": "allow",
+      "current_classifier_reason": "Heuristic family: sports outright / repricing-friendly market | No external classifier configured",
+      "tags": []
+    },
+    {
+      "condition_id": "0x52847ca1413b76a5570b97c0c432e38dbe61b0140f9d45e912604591b08f6fca",
+      "token_id": "114248353339288476395516704859280406139740194553592209059241667781908210476009",
+      "slug": "will-the-montreal-canadiens-win-the-2026-nhl-stanley-cup",
+      "question": "Will the Montreal Canadiens win the 2026 NHL Stanley Cup?",
+      "description": "This market will resolve to \u201cYes\u201d if the Montreal Canadiens win the 2026 NHL Stanley Cup. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2026 NHL Stanley Cup based off the rules of the NHL.\n\nThe resolution source for this market will be information from the NHL.\n",
+      "category": null,
+      "subcategory": null,
+      "end_date_iso": "2026-06-30T00:00:00Z",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_prices": [
+        "0.042",
+        "0.958"
+      ],
+      "yes_outcome": "Yes",
+      "yes_price": 0.042,
+      "liquidity": 133090.06555,
+      "best_bid": 0.04,
+      "best_ask": 0.044,
+      "spread_bps": 952.4,
+      "history_points": 652,
+      "abs_return_bps_24h": 1250.0,
+      "realized_volatility_bps": 700.4,
+      "movement_consistency": 0.358,
+      "quality_score": 85.4,
+      "quality_tier": "A",
+      "score_breakdown": {
+        "liquidity": {
+          "score": 25.0,
+          "max_score": 25.0,
+          "value": 133090.07,
+          "explanation": "More liquidity usually means easier entry/exit and less slippage."
+        },
+        "history": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 652,
+          "explanation": "Longer history makes the strategy test less fragile."
+        },
+        "recent_move": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 1250.0,
+          "explanation": "Some recent movement is useful; dead markets are hard to trade."
+        },
+        "volatility": {
+          "score": 15.0,
+          "max_score": 15.0,
+          "value": 700.4,
+          "explanation": "Intraday volatility can create signals, up to a capped score."
+        },
+        "quote_quality": {
+          "score": 0.0,
+          "max_score": 10.0,
+          "value": 952.4,
+          "explanation": "Tighter spread is better when quote data is available."
+        },
+        "price_zone": {
+          "score": 0.4,
+          "max_score": 5.0,
+          "value": 0.042,
+          "explanation": "Prices away from 0/1 are often more tradable than near-certain outcomes."
+        },
+        "movement_consistency": {
+          "score": 5.0,
+          "max_score": 5.0,
+          "value": 0.358,
+          "explanation": "A bit of back-and-forth suggests the market is actually moving, not frozen."
+        }
+      },
+      "eligibility_reason": "Current price outside configured range",
+      "eligible_now": false,
+      "heuristic_family": "sports_outright",
+      "current_family": "sports_outright",
+      "current_classifier_decision": "allow",
+      "current_classifier_reason": "Heuristic family: sports outright / repricing-friendly market | No external classifier configured",
+      "tags": []
+    },
+    {
+      "condition_id": "0xceb5e0c99a9195da148d79693f3c6819d44d4d3d7e5be77931e174a3eebe4a85",
+      "token_id": "1755198236548058730692725634969806667163093356894670716555961840777456036471",
+      "slug": "will-the-anaheim-ducks-win-the-2026-nhl-stanley-cup",
+      "question": "Will the Anaheim Ducks win the 2026 NHL Stanley Cup?",
+      "description": "This market will resolve to \u201cYes\u201d if the Anaheim Ducks win the 2026 NHL Stanley Cup. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2026 NHL Stanley Cup based off the rules of the NHL.\n\nThe resolution source for this market will be information from the NHL.\n",
+      "category": null,
+      "subcategory": null,
+      "end_date_iso": "2026-06-30T00:00:00Z",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_prices": [
+        "0.0205",
+        "0.9795"
+      ],
+      "yes_outcome": "Yes",
+      "yes_price": 0.0205,
+      "liquidity": 175250.76312,
+      "best_bid": 0.019,
+      "best_ask": 0.022,
+      "spread_bps": 1463.4,
+      "history_points": 668,
+      "abs_return_bps_24h": 1087.0,
+      "realized_volatility_bps": 554.2,
+      "movement_consistency": 0.384,
+      "quality_score": 85.2,
+      "quality_tier": "A",
+      "score_breakdown": {
+        "liquidity": {
+          "score": 25.0,
+          "max_score": 25.0,
+          "value": 175250.76,
+          "explanation": "More liquidity usually means easier entry/exit and less slippage."
+        },
+        "history": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 668,
+          "explanation": "Longer history makes the strategy test less fragile."
+        },
+        "recent_move": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 1087.0,
+          "explanation": "Some recent movement is useful; dead markets are hard to trade."
+        },
+        "volatility": {
+          "score": 15.0,
+          "max_score": 15.0,
+          "value": 554.2,
+          "explanation": "Intraday volatility can create signals, up to a capped score."
+        },
+        "quote_quality": {
+          "score": 0.0,
+          "max_score": 10.0,
+          "value": 1463.4,
+          "explanation": "Tighter spread is better when quote data is available."
+        },
+        "price_zone": {
+          "score": 0.2,
+          "max_score": 5.0,
+          "value": 0.0205,
+          "explanation": "Prices away from 0/1 are often more tradable than near-certain outcomes."
+        },
+        "movement_consistency": {
+          "score": 5.0,
+          "max_score": 5.0,
+          "value": 0.384,
+          "explanation": "A bit of back-and-forth suggests the market is actually moving, not frozen."
+        }
+      },
+      "eligibility_reason": "Current price outside configured range",
+      "eligible_now": false,
+      "heuristic_family": "sports_outright",
+      "current_family": "sports_outright",
+      "current_classifier_decision": "allow",
+      "current_classifier_reason": "Heuristic family: sports outright / repricing-friendly market | No external classifier configured",
+      "tags": []
+    },
+    {
+      "condition_id": "0x796e791e7058571e460278814fc7a3183752285338f1400087b98bef3c447908",
+      "token_id": "86297520870744792204751483474339201341298076835836561764334428915355504860913",
+      "slug": "will-the-los-angeles-lakers-win-the-2026-nba-finals",
+      "question": "Will the Los Angeles Lakers win the 2026 NBA Finals?",
+      "description": "This market will resolve to \u201cYes\u201d if the Los Angeles Lakers win the 2026 NBA Finals. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2026 NBA Finals based off the rules of the NBA.\n\nThe resolution source for this market will be information from the NBA.",
+      "category": null,
+      "subcategory": null,
+      "end_date_iso": "2026-07-01T00:00:00Z",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_prices": [
+        "0.0085",
+        "0.9915"
+      ],
+      "yes_outcome": "Yes",
+      "yes_price": 0.0085,
+      "liquidity": 396129.64463,
+      "best_bid": 0.008,
+      "best_ask": 0.009,
+      "spread_bps": 1176.5,
+      "history_points": 710,
+      "abs_return_bps_24h": 3076.9,
+      "realized_volatility_bps": 441.8,
+      "movement_consistency": 0.358,
+      "quality_score": 85.1,
+      "quality_tier": "A",
+      "score_breakdown": {
+        "liquidity": {
+          "score": 25.0,
+          "max_score": 25.0,
+          "value": 396129.64,
+          "explanation": "More liquidity usually means easier entry/exit and less slippage."
+        },
+        "history": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 710,
+          "explanation": "Longer history makes the strategy test less fragile."
+        },
+        "recent_move": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 3076.9,
+          "explanation": "Some recent movement is useful; dead markets are hard to trade."
+        },
+        "volatility": {
+          "score": 15.0,
+          "max_score": 15.0,
+          "value": 441.8,
+          "explanation": "Intraday volatility can create signals, up to a capped score."
+        },
+        "quote_quality": {
+          "score": 0.0,
+          "max_score": 10.0,
+          "value": 1176.5,
+          "explanation": "Tighter spread is better when quote data is available."
+        },
+        "price_zone": {
+          "score": 0.1,
+          "max_score": 5.0,
+          "value": 0.0085,
+          "explanation": "Prices away from 0/1 are often more tradable than near-certain outcomes."
+        },
+        "movement_consistency": {
+          "score": 5.0,
+          "max_score": 5.0,
+          "value": 0.358,
+          "explanation": "A bit of back-and-forth suggests the market is actually moving, not frozen."
+        }
+      },
+      "eligibility_reason": "Current price outside configured range",
+      "eligible_now": false,
+      "heuristic_family": "sports_outright",
+      "current_family": "sports_outright",
+      "current_classifier_decision": "allow",
+      "current_classifier_reason": "Heuristic family: sports outright / repricing-friendly market | No external classifier configured",
+      "tags": []
+    },
+    {
+      "condition_id": "0x3b6cdd4f72cef7f29ff7e054444095564dc582266b7230be3c2b5f194d89f37d",
+      "token_id": "75497690502531380056390405612014900797768656980504946546336044296003833597355",
+      "slug": "will-the-los-angeles-kings-win-the-2026-nhl-stanley-cup",
+      "question": "Will the Los Angeles Kings win the 2026 NHL Stanley Cup?",
+      "description": "This market will resolve to \u201cYes\u201d if the Los Angeles Kings win the 2026 NHL Stanley Cup. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2026 NHL Stanley Cup based off the rules of the NHL.\n\nThe resolution source for this market will be information from the NHL.\n",
+      "category": null,
+      "subcategory": null,
+      "end_date_iso": "2026-06-30T00:00:00Z",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_prices": [
+        "0.01",
+        "0.99"
+      ],
+      "yes_outcome": "Yes",
+      "yes_price": 0.01,
+      "liquidity": 144841.8764,
+      "best_bid": 0.009,
+      "best_ask": 0.011,
+      "spread_bps": 2000.0,
+      "history_points": 646,
+      "abs_return_bps_24h": 1250.0,
+      "realized_volatility_bps": 1192.2,
+      "movement_consistency": 0.353,
+      "quality_score": 85.1,
+      "quality_tier": "A",
+      "score_breakdown": {
+        "liquidity": {
+          "score": 25.0,
+          "max_score": 25.0,
+          "value": 144841.88,
+          "explanation": "More liquidity usually means easier entry/exit and less slippage."
+        },
+        "history": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 646,
+          "explanation": "Longer history makes the strategy test less fragile."
+        },
+        "recent_move": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 1250.0,
+          "explanation": "Some recent movement is useful; dead markets are hard to trade."
+        },
+        "volatility": {
+          "score": 15.0,
+          "max_score": 15.0,
+          "value": 1192.2,
+          "explanation": "Intraday volatility can create signals, up to a capped score."
+        },
+        "quote_quality": {
+          "score": 0.0,
+          "max_score": 10.0,
+          "value": 2000.0,
+          "explanation": "Tighter spread is better when quote data is available."
+        },
+        "price_zone": {
+          "score": 0.1,
+          "max_score": 5.0,
+          "value": 0.01,
+          "explanation": "Prices away from 0/1 are often more tradable than near-certain outcomes."
+        },
+        "movement_consistency": {
+          "score": 5.0,
+          "max_score": 5.0,
+          "value": 0.353,
+          "explanation": "A bit of back-and-forth suggests the market is actually moving, not frozen."
+        }
+      },
+      "eligibility_reason": "Current price outside configured range",
+      "eligible_now": false,
+      "heuristic_family": "sports_outright",
+      "current_family": "sports_outright",
+      "current_classifier_decision": "allow",
+      "current_classifier_reason": "Heuristic family: sports outright / repricing-friendly market | No external classifier configured",
+      "tags": []
+    },
+    {
+      "condition_id": "0x4c317ee82d81e0a49aa9862a8c2d876fee322064acf02cd8e1346fbed36083e8",
+      "token_id": "6772099324721707224715070437205709623671146843087680984461675764599992554029",
+      "slug": "will-the-columbus-blue-jackets-win-the-2026-nhl-stanley-cup",
+      "question": "Will the Columbus Blue Jackets win the 2026 NHL Stanley Cup?",
+      "description": "This market will resolve to \u201cYes\u201d if the Columbus Blue Jackets win the 2026 NHL Stanley Cup. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2026 NHL Stanley Cup based off the rules of the NHL.\n\nThe resolution source for this market will be information from the NHL.\n",
+      "category": null,
+      "subcategory": null,
+      "end_date_iso": "2026-06-30T00:00:00Z",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_prices": [
+        "0.0095",
+        "0.9905"
+      ],
+      "yes_outcome": "Yes",
+      "yes_price": 0.0095,
+      "liquidity": 90237.24565,
+      "best_bid": 0.009,
+      "best_ask": 0.01,
+      "spread_bps": 1052.6,
+      "history_points": 616,
+      "abs_return_bps_24h": 6595.7,
+      "realized_volatility_bps": 1407.6,
+      "movement_consistency": 0.302,
+      "quality_score": 84.4,
+      "quality_tier": "A",
+      "score_breakdown": {
+        "liquidity": {
+          "score": 25.0,
+          "max_score": 25.0,
+          "value": 90237.25,
+          "explanation": "More liquidity usually means easier entry/exit and less slippage."
+        },
+        "history": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 616,
+          "explanation": "Longer history makes the strategy test less fragile."
+        },
+        "recent_move": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 6595.7,
+          "explanation": "Some recent movement is useful; dead markets are hard to trade."
+        },
+        "volatility": {
+          "score": 15.0,
+          "max_score": 15.0,
+          "value": 1407.6,
+          "explanation": "Intraday volatility can create signals, up to a capped score."
+        },
+        "quote_quality": {
+          "score": 0.0,
+          "max_score": 10.0,
+          "value": 1052.6,
+          "explanation": "Tighter spread is better when quote data is available."
+        },
+        "price_zone": {
+          "score": 0.1,
+          "max_score": 5.0,
+          "value": 0.0095,
+          "explanation": "Prices away from 0/1 are often more tradable than near-certain outcomes."
+        },
+        "movement_consistency": {
+          "score": 4.3,
+          "max_score": 5.0,
+          "value": 0.302,
+          "explanation": "A bit of back-and-forth suggests the market is actually moving, not frozen."
+        }
+      },
+      "eligibility_reason": "Current price outside configured range",
+      "eligible_now": false,
+      "heuristic_family": "sports_outright",
+      "current_family": "sports_outright",
+      "current_classifier_decision": "allow",
+      "current_classifier_reason": "Heuristic family: sports outright / repricing-friendly market | No external classifier configured",
+      "tags": []
+    },
+    {
+      "condition_id": "0x649ad05a2868343271fe82ea692031d567ca1af652e3529788933157e94aa088",
+      "token_id": "5771676627182954113677164857547228277089396639521594262964034606220001939923",
+      "slug": "will-the-minnesota-timberwolves-win-the-2026-nba-finals",
+      "question": "Will the Minnesota Timberwolves win the 2026 NBA Finals?",
+      "description": "This market will resolve to \u201cYes\u201d if the Minnesota Timberwolves win the 2026 NBA Finals. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2026 NBA Finals based off the rules of the NBA.\n\nThe resolution source for this market will be information from the NBA.",
+      "category": null,
+      "subcategory": null,
+      "end_date_iso": "2026-07-01T00:00:00Z",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_prices": [
+        "0.0225",
+        "0.9775"
+      ],
+      "yes_outcome": "Yes",
+      "yes_price": 0.0225,
+      "liquidity": 264915.10346,
+      "best_bid": 0.022,
+      "best_ask": 0.023,
+      "spread_bps": 444.4,
+      "history_points": 595,
+      "abs_return_bps_24h": 6666.7,
+      "realized_volatility_bps": 262.5,
+      "movement_consistency": 0.199,
+      "quality_score": 84.1,
+      "quality_tier": "A",
+      "score_breakdown": {
+        "liquidity": {
+          "score": 25.0,
+          "max_score": 25.0,
+          "value": 264915.1,
+          "explanation": "More liquidity usually means easier entry/exit and less slippage."
+        },
+        "history": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 595,
+          "explanation": "Longer history makes the strategy test less fragile."
+        },
+        "recent_move": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 6666.7,
+          "explanation": "Some recent movement is useful; dead markets are hard to trade."
+        },
+        "volatility": {
+          "score": 15.0,
+          "max_score": 15.0,
+          "value": 262.5,
+          "explanation": "Intraday volatility can create signals, up to a capped score."
+        },
+        "quote_quality": {
+          "score": 1.1,
+          "max_score": 10.0,
+          "value": 444.4,
+          "explanation": "Tighter spread is better when quote data is available."
+        },
+        "price_zone": {
+          "score": 0.2,
+          "max_score": 5.0,
+          "value": 0.0225,
+          "explanation": "Prices away from 0/1 are often more tradable than near-certain outcomes."
+        },
+        "movement_consistency": {
+          "score": 2.8,
+          "max_score": 5.0,
+          "value": 0.199,
+          "explanation": "A bit of back-and-forth suggests the market is actually moving, not frozen."
+        }
+      },
+      "eligibility_reason": "Current price outside configured range",
+      "eligible_now": false,
+      "heuristic_family": "sports_outright",
+      "current_family": "sports_outright",
+      "current_classifier_decision": "allow",
+      "current_classifier_reason": "Heuristic family: sports outright / repricing-friendly market | No external classifier configured",
+      "tags": []
+    },
+    {
+      "condition_id": "0x82d8c535c037a779ffbd2eb94704b093a5341350b49ca68128fc1c16a0901e4a",
+      "token_id": "96156230578747105661476819749931380321917772151891667564189808442987244872145",
+      "slug": "will-the-boston-bruins-win-the-2026-nhl-stanley-cup",
+      "question": "Will the Boston Bruins win the 2026 NHL Stanley Cup?",
+      "description": "This market will resolve to \u201cYes\u201d if the Boston Bruins win the 2026 NHL Stanley Cup. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2026 NHL Stanley Cup based off the rules of the NHL.\n\nThe resolution source for this market will be information from the NHL.\n",
+      "category": null,
+      "subcategory": null,
+      "end_date_iso": "2026-06-30T00:00:00Z",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_prices": [
+        "0.0185",
+        "0.9815"
+      ],
+      "yes_outcome": "Yes",
+      "yes_price": 0.0185,
+      "liquidity": 154723.65077,
+      "best_bid": 0.017,
+      "best_ask": 0.02,
+      "spread_bps": 1621.6,
+      "history_points": 683,
+      "abs_return_bps_24h": 1212.1,
+      "realized_volatility_bps": 588.0,
+      "movement_consistency": 0.27,
+      "quality_score": 84.1,
+      "quality_tier": "A",
+      "score_breakdown": {
+        "liquidity": {
+          "score": 25.0,
+          "max_score": 25.0,
+          "value": 154723.65,
+          "explanation": "More liquidity usually means easier entry/exit and less slippage."
+        },
+        "history": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 683,
+          "explanation": "Longer history makes the strategy test less fragile."
+        },
+        "recent_move": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 1212.1,
+          "explanation": "Some recent movement is useful; dead markets are hard to trade."
+        },
+        "volatility": {
+          "score": 15.0,
+          "max_score": 15.0,
+          "value": 588.0,
+          "explanation": "Intraday volatility can create signals, up to a capped score."
+        },
+        "quote_quality": {
+          "score": 0.0,
+          "max_score": 10.0,
+          "value": 1621.6,
+          "explanation": "Tighter spread is better when quote data is available."
+        },
+        "price_zone": {
+          "score": 0.2,
+          "max_score": 5.0,
+          "value": 0.0185,
+          "explanation": "Prices away from 0/1 are often more tradable than near-certain outcomes."
+        },
+        "movement_consistency": {
+          "score": 3.9,
+          "max_score": 5.0,
+          "value": 0.27,
+          "explanation": "A bit of back-and-forth suggests the market is actually moving, not frozen."
+        }
+      },
+      "eligibility_reason": "Current price outside configured range",
+      "eligible_now": false,
+      "heuristic_family": "sports_outright",
+      "current_family": "sports_outright",
+      "current_classifier_decision": "allow",
+      "current_classifier_reason": "Heuristic family: sports outright / repricing-friendly market | No external classifier configured",
+      "tags": []
+    },
+    {
+      "condition_id": "0x139b893a7ae21eaec72e887ba88910831944b4662512428c122c4ad0a5c125ac",
+      "token_id": "52122163926965666340769912737036425235018536048643947600257470162508745804215",
+      "slug": "will-the-ottawa-senators-win-the-2026-nhl-stanley-cup",
+      "question": "Will the Ottawa Senators win the 2026 NHL Stanley Cup?",
+      "description": "This market will resolve to \u201cYes\u201d if the Ottawa Senators win the 2026 NHL Stanley Cup. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2026 NHL Stanley Cup based off the rules of the NHL.\n\nThe resolution source for this market will be information from the NHL.\n",
+      "category": null,
+      "subcategory": null,
+      "end_date_iso": "2026-06-30T00:00:00Z",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_prices": [
+        "0.0275",
+        "0.9725"
+      ],
+      "yes_outcome": "Yes",
+      "yes_price": 0.0275,
+      "liquidity": 94146.76794,
+      "best_bid": 0.026,
+      "best_ask": 0.029,
+      "spread_bps": 1090.9,
+      "history_points": 656,
+      "abs_return_bps_24h": 983.6,
+      "realized_volatility_bps": 829.1,
+      "movement_consistency": 0.263,
+      "quality_score": 84.1,
+      "quality_tier": "A",
+      "score_breakdown": {
+        "liquidity": {
+          "score": 25.0,
+          "max_score": 25.0,
+          "value": 94146.77,
+          "explanation": "More liquidity usually means easier entry/exit and less slippage."
+        },
+        "history": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 656,
+          "explanation": "Longer history makes the strategy test less fragile."
+        },
+        "recent_move": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 983.6,
+          "explanation": "Some recent movement is useful; dead markets are hard to trade."
+        },
+        "volatility": {
+          "score": 15.0,
+          "max_score": 15.0,
+          "value": 829.1,
+          "explanation": "Intraday volatility can create signals, up to a capped score."
+        },
+        "quote_quality": {
+          "score": 0.0,
+          "max_score": 10.0,
+          "value": 1090.9,
+          "explanation": "Tighter spread is better when quote data is available."
+        },
+        "price_zone": {
+          "score": 0.3,
+          "max_score": 5.0,
+          "value": 0.0275,
+          "explanation": "Prices away from 0/1 are often more tradable than near-certain outcomes."
+        },
+        "movement_consistency": {
+          "score": 3.8,
+          "max_score": 5.0,
+          "value": 0.263,
+          "explanation": "A bit of back-and-forth suggests the market is actually moving, not frozen."
+        }
+      },
+      "eligibility_reason": "Current price outside configured range",
+      "eligible_now": false,
+      "heuristic_family": "sports_outright",
+      "current_family": "sports_outright",
+      "current_classifier_decision": "allow",
+      "current_classifier_reason": "Heuristic family: sports outright / repricing-friendly market | No external classifier configured",
+      "tags": []
+    },
+    {
+      "condition_id": "0x99d0ce2ab858154ba1ec511863dae5a9fe41731457022cf2ef8b1024cf97405a",
+      "token_id": "100198467481990754389879542132900146141512359428605143337944632886324000145723",
+      "slug": "will-the-new-york-islanders-win-the-2026-nhl-stanley-cup",
+      "question": "Will the New York Islanders win the 2026 NHL Stanley Cup?",
+      "description": "This market will resolve to \u201cYes\u201d if the New York Islanders win the 2026 NHL Stanley Cup. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2026 NHL Stanley Cup based off the rules of the NHL.\n\nThe resolution source for this market will be information from the NHL.\n",
+      "category": null,
+      "subcategory": null,
+      "end_date_iso": "2026-06-30T00:00:00Z",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_prices": [
+        "0.007",
+        "0.993"
+      ],
+      "yes_outcome": "Yes",
+      "yes_price": 0.007,
+      "liquidity": 123010.49326,
+      "best_bid": 0.006,
+      "best_ask": 0.008,
+      "spread_bps": 2857.1,
+      "history_points": 709,
+      "abs_return_bps_24h": 1250.0,
+      "realized_volatility_bps": 534.8,
+      "movement_consistency": 0.182,
+      "quality_score": 82.7,
+      "quality_tier": "A",
+      "score_breakdown": {
+        "liquidity": {
+          "score": 25.0,
+          "max_score": 25.0,
+          "value": 123010.49,
+          "explanation": "More liquidity usually means easier entry/exit and less slippage."
+        },
+        "history": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 709,
+          "explanation": "Longer history makes the strategy test less fragile."
+        },
+        "recent_move": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 1250.0,
+          "explanation": "Some recent movement is useful; dead markets are hard to trade."
+        },
+        "volatility": {
+          "score": 15.0,
+          "max_score": 15.0,
+          "value": 534.8,
+          "explanation": "Intraday volatility can create signals, up to a capped score."
+        },
+        "quote_quality": {
+          "score": 0.0,
+          "max_score": 10.0,
+          "value": 2857.1,
+          "explanation": "Tighter spread is better when quote data is available."
+        },
+        "price_zone": {
+          "score": 0.1,
+          "max_score": 5.0,
+          "value": 0.007,
+          "explanation": "Prices away from 0/1 are often more tradable than near-certain outcomes."
+        },
+        "movement_consistency": {
+          "score": 2.6,
+          "max_score": 5.0,
+          "value": 0.182,
+          "explanation": "A bit of back-and-forth suggests the market is actually moving, not frozen."
+        }
+      },
+      "eligibility_reason": "Current price outside configured range",
+      "eligible_now": false,
+      "heuristic_family": "sports_outright",
+      "current_family": "sports_outright",
+      "current_classifier_decision": "allow",
+      "current_classifier_reason": "Heuristic family: sports outright / repricing-friendly market | No external classifier configured",
+      "tags": []
+    },
+    {
+      "condition_id": "0xa8b42e207814d2844997523ba83e708b5bfe19cf5d2203325e4eb3ed459a9ded",
+      "token_id": "99302435322944813052105841164428761175935099146724842887228853211763294863784",
+      "slug": "will-the-winnipeg-jets-win-the-2026-nhl-stanley-cup",
+      "question": "Will the Winnipeg Jets win the 2026 NHL Stanley Cup?",
+      "description": "This market will resolve to \u201cYes\u201d if the Winnipeg Jets win the 2026 NHL Stanley Cup. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2026 NHL Stanley Cup based off the rules of the NHL.\n\nThe resolution source for this market will be information from the NHL.\n",
+      "category": null,
+      "subcategory": null,
+      "end_date_iso": "2026-06-30T00:00:00Z",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_prices": [
+        "0.003",
+        "0.997"
+      ],
+      "yes_outcome": "Yes",
+      "yes_price": 0.003,
+      "liquidity": 123318.52742,
+      "best_bid": 0.002,
+      "best_ask": 0.004,
+      "spread_bps": 6666.7,
+      "history_points": 652,
+      "abs_return_bps_24h": 6000.0,
+      "realized_volatility_bps": 2072.3,
+      "movement_consistency": 0.151,
+      "quality_score": 82.2,
+      "quality_tier": "A",
+      "score_breakdown": {
+        "liquidity": {
+          "score": 25.0,
+          "max_score": 25.0,
+          "value": 123318.53,
+          "explanation": "More liquidity usually means easier entry/exit and less slippage."
+        },
+        "history": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 652,
+          "explanation": "Longer history makes the strategy test less fragile."
+        },
+        "recent_move": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 6000.0,
+          "explanation": "Some recent movement is useful; dead markets are hard to trade."
+        },
+        "volatility": {
+          "score": 15.0,
+          "max_score": 15.0,
+          "value": 2072.3,
+          "explanation": "Intraday volatility can create signals, up to a capped score."
+        },
+        "quote_quality": {
+          "score": 0.0,
+          "max_score": 10.0,
+          "value": 6666.7,
+          "explanation": "Tighter spread is better when quote data is available."
+        },
+        "price_zone": {
+          "score": 0.0,
+          "max_score": 5.0,
+          "value": 0.003,
+          "explanation": "Prices away from 0/1 are often more tradable than near-certain outcomes."
+        },
+        "movement_consistency": {
+          "score": 2.2,
+          "max_score": 5.0,
+          "value": 0.151,
+          "explanation": "A bit of back-and-forth suggests the market is actually moving, not frozen."
+        }
+      },
+      "eligibility_reason": "Current price outside configured range",
+      "eligible_now": false,
+      "heuristic_family": "sports_outright",
+      "current_family": "sports_outright",
+      "current_classifier_decision": "allow",
+      "current_classifier_reason": "Heuristic family: sports outright / repricing-friendly market | No external classifier configured",
+      "tags": []
+    },
+    {
+      "condition_id": "0x08fa7d350c801391e7ec81d0da90f1fb05ec365f98d16d27e6d64a18d7118973",
+      "token_id": "89607539467374084618016881443767018676837500055609025995679802231807669451541",
+      "slug": "will-the-washington-capitals-win-the-2026-nhl-stanley-cup",
+      "question": "Will the Washington Capitals win the 2026 NHL Stanley Cup?",
+      "description": "This market will resolve to \u201cYes\u201d if the Washington Capitals win the 2026 NHL Stanley Cup. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2026 NHL Stanley Cup based off the rules of the NHL.\n\nThe resolution source for this market will be information from the NHL.\n",
+      "category": null,
+      "subcategory": null,
+      "end_date_iso": "2026-06-30T00:00:00Z",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_prices": [
+        "0.0015",
+        "0.9985"
+      ],
+      "yes_outcome": "Yes",
+      "yes_price": 0.0015,
+      "liquidity": 154260.72577,
+      "best_bid": 0.001,
+      "best_ask": 0.002,
+      "spread_bps": 6666.7,
+      "history_points": 732,
+      "abs_return_bps_24h": 4000.0,
+      "realized_volatility_bps": 1006.4,
+      "movement_consistency": 0.14,
+      "quality_score": 82.0,
+      "quality_tier": "A",
+      "score_breakdown": {
+        "liquidity": {
+          "score": 25.0,
+          "max_score": 25.0,
+          "value": 154260.73,
+          "explanation": "More liquidity usually means easier entry/exit and less slippage."
+        },
+        "history": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 732,
+          "explanation": "Longer history makes the strategy test less fragile."
+        },
+        "recent_move": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 4000.0,
+          "explanation": "Some recent movement is useful; dead markets are hard to trade."
+        },
+        "volatility": {
+          "score": 15.0,
+          "max_score": 15.0,
+          "value": 1006.4,
+          "explanation": "Intraday volatility can create signals, up to a capped score."
+        },
+        "quote_quality": {
+          "score": 0.0,
+          "max_score": 10.0,
+          "value": 6666.7,
+          "explanation": "Tighter spread is better when quote data is available."
+        },
+        "price_zone": {
+          "score": 0.0,
+          "max_score": 5.0,
+          "value": 0.0015,
+          "explanation": "Prices away from 0/1 are often more tradable than near-certain outcomes."
+        },
+        "movement_consistency": {
+          "score": 2.0,
+          "max_score": 5.0,
+          "value": 0.14,
+          "explanation": "A bit of back-and-forth suggests the market is actually moving, not frozen."
+        }
+      },
+      "eligibility_reason": "Current price outside configured range",
+      "eligible_now": false,
+      "heuristic_family": "sports_outright",
+      "current_family": "sports_outright",
+      "current_classifier_decision": "allow",
+      "current_classifier_reason": "Heuristic family: sports outright / repricing-friendly market | No external classifier configured",
+      "tags": []
+    },
+    {
+      "condition_id": "0x7014b40f62a559be0a0abd2bf1ca1ef16e44674b2c505bb5243c752f2e0d351f",
+      "token_id": "105820657025478857015993206354412568572835231572443865502882842764049428172501",
+      "slug": "will-the-detroit-red-wings-win-the-2026-nhl-stanley-cup",
+      "question": "Will the Detroit Red Wings win the 2026 NHL Stanley Cup?",
+      "description": "This market will resolve to \u201cYes\u201d if the Detroit Red Wings win the 2026 NHL Stanley Cup. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2026 NHL Stanley Cup based off the rules of the NHL.\n\nThe resolution source for this market will be information from the NHL.\n",
+      "category": null,
+      "subcategory": null,
+      "end_date_iso": "2026-06-30T00:00:00Z",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_prices": [
+        "0.0035",
+        "0.9965"
+      ],
+      "yes_outcome": "Yes",
+      "yes_price": 0.0035,
+      "liquidity": 140724.09688,
+      "best_bid": 0.003,
+      "best_ask": 0.004,
+      "spread_bps": 2857.1,
+      "history_points": 535,
+      "abs_return_bps_24h": 3636.4,
+      "realized_volatility_bps": 366.0,
+      "movement_consistency": 0.122,
+      "quality_score": 81.7,
+      "quality_tier": "A",
+      "score_breakdown": {
+        "liquidity": {
+          "score": 25.0,
+          "max_score": 25.0,
+          "value": 140724.1,
+          "explanation": "More liquidity usually means easier entry/exit and less slippage."
+        },
+        "history": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 535,
+          "explanation": "Longer history makes the strategy test less fragile."
+        },
+        "recent_move": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 3636.4,
+          "explanation": "Some recent movement is useful; dead markets are hard to trade."
+        },
+        "volatility": {
+          "score": 15.0,
+          "max_score": 15.0,
+          "value": 366.0,
+          "explanation": "Intraday volatility can create signals, up to a capped score."
+        },
+        "quote_quality": {
+          "score": 0.0,
+          "max_score": 10.0,
+          "value": 2857.1,
+          "explanation": "Tighter spread is better when quote data is available."
+        },
+        "price_zone": {
+          "score": 0.0,
+          "max_score": 5.0,
+          "value": 0.0035,
+          "explanation": "Prices away from 0/1 are often more tradable than near-certain outcomes."
+        },
+        "movement_consistency": {
+          "score": 1.7,
+          "max_score": 5.0,
+          "value": 0.122,
+          "explanation": "A bit of back-and-forth suggests the market is actually moving, not frozen."
+        }
+      },
+      "eligibility_reason": "Current price outside configured range",
+      "eligible_now": false,
+      "heuristic_family": "sports_outright",
+      "current_family": "sports_outright",
+      "current_classifier_decision": "allow",
+      "current_classifier_reason": "Heuristic family: sports outright / repricing-friendly market | No external classifier configured",
+      "tags": []
+    },
+    {
+      "condition_id": "0x4a67e1270a2ed86be8fc524b6114640e41b0c56303ecaa9584deacd62402650a",
+      "token_id": "26994926807159308505531352241892510362185630293975165092400997815774500370214",
+      "slug": "will-the-edmonton-oilers-win-the-2026-nhl-stanley-cup",
+      "question": "Will the Edmonton Oilers win the 2026 NHL Stanley Cup?",
+      "description": "This market will resolve to \u201cYes\u201d if the Edmonton Oilers win the 2026 NHL Stanley Cup. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2026 NHL Stanley Cup based off the rules of the NHL.\n\nThe resolution source for this market will be information from the NHL.\n",
+      "category": null,
+      "subcategory": null,
+      "end_date_iso": "2026-06-30T00:00:00Z",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_prices": [
+        "0.085",
+        "0.915"
+      ],
+      "yes_outcome": "Yes",
+      "yes_price": 0.085,
+      "liquidity": 53986.692,
+      "best_bid": 0.08,
+      "best_ask": 0.09,
+      "spread_bps": 1176.5,
+      "history_points": 659,
+      "abs_return_bps_24h": 1333.3,
+      "realized_volatility_bps": 303.6,
+      "movement_consistency": 0.056,
+      "quality_score": 81.7,
+      "quality_tier": "A",
+      "score_breakdown": {
+        "liquidity": {
+          "score": 25.0,
+          "max_score": 25.0,
+          "value": 53986.69,
+          "explanation": "More liquidity usually means easier entry/exit and less slippage."
+        },
+        "history": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 659,
+          "explanation": "Longer history makes the strategy test less fragile."
+        },
+        "recent_move": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 1333.3,
+          "explanation": "Some recent movement is useful; dead markets are hard to trade."
+        },
+        "volatility": {
+          "score": 15.0,
+          "max_score": 15.0,
+          "value": 303.6,
+          "explanation": "Intraday volatility can create signals, up to a capped score."
+        },
+        "quote_quality": {
+          "score": 0.0,
+          "max_score": 10.0,
+          "value": 1176.5,
+          "explanation": "Tighter spread is better when quote data is available."
+        },
+        "price_zone": {
+          "score": 0.9,
+          "max_score": 5.0,
+          "value": 0.085,
+          "explanation": "Prices away from 0/1 are often more tradable than near-certain outcomes."
+        },
+        "movement_consistency": {
+          "score": 0.8,
+          "max_score": 5.0,
+          "value": 0.056,
+          "explanation": "A bit of back-and-forth suggests the market is actually moving, not frozen."
+        }
+      },
+      "eligibility_reason": "Current price outside configured range",
+      "eligible_now": false,
+      "heuristic_family": "sports_outright",
+      "current_family": "sports_outright",
+      "current_classifier_decision": "allow",
+      "current_classifier_reason": "Heuristic family: sports outright / repricing-friendly market | No external classifier configured",
+      "tags": []
+    },
+    {
+      "condition_id": "0x1e03cd6255e4dec87c7c85d2267b7b4104beba48abf50e2fc15acabbf233b308",
+      "token_id": "83053136095375464518484635535538303979818736083252284786624282549893531568449",
+      "slug": "will-the-new-jersey-devils-win-the-2026-nhl-stanley-cup",
+      "question": "Will the New Jersey Devils win the 2026 NHL Stanley Cup?",
+      "description": "This market will resolve to \u201cYes\u201d if the New Jersey Devils win the 2026 NHL Stanley Cup. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2026 NHL Stanley Cup based off the rules of the NHL.\n\nThe resolution source for this market will be information from the NHL.\n",
+      "category": null,
+      "subcategory": null,
+      "end_date_iso": "2026-06-30T00:00:00Z",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_prices": [
+        "0.0015",
+        "0.9985"
+      ],
+      "yes_outcome": "Yes",
+      "yes_price": 0.0015,
+      "liquidity": 93622.94879,
+      "best_bid": 0.001,
+      "best_ask": 0.002,
+      "spread_bps": 6666.7,
+      "history_points": 700,
+      "abs_return_bps_24h": 20000.0,
+      "realized_volatility_bps": 7919.4,
+      "movement_consistency": 0.1,
+      "quality_score": 81.4,
+      "quality_tier": "A",
+      "score_breakdown": {
+        "liquidity": {
+          "score": 25.0,
+          "max_score": 25.0,
+          "value": 93622.95,
+          "explanation": "More liquidity usually means easier entry/exit and less slippage."
+        },
+        "history": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 700,
+          "explanation": "Longer history makes the strategy test less fragile."
+        },
+        "recent_move": {
+          "score": 20.0,
+          "max_score": 20.0,
+          "value": 20000.0,
+          "explanation": "Some recent movement is useful; dead markets are hard to trade."
+        },
+        "volatility": {
+          "score": 15.0,
+          "max_score": 15.0,
+          "value": 7919.4,
+          "explanation": "Intraday volatility can create signals, up to a capped score."
+        },
+        "quote_quality": {
+          "score": 0.0,
+          "max_score": 10.0,
+          "value": 6666.7,
+          "explanation": "Tighter spread is better when quote data is available."
+        },
+        "price_zone": {
+          "score": 0.0,
+          "max_score": 5.0,
+          "value": 0.0015,
+          "explanation": "Prices away from 0/1 are often more tradable than near-certain outcomes."
+        },
+        "movement_consistency": {
+          "score": 1.4,
+          "max_score": 5.0,
+          "value": 0.1,
+          "explanation": "A bit of back-and-forth suggests the market is actually moving, not frozen."
+        }
+      },
+      "eligibility_reason": "Current price outside configured range",
+      "eligible_now": false,
+      "heuristic_family": "sports_outright",
+      "current_family": "sports_outright",
+      "current_classifier_decision": "allow",
+      "current_classifier_reason": "Heuristic family: sports outright / repricing-friendly market | No external classifier configured",
+      "tags": []
+    }
+  ]
+}

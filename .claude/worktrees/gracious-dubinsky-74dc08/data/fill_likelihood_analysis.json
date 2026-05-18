@@ -1,0 +1,526 @@
+{
+  "windows": [
+    10,
+    20
+  ],
+  "markets": [
+    {
+      "csv": "quote_backtest_102227184035967850089766981958743064457339118173548431660886438726896222843254.csv",
+      "question": "Will the San Antonio Spurs win the 2026 NBA Finals?",
+      "outcome": "Yes",
+      "token_id": "102227184035967850089766981958743064457339118173548431660886438726896222843254",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 2167,
+            "avg_spread_bps": 173.61,
+            "avg_abs_next_move_bps": 28.69,
+            "crossed_mid_rate": 0.1477,
+            "crossed_price_rate": 0.0554,
+            "moved_away_rate": 0.0231,
+            "never_touched_rate": 0.8523
+          },
+          "one_tick_inside": {
+            "count": 1697,
+            "avg_spread_bps": 203.76,
+            "avg_abs_next_move_bps": 29.91,
+            "crossed_mid_rate": 0.6052,
+            "crossed_price_rate": 0.1591,
+            "moved_away_rate": 0.7407,
+            "never_touched_rate": 0.3948
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 2167,
+            "avg_spread_bps": 173.61,
+            "avg_abs_next_move_bps": 46.15,
+            "crossed_mid_rate": 0.2187,
+            "crossed_price_rate": 0.1061,
+            "moved_away_rate": 0.0171,
+            "never_touched_rate": 0.7813
+          },
+          "one_tick_inside": {
+            "count": 1697,
+            "avg_spread_bps": 203.76,
+            "avg_abs_next_move_bps": 48.29,
+            "crossed_mid_rate": 0.6623,
+            "crossed_price_rate": 0.2593,
+            "moved_away_rate": 0.5993,
+            "never_touched_rate": 0.3377
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_12636035070565821048178968461063687179393834041535317885287743395873720755118.csv",
+      "question": "Will the San Antonio Spurs win the 2026 NBA Finals?",
+      "outcome": "No",
+      "token_id": "12636035070565821048178968461063687179393834041535317885287743395873720755118",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 2167,
+            "avg_spread_bps": 173.61,
+            "avg_abs_next_move_bps": 28.69,
+            "crossed_mid_rate": 0.1477,
+            "crossed_price_rate": 0.0554,
+            "moved_away_rate": 0.0231,
+            "never_touched_rate": 0.8523
+          },
+          "one_tick_inside": {
+            "count": 1697,
+            "avg_spread_bps": 203.76,
+            "avg_abs_next_move_bps": 29.91,
+            "crossed_mid_rate": 0.6052,
+            "crossed_price_rate": 0.1591,
+            "moved_away_rate": 0.7407,
+            "never_touched_rate": 0.3948
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 2167,
+            "avg_spread_bps": 173.61,
+            "avg_abs_next_move_bps": 46.15,
+            "crossed_mid_rate": 0.2187,
+            "crossed_price_rate": 0.1061,
+            "moved_away_rate": 0.0171,
+            "never_touched_rate": 0.7813
+          },
+          "one_tick_inside": {
+            "count": 1697,
+            "avg_spread_bps": 203.76,
+            "avg_abs_next_move_bps": 48.29,
+            "crossed_mid_rate": 0.6623,
+            "crossed_price_rate": 0.2593,
+            "moved_away_rate": 0.5993,
+            "never_touched_rate": 0.3377
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_35573117698117780238142713946749692621043319879346349609080985768472429209643.csv",
+      "question": "Will the Tampa Bay Lightning win the 2026 NHL Stanley Cup?",
+      "outcome": "Yes",
+      "token_id": "35573117698117780238142713946749692621043319879346349609080985768472429209643",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 2187,
+            "avg_spread_bps": 173.35,
+            "avg_abs_next_move_bps": 18.74,
+            "crossed_mid_rate": 0.1436,
+            "crossed_price_rate": 0.0229,
+            "moved_away_rate": 0.0206,
+            "never_touched_rate": 0.8564
+          },
+          "one_tick_inside": {
+            "count": 1560,
+            "avg_spread_bps": 215.03,
+            "avg_abs_next_move_bps": 19.22,
+            "crossed_mid_rate": 0.4929,
+            "crossed_price_rate": 0.0513,
+            "moved_away_rate": 0.7308,
+            "never_touched_rate": 0.5071
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 2187,
+            "avg_spread_bps": 173.35,
+            "avg_abs_next_move_bps": 28.63,
+            "crossed_mid_rate": 0.1893,
+            "crossed_price_rate": 0.032,
+            "moved_away_rate": 0.0146,
+            "never_touched_rate": 0.8107
+          },
+          "one_tick_inside": {
+            "count": 1560,
+            "avg_spread_bps": 215.03,
+            "avg_abs_next_move_bps": 30.57,
+            "crossed_mid_rate": 0.5577,
+            "crossed_price_rate": 0.1026,
+            "moved_away_rate": 0.6032,
+            "never_touched_rate": 0.4423
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_44914465637297319816681463234953032477919413063019359633128421605039733545953.csv",
+      "question": "Will the Oklahoma City Thunder win the 2026 NBA Finals?",
+      "outcome": "No",
+      "token_id": "44914465637297319816681463234953032477919413063019359633128421605039733545953",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 2187,
+            "avg_spread_bps": 260.93,
+            "avg_abs_next_move_bps": 6.61,
+            "crossed_mid_rate": 0.0229,
+            "crossed_price_rate": 0.0091,
+            "moved_away_rate": 0.0023,
+            "never_touched_rate": 0.9771
+          },
+          "one_tick_inside": {
+            "count": 2187,
+            "avg_spread_bps": 260.93,
+            "avg_abs_next_move_bps": 6.61,
+            "crossed_mid_rate": 0.0229,
+            "crossed_price_rate": 0.0091,
+            "moved_away_rate": 0.9817,
+            "never_touched_rate": 0.9771
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 2187,
+            "avg_spread_bps": 260.93,
+            "avg_abs_next_move_bps": 11.66,
+            "crossed_mid_rate": 0.0457,
+            "crossed_price_rate": 0.0229,
+            "moved_away_rate": 0.0023,
+            "never_touched_rate": 0.9543
+          },
+          "one_tick_inside": {
+            "count": 2187,
+            "avg_spread_bps": 260.93,
+            "avg_abs_next_move_bps": 11.66,
+            "crossed_mid_rate": 0.0457,
+            "crossed_price_rate": 0.0229,
+            "moved_away_rate": 0.9634,
+            "never_touched_rate": 0.9543
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_49500299856831034491021962156746701298730459370557900271970866855042624695770.csv",
+      "question": "Will the Oklahoma City Thunder win the 2026 NBA Finals?",
+      "outcome": "Yes",
+      "token_id": "49500299856831034491021962156746701298730459370557900271970866855042624695770",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 2187,
+            "avg_spread_bps": 260.93,
+            "avg_abs_next_move_bps": 6.61,
+            "crossed_mid_rate": 0.0229,
+            "crossed_price_rate": 0.0091,
+            "moved_away_rate": 0.0023,
+            "never_touched_rate": 0.9771
+          },
+          "one_tick_inside": {
+            "count": 2187,
+            "avg_spread_bps": 260.93,
+            "avg_abs_next_move_bps": 6.61,
+            "crossed_mid_rate": 0.0229,
+            "crossed_price_rate": 0.0091,
+            "moved_away_rate": 0.9817,
+            "never_touched_rate": 0.9771
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 2187,
+            "avg_spread_bps": 260.93,
+            "avg_abs_next_move_bps": 11.66,
+            "crossed_mid_rate": 0.0457,
+            "crossed_price_rate": 0.0229,
+            "moved_away_rate": 0.0023,
+            "never_touched_rate": 0.9543
+          },
+          "one_tick_inside": {
+            "count": 2187,
+            "avg_spread_bps": 260.93,
+            "avg_abs_next_move_bps": 11.66,
+            "crossed_mid_rate": 0.0457,
+            "crossed_price_rate": 0.0229,
+            "moved_away_rate": 0.9634,
+            "never_touched_rate": 0.9543
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_56814725870179920615881424393027028330166672775619196396436430486653645555698.csv",
+      "question": "Will the Denver Nuggets win the 2026 NBA Finals?",
+      "outcome": "Yes",
+      "token_id": "56814725870179920615881424393027028330166672775619196396436430486653645555698",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 2147,
+            "avg_spread_bps": 948.91,
+            "avg_abs_next_move_bps": 7.11,
+            "crossed_mid_rate": 0.0093,
+            "crossed_price_rate": 0.0093,
+            "moved_away_rate": 0.0005,
+            "never_touched_rate": 0.9907
+          },
+          "one_tick_inside": {
+            "count": 2147,
+            "avg_spread_bps": 948.91,
+            "avg_abs_next_move_bps": 7.11,
+            "crossed_mid_rate": 0.0093,
+            "crossed_price_rate": 0.0093,
+            "moved_away_rate": 0.9953,
+            "never_touched_rate": 0.9907
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 2147,
+            "avg_spread_bps": 948.91,
+            "avg_abs_next_move_bps": 13.57,
+            "crossed_mid_rate": 0.0186,
+            "crossed_price_rate": 0.0186,
+            "moved_away_rate": 0.0005,
+            "never_touched_rate": 0.9814
+          },
+          "one_tick_inside": {
+            "count": 2147,
+            "avg_spread_bps": 948.91,
+            "avg_abs_next_move_bps": 13.57,
+            "crossed_mid_rate": 0.0186,
+            "crossed_price_rate": 0.0186,
+            "moved_away_rate": 0.9907,
+            "never_touched_rate": 0.9814
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_68988781087071608596579516085819336301201525599500826069950065091990393143710.csv",
+      "question": "Will the Boston Celtics win the 2026 NBA Finals?",
+      "outcome": "No",
+      "token_id": "68988781087071608596579516085819336301201525599500826069950065091990393143710",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 2187,
+            "avg_spread_bps": 257.3,
+            "avg_abs_next_move_bps": 15.37,
+            "crossed_mid_rate": 0.0457,
+            "crossed_price_rate": 0.0091,
+            "moved_away_rate": 0.0096,
+            "never_touched_rate": 0.9543
+          },
+          "one_tick_inside": {
+            "count": 1853,
+            "avg_spread_bps": 288.18,
+            "avg_abs_next_move_bps": 15.48,
+            "crossed_mid_rate": 0.2882,
+            "crossed_price_rate": 0.0221,
+            "moved_away_rate": 0.9298,
+            "never_touched_rate": 0.7118
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 2187,
+            "avg_spread_bps": 257.3,
+            "avg_abs_next_move_bps": 25.5,
+            "crossed_mid_rate": 0.0914,
+            "crossed_price_rate": 0.0183,
+            "moved_away_rate": 0.0078,
+            "never_touched_rate": 0.9086
+          },
+          "one_tick_inside": {
+            "count": 1853,
+            "avg_spread_bps": 288.18,
+            "avg_abs_next_move_bps": 25.58,
+            "crossed_mid_rate": 0.3486,
+            "crossed_price_rate": 0.0491,
+            "moved_away_rate": 0.8813,
+            "never_touched_rate": 0.6514
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_76502490060038468983308870100553689583720145873703214557423080536912388384600.csv",
+      "question": "Will the Denver Nuggets win the 2026 NBA Finals?",
+      "outcome": "No",
+      "token_id": "76502490060038468983308870100553689583720145873703214557423080536912388384600",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 2147,
+            "avg_spread_bps": 948.91,
+            "avg_abs_next_move_bps": 7.11,
+            "crossed_mid_rate": 0.0093,
+            "crossed_price_rate": 0.0093,
+            "moved_away_rate": 0.0005,
+            "never_touched_rate": 0.9907
+          },
+          "one_tick_inside": {
+            "count": 2147,
+            "avg_spread_bps": 948.91,
+            "avg_abs_next_move_bps": 7.11,
+            "crossed_mid_rate": 0.0093,
+            "crossed_price_rate": 0.0093,
+            "moved_away_rate": 0.9953,
+            "never_touched_rate": 0.9907
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 2147,
+            "avg_spread_bps": 948.91,
+            "avg_abs_next_move_bps": 13.57,
+            "crossed_mid_rate": 0.0186,
+            "crossed_price_rate": 0.0186,
+            "moved_away_rate": 0.0005,
+            "never_touched_rate": 0.9814
+          },
+          "one_tick_inside": {
+            "count": 2147,
+            "avg_spread_bps": 948.91,
+            "avg_abs_next_move_bps": 13.57,
+            "crossed_mid_rate": 0.0186,
+            "crossed_price_rate": 0.0186,
+            "moved_away_rate": 0.9907,
+            "never_touched_rate": 0.9814
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_76626937605855383085159195963889428951048025160807952406004049979161449392204.csv",
+      "question": "Will the Tampa Bay Lightning win the 2026 NHL Stanley Cup?",
+      "outcome": "No",
+      "token_id": "76626937605855383085159195963889428951048025160807952406004049979161449392204",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 2187,
+            "avg_spread_bps": 173.35,
+            "avg_abs_next_move_bps": 18.74,
+            "crossed_mid_rate": 0.1436,
+            "crossed_price_rate": 0.0229,
+            "moved_away_rate": 0.0206,
+            "never_touched_rate": 0.8564
+          },
+          "one_tick_inside": {
+            "count": 1560,
+            "avg_spread_bps": 215.03,
+            "avg_abs_next_move_bps": 19.22,
+            "crossed_mid_rate": 0.4929,
+            "crossed_price_rate": 0.0513,
+            "moved_away_rate": 0.7308,
+            "never_touched_rate": 0.5071
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 2187,
+            "avg_spread_bps": 173.35,
+            "avg_abs_next_move_bps": 28.63,
+            "crossed_mid_rate": 0.1893,
+            "crossed_price_rate": 0.032,
+            "moved_away_rate": 0.0146,
+            "never_touched_rate": 0.8107
+          },
+          "one_tick_inside": {
+            "count": 1560,
+            "avg_spread_bps": 215.03,
+            "avg_abs_next_move_bps": 30.57,
+            "crossed_mid_rate": 0.5577,
+            "crossed_price_rate": 0.1026,
+            "moved_away_rate": 0.6032,
+            "never_touched_rate": 0.4423
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_98951343420969493497594761179562691809954416596888138302255086663562042936451.csv",
+      "question": "Will the Boston Celtics win the 2026 NBA Finals?",
+      "outcome": "Yes",
+      "token_id": "98951343420969493497594761179562691809954416596888138302255086663562042936451",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 2187,
+            "avg_spread_bps": 257.3,
+            "avg_abs_next_move_bps": 15.37,
+            "crossed_mid_rate": 0.0457,
+            "crossed_price_rate": 0.0091,
+            "moved_away_rate": 0.0096,
+            "never_touched_rate": 0.9543
+          },
+          "one_tick_inside": {
+            "count": 1853,
+            "avg_spread_bps": 288.18,
+            "avg_abs_next_move_bps": 15.48,
+            "crossed_mid_rate": 0.2882,
+            "crossed_price_rate": 0.0221,
+            "moved_away_rate": 0.9298,
+            "never_touched_rate": 0.7118
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 2187,
+            "avg_spread_bps": 257.3,
+            "avg_abs_next_move_bps": 25.5,
+            "crossed_mid_rate": 0.0914,
+            "crossed_price_rate": 0.0183,
+            "moved_away_rate": 0.0078,
+            "never_touched_rate": 0.9086
+          },
+          "one_tick_inside": {
+            "count": 1853,
+            "avg_spread_bps": 288.18,
+            "avg_abs_next_move_bps": 25.58,
+            "crossed_mid_rate": 0.3486,
+            "crossed_price_rate": 0.0491,
+            "moved_away_rate": 0.8813,
+            "never_touched_rate": 0.6514
+          }
+        }
+      }
+    }
+  ],
+  "summary": {
+    "10:at_touch": {
+      "count": 21750,
+      "avg_spread_bps": 361.01,
+      "avg_abs_next_move_bps": 15.31,
+      "crossed_mid_rate": 0.0739,
+      "crossed_price_rate": 0.0211,
+      "moved_away_rate": 0.0112,
+      "never_touched_rate": 0.9261
+    },
+    "10:one_tick_inside": {
+      "count": 18888,
+      "avg_spread_bps": 404.83,
+      "avg_abs_next_move_bps": 14.73,
+      "crossed_mid_rate": 0.2541,
+      "crossed_price_rate": 0.0456,
+      "moved_away_rate": 0.8899,
+      "never_touched_rate": 0.7459
+    },
+    "20:at_touch": {
+      "count": 21750,
+      "avg_spread_bps": 361.01,
+      "avg_abs_next_move_bps": 25.11,
+      "crossed_mid_rate": 0.1129,
+      "crossed_price_rate": 0.0395,
+      "moved_away_rate": 0.0085,
+      "never_touched_rate": 0.8871
+    },
+    "20:one_tick_inside": {
+      "count": 18888,
+      "avg_spread_bps": 404.83,
+      "avg_abs_next_move_bps": 24.53,
+      "crossed_mid_rate": 0.2944,
+      "crossed_price_rate": 0.0827,
+      "moved_away_rate": 0.8286,
+      "never_touched_rate": 0.7056
+    }
+  }
+}

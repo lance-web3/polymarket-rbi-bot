@@ -1,0 +1,24 @@
+{
+  "probe_id": 2,
+  "intent": "execution_test_only",
+  "question": "Will the Tampa Bay Lightning win the 2026 NHL Stanley Cup?",
+  "condition_id": "0xbdd688664b4f3cf7ec4ec011607934fe8ae720c08353fc14a6e9dfbf6bbcf11a",
+  "token_id": "35573117698117780238142713946749692621043319879346349609080985768472429209643",
+  "outcome": "Yes",
+  "order_id": "0xf7566a138f9e0db940011dc1e6a46c0315ea865e88be98a51a5a2ba2a0bbdcf0",
+  "side": "BUY",
+  "order_type": "post_only_gtc",
+  "price": 0.143,
+  "size": 20.0,
+  "posted_notional": 2.86,
+  "matched_size": 0.0,
+  "final_status": "CANCELED",
+  "filled": false,
+  "takeaway": {
+    "auth_working": true,
+    "submission_working": true,
+    "cancellation_working": true,
+    "maker_fill_observed": false,
+    "queue_priority_variant": "one_tick_inside_spread"
+  }
+}

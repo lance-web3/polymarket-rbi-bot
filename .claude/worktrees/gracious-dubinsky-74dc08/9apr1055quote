@@ -1,0 +1,270 @@
+{
+  "output_dir": "data/quote_backtests",
+  "tokens": 10,
+  "manifest": "data/quote_backtests/manifest.json"
+}
+{
+  "saved": "data/quote_backtests_matrix.json",
+  "ranked_summary": {
+    "ranked_experiments": [
+      {
+        "rank": 1,
+        "experiment": "loose_baseline",
+        "avg_score": 35.76,
+        "avg_net_return_pct": -0.118,
+        "avg_expectancy": -0.0495,
+        "avg_trade_count": 59.6,
+        "avg_win_rate": 0.1221,
+        "avg_max_drawdown_pct": 0.12
+      },
+      {
+        "rank": 2,
+        "experiment": "strict_full",
+        "avg_score": 20.0,
+        "avg_net_return_pct": 0.0,
+        "avg_expectancy": 0.0,
+        "avg_trade_count": 0.0,
+        "avg_win_rate": null,
+        "avg_max_drawdown_pct": 0.0
+      },
+      {
+        "rank": 3,
+        "experiment": "strict_no_long_entry_led",
+        "avg_score": 20.0,
+        "avg_net_return_pct": 0.0,
+        "avg_expectancy": 0.0,
+        "avg_trade_count": 0.0,
+        "avg_win_rate": null,
+        "avg_max_drawdown_pct": 0.0
+      },
+      {
+        "rank": 4,
+        "experiment": "strict_long_entry_legacy",
+        "avg_score": 20.0,
+        "avg_net_return_pct": 0.0,
+        "avg_expectancy": 0.0,
+        "avg_trade_count": 0.0,
+        "avg_win_rate": null,
+        "avg_max_drawdown_pct": 0.0
+      },
+      {
+        "rank": 5,
+        "experiment": "strict_exit_legacy",
+        "avg_score": 20.0,
+        "avg_net_return_pct": 0.0,
+        "avg_expectancy": 0.0,
+        "avg_trade_count": 0.0,
+        "avg_win_rate": null,
+        "avg_max_drawdown_pct": 0.0
+      },
+      {
+        "rank": 6,
+        "experiment": "strict_no_maturity_gate",
+        "avg_score": 20.0,
+        "avg_net_return_pct": 0.0,
+        "avg_expectancy": 0.0,
+        "avg_trade_count": 0.0,
+        "avg_win_rate": null,
+        "avg_max_drawdown_pct": 0.0
+      },
+      {
+        "rank": 7,
+        "experiment": "strict_no_micro_gate",
+        "avg_score": 20.0,
+        "avg_net_return_pct": 0.0,
+        "avg_expectancy": 0.0,
+        "avg_trade_count": 0.0,
+        "avg_win_rate": null,
+        "avg_max_drawdown_pct": 0.0
+      }
+    ],
+    "notes": [
+      "Best by average score: loose_baseline (score 35.76, avg return -0.118%, avg expectancy -0.0495).",
+      "loose_baseline helped vs strict_full (\u0394score 15.76, \u0394expectancy -0.0495, \u0394trades 59.6) mostly by changing turnover.",
+      "strict_no_long_entry_led was neutral vs strict_full (\u0394score 0.0, \u0394expectancy 0.0, \u0394trades 0.0) without much turnover change.",
+      "strict_long_entry_legacy was neutral vs strict_full (\u0394score 0.0, \u0394expectancy 0.0, \u0394trades 0.0) without much turnover change."
+    ]
+  }
+}
+{
+  "quote_csv_count": 10,
+  "experiment_count": 7,
+  "top_experiments": [
+    {
+      "rank": 1,
+      "experiment": "loose_baseline",
+      "avg_score": 35.76,
+      "avg_net_return_pct": -0.118,
+      "avg_expectancy": -0.0495,
+      "avg_trade_count": 59.6,
+      "avg_win_rate": 0.1221,
+      "avg_max_drawdown_pct": 0.12
+    },
+    {
+      "rank": 2,
+      "experiment": "strict_full",
+      "avg_score": 20.0,
+      "avg_net_return_pct": 0.0,
+      "avg_expectancy": 0.0,
+      "avg_trade_count": 0.0,
+      "avg_win_rate": null,
+      "avg_max_drawdown_pct": 0.0
+    },
+    {
+      "rank": 3,
+      "experiment": "strict_no_long_entry_led",
+      "avg_score": 20.0,
+      "avg_net_return_pct": 0.0,
+      "avg_expectancy": 0.0,
+      "avg_trade_count": 0.0,
+      "avg_win_rate": null,
+      "avg_max_drawdown_pct": 0.0
+    }
+  ],
+  "top_tokens_loose_baseline": [
+    {
+      "csv": "data/quote_backtests/quote_backtest_35573117698117780238142713946749692621043319879346349609080985768472429209643.csv",
+      "score": 39.7,
+      "trade_count": 112,
+      "round_trip_count": 56,
+      "net_return_pct": -0.17,
+      "expectancy": -0.03061917638938347,
+      "max_drawdown_pct": 0.17,
+      "win_rate": 0.0,
+      "time_in_market_ratio": 0.2926383173296754
+    },
+    {
+      "csv": "data/quote_backtests/quote_backtest_76626937605855383085159195963889428951048025160807952406004049979161449392204.csv",
+      "score": 39.7,
+      "trade_count": 112,
+      "round_trip_count": 56,
+      "net_return_pct": -0.17,
+      "expectancy": -0.03061917638938347,
+      "max_drawdown_pct": 0.17,
+      "win_rate": 0.0,
+      "time_in_market_ratio": 0.2926383173296754
+    },
+    {
+      "csv": "data/quote_backtests/quote_backtest_102227184035967850089766981958743064457339118173548431660886438726896222843254.csv",
+      "score": 39.6,
+      "trade_count": 104,
+      "round_trip_count": 52,
+      "net_return_pct": -0.18,
+      "expectancy": -0.03402174971225769,
+      "max_drawdown_pct": 0.18,
+      "win_rate": 0.07692307692307693,
+      "time_in_market_ratio": 0.3465935070873343
+    },
+    {
+      "csv": "data/quote_backtests/quote_backtest_12636035070565821048178968461063687179393834041535317885287743395873720755118.csv",
+      "score": 39.6,
+      "trade_count": 104,
+      "round_trip_count": 52,
+      "net_return_pct": -0.18,
+      "expectancy": -0.03402174971225769,
+      "max_drawdown_pct": 0.18,
+      "win_rate": 0.07692307692307693,
+      "time_in_market_ratio": 0.3465935070873343
+    },
+    {
+      "csv": "data/quote_backtests/quote_backtest_68988781087071608596579516085819336301201525599500826069950065091990393143710.csv",
+      "score": 39.8,
+      "trade_count": 61,
+      "round_trip_count": 30,
+      "net_return_pct": -0.11,
+      "expectancy": -0.03318777639235223,
+      "max_drawdown_pct": 0.11,
+      "win_rate": 0.03333333333333333,
+      "time_in_market_ratio": 0.2162780064014632
+    }
+  ],
+  "top_blockers": {
+    "loose_baseline": [
+      {
+        "reason": "cooldown",
+        "count": 6
+      }
+    ],
+    "strict_full": [
+      {
+        "reason": "long_entry_not_buy",
+        "count": 16424
+      },
+      {
+        "reason": "spread_too_wide",
+        "count": 4796
+      },
+      {
+        "reason": "avg_spread_too_wide",
+        "count": 106
+      }
+    ],
+    "strict_no_long_entry_led": [
+      {
+        "reason": "confirmers",
+        "count": 10468
+      },
+      {
+        "reason": "entry_score",
+        "count": 5956
+      },
+      {
+        "reason": "spread_too_wide",
+        "count": 4796
+      },
+      {
+        "reason": "avg_spread_too_wide",
+        "count": 106
+      }
+    ],
+    "strict_long_entry_legacy": [
+      {
+        "reason": "long_entry_not_buy",
+        "count": 16424
+      },
+      {
+        "reason": "spread_too_wide",
+        "count": 4796
+      },
+      {
+        "reason": "avg_spread_too_wide",
+        "count": 106
+      }
+    ],
+    "strict_exit_legacy": [
+      {
+        "reason": "long_entry_not_buy",
+        "count": 16424
+      },
+      {
+        "reason": "spread_too_wide",
+        "count": 4796
+      },
+      {
+        "reason": "avg_spread_too_wide",
+        "count": 106
+      }
+    ],
+    "strict_no_maturity_gate": [
+      {
+        "reason": "long_entry_not_buy",
+        "count": 16424
+      },
+      {
+        "reason": "spread_too_wide",
+        "count": 4796
+      },
+      {
+        "reason": "avg_spread_too_wide",
+        "count": 106
+      }
+    ],
+    "strict_no_micro_gate": [
+      {
+        "reason": "long_entry_not_buy",
+        "count": 21326
+      }
+    ]
+  },
+  "matrix_out": "data/quote_backtests_matrix.json"
+}

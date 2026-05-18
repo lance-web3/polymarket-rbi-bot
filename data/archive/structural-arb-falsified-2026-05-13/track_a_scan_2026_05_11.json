@@ -1,0 +1,307 @@
+{
+  "params": {
+    "bucket_seconds": 60,
+    "fee_bps": 0.0,
+    "min_net_edge_bps": 30.0,
+    "min_field_fraction": 0.85,
+    "patterns": {
+      "NBA_FINALS_2026": "win the 2026 NBA Finals\\??$",
+      "NHL_CUP_2026": "win the 2026 NHL Stanley Cup\\??$",
+      "EPL_2025_26": "win the 2025[-/\\u2013]26 (English )?Premier League\\??$"
+    }
+  },
+  "summary": {
+    "championships_scanned": 3,
+    "total_opportunities_above_mve": 325,
+    "any_mve_hit": true
+  },
+  "per_championship": {
+    "NHL_CUP_2026": {
+      "expected_field_size": 16,
+      "min_legs_required": 14,
+      "full_buckets": 410,
+      "qualifying_buckets": 3910,
+      "skipped_partial_buckets": 6088,
+      "buy_above_mve": 0,
+      "sell_above_mve": 53,
+      "buy_edge_bps": {
+        "count": 3910,
+        "median": -410.0,
+        "max": -30.0,
+        "min": -97160.0,
+        "p05": -680.0,
+        "p95": -160.0
+      },
+      "sell_edge_bps": {
+        "count": 3910,
+        "median": -140.0,
+        "max": 130.0,
+        "min": -8140.0,
+        "p05": -370.0,
+        "p95": -10.0
+      },
+      "best_buy_bucket": null,
+      "best_sell_bucket": {
+        "type": "sell_field",
+        "championship": "NHL_CUP_2026",
+        "bucket_ts": "2026-04-29T02:30:00+00:00",
+        "n_legs": 14,
+        "expected_n_legs": 16,
+        "sum_yes_bid": 1.013,
+        "net_edge_bps": 130.0
+      }
+    },
+    "NBA_FINALS_2026": {
+      "expected_field_size": 16,
+      "min_legs_required": 14,
+      "full_buckets": 0,
+      "qualifying_buckets": 1387,
+      "skipped_partial_buckets": 8611,
+      "buy_above_mve": 0,
+      "sell_above_mve": 272,
+      "buy_edge_bps": {
+        "count": 1387,
+        "median": -280.0,
+        "max": -150.0,
+        "min": -450.0,
+        "p05": -400.0,
+        "p95": -210.0
+      },
+      "sell_edge_bps": {
+        "count": 1387,
+        "median": -10.0,
+        "max": 220.0,
+        "min": -190.0,
+        "p05": -110.0,
+        "p95": 110.0
+      },
+      "best_buy_bucket": null,
+      "best_sell_bucket": {
+        "type": "sell_field",
+        "championship": "NBA_FINALS_2026",
+        "bucket_ts": "2026-04-28T15:29:00+00:00",
+        "n_legs": 14,
+        "expected_n_legs": 16,
+        "sum_yes_bid": 1.022,
+        "net_edge_bps": 220.0
+      }
+    },
+    "EPL_2025_26": {
+      "expected_field_size": 3,
+      "min_legs_required": 3,
+      "full_buckets": 10,
+      "qualifying_buckets": 10,
+      "skipped_partial_buckets": 3684,
+      "buy_above_mve": 0,
+      "sell_above_mve": 0,
+      "buy_edge_bps": {
+        "count": 10,
+        "median": -2190.0,
+        "max": -120.0,
+        "min": -10360.0,
+        "p05": null,
+        "p95": null
+      },
+      "sell_edge_bps": {
+        "count": 10,
+        "median": -95.0,
+        "max": -90.0,
+        "min": -290.0,
+        "p05": null,
+        "p95": null
+      },
+      "best_buy_bucket": null,
+      "best_sell_bucket": null
+    }
+  },
+  "data_quality": {
+    "rows_kept": 2069374,
+    "rows_rejected": {
+      "missing_quote": 86956,
+      "crossed_quote": 924,
+      "out_of_band": 0
+    }
+  },
+  "top_opportunities": [
+    {
+      "type": "sell_field",
+      "championship": "NBA_FINALS_2026",
+      "bucket_ts": "2026-04-28T15:28:00+00:00",
+      "n_legs": 14,
+      "expected_n_legs": 16,
+      "sum_yes_bid": 1.022,
+      "net_edge_bps": 220.0
+    },
+    {
+      "type": "sell_field",
+      "championship": "NBA_FINALS_2026",
+      "bucket_ts": "2026-04-28T15:29:00+00:00",
+      "n_legs": 14,
+      "expected_n_legs": 16,
+      "sum_yes_bid": 1.022,
+      "net_edge_bps": 220.0
+    },
+    {
+      "type": "sell_field",
+      "championship": "NBA_FINALS_2026",
+      "bucket_ts": "2026-04-28T15:30:00+00:00",
+      "n_legs": 14,
+      "expected_n_legs": 16,
+      "sum_yes_bid": 1.021,
+      "net_edge_bps": 210.0
+    },
+    {
+      "type": "sell_field",
+      "championship": "NBA_FINALS_2026",
+      "bucket_ts": "2026-04-28T15:31:00+00:00",
+      "n_legs": 14,
+      "expected_n_legs": 16,
+      "sum_yes_bid": 1.021,
+      "net_edge_bps": 210.0
+    },
+    {
+      "type": "sell_field",
+      "championship": "NBA_FINALS_2026",
+      "bucket_ts": "2026-04-28T15:32:00+00:00",
+      "n_legs": 14,
+      "expected_n_legs": 16,
+      "sum_yes_bid": 1.021,
+      "net_edge_bps": 210.0
+    },
+    {
+      "type": "sell_field",
+      "championship": "NBA_FINALS_2026",
+      "bucket_ts": "2026-04-28T15:33:00+00:00",
+      "n_legs": 14,
+      "expected_n_legs": 16,
+      "sum_yes_bid": 1.021,
+      "net_edge_bps": 210.0
+    },
+    {
+      "type": "sell_field",
+      "championship": "NBA_FINALS_2026",
+      "bucket_ts": "2026-04-28T15:34:00+00:00",
+      "n_legs": 14,
+      "expected_n_legs": 16,
+      "sum_yes_bid": 1.021,
+      "net_edge_bps": 210.0
+    },
+    {
+      "type": "sell_field",
+      "championship": "NBA_FINALS_2026",
+      "bucket_ts": "2026-04-28T15:35:00+00:00",
+      "n_legs": 14,
+      "expected_n_legs": 16,
+      "sum_yes_bid": 1.021,
+      "net_edge_bps": 210.0
+    },
+    {
+      "type": "sell_field",
+      "championship": "NBA_FINALS_2026",
+      "bucket_ts": "2026-04-28T15:36:00+00:00",
+      "n_legs": 14,
+      "expected_n_legs": 16,
+      "sum_yes_bid": 1.021,
+      "net_edge_bps": 210.0
+    },
+    {
+      "type": "sell_field",
+      "championship": "NBA_FINALS_2026",
+      "bucket_ts": "2026-04-28T15:37:00+00:00",
+      "n_legs": 14,
+      "expected_n_legs": 16,
+      "sum_yes_bid": 1.021,
+      "net_edge_bps": 210.0
+    },
+    {
+      "type": "sell_field",
+      "championship": "NBA_FINALS_2026",
+      "bucket_ts": "2026-04-28T15:38:00+00:00",
+      "n_legs": 14,
+      "expected_n_legs": 16,
+      "sum_yes_bid": 1.021,
+      "net_edge_bps": 210.0
+    },
+    {
+      "type": "sell_field",
+      "championship": "NBA_FINALS_2026",
+      "bucket_ts": "2026-04-28T15:39:00+00:00",
+      "n_legs": 14,
+      "expected_n_legs": 16,
+      "sum_yes_bid": 1.021,
+      "net_edge_bps": 210.0
+    },
+    {
+      "type": "sell_field",
+      "championship": "NBA_FINALS_2026",
+      "bucket_ts": "2026-04-28T15:40:00+00:00",
+      "n_legs": 14,
+      "expected_n_legs": 16,
+      "sum_yes_bid": 1.021,
+      "net_edge_bps": 210.0
+    },
+    {
+      "type": "sell_field",
+      "championship": "NBA_FINALS_2026",
+      "bucket_ts": "2026-04-28T15:41:00+00:00",
+      "n_legs": 14,
+      "expected_n_legs": 16,
+      "sum_yes_bid": 1.021,
+      "net_edge_bps": 210.0
+    },
+    {
+      "type": "sell_field",
+      "championship": "NBA_FINALS_2026",
+      "bucket_ts": "2026-04-28T15:42:00+00:00",
+      "n_legs": 14,
+      "expected_n_legs": 16,
+      "sum_yes_bid": 1.021,
+      "net_edge_bps": 210.0
+    },
+    {
+      "type": "sell_field",
+      "championship": "NBA_FINALS_2026",
+      "bucket_ts": "2026-04-28T15:43:00+00:00",
+      "n_legs": 14,
+      "expected_n_legs": 16,
+      "sum_yes_bid": 1.021,
+      "net_edge_bps": 210.0
+    },
+    {
+      "type": "sell_field",
+      "championship": "NBA_FINALS_2026",
+      "bucket_ts": "2026-04-28T15:44:00+00:00",
+      "n_legs": 14,
+      "expected_n_legs": 16,
+      "sum_yes_bid": 1.021,
+      "net_edge_bps": 210.0
+    },
+    {
+      "type": "sell_field",
+      "championship": "NBA_FINALS_2026",
+      "bucket_ts": "2026-04-28T15:45:00+00:00",
+      "n_legs": 14,
+      "expected_n_legs": 16,
+      "sum_yes_bid": 1.021,
+      "net_edge_bps": 210.0
+    },
+    {
+      "type": "sell_field",
+      "championship": "NBA_FINALS_2026",
+      "bucket_ts": "2026-04-28T15:46:00+00:00",
+      "n_legs": 14,
+      "expected_n_legs": 16,
+      "sum_yes_bid": 1.021,
+      "net_edge_bps": 210.0
+    },
+    {
+      "type": "sell_field",
+      "championship": "NBA_FINALS_2026",
+      "bucket_ts": "2026-04-28T16:00:00+00:00",
+      "n_legs": 14,
+      "expected_n_legs": 16,
+      "sum_yes_bid": 1.021,
+      "net_edge_bps": 210.0
+    }
+  ]
+}

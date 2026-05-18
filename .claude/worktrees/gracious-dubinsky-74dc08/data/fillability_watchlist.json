@@ -1,0 +1,34 @@
+[
+  {
+    "token_id": "102227184035967850089766981958743064457339118173548431660886438726896222843254",
+    "question": "Will the San Antonio Spurs win the 2026 NBA Finals?",
+    "outcome": "Yes",
+    "fillability_score": 14.96,
+    "rank": 1,
+    "source": "fillability_shortlist"
+  },
+  {
+    "token_id": "12636035070565821048178968461063687179393834041535317885287743395873720755118",
+    "question": "Will the San Antonio Spurs win the 2026 NBA Finals?",
+    "outcome": "No",
+    "fillability_score": 14.96,
+    "rank": 2,
+    "source": "fillability_shortlist"
+  },
+  {
+    "token_id": "35573117698117780238142713946749692621043319879346349609080985768472429209643",
+    "question": "Will the Tampa Bay Lightning win the 2026 NHL Stanley Cup?",
+    "outcome": "Yes",
+    "fillability_score": 5.32,
+    "rank": 3,
+    "source": "fillability_shortlist"
+  },
+  {
+    "token_id": "76626937605855383085159195963889428951048025160807952406004049979161449392204",
+    "question": "Will the Tampa Bay Lightning win the 2026 NHL Stanley Cup?",
+    "outcome": "No",
+    "fillability_score": 5.32,
+    "rank": 4,
+    "source": "fillability_shortlist"
+  }
+]

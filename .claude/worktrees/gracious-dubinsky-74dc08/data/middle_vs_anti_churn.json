@@ -1,0 +1,550 @@
+[
+  {
+    "experiment": "strict_middle_ground",
+    "summary": {
+      "avg_trade_count": 4.8,
+      "avg_round_trip_count": 2.4,
+      "avg_net_return_pct": -0.006,
+      "avg_expectancy": -0.0124,
+      "avg_score": 24.78
+    },
+    "rows": [
+      {
+        "csv": "quote_backtest_102227184035967850089766981958743064457339118173548431660886438726896222843254.csv",
+        "headline": {
+          "net_return_pct": -0.03,
+          "expectancy": -0.028917680798004858,
+          "max_drawdown_pct": 0.03,
+          "trade_count": 20,
+          "round_trip_count": 10,
+          "win_rate": 0.0,
+          "time_in_market_ratio": 0.013717421124828532,
+          "score": 39.9
+        },
+        "top_blocked_entries": [
+          {
+            "reason": "long_entry_not_buy",
+            "count": 1961
+          },
+          {
+            "reason": "spread_too_wide",
+            "count": 66
+          },
+          {
+            "reason": "avg_spread_too_wide",
+            "count": 15
+          }
+        ]
+      },
+      {
+        "csv": "quote_backtest_12636035070565821048178968461063687179393834041535317885287743395873720755118.csv",
+        "headline": {
+          "net_return_pct": -0.03,
+          "expectancy": -0.028917680798004858,
+          "max_drawdown_pct": 0.03,
+          "trade_count": 20,
+          "round_trip_count": 10,
+          "win_rate": 0.0,
+          "time_in_market_ratio": 0.013717421124828532,
+          "score": 39.9
+        },
+        "top_blocked_entries": [
+          {
+            "reason": "long_entry_not_buy",
+            "count": 1961
+          },
+          {
+            "reason": "spread_too_wide",
+            "count": 66
+          },
+          {
+            "reason": "avg_spread_too_wide",
+            "count": 15
+          }
+        ]
+      },
+      {
+        "csv": "quote_backtest_35573117698117780238142713946749692621043319879346349609080985768472429209643.csv",
+        "headline": {
+          "net_return_pct": -0.0,
+          "expectancy": -0.017265960099750732,
+          "max_drawdown_pct": 0.0,
+          "trade_count": 2,
+          "round_trip_count": 1,
+          "win_rate": 0.0,
+          "time_in_market_ratio": 0.0013717421124828531,
+          "score": 22.0
+        },
+        "top_blocked_entries": [
+          {
+            "reason": "long_entry_not_buy",
+            "count": 1963
+          },
+          {
+            "reason": "spread_too_wide",
+            "count": 70
+          },
+          {
+            "reason": "avg_spread_too_wide",
+            "count": 64
+          }
+        ]
+      },
+      {
+        "csv": "quote_backtest_44914465637297319816681463234953032477919413063019359633128421605039733545953.csv",
+        "headline": {
+          "net_return_pct": 0.0,
+          "expectancy": null,
+          "max_drawdown_pct": 0.0,
+          "trade_count": 0,
+          "round_trip_count": 0,
+          "win_rate": null,
+          "time_in_market_ratio": 0.0,
+          "score": 20.0
+        },
+        "top_blocked_entries": [
+          {
+            "reason": "long_entry_not_buy",
+            "count": 2027
+          },
+          {
+            "reason": "spread_too_wide",
+            "count": 109
+          },
+          {
+            "reason": "avg_spread_too_wide",
+            "count": 33
+          }
+        ]
+      },
+      {
+        "csv": "quote_backtest_49500299856831034491021962156746701298730459370557900271970866855042624695770.csv",
+        "headline": {
+          "net_return_pct": 0.0,
+          "expectancy": null,
+          "max_drawdown_pct": 0.0,
+          "trade_count": 0,
+          "round_trip_count": 0,
+          "win_rate": null,
+          "time_in_market_ratio": 0.0,
+          "score": 20.0
+        },
+        "top_blocked_entries": [
+          {
+            "reason": "long_entry_not_buy",
+            "count": 2027
+          },
+          {
+            "reason": "spread_too_wide",
+            "count": 109
+          },
+          {
+            "reason": "avg_spread_too_wide",
+            "count": 33
+          }
+        ]
+      },
+      {
+        "csv": "quote_backtest_56814725870179920615881424393027028330166672775619196396436430486653645555698.csv",
+        "headline": {
+          "net_return_pct": 0.0,
+          "expectancy": null,
+          "max_drawdown_pct": 0.0,
+          "trade_count": 0,
+          "round_trip_count": 0,
+          "win_rate": null,
+          "time_in_market_ratio": 0.0,
+          "score": 20.0
+        },
+        "top_blocked_entries": [
+          {
+            "reason": "spread_too_wide",
+            "count": 2133
+          },
+          {
+            "reason": "long_entry_not_buy",
+            "count": 25
+          },
+          {
+            "reason": "avg_spread_too_wide",
+            "count": 15
+          }
+        ]
+      },
+      {
+        "csv": "quote_backtest_68988781087071608596579516085819336301201525599500826069950065091990393143710.csv",
+        "headline": {
+          "net_return_pct": -0.0,
+          "expectancy": -0.015917643391521047,
+          "max_drawdown_pct": 0.0,
+          "trade_count": 2,
+          "round_trip_count": 1,
+          "win_rate": 0.0,
+          "time_in_market_ratio": 0.0013717421124828531,
+          "score": 22.0
+        },
+        "top_blocked_entries": [
+          {
+            "reason": "long_entry_not_buy",
+            "count": 1908
+          },
+          {
+            "reason": "spread_too_wide",
+            "count": 174
+          },
+          {
+            "reason": "avg_spread_too_wide",
+            "count": 41
+          }
+        ]
+      },
+      {
+        "csv": "quote_backtest_76502490060038468983308870100553689583720145873703214557423080536912388384600.csv",
+        "headline": {
+          "net_return_pct": 0.0,
+          "expectancy": null,
+          "max_drawdown_pct": 0.0,
+          "trade_count": 0,
+          "round_trip_count": 0,
+          "win_rate": null,
+          "time_in_market_ratio": 0.0,
+          "score": 20.0
+        },
+        "top_blocked_entries": [
+          {
+            "reason": "spread_too_wide",
+            "count": 2133
+          },
+          {
+            "reason": "long_entry_not_buy",
+            "count": 25
+          },
+          {
+            "reason": "avg_spread_too_wide",
+            "count": 15
+          }
+        ]
+      },
+      {
+        "csv": "quote_backtest_76626937605855383085159195963889428951048025160807952406004049979161449392204.csv",
+        "headline": {
+          "net_return_pct": -0.0,
+          "expectancy": -0.017265960099750732,
+          "max_drawdown_pct": 0.0,
+          "trade_count": 2,
+          "round_trip_count": 1,
+          "win_rate": 0.0,
+          "time_in_market_ratio": 0.0013717421124828531,
+          "score": 22.0
+        },
+        "top_blocked_entries": [
+          {
+            "reason": "long_entry_not_buy",
+            "count": 1963
+          },
+          {
+            "reason": "spread_too_wide",
+            "count": 70
+          },
+          {
+            "reason": "avg_spread_too_wide",
+            "count": 64
+          }
+        ]
+      },
+      {
+        "csv": "quote_backtest_98951343420969493497594761179562691809954416596888138302255086663562042936451.csv",
+        "headline": {
+          "net_return_pct": -0.0,
+          "expectancy": -0.015917643391521047,
+          "max_drawdown_pct": 0.0,
+          "trade_count": 2,
+          "round_trip_count": 1,
+          "win_rate": 0.0,
+          "time_in_market_ratio": 0.0013717421124828531,
+          "score": 22.0
+        },
+        "top_blocked_entries": [
+          {
+            "reason": "long_entry_not_buy",
+            "count": 1908
+          },
+          {
+            "reason": "spread_too_wide",
+            "count": 174
+          },
+          {
+            "reason": "avg_spread_too_wide",
+            "count": 41
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "experiment": "strict_middle_anti_churn",
+    "summary": {
+      "avg_trade_count": 1.6,
+      "avg_round_trip_count": 0.8,
+      "avg_net_return_pct": -0.002,
+      "avg_expectancy": -0.0097,
+      "avg_score": 21.6
+    },
+    "rows": [
+      {
+        "csv": "quote_backtest_102227184035967850089766981958743064457339118173548431660886438726896222843254.csv",
+        "headline": {
+          "net_return_pct": -0.01,
+          "expectancy": -0.03131510806317526,
+          "max_drawdown_pct": 0.01,
+          "trade_count": 6,
+          "round_trip_count": 3,
+          "win_rate": 0.0,
+          "time_in_market_ratio": 0.007315957933241884,
+          "score": 26.0
+        },
+        "top_blocked_entries": [
+          {
+            "reason": "long_entry_not_buy",
+            "count": 1311
+          },
+          {
+            "reason": "spread_too_wide",
+            "count": 561
+          },
+          {
+            "reason": "avg_spread_too_wide",
+            "count": 195
+          }
+        ]
+      },
+      {
+        "csv": "quote_backtest_12636035070565821048178968461063687179393834041535317885287743395873720755118.csv",
+        "headline": {
+          "net_return_pct": -0.01,
+          "expectancy": -0.03131510806317526,
+          "max_drawdown_pct": 0.01,
+          "trade_count": 6,
+          "round_trip_count": 3,
+          "win_rate": 0.0,
+          "time_in_market_ratio": 0.007315957933241884,
+          "score": 26.0
+        },
+        "top_blocked_entries": [
+          {
+            "reason": "long_entry_not_buy",
+            "count": 1311
+          },
+          {
+            "reason": "spread_too_wide",
+            "count": 561
+          },
+          {
+            "reason": "avg_spread_too_wide",
+            "count": 195
+          }
+        ]
+      },
+      {
+        "csv": "quote_backtest_35573117698117780238142713946749692621043319879346349609080985768472429209643.csv",
+        "headline": {
+          "net_return_pct": -0.0,
+          "expectancy": -0.017265960099750732,
+          "max_drawdown_pct": 0.0,
+          "trade_count": 2,
+          "round_trip_count": 1,
+          "win_rate": 0.0,
+          "time_in_market_ratio": 0.002286236854138089,
+          "score": 22.0
+        },
+        "top_blocked_entries": [
+          {
+            "reason": "long_entry_not_buy",
+            "count": 1707
+          },
+          {
+            "reason": "spread_too_wide",
+            "count": 289
+          },
+          {
+            "reason": "avg_spread_too_wide",
+            "count": 101
+          }
+        ]
+      },
+      {
+        "csv": "quote_backtest_44914465637297319816681463234953032477919413063019359633128421605039733545953.csv",
+        "headline": {
+          "net_return_pct": 0.0,
+          "expectancy": null,
+          "max_drawdown_pct": 0.0,
+          "trade_count": 0,
+          "round_trip_count": 0,
+          "win_rate": null,
+          "time_in_market_ratio": 0.0,
+          "score": 20.0
+        },
+        "top_blocked_entries": [
+          {
+            "reason": "spread_too_wide",
+            "count": 2169
+          }
+        ]
+      },
+      {
+        "csv": "quote_backtest_49500299856831034491021962156746701298730459370557900271970866855042624695770.csv",
+        "headline": {
+          "net_return_pct": 0.0,
+          "expectancy": null,
+          "max_drawdown_pct": 0.0,
+          "trade_count": 0,
+          "round_trip_count": 0,
+          "win_rate": null,
+          "time_in_market_ratio": 0.0,
+          "score": 20.0
+        },
+        "top_blocked_entries": [
+          {
+            "reason": "spread_too_wide",
+            "count": 2169
+          }
+        ]
+      },
+      {
+        "csv": "quote_backtest_56814725870179920615881424393027028330166672775619196396436430486653645555698.csv",
+        "headline": {
+          "net_return_pct": 0.0,
+          "expectancy": null,
+          "max_drawdown_pct": 0.0,
+          "trade_count": 0,
+          "round_trip_count": 0,
+          "win_rate": null,
+          "time_in_market_ratio": 0.0,
+          "score": 20.0
+        },
+        "top_blocked_entries": [
+          {
+            "reason": "spread_too_wide",
+            "count": 2133
+          },
+          {
+            "reason": "long_entry_not_buy",
+            "count": 20
+          },
+          {
+            "reason": "avg_spread_too_wide",
+            "count": 20
+          }
+        ]
+      },
+      {
+        "csv": "quote_backtest_68988781087071608596579516085819336301201525599500826069950065091990393143710.csv",
+        "headline": {
+          "net_return_pct": 0.0,
+          "expectancy": null,
+          "max_drawdown_pct": 0.0,
+          "trade_count": 0,
+          "round_trip_count": 0,
+          "win_rate": null,
+          "time_in_market_ratio": 0.0,
+          "score": 20.0
+        },
+        "top_blocked_entries": [
+          {
+            "reason": "spread_too_wide",
+            "count": 1462
+          },
+          {
+            "reason": "long_entry_not_buy",
+            "count": 561
+          },
+          {
+            "reason": "avg_spread_too_wide",
+            "count": 104
+          }
+        ]
+      },
+      {
+        "csv": "quote_backtest_76502490060038468983308870100553689583720145873703214557423080536912388384600.csv",
+        "headline": {
+          "net_return_pct": 0.0,
+          "expectancy": null,
+          "max_drawdown_pct": 0.0,
+          "trade_count": 0,
+          "round_trip_count": 0,
+          "win_rate": null,
+          "time_in_market_ratio": 0.0,
+          "score": 20.0
+        },
+        "top_blocked_entries": [
+          {
+            "reason": "spread_too_wide",
+            "count": 2133
+          },
+          {
+            "reason": "long_entry_not_buy",
+            "count": 20
+          },
+          {
+            "reason": "avg_spread_too_wide",
+            "count": 20
+          }
+        ]
+      },
+      {
+        "csv": "quote_backtest_76626937605855383085159195963889428951048025160807952406004049979161449392204.csv",
+        "headline": {
+          "net_return_pct": -0.0,
+          "expectancy": -0.017265960099750732,
+          "max_drawdown_pct": 0.0,
+          "trade_count": 2,
+          "round_trip_count": 1,
+          "win_rate": 0.0,
+          "time_in_market_ratio": 0.002286236854138089,
+          "score": 22.0
+        },
+        "top_blocked_entries": [
+          {
+            "reason": "long_entry_not_buy",
+            "count": 1707
+          },
+          {
+            "reason": "spread_too_wide",
+            "count": 289
+          },
+          {
+            "reason": "avg_spread_too_wide",
+            "count": 101
+          }
+        ]
+      },
+      {
+        "csv": "quote_backtest_98951343420969493497594761179562691809954416596888138302255086663562042936451.csv",
+        "headline": {
+          "net_return_pct": 0.0,
+          "expectancy": null,
+          "max_drawdown_pct": 0.0,
+          "trade_count": 0,
+          "round_trip_count": 0,
+          "win_rate": null,
+          "time_in_market_ratio": 0.0,
+          "score": 20.0
+        },
+        "top_blocked_entries": [
+          {
+            "reason": "spread_too_wide",
+            "count": 1462
+          },
+          {
+            "reason": "long_entry_not_buy",
+            "count": 561
+          },
+          {
+            "reason": "avg_spread_too_wide",
+            "count": 104
+          }
+        ]
+      }
+    ]
+  }
+]

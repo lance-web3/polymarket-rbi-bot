@@ -90,6 +90,16 @@ class BotConfig:
     openai_classifier_output_path: str = "data/market_classifier_output.json"
     openai_classifier_batch_size: int = 8
     openai_classifier_pause_seconds: float = 1.5
+    # LLM probability engine (PLAN Phase 5 candidate #2)
+    anthropic_api_key: str | None = None
+    anthropic_model: str = "claude-opus-4-7"
+    llm_provider: str = "anthropic"  # "anthropic" primary, "openai" fallback
+    llm_predict_model: str = "gpt-5.5"  # OpenAI model when using OpenAI for predict (not classify)
+    llm_predict_pause_seconds: float = 1.0
+    llm_predict_max_retries: int = 4
+    llm_predictions_path: str = "data/llm_predictions.jsonl"
+    llm_calibration_output_path: str = "data/llm_calibration_backtest.jsonl"
+    llm_calibration_summary_path: str = "data/llm_calibration_summary.json"
     # Maturity and microstructure gating
     enable_maturity_gating: bool = True
     enable_microstructure_gating: bool = True
@@ -192,6 +202,15 @@ class BotConfig:
             openai_classifier_output_path=os.getenv("OPENAI_CLASSIFIER_OUTPUT_PATH", "data/market_classifier_output.json").strip() or "data/market_classifier_output.json",
             openai_classifier_batch_size=int(os.getenv("OPENAI_CLASSIFIER_BATCH_SIZE", "8")),
             openai_classifier_pause_seconds=float(os.getenv("OPENAI_CLASSIFIER_PAUSE_SECONDS", "1.5")),
+            anthropic_api_key=(os.getenv("ANTHROPIC_API_KEY") or "").strip() or None,
+            anthropic_model=os.getenv("ANTHROPIC_MODEL", "claude-opus-4-7").strip() or "claude-opus-4-7",
+            llm_provider=os.getenv("LLM_PROVIDER", "anthropic").strip().lower() or "anthropic",
+            llm_predict_model=os.getenv("LLM_PREDICT_MODEL", "gpt-5.5").strip() or "gpt-5.5",
+            llm_predict_pause_seconds=float(os.getenv("LLM_PREDICT_PAUSE_SECONDS", "1.0")),
+            llm_predict_max_retries=int(os.getenv("LLM_PREDICT_MAX_RETRIES", "4")),
+            llm_predictions_path=os.getenv("LLM_PREDICTIONS_PATH", "data/llm_predictions.jsonl").strip() or "data/llm_predictions.jsonl",
+            llm_calibration_output_path=os.getenv("LLM_CALIBRATION_OUTPUT_PATH", "data/llm_calibration_backtest.jsonl").strip() or "data/llm_calibration_backtest.jsonl",
+            llm_calibration_summary_path=os.getenv("LLM_CALIBRATION_SUMMARY_PATH", "data/llm_calibration_summary.json").strip() or "data/llm_calibration_summary.json",
             enable_maturity_gating=os.getenv("ENABLE_MATURITY_GATING", "true").strip().lower() in {"1", "true", "yes", "on"},
             enable_microstructure_gating=os.getenv("ENABLE_MICROSTRUCTURE_GATING", "true").strip().lower() in {"1", "true", "yes", "on"},
             strict_min_time_to_resolution_hours=(

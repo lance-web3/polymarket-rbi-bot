@@ -1,0 +1,430 @@
+{
+  "windows": [
+    10,
+    20
+  ],
+  "markets": [
+    {
+      "csv": "quote_backtest_2527312495175492857904889758552137141356236738032676480522356889996545113869.csv",
+      "question": "Russia-Ukraine Ceasefire before GTA VI?",
+      "outcome": "No",
+      "token_id": "2527312495175492857904889758552137141356236738032676480522356889996545113869",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 19,
+            "avg_spread_bps": 215.05,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 19,
+            "avg_spread_bps": 215.05,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 1.0,
+            "never_touched_rate": 1.0
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 19,
+            "avg_spread_bps": 215.05,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 19,
+            "avg_spread_bps": 215.05,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 1.0,
+            "never_touched_rate": 1.0
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_35573117698117780238142713946749692621043319879346349609080985768472429209643.csv",
+      "question": "Will the Tampa Bay Lightning win the 2026 NHL Stanley Cup?",
+      "outcome": "Yes",
+      "token_id": "35573117698117780238142713946749692621043319879346349609080985768472429209643",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 19,
+            "avg_spread_bps": 240.96,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 19,
+            "avg_spread_bps": 240.96,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 1.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 1.0,
+            "never_touched_rate": 0.0
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 19,
+            "avg_spread_bps": 240.96,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 19,
+            "avg_spread_bps": 240.96,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 1.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 1.0,
+            "never_touched_rate": 0.0
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_53831553061883006530739877284105938919721408776239639687877978808906551086026.csv",
+      "question": "New Rihanna Album before GTA VI?",
+      "outcome": "No",
+      "token_id": "53831553061883006530739877284105938919721408776239639687877978808906551086026",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 19,
+            "avg_spread_bps": 705.88,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 19,
+            "avg_spread_bps": 705.88,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 1.0,
+            "never_touched_rate": 1.0
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 19,
+            "avg_spread_bps": 705.88,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 19,
+            "avg_spread_bps": 705.88,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 1.0,
+            "never_touched_rate": 1.0
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_68988781087071608596579516085819336301201525599500826069950065091990393143710.csv",
+      "question": "Will the Boston Celtics win the 2026 NBA Finals?",
+      "outcome": "No",
+      "token_id": "68988781087071608596579516085819336301201525599500826069950065091990393143710",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 19,
+            "avg_spread_bps": 40.8,
+            "avg_abs_next_move_bps": 6.34,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 19,
+            "avg_spread_bps": 40.8,
+            "avg_abs_next_move_bps": 6.34,
+            "crossed_mid_rate": 0.3158,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.4737,
+            "never_touched_rate": 0.6842
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 19,
+            "avg_spread_bps": 40.8,
+            "avg_abs_next_move_bps": 7.81,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 19,
+            "avg_spread_bps": 40.8,
+            "avg_abs_next_move_bps": 7.81,
+            "crossed_mid_rate": 0.3158,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.4211,
+            "never_touched_rate": 0.6842
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_76626937605855383085159195963889428951048025160807952406004049979161449392204.csv",
+      "question": "Will the Tampa Bay Lightning win the 2026 NHL Stanley Cup?",
+      "outcome": "No",
+      "token_id": "76626937605855383085159195963889428951048025160807952406004049979161449392204",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 19,
+            "avg_spread_bps": 21.81,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 19,
+            "avg_spread_bps": 21.81,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 1.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 1.0,
+            "never_touched_rate": 0.0
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 19,
+            "avg_spread_bps": 21.81,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 19,
+            "avg_spread_bps": 21.81,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 1.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 1.0,
+            "never_touched_rate": 0.0
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_8501497159083948713316135768103773293754490207922884688769443031624417212426.csv",
+      "question": "Russia-Ukraine Ceasefire before GTA VI?",
+      "outcome": "Yes",
+      "token_id": "8501497159083948713316135768103773293754490207922884688769443031624417212426",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 19,
+            "avg_spread_bps": 186.92,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 19,
+            "avg_spread_bps": 186.92,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 1.0,
+            "never_touched_rate": 1.0
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 19,
+            "avg_spread_bps": 186.92,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 19,
+            "avg_spread_bps": 186.92,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 1.0,
+            "never_touched_rate": 1.0
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_98022490269692409998126496127597032490334070080325855126491859374983463996227.csv",
+      "question": "New Rihanna Album before GTA VI?",
+      "outcome": "Yes",
+      "token_id": "98022490269692409998126496127597032490334070080325855126491859374983463996227",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 19,
+            "avg_spread_bps": 521.74,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 19,
+            "avg_spread_bps": 521.74,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 1.0,
+            "never_touched_rate": 1.0
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 19,
+            "avg_spread_bps": 521.74,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0,
+            "never_touched_rate": 1.0
+          },
+          "one_tick_inside": {
+            "count": 19,
+            "avg_spread_bps": 521.74,
+            "avg_abs_next_move_bps": 0.0,
+            "crossed_mid_rate": 0.0,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 1.0,
+            "never_touched_rate": 1.0
+          }
+        }
+      }
+    },
+    {
+      "csv": "quote_backtest_98951343420969493497594761179562691809954416596888138302255086663562042936451.csv",
+      "question": "Will the Boston Celtics win the 2026 NBA Finals?",
+      "outcome": "Yes",
+      "token_id": "98951343420969493497594761179562691809954416596888138302255086663562042936451",
+      "windows": {
+        "10": {
+          "at_touch": {
+            "count": 19,
+            "avg_spread_bps": 260.02,
+            "avg_abs_next_move_bps": 40.04,
+            "crossed_mid_rate": 0.3684,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0526,
+            "never_touched_rate": 0.6316
+          },
+          "one_tick_inside": {
+            "count": 19,
+            "avg_spread_bps": 260.02,
+            "avg_abs_next_move_bps": 40.04,
+            "crossed_mid_rate": 0.3684,
+            "crossed_price_rate": 0.3158,
+            "moved_away_rate": 1.0,
+            "never_touched_rate": 0.6316
+          }
+        },
+        "20": {
+          "at_touch": {
+            "count": 19,
+            "avg_spread_bps": 260.02,
+            "avg_abs_next_move_bps": 49.33,
+            "crossed_mid_rate": 0.3684,
+            "crossed_price_rate": 0.0,
+            "moved_away_rate": 0.0526,
+            "never_touched_rate": 0.6316
+          },
+          "one_tick_inside": {
+            "count": 19,
+            "avg_spread_bps": 260.02,
+            "avg_abs_next_move_bps": 49.33,
+            "crossed_mid_rate": 0.3684,
+            "crossed_price_rate": 0.3684,
+            "moved_away_rate": 1.0,
+            "never_touched_rate": 0.6316
+          }
+        }
+      }
+    }
+  ],
+  "summary": {
+    "10:at_touch": {
+      "count": 152,
+      "avg_spread_bps": 274.15,
+      "avg_abs_next_move_bps": 5.8,
+      "crossed_mid_rate": 0.0461,
+      "crossed_price_rate": 0.0,
+      "moved_away_rate": 0.0066,
+      "never_touched_rate": 0.9539
+    },
+    "10:one_tick_inside": {
+      "count": 152,
+      "avg_spread_bps": 274.15,
+      "avg_abs_next_move_bps": 5.8,
+      "crossed_mid_rate": 0.3355,
+      "crossed_price_rate": 0.0395,
+      "moved_away_rate": 0.9342,
+      "never_touched_rate": 0.6645
+    },
+    "20:at_touch": {
+      "count": 152,
+      "avg_spread_bps": 274.15,
+      "avg_abs_next_move_bps": 7.14,
+      "crossed_mid_rate": 0.0461,
+      "crossed_price_rate": 0.0,
+      "moved_away_rate": 0.0066,
+      "never_touched_rate": 0.9539
+    },
+    "20:one_tick_inside": {
+      "count": 152,
+      "avg_spread_bps": 274.15,
+      "avg_abs_next_move_bps": 7.14,
+      "crossed_mid_rate": 0.3355,
+      "crossed_price_rate": 0.0461,
+      "moved_away_rate": 0.9276,
+      "never_touched_rate": 0.6645
+    }
+  }
+}

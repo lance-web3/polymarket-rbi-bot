@@ -1,0 +1,169 @@
+{
+  "mode": "live_reference",
+  "summary": {
+    "markets_scanned": 2,
+    "underround_count": 1,
+    "overround_count": 0,
+    "balanced_count": 1,
+    "top_requested": 5,
+    "min_liquidity": 0.0,
+    "underround_buffer": 0.01,
+    "overround_buffer": 0.01
+  },
+  "shortlist": [
+    {
+      "question": "Who will win Sample League?",
+      "condition_id": "fixture-underround-1",
+      "market_slug": "sample-league-outright",
+      "liquidity": 25000.0,
+      "volume": 150000.0,
+      "outcome_count": 3,
+      "pricing_basis": "gamma_outcomePrices_reference_only",
+      "category": "underround",
+      "implied_probability_sum": 0.93,
+      "underround": 0.07,
+      "overround": -0.07,
+      "outcomes": [
+        {
+          "index": 0,
+          "outcome": "Team A",
+          "token_id": "tok-a",
+          "reference_price": 0.3
+        },
+        {
+          "index": 1,
+          "outcome": "Team B",
+          "token_id": "tok-b",
+          "reference_price": 0.31
+        },
+        {
+          "index": 2,
+          "outcome": "Team C",
+          "token_id": "tok-c",
+          "reference_price": 0.32
+        }
+      ],
+      "notes": [
+        "This live scan uses Gamma outcomePrices as a reference snapshot, not guaranteed executable bid/ask across every outcome.",
+        "Use quote-backtest mode for timestamp-aligned executable-style bundle checks when per-token bid/ask snapshots are available."
+      ]
+    },
+    {
+      "question": "Who will win Other Sample League?",
+      "condition_id": "fixture-balanced-1",
+      "market_slug": "other-sample-league-outright",
+      "liquidity": 12000.0,
+      "volume": 40000.0,
+      "outcome_count": 3,
+      "pricing_basis": "gamma_outcomePrices_reference_only",
+      "category": "balanced",
+      "implied_probability_sum": 1.0,
+      "underround": 0.0,
+      "overround": 0.0,
+      "outcomes": [
+        {
+          "index": 0,
+          "outcome": "Alpha",
+          "token_id": "tok-x",
+          "reference_price": 0.33
+        },
+        {
+          "index": 1,
+          "outcome": "Beta",
+          "token_id": "tok-y",
+          "reference_price": 0.33
+        },
+        {
+          "index": 2,
+          "outcome": "Gamma",
+          "token_id": "tok-z",
+          "reference_price": 0.34
+        }
+      ],
+      "notes": [
+        "This live scan uses Gamma outcomePrices as a reference snapshot, not guaranteed executable bid/ask across every outcome.",
+        "Use quote-backtest mode for timestamp-aligned executable-style bundle checks when per-token bid/ask snapshots are available."
+      ]
+    }
+  ],
+  "ranked_markets": [
+    {
+      "question": "Who will win Sample League?",
+      "condition_id": "fixture-underround-1",
+      "market_slug": "sample-league-outright",
+      "liquidity": 25000.0,
+      "volume": 150000.0,
+      "outcome_count": 3,
+      "pricing_basis": "gamma_outcomePrices_reference_only",
+      "category": "underround",
+      "implied_probability_sum": 0.93,
+      "underround": 0.07,
+      "overround": -0.07,
+      "outcomes": [
+        {
+          "index": 0,
+          "outcome": "Team A",
+          "token_id": "tok-a",
+          "reference_price": 0.3
+        },
+        {
+          "index": 1,
+          "outcome": "Team B",
+          "token_id": "tok-b",
+          "reference_price": 0.31
+        },
+        {
+          "index": 2,
+          "outcome": "Team C",
+          "token_id": "tok-c",
+          "reference_price": 0.32
+        }
+      ],
+      "notes": [
+        "This live scan uses Gamma outcomePrices as a reference snapshot, not guaranteed executable bid/ask across every outcome.",
+        "Use quote-backtest mode for timestamp-aligned executable-style bundle checks when per-token bid/ask snapshots are available."
+      ]
+    },
+    {
+      "question": "Who will win Other Sample League?",
+      "condition_id": "fixture-balanced-1",
+      "market_slug": "other-sample-league-outright",
+      "liquidity": 12000.0,
+      "volume": 40000.0,
+      "outcome_count": 3,
+      "pricing_basis": "gamma_outcomePrices_reference_only",
+      "category": "balanced",
+      "implied_probability_sum": 1.0,
+      "underround": 0.0,
+      "overround": 0.0,
+      "outcomes": [
+        {
+          "index": 0,
+          "outcome": "Alpha",
+          "token_id": "tok-x",
+          "reference_price": 0.33
+        },
+        {
+          "index": 1,
+          "outcome": "Beta",
+          "token_id": "tok-y",
+          "reference_price": 0.33
+        },
+        {
+          "index": 2,
+          "outcome": "Gamma",
+          "token_id": "tok-z",
+          "reference_price": 0.34
+        }
+      ],
+      "notes": [
+        "This live scan uses Gamma outcomePrices as a reference snapshot, not guaranteed executable bid/ask across every outcome.",
+        "Use quote-backtest mode for timestamp-aligned executable-style bundle checks when per-token bid/ask snapshots are available."
+      ]
+    }
+  ],
+  "combinatorial_scaffold": {
+    "status": "not_implemented_yet",
+    "idea": "Future step: link logically dependent conditions across separate markets once we have robust dependency mapping and executable pricing checks."
+  }
+}

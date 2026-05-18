@@ -1,0 +1,23 @@
+{
+  "probe_id": 1,
+  "intent": "execution_test_only",
+  "question": "Will the San Antonio Spurs win the 2026 NBA Finals?",
+  "condition_id": "0xb6b3d7a2037b3faa7e1306d741840d453432902d73cc9a146a035e40271eae73",
+  "token_id": "102227184035967850089766981958743064457339118173548431660886438726896222843254",
+  "outcome": "Yes",
+  "order_id": "0xf8be1b40a53f41ed9ead053bbf67c6af29b197764c1530d3a1437abae434a2ee",
+  "side": "BUY",
+  "order_type": "post_only_gtc",
+  "price": 0.116,
+  "size": 20.0,
+  "posted_notional": 2.32,
+  "matched_size": 0.0,
+  "final_status": "CANCELED",
+  "filled": false,
+  "takeaway": {
+    "auth_working": true,
+    "submission_working": true,
+    "cancellation_working": true,
+    "maker_fill_observed": false
+  }
+}

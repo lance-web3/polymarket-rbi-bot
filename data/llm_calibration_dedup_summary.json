@@ -1,0 +1,1329 @@
+{
+  "n_underlying_events": 128,
+  "n_original_markets": 240,
+  "event_brier_llm": 0.1613,
+  "event_brier_market_p_t7": 0.1563,
+  "delta_llm_minus_market_event_level": 0.005,
+  "per_niche_event_level": {
+    "sports_outright": {
+      "n_events": 76,
+      "brier_llm_event_level": 0.1934,
+      "brier_market_event_level": 0.1933,
+      "delta_llm_minus_market": 0.0001
+    },
+    "awards_entertainment": {
+      "n_events": 2,
+      "skipped": "below gate_min_n"
+    },
+    "scheduled_event": {
+      "n_events": 42,
+      "brier_llm_event_level": 0.1353,
+      "brier_market_event_level": 0.1242,
+      "delta_llm_minus_market": 0.0111
+    },
+    "politics_election": {
+      "n_events": 1,
+      "skipped": "below gate_min_n"
+    },
+    "corporate_event": {
+      "n_events": 3,
+      "skipped": "below gate_min_n"
+    },
+    "regulatory_policy": {
+      "n_events": 1,
+      "skipped": "below gate_min_n"
+    },
+    "crypto": {
+      "n_events": 1,
+      "skipped": "below gate_min_n"
+    },
+    "breaking_news": {
+      "n_events": 2,
+      "skipped": "below gate_min_n"
+    }
+  },
+  "passing_niches_event_level": [],
+  "verdict_event_level": "NO_GO",
+  "events": [
+    {
+      "event_key": "drake-iceman-album-2026",
+      "n_buckets": 46,
+      "niche": "awards_entertainment",
+      "mean_p_llm": 0.2826,
+      "mean_p_market_t7": 0.4231,
+      "mean_outcome_yes_rate": 0.2174,
+      "brier_llm_per_bucket": 0.1303,
+      "brier_market_per_bucket": 0.1807
+    },
+    {
+      "event_key": "eurovision-2026",
+      "n_buckets": 44,
+      "niche": "awards_entertainment",
+      "mean_p_llm": 0.2498,
+      "mean_p_market_t7": 0.2721,
+      "mean_outcome_yes_rate": 0.2273,
+      "brier_llm_per_bucket": 0.0947,
+      "brier_market_per_bucket": 0.0282
+    },
+    {
+      "event_key": "q:will argentina\u2019s monthly inflation in april",
+      "n_buckets": 7,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.1629,
+      "mean_p_market_t7": 0.1566,
+      "mean_outcome_yes_rate": 0.1429,
+      "brier_llm_per_bucket": 0.1634,
+      "brier_market_per_bucket": 0.0781
+    },
+    {
+      "event_key": "cerebras-ipo",
+      "n_buckets": 6,
+      "niche": "corporate_event",
+      "mean_p_llm": 0.2367,
+      "mean_p_market_t7": 0.1874,
+      "mean_outcome_yes_rate": 0.1667,
+      "brier_llm_per_bucket": 0.1991,
+      "brier_market_per_bucket": 0.1287
+    },
+    {
+      "event_key": "q:will the next google gemini model",
+      "n_buckets": 5,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.59,
+      "mean_p_market_t7": 0.271,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.3601,
+      "brier_market_per_bucket": 0.1264
+    },
+    {
+      "event_key": "q:will gemini 3.2 be released on",
+      "n_buckets": 3,
+      "niche": "corporate_event",
+      "mean_p_llm": 0.02,
+      "mean_p_market_t7": 0.0892,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0004,
+      "brier_market_per_bucket": 0.0087
+    },
+    {
+      "event_key": "q:exact score: real madrid cf 3",
+      "n_buckets": 3,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.0517,
+      "mean_p_market_t7": 0.0767,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0038,
+      "brier_market_per_bucket": 0.0063
+    },
+    {
+      "event_key": "q:will gold (xauusd) hit (low) $4,",
+      "n_buckets": 2,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.35,
+      "mean_p_market_t7": 0.6025,
+      "mean_outcome_yes_rate": 1.0,
+      "brier_llm_per_bucket": 0.4225,
+      "brier_market_per_bucket": 0.1613
+    },
+    {
+      "event_key": "q:will elon musk post - tweets",
+      "n_buckets": 2,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.06,
+      "mean_p_market_t7": 0.016,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.004,
+      "brier_market_per_bucket": 0.0005
+    },
+    {
+      "event_key": "q:will the anaheim ducks win the",
+      "n_buckets": 2,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.02,
+      "mean_p_market_t7": 0.0595,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0004,
+      "brier_market_per_bucket": 0.0041
+    },
+    {
+      "event_key": "q:exact score: real madrid cf 2",
+      "n_buckets": 2,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.08,
+      "mean_p_market_t7": 0.095,
+      "mean_outcome_yes_rate": 0.5,
+      "brier_llm_per_bucket": 0.4165,
+      "brier_market_per_bucket": 0.4041
+    },
+    {
+      "event_key": "q:exact score: valencia cf 1 -",
+      "n_buckets": 2,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.085,
+      "mean_p_market_t7": 0.1125,
+      "mean_outcome_yes_rate": 0.5,
+      "brier_llm_per_bucket": 0.4173,
+      "brier_market_per_bucket": 0.3878
+    },
+    {
+      "event_key": "q:tianjin jinmen hu fc vs. chengdu",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.54,
+      "mean_p_market_t7": 0.51,
+      "mean_outcome_yes_rate": 1.0,
+      "brier_llm_per_bucket": 0.2116,
+      "brier_market_per_bucket": 0.2401
+    },
+    {
+      "event_key": "q:shanghai haigang fc vs. zhejiang zhiye",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.55,
+      "mean_p_market_t7": 0.51,
+      "mean_outcome_yes_rate": 1.0,
+      "brier_llm_per_bucket": 0.2025,
+      "brier_market_per_bucket": 0.2401
+    },
+    {
+      "event_key": "q:will ted cruz post - posts",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.15,
+      "mean_p_market_t7": 0.235,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0225,
+      "brier_market_per_bucket": 0.0552
+    },
+    {
+      "event_key": "q:will adelaide united fc win on",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.35,
+      "mean_p_market_t7": 0.375,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.1225,
+      "brier_market_per_bucket": 0.1406
+    },
+    {
+      "event_key": "q:will adelaide united fc vs. auckland",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.24,
+      "mean_p_market_t7": 0.305,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0576,
+      "brier_market_per_bucket": 0.093
+    },
+    {
+      "event_key": "q:will auckland fc win on ?",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.4,
+      "mean_p_market_t7": 0.335,
+      "mean_outcome_yes_rate": 1.0,
+      "brier_llm_per_bucket": 0.36,
+      "brier_market_per_bucket": 0.4422
+    },
+    {
+      "event_key": "q:adelaide united fc vs. auckland fc:",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.54,
+      "mean_p_market_t7": 0.5,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.2916,
+      "brier_market_per_bucket": 0.25
+    },
+    {
+      "event_key": "q:will g2 win pgl astana ?",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.07,
+      "mean_p_market_t7": 0.075,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0049,
+      "brier_market_per_bucket": 0.0056
+    },
+    {
+      "event_key": "q:will trump say \"tiktok\" during events",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.22,
+      "mean_p_market_t7": 0.25,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0484,
+      "brier_market_per_bucket": 0.0625
+    },
+    {
+      "event_key": "q:will trump say \"mao\" during events",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.07,
+      "mean_p_market_t7": 0.12,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0049,
+      "brier_market_per_bucket": 0.0144
+    },
+    {
+      "event_key": "q:will chiefs win?",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.5,
+      "mean_p_market_t7": 0.565,
+      "mean_outcome_yes_rate": 1.0,
+      "brier_llm_per_bucket": 0.25,
+      "brier_market_per_bucket": 0.1892
+    },
+    {
+      "event_key": "q:will the match end in a",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.05,
+      "mean_p_market_t7": 0.375,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0025,
+      "brier_market_per_bucket": 0.1406
+    },
+    {
+      "event_key": "q:will trump say \"kamikaze\" during events",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.04,
+      "mean_p_market_t7": 0.115,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0016,
+      "brier_market_per_bucket": 0.0132
+    },
+    {
+      "event_key": "q:will trump say \"six seven\" during",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.04,
+      "mean_p_market_t7": 0.11,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0016,
+      "brier_market_per_bucket": 0.0121
+    },
+    {
+      "event_key": "q:will trump say \"north korea\" or",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.22,
+      "mean_p_market_t7": 0.255,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0484,
+      "brier_market_per_bucket": 0.065
+    },
+    {
+      "event_key": "q:will trump say \"rare earth\" during",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.45,
+      "mean_p_market_t7": 0.3675,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.2025,
+      "brier_market_per_bucket": 0.1351
+    },
+    {
+      "event_key": "q:will trump say \"cookie\" during events",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.03,
+      "mean_p_market_t7": 0.155,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0009,
+      "brier_market_per_bucket": 0.024
+    },
+    {
+      "event_key": "q:will trump say \"soybean\" during events",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.18,
+      "mean_p_market_t7": 0.39,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0324,
+      "brier_market_per_bucket": 0.1521
+    },
+    {
+      "event_key": "q:will trump say \"farmer\" during events",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.35,
+      "mean_p_market_t7": 0.285,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.1225,
+      "brier_market_per_bucket": 0.0812
+    },
+    {
+      "event_key": "q:will trump say \"hottest\" during events",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.35,
+      "mean_p_market_t7": 0.175,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.1225,
+      "brier_market_per_bucket": 0.0306
+    },
+    {
+      "event_key": "q:will trump say \"forbidden city\" during",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.18,
+      "mean_p_market_t7": 0.21,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0324,
+      "brier_market_per_bucket": 0.0441
+    },
+    {
+      "event_key": "q:will trump say \"fentanyl\" during events",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.45,
+      "mean_p_market_t7": 0.2275,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.2025,
+      "brier_market_per_bucket": 0.0518
+    },
+    {
+      "event_key": "q:will trump say \"shanghai\" during events",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.08,
+      "mean_p_market_t7": 0.285,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0064,
+      "brier_market_per_bucket": 0.0812
+    },
+    {
+      "event_key": "q:will trump say \"hong kong\" during",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.12,
+      "mean_p_market_t7": 0.245,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0144,
+      "brier_market_per_bucket": 0.06
+    },
+    {
+      "event_key": "q:will trump say \"tough negotiator\" during",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.18,
+      "mean_p_market_t7": 0.325,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0324,
+      "brier_market_per_bucket": 0.1056
+    },
+    {
+      "event_key": "q:will trump say \"great wall\" during",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.08,
+      "mean_p_market_t7": 0.19,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0064,
+      "brier_market_per_bucket": 0.0361
+    },
+    {
+      "event_key": "q:will trump say \"autopen\" or \"auto",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.07,
+      "mean_p_market_t7": 0.075,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0049,
+      "brier_market_per_bucket": 0.0056
+    },
+    {
+      "event_key": "q:will trump say \"taiwan\" or \"tibet\"",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.12,
+      "mean_p_market_t7": 0.425,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0144,
+      "brier_market_per_bucket": 0.1806
+    },
+    {
+      "event_key": "q:will trump say \"iq\" during events",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.06,
+      "mean_p_market_t7": 0.13,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0036,
+      "brier_market_per_bucket": 0.0169
+    },
+    {
+      "event_key": "q:will trump say \"japan\" or \"korea\"",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.78,
+      "mean_p_market_t7": 0.415,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.6084,
+      "brier_market_per_bucket": 0.1722
+    },
+    {
+      "event_key": "q:will trump say \"sleepy joe\" during",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.04,
+      "mean_p_market_t7": 0.1125,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0016,
+      "brier_market_per_bucket": 0.0127
+    },
+    {
+      "event_key": "q:will trump say \"transgender\" during events",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.04,
+      "mean_p_market_t7": 0.09,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0016,
+      "brier_market_per_bucket": 0.0081
+    },
+    {
+      "event_key": "q:will trump say \"tariff\" during events",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.78,
+      "mean_p_market_t7": 0.6525,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.6084,
+      "brier_market_per_bucket": 0.4258
+    },
+    {
+      "event_key": "q:will trump say \"tanker\" during events",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.06,
+      "mean_p_market_t7": 0.2225,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0036,
+      "brier_market_per_bucket": 0.0495
+    },
+    {
+      "event_key": "q:will trump say \"crypto\" or \"bitcoin\"",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.12,
+      "mean_p_market_t7": 0.1125,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0144,
+      "brier_market_per_bucket": 0.0127
+    },
+    {
+      "event_key": "q:will trump say \"covid\" or \"pandemic\"",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.15,
+      "mean_p_market_t7": 0.1225,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0225,
+      "brier_market_per_bucket": 0.015
+    },
+    {
+      "event_key": "q:will trump say \"friend of mine\"",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.7,
+      "mean_p_market_t7": 0.495,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.49,
+      "brier_market_per_bucket": 0.245
+    },
+    {
+      "event_key": "q:will trump say \"ai\" or \"artificial",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.7,
+      "mean_p_market_t7": 0.55,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.49,
+      "brier_market_per_bucket": 0.3025
+    },
+    {
+      "event_key": "q:will fnatic win lec spring?",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.08,
+      "mean_p_market_t7": 0.0015,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0064,
+      "brier_market_per_bucket": 0.0
+    },
+    {
+      "event_key": "q:will the nyt front-page headlines say",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.55,
+      "mean_p_market_t7": 0.575,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.3025,
+      "brier_market_per_bucket": 0.3306
+    },
+    {
+      "event_key": "q:will team heretics win lec spring?",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.12,
+      "mean_p_market_t7": 0.0005,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0144,
+      "brier_market_per_bucket": 0.0
+    },
+    {
+      "event_key": "q:will aurora win pgl astana ?",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.08,
+      "mean_p_market_t7": 0.07,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0064,
+      "brier_market_per_bucket": 0.0049
+    },
+    {
+      "event_key": "q:will cz post - posts from",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.22,
+      "mean_p_market_t7": 0.7,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0484,
+      "brier_market_per_bucket": 0.49
+    },
+    {
+      "event_key": "q:will vegas golden knights advance to",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.18,
+      "mean_p_market_t7": 0.645,
+      "mean_outcome_yes_rate": 1.0,
+      "brier_llm_per_bucket": 0.6724,
+      "brier_market_per_bucket": 0.126
+    },
+    {
+      "event_key": "q:will jerome powell depart as fed",
+      "n_buckets": 1,
+      "niche": "politics_election",
+      "mean_p_llm": 0.04,
+      "mean_p_market_t7": 0.005,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0016,
+      "brier_market_per_bucket": 0.0
+    },
+    {
+      "event_key": "q:will donald trump dance on may",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.42,
+      "mean_p_market_t7": 0.245,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.1764,
+      "brier_market_per_bucket": 0.06
+    },
+    {
+      "event_key": "q:jerome powell out as fed chair",
+      "n_buckets": 1,
+      "niche": "regulatory_policy",
+      "mean_p_llm": 0.07,
+      "mean_p_market_t7": 0.0105,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0049,
+      "brier_market_per_bucket": 0.0001
+    },
+    {
+      "event_key": "q:will hyperliquid reach $ by december",
+      "n_buckets": 1,
+      "niche": "crypto",
+      "mean_p_llm": 0.62,
+      "mean_p_market_t7": 0.854,
+      "mean_outcome_yes_rate": 1.0,
+      "brier_llm_per_bucket": 0.1444,
+      "brier_market_per_bucket": 0.0213
+    },
+    {
+      "event_key": "q:will cr flamengo win on ?",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.5,
+      "mean_p_market_t7": 0.325,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.25,
+      "brier_market_per_bucket": 0.1056
+    },
+    {
+      "event_key": "q:ec vit\u00f3ria vs. cr flamengo: both",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.48,
+      "mean_p_market_t7": 0.51,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.2304,
+      "brier_market_per_bucket": 0.2601
+    },
+    {
+      "event_key": "q:will ec vit\u00f3ria win on ?",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.38,
+      "mean_p_market_t7": 0.41,
+      "mean_outcome_yes_rate": 1.0,
+      "brier_llm_per_bucket": 0.3844,
+      "brier_market_per_bucket": 0.3481
+    },
+    {
+      "event_key": "q:will ec vit\u00f3ria vs. cr flamengo",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.26,
+      "mean_p_market_t7": 0.28,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0676,
+      "brier_market_per_bucket": 0.0784
+    },
+    {
+      "event_key": "q:will cd oriente petrolero vs. club",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.26,
+      "mean_p_market_t7": 0.385,
+      "mean_outcome_yes_rate": 1.0,
+      "brier_llm_per_bucket": 0.5476,
+      "brier_market_per_bucket": 0.3782
+    },
+    {
+      "event_key": "q:will club guabir\u00e1 win on ?",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.33,
+      "mean_p_market_t7": 0.4,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.1089,
+      "brier_market_per_bucket": 0.16
+    },
+    {
+      "event_key": "q:will cd oriente petrolero win on",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.35,
+      "mean_p_market_t7": 0.47,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.1225,
+      "brier_market_per_bucket": 0.2209
+    },
+    {
+      "event_key": "q:will cz post 0- posts from",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.08,
+      "mean_p_market_t7": 0.25,
+      "mean_outcome_yes_rate": 1.0,
+      "brier_llm_per_bucket": 0.8464,
+      "brier_market_per_bucket": 0.5625
+    },
+    {
+      "event_key": "q:will cr brasil vs. fortaleza ec",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.27,
+      "mean_p_market_t7": 0.33,
+      "mean_outcome_yes_rate": 1.0,
+      "brier_llm_per_bucket": 0.5329,
+      "brier_market_per_bucket": 0.4489
+    },
+    {
+      "event_key": "q:will cr brasil win on ?",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.4,
+      "mean_p_market_t7": 0.435,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.16,
+      "brier_market_per_bucket": 0.1892
+    },
+    {
+      "event_key": "q:will fortaleza ec win on ?",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.38,
+      "mean_p_market_t7": 0.29,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.1444,
+      "brier_market_per_bucket": 0.0841
+    },
+    {
+      "event_key": "q:will nyc mayor post 0- posts",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.25,
+      "mean_p_market_t7": 0.08,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0625,
+      "brier_market_per_bucket": 0.0064
+    },
+    {
+      "event_key": "q:will sc corinthians paulista vs. barra",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.22,
+      "mean_p_market_t7": 0.225,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0484,
+      "brier_market_per_bucket": 0.0506
+    },
+    {
+      "event_key": "q:will sc corinthians paulista win on",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.4,
+      "mean_p_market_t7": 0.585,
+      "mean_outcome_yes_rate": 1.0,
+      "brier_llm_per_bucket": 0.36,
+      "brier_market_per_bucket": 0.1722
+    },
+    {
+      "event_key": "q:will barra fc win on ?",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.4,
+      "mean_p_market_t7": 0.27,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.16,
+      "brier_market_per_bucket": 0.0729
+    },
+    {
+      "event_key": "q:will ca paranaense win on ?",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.4,
+      "mean_p_market_t7": 0.325,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.16,
+      "brier_market_per_bucket": 0.1056
+    },
+    {
+      "event_key": "q:ac goianiense vs. ca paranaense: both",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.42,
+      "mean_p_market_t7": 0.475,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.1764,
+      "brier_market_per_bucket": 0.2256
+    },
+    {
+      "event_key": "q:will ac goianiense vs. ca paranaense",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.27,
+      "mean_p_market_t7": 0.3,
+      "mean_outcome_yes_rate": 1.0,
+      "brier_llm_per_bucket": 0.5329,
+      "brier_market_per_bucket": 0.49
+    },
+    {
+      "event_key": "q:will ac goianiense win on ?",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.4,
+      "mean_p_market_t7": 0.415,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.16,
+      "brier_market_per_bucket": 0.1722
+    },
+    {
+      "event_key": "q:will gr\u00eamio fbpa win on ?",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.4,
+      "mean_p_market_t7": 0.345,
+      "mean_outcome_yes_rate": 1.0,
+      "brier_llm_per_bucket": 0.36,
+      "brier_market_per_bucket": 0.429
+    },
+    {
+      "event_key": "q:will ad confian\u00e7a win on ?",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.4,
+      "mean_p_market_t7": 0.32,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.16,
+      "brier_market_per_bucket": 0.1024
+    },
+    {
+      "event_key": "q:will ad confian\u00e7a vs. gr\u00eamio fbpa",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.22,
+      "mean_p_market_t7": 0.335,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0484,
+      "brier_market_per_bucket": 0.1122
+    },
+    {
+      "event_key": "q:ad confian\u00e7a vs. gr\u00eamio fbpa: both",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.42,
+      "mean_p_market_t7": 0.525,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.1764,
+      "brier_market_per_bucket": 0.2756
+    },
+    {
+      "event_key": "q:will associa\u00e7\u00e3o chapecoense de futebol vs.",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.26,
+      "mean_p_market_t7": 0.305,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0676,
+      "brier_market_per_bucket": 0.093
+    },
+    {
+      "event_key": "q:will associa\u00e7\u00e3o chapecoense de futebol win",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.38,
+      "mean_p_market_t7": 0.415,
+      "mean_outcome_yes_rate": 1.0,
+      "brier_llm_per_bucket": 0.3844,
+      "brier_market_per_bucket": 0.3422
+    },
+    {
+      "event_key": "q:will botafogo fr win on ?",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.45,
+      "mean_p_market_t7": 0.32,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.2025,
+      "brier_market_per_bucket": 0.1024
+    },
+    {
+      "event_key": "q:associa\u00e7\u00e3o chapecoense de futebol vs. botafogo",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.42,
+      "mean_p_market_t7": 0.51,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.1764,
+      "brier_market_per_bucket": 0.2601
+    },
+    {
+      "event_key": "q:will fk rukh lviv win on",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.35,
+      "mean_p_market_t7": 0.335,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.1225,
+      "brier_market_per_bucket": 0.1122
+    },
+    {
+      "event_key": "q:will fk kudrivka win on ?",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.4,
+      "mean_p_market_t7": 0.405,
+      "mean_outcome_yes_rate": 1.0,
+      "brier_llm_per_bucket": 0.36,
+      "brier_market_per_bucket": 0.354
+    },
+    {
+      "event_key": "q:will club the strongest win on",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.4,
+      "mean_p_market_t7": 0.355,
+      "mean_outcome_yes_rate": 1.0,
+      "brier_llm_per_bucket": 0.36,
+      "brier_market_per_bucket": 0.416
+    },
+    {
+      "event_key": "q:will club always ready win on",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.4,
+      "mean_p_market_t7": 0.435,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.16,
+      "brier_market_per_bucket": 0.1892
+    },
+    {
+      "event_key": "q:will donald trump publicly insult someone",
+      "n_buckets": 1,
+      "niche": "breaking_news",
+      "mean_p_llm": 0.97,
+      "mean_p_market_t7": 0.855,
+      "mean_outcome_yes_rate": 1.0,
+      "brier_llm_per_bucket": 0.0009,
+      "brier_market_per_bucket": 0.021
+    },
+    {
+      "event_key": "q:epstein suicide note released by may",
+      "n_buckets": 1,
+      "niche": "breaking_news",
+      "mean_p_llm": 0.03,
+      "mean_p_market_t7": 0.0175,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0009,
+      "brier_market_per_bucket": 0.0003
+    },
+    {
+      "event_key": "q:will bolton wanderers fc win on",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.35,
+      "mean_p_market_t7": 0.31,
+      "mean_outcome_yes_rate": 1.0,
+      "brier_llm_per_bucket": 0.4225,
+      "brier_market_per_bucket": 0.4761
+    },
+    {
+      "event_key": "q:will bradford city afc win on",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.35,
+      "mean_p_market_t7": 0.385,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.1225,
+      "brier_market_per_bucket": 0.1482
+    },
+    {
+      "event_key": "q:will bradford city afc vs. bolton",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.25,
+      "mean_p_market_t7": 0.295,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0625,
+      "brier_market_per_bucket": 0.087
+    },
+    {
+      "event_key": "q:bradford city afc vs. bolton wanderers",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.5,
+      "mean_p_market_t7": 0.515,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.25,
+      "brier_market_per_bucket": 0.2652
+    },
+    {
+      "event_key": "q:will al hazem sc win on",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.33,
+      "mean_p_market_t7": 0.24,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.1089,
+      "brier_market_per_bucket": 0.0576
+    },
+    {
+      "event_key": "q:will al qadisiyah saudi club vs.",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.24,
+      "mean_p_market_t7": 0.245,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0576,
+      "brier_market_per_bucket": 0.06
+    },
+    {
+      "event_key": "q:will al qadisiyah saudi club win",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.35,
+      "mean_p_market_t7": 0.61,
+      "mean_outcome_yes_rate": 1.0,
+      "brier_llm_per_bucket": 0.4225,
+      "brier_market_per_bucket": 0.1521
+    },
+    {
+      "event_key": "q:al qadisiyah saudi club vs. al",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.5,
+      "mean_p_market_t7": 0.56,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.25,
+      "brier_market_per_bucket": 0.3136
+    },
+    {
+      "event_key": "q:exact score: girona fc 1 -",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.09,
+      "mean_p_market_t7": 0.115,
+      "mean_outcome_yes_rate": 1.0,
+      "brier_llm_per_bucket": 0.8281,
+      "brier_market_per_bucket": 0.7832
+    },
+    {
+      "event_key": "q:girona fc vs. real sociedad de",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.55,
+      "mean_p_market_t7": 0.595,
+      "mean_outcome_yes_rate": 1.0,
+      "brier_llm_per_bucket": 0.2025,
+      "brier_market_per_bucket": 0.164
+    },
+    {
+      "event_key": "q:exact score: girona fc 0 -",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.08,
+      "mean_p_market_t7": 0.48,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0064,
+      "brier_market_per_bucket": 0.2304
+    },
+    {
+      "event_key": "q:will girona fc win on ?",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.35,
+      "mean_p_market_t7": 0.425,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.1225,
+      "brier_market_per_bucket": 0.1806
+    },
+    {
+      "event_key": "q:exact score: girona fc 2 -",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.06,
+      "mean_p_market_t7": 0.48,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0036,
+      "brier_market_per_bucket": 0.2304
+    },
+    {
+      "event_key": "q:will real sociedad de f\u00fatbol win",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.38,
+      "mean_p_market_t7": 0.315,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.1444,
+      "brier_market_per_bucket": 0.0992
+    },
+    {
+      "event_key": "q:will girona fc vs. real sociedad",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.24,
+      "mean_p_market_t7": 0.26,
+      "mean_outcome_yes_rate": 1.0,
+      "brier_llm_per_bucket": 0.5776,
+      "brier_market_per_bucket": 0.5476
+    },
+    {
+      "event_key": "q:will real oviedo win on ?",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.33,
+      "mean_p_market_t7": 0.075,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.1089,
+      "brier_market_per_bucket": 0.0056
+    },
+    {
+      "event_key": "q:real madrid cf vs. real oviedo:",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.42,
+      "mean_p_market_t7": 0.515,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.1764,
+      "brier_market_per_bucket": 0.2652
+    },
+    {
+      "event_key": "q:will real madrid cf vs. real",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.12,
+      "mean_p_market_t7": 0.14,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0144,
+      "brier_market_per_bucket": 0.0196
+    },
+    {
+      "event_key": "q:exact score: real madrid cf 1",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.07,
+      "mean_p_market_t7": 0.08,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0049,
+      "brier_market_per_bucket": 0.0064
+    },
+    {
+      "event_key": "q:exact score: real madrid cf 4",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.07,
+      "mean_p_market_t7": 0.47,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0049,
+      "brier_market_per_bucket": 0.2209
+    },
+    {
+      "event_key": "q:exact score: real madrid cf 0",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.02,
+      "mean_p_market_t7": 0.475,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0004,
+      "brier_market_per_bucket": 0.2256
+    },
+    {
+      "event_key": "q:will real madrid cf win on",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.45,
+      "mean_p_market_t7": 0.81,
+      "mean_outcome_yes_rate": 1.0,
+      "brier_llm_per_bucket": 0.3025,
+      "brier_market_per_bucket": 0.0361
+    },
+    {
+      "event_key": "q:us x cuba diplomatic meeting by",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.85,
+      "mean_p_market_t7": 0.245,
+      "mean_outcome_yes_rate": 1.0,
+      "brier_llm_per_bucket": 0.0225,
+      "brier_market_per_bucket": 0.57
+    },
+    {
+      "event_key": "q:will white house post - posts",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.18,
+      "mean_p_market_t7": 0.36,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0324,
+      "brier_market_per_bucket": 0.1296
+    },
+    {
+      "event_key": "q:valencia cf vs. rayo vallecano de",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.48,
+      "mean_p_market_t7": 0.5625,
+      "mean_outcome_yes_rate": 1.0,
+      "brier_llm_per_bucket": 0.2704,
+      "brier_market_per_bucket": 0.1914
+    },
+    {
+      "event_key": "q:exact score: valencia cf 0 -",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.08,
+      "mean_p_market_t7": 0.065,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0064,
+      "brier_market_per_bucket": 0.0042
+    },
+    {
+      "event_key": "q:exact score: valencia cf 2 -",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.07,
+      "mean_p_market_t7": 0.095,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0049,
+      "brier_market_per_bucket": 0.009
+    },
+    {
+      "event_key": "q:will rayo vallecano de madrid win",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.32,
+      "mean_p_market_t7": 0.3,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.1024,
+      "brier_market_per_bucket": 0.09
+    },
+    {
+      "event_key": "q:will valencia cf vs. rayo vallecano",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.26,
+      "mean_p_market_t7": 0.275,
+      "mean_outcome_yes_rate": 1.0,
+      "brier_llm_per_bucket": 0.5476,
+      "brier_market_per_bucket": 0.5256
+    },
+    {
+      "event_key": "q:will valencia cf win on ?",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.25,
+      "mean_p_market_t7": 0.435,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0625,
+      "brier_market_per_bucket": 0.1892
+    },
+    {
+      "event_key": "q:israel x lebanon diplomatic meeting by",
+      "n_buckets": 1,
+      "niche": "scheduled_event",
+      "mean_p_llm": 0.95,
+      "mean_p_market_t7": 0.58,
+      "mean_outcome_yes_rate": 1.0,
+      "brier_llm_per_bucket": 0.0025,
+      "brier_market_per_bucket": 0.1764
+    },
+    {
+      "event_key": "q:will applied materials (amat) beat quarterly",
+      "n_buckets": 1,
+      "niche": "corporate_event",
+      "mean_p_llm": 0.68,
+      "mean_p_market_t7": 0.935,
+      "mean_outcome_yes_rate": 1.0,
+      "brier_llm_per_bucket": 0.1024,
+      "brier_market_per_bucket": 0.0042
+    },
+    {
+      "event_key": "q:will al ettifaq saudi club vs.",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.24,
+      "mean_p_market_t7": 0.315,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.0576,
+      "brier_market_per_bucket": 0.0992
+    },
+    {
+      "event_key": "q:will al ettifaq saudi club win",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.35,
+      "mean_p_market_t7": 0.43,
+      "mean_outcome_yes_rate": 0.0,
+      "brier_llm_per_bucket": 0.1225,
+      "brier_market_per_bucket": 0.1849
+    },
+    {
+      "event_key": "q:will al ittihad saudi club win",
+      "n_buckets": 1,
+      "niche": "sports_outright",
+      "mean_p_llm": 0.45,
+      "mean_p_market_t7": 0.32,
+      "mean_outcome_yes_rate": 1.0,
+      "brier_llm_per_bucket": 0.3025,
+      "brier_market_per_bucket": 0.4624
+    }
+  ]
+}

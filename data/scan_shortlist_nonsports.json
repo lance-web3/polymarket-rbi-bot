@@ -1,0 +1,266 @@
+{
+  "summary": {
+    "recovered_from": "data/quote_collection/nonsports_run.jsonl",
+    "rows_read": 422336,
+    "rows_with_condition": 422336,
+    "condition_count": 32
+  },
+  "shortlist": [
+    {
+      "condition_id": "0xbb57ccf5853a85487bc3d83d04d669310d28c6c810758953b9d9b91d1aee89d2",
+      "question": "Will bitcoin hit $1m before GTA VI?",
+      "market_slug": "will-bitcoin-hit-1m-before-gta-vi-872",
+      "liquidity": 474260.28332,
+      "market_family": "event_resolution",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    },
+    {
+      "condition_id": "0xd5d9fc47718bd553592d126b1fa5e87183d27f3936975b0c04cc0f2dec1f1bb4",
+      "question": "Will the Democratic Party control the House after the 2026 Midterm elections?",
+      "market_slug": "will-the-democratic-party-control-the-house-after-the-2026-midterm-elections",
+      "liquidity": 246522.6835,
+      "market_family": "event_resolution",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    },
+    {
+      "condition_id": "0x4e4f77e7dbf4cab666e9a1943674d7ae66348e862df03ea6f44b11eb95731928",
+      "question": "Will the Republican Party control the House after the 2026 Midterm elections?",
+      "market_slug": "will-the-republican-party-control-the-house-after-the-2026-midterm-elections",
+      "liquidity": 244420.1564,
+      "market_family": "event_resolution",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    },
+    {
+      "condition_id": "0x0e16a806a7d079ad19a18599e800bae595eb99b640c5922e1398e30244a0ea43",
+      "question": "Will the next Prime Minister of Hungary be J\u00e1nos L\u00e1z\u00e1r?",
+      "market_slug": "will-the-next-prime-minister-of-hungary-be-jnos-lzr",
+      "liquidity": 488302.57372,
+      "market_family": "event_resolution",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    },
+    {
+      "condition_id": "0x5599856587ed77cf40cf20608448180f6abdcc512027016bcdd68ad73fca3e9f",
+      "question": "Will the next Prime Minister of Hungary be Kl\u00e1ra Dobrev?",
+      "market_slug": "will-the-next-prime-minister-of-hungary-be-klra-dobrev",
+      "liquidity": 2432296.43967,
+      "market_family": "event_resolution",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    },
+    {
+      "condition_id": "0x73e39c98045179951b7c527b749118771c10a15a32eee5ebc98f9e3650a69fe1",
+      "question": "Will the next Prime Minister of Hungary be L\u00e1szl\u00f3 Toroczkai?",
+      "market_slug": "will-the-next-prime-minister-of-hungary-be-lszl-toroczkai",
+      "liquidity": 1027924.14936,
+      "market_family": "event_resolution",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    },
+    {
+      "condition_id": "0x1480b819d03d4b6388d70e848b0384adf38c38d955cb783cdbcf6d4a436dee14",
+      "question": "Will the next Prime Minister of Hungary be P\u00e9ter Magyar?",
+      "market_slug": "will-the-next-prime-minister-of-hungary-be-pter-magyar",
+      "liquidity": 542900.62281,
+      "market_family": "event_resolution",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    },
+    {
+      "condition_id": "0x5ec80dc407457301f282a2b44341947afc700dfaa7923d14c8894e04bc63b03f",
+      "question": "Will the next Prime Minister of Hungary be Viktor Orb\u00e1n?",
+      "market_slug": "will-the-next-prime-minister-of-hungary-be-viktor-orbn",
+      "liquidity": 667921.71261,
+      "market_family": "event_resolution",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    },
+    {
+      "condition_id": "0xafd3f96b7b6084509e625270538ff0699003fafc042263c1216e7f084cef753a",
+      "question": "Will Aldo Rebelo win the 2026 Brazilian presidential election?",
+      "market_slug": "will-aldo-rebelo-win-the-2026-brazilian-presidential-election",
+      "liquidity": 483257.09555,
+      "market_family": "legal_regulatory",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    },
+    {
+      "condition_id": "0xa59bb6bb91e5c1e4d533864520fbd3bb75d6d0ebb813b4cd8a8b88479bfa8966",
+      "question": "Will Carlos Roberto Massa J\u00fanior win the 2026 Brazilian presidential election?",
+      "market_slug": "will-carlos-roberto-massa-jnior-win-the-2026-brazilian-presidential-election",
+      "liquidity": 677308.6175,
+      "market_family": "legal_regulatory",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    },
+    {
+      "condition_id": "0xd9fb1184af0064e5e34b129f5b79afa5a17b7e32f2953ab05efed82315fee6d4",
+      "question": "Will China invade Taiwan by end of 2026?",
+      "market_slug": "will-china-invade-taiwan-before-2027",
+      "liquidity": 979680.53133,
+      "market_family": "legal_regulatory",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    },
+    {
+      "condition_id": "0xe1d5733322fd2215f136412f419d9ff805d097f78c68de3261515ff736895f2b",
+      "question": "Will Eduardo Bolsonaro win the 2026 Brazilian presidential election?",
+      "market_slug": "will-eduardo-bolsonaro-win-the-2026-brazilian-presidential-election",
+      "liquidity": 661515.04883,
+      "market_family": "legal_regulatory",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    },
+    {
+      "condition_id": "0x70f1a7d2cd490b640676d5e31470bcbe16fef40087de1af8b6f6e44e299b5784",
+      "question": "Will Eduardo Leite win the 2026 Brazilian presidential election?",
+      "market_slug": "will-eduardo-leite-win-the-2026-brazilian-presidential-election",
+      "liquidity": 799608.93187,
+      "market_family": "legal_regulatory",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    },
+    {
+      "condition_id": "0x63d8f3a34c90bd5342dda8acf62b6a898dfa52f86475efaf180b66493ef6af80",
+      "question": "Will Jair Bolsonaro win the 2026 Brazilian presidential election?",
+      "market_slug": "will-jair-bolsonaro-win-the-2026-brazilian-presidential-election",
+      "liquidity": 228415.72151,
+      "market_family": "legal_regulatory",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    },
+    {
+      "condition_id": "0x32b09f6390252b37d674501527e709016d55581b2c1e544bd4b8167f5f732f4c",
+      "question": "Will Jesus Christ return before GTA VI?",
+      "market_slug": "will-jesus-christ-return-before-gta-vi-665",
+      "liquidity": 767542.0127,
+      "market_family": "legal_regulatory",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    },
+    {
+      "condition_id": "0x81a537b379a35e4e17c286d3b37394e94bd74c1779bbe9a13670eb991b201a3a",
+      "question": "Will Tarcisio de Freitas win the 2026 Brazilian presidential election?",
+      "market_slug": "will-tarcisio-de-frietas-win-the-2026-brazilian-presidential-election",
+      "liquidity": 415871.3498,
+      "market_family": "legal_regulatory",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    },
+    {
+      "condition_id": "0xaeea5f917fc5746387b5f9c0a4263dba035dbb3f0ac6ad72bf92183d21e26739",
+      "question": "Russia x Ukraine ceasefire by end of 2026?",
+      "market_slug": "russia-x-ukraine-ceasefire-before-2027",
+      "liquidity": 477986.7672,
+      "market_family": "news_breaking",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    },
+    {
+      "condition_id": "0x5e082f0b57f47a29044aa35b4c5658393122e659d5feae521c06b57cdd7f905c",
+      "question": "Will 1 Fed rate cut happen in 2026?",
+      "market_slug": "will-1-fed-rate-cut-happen-in-2026",
+      "liquidity": 126608.1209,
+      "market_family": "news_breaking",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    },
+    {
+      "condition_id": "0x757c144993b3cb831e04c42bfcff8c18864c7da4f4688a5939d2f62e031cbc87",
+      "question": "Will 10 Fed rate cuts happen in 2026?",
+      "market_slug": "will-10-fed-rate-cuts-happen-in-2026",
+      "liquidity": 149689.55533,
+      "market_family": "news_breaking",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    },
+    {
+      "condition_id": "0x1adf074e048fa613f4ddbc0766088748a48d120a3a713b0183e219032a411ae3",
+      "question": "Will 11 Fed rate cuts happen in 2026?",
+      "market_slug": "will-11-fed-rate-cuts-happen-in-2026",
+      "liquidity": 201610.33017,
+      "market_family": "news_breaking",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    },
+    {
+      "condition_id": "0x8d4966e84ae80f24b2e14643fdd45364e354229e11e2c17903b4b1763cfbe67c",
+      "question": "Will 3 Fed rate cuts happen in 2026?",
+      "market_slug": "will-3-fed-rate-cuts-happen-in-2026",
+      "liquidity": 126408.0753,
+      "market_family": "news_breaking",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    },
+    {
+      "condition_id": "0x2368d2604c9c2b95bc98c51bd50c66e5351caebf05b9fe79d3398c387fe29a89",
+      "question": "Will 7 Fed rate cuts happen in 2026?",
+      "market_slug": "will-7-fed-rate-cuts-happen-in-2026",
+      "liquidity": 131822.03244,
+      "market_family": "news_breaking",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    },
+    {
+      "condition_id": "0x4ec6fcb43fe1a32163c7da09d54a99ab9bf6abdc6fd49939d7ad67d696a3248b",
+      "question": "Will 9 Fed rate cuts happen in 2026?",
+      "market_slug": "will-9-fed-rate-cuts-happen-in-2026",
+      "liquidity": 158955.19084,
+      "market_family": "news_breaking",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    },
+    {
+      "condition_id": "0x448f73e89890ae9d0e42ad0b592f63b53c0ae05d1ca3fa8d80b30027781f1be7",
+      "question": "Will Trump resign by December 31, 2026?",
+      "market_slug": "will-trump-resign-by-december-31-2026",
+      "liquidity": 150317.9548,
+      "market_family": "news_breaking",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    },
+    {
+      "condition_id": "0x450810ae738a0ff820d3248f2b24937f63fb8c8cf422ed2a915125adb4d9d3c8",
+      "question": "Will Andrew Yang win the 2028 Democratic presidential nomination?",
+      "market_slug": "will-andrew-yang-win-the-2028-democratic-presidential-nomination",
+      "liquidity": 2448278.70955,
+      "market_family": "scheduled_event",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    },
+    {
+      "condition_id": "0x822e61527476cabf98927e3aad385c5ecdae7086f945535f2c1fd9ae8dbfa46e",
+      "question": "Will George Clooney win the 2028 Democratic presidential nomination?",
+      "market_slug": "will-george-clooney-win-the-2028-democratic-presidential-nomination",
+      "liquidity": 2464015.14196,
+      "market_family": "scheduled_event",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    },
+    {
+      "condition_id": "0x1945a8b23e313ed7423b6b6fd556f9ab5578900376b565a61dc480a5f4f35d21",
+      "question": "Will Hunter Biden win the 2028 Democratic presidential nomination?",
+      "market_slug": "will-person-a-win-the-2028-democratic-presidential-nomination",
+      "liquidity": 2450151.81408,
+      "market_family": "scheduled_event",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    },
+    {
+      "condition_id": "0x0f8ef3cc906ba7ba94a44724738df44bdd5f73e59e40c9c8b4ff8569e349643c",
+      "question": "Will Kim Kardashian win the 2028 Democratic presidential nomination?",
+      "market_slug": "will-kim-kardashian-win-the-2028-democratic-presidential-nomination",
+      "liquidity": 2653327.20403,
+      "market_family": "scheduled_event",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    },
+    {
+      "condition_id": "0x8b203037c7c0e21b500314f8398d2a8ea294b7ce1f4f9185f426425a3505bc45",
+      "question": "Will LeBron James win the 2028 Democratic presidential nomination?",
+      "market_slug": "will-lebron-james-win-the-2028-democratic-presidential-nomination",
+      "liquidity": 2680035.40991,
+      "market_family": "scheduled_event",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    },
+    {
+      "condition_id": "0xc44edcfdedb422bae8ff1803e2178d1ee025fc41efd81400ccbede709e018841",
+      "question": "Will MrBeast win the 2028 Democratic presidential nomination?",
+      "market_slug": "will-mrbeast-win-the-2028-democratic-presidential-nomination",
+      "liquidity": 2582092.25599,
+      "market_family": "scheduled_event",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    },
+    {
+      "condition_id": "0xe06a7e94cf2fa8dc2085b7610fe16e9be1cde6654f34d365c13da1149b276c61",
+      "question": "Will Oprah Winfrey win the 2028 Democratic presidential nomination?",
+      "market_slug": "will-oprah-winfrey-win-the-2028-democratic-presidential-nomination",
+      "liquidity": 2446374.20997,
+      "market_family": "scheduled_event",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    },
+    {
+      "condition_id": "0x29283b56d3eec6d1d89fff51793d9d2e01579d2379b1d3e9ebda175d3561e809",
+      "question": "Will Phil Murphy win the 2028 Democratic presidential nomination?",
+      "market_slug": "will-phil-murphy-win-the-2028-democratic-presidential-nomination-611",
+      "liquidity": 2481758.1194,
+      "market_family": "scheduled_event",
+      "added_via": "recovered_from_nonsports_run_jsonl"
+    }
+  ]
+}

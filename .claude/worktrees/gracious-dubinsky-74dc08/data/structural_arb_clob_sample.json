@@ -1,0 +1,108 @@
+{
+  "mode": "quote_backtests",
+  "summary": {
+    "conditions_scanned": 2,
+    "timestamp_rows_scanned": 2,
+    "buy_bundle_count": 0,
+    "sell_bundle_count": 0,
+    "invalid_quote_rows": 0,
+    "rejected_reference_rows": 0,
+    "ask_buffer": 0.01,
+    "bid_buffer": 0.01,
+    "min_rows_per_condition": 1,
+    "min_reference_sum": 0.95,
+    "max_reference_sum": 1.05,
+    "top_requested": 10
+  },
+  "shortlist": [],
+  "ranked_conditions": [
+    {
+      "condition_id": "0x1fad72fae204143ff1c3035e99e7c0f65ea8d5cd9bd1070987bd1a3316f772be",
+      "question": "New Rihanna Album before GTA VI?",
+      "outcomes": [
+        "No",
+        "Yes"
+      ],
+      "paths": [
+        "data/quote_backtests_clob_sample/quote_backtest_53831553061883006530739877284105938919721408776239639687877978808906551086026.csv",
+        "data/quote_backtests_clob_sample/quote_backtest_98022490269692409998126496127597032490334070080325855126491859374983463996227.csv"
+      ],
+      "aligned_rows": 1,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 0,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0x9c1a953fe92c8357f1b646ba25d983aa83e90c525992db14fb726fa895cb5763",
+      "question": "Russia-Ukraine Ceasefire before GTA VI?",
+      "outcomes": [
+        "No",
+        "Yes"
+      ],
+      "paths": [
+        "data/quote_backtests_clob_sample/quote_backtest_2527312495175492857904889758552137141356236738032676480522356889996545113869.csv",
+        "data/quote_backtests_clob_sample/quote_backtest_8501497159083948713316135768103773293754490207922884688769443031624417212426.csv"
+      ],
+      "aligned_rows": 1,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 0,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    }
+  ],
+  "all_condition_summaries": [
+    {
+      "condition_id": "0x1fad72fae204143ff1c3035e99e7c0f65ea8d5cd9bd1070987bd1a3316f772be",
+      "question": "New Rihanna Album before GTA VI?",
+      "outcomes": [
+        "No",
+        "Yes"
+      ],
+      "paths": [
+        "data/quote_backtests_clob_sample/quote_backtest_53831553061883006530739877284105938919721408776239639687877978808906551086026.csv",
+        "data/quote_backtests_clob_sample/quote_backtest_98022490269692409998126496127597032490334070080325855126491859374983463996227.csv"
+      ],
+      "aligned_rows": 1,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 0,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0x9c1a953fe92c8357f1b646ba25d983aa83e90c525992db14fb726fa895cb5763",
+      "question": "Russia-Ukraine Ceasefire before GTA VI?",
+      "outcomes": [
+        "No",
+        "Yes"
+      ],
+      "paths": [
+        "data/quote_backtests_clob_sample/quote_backtest_2527312495175492857904889758552137141356236738032676480522356889996545113869.csv",
+        "data/quote_backtests_clob_sample/quote_backtest_8501497159083948713316135768103773293754490207922884688769443031624417212426.csv"
+      ],
+      "aligned_rows": 1,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 0,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    }
+  ],
+  "notes": [
+    "quote-backtest mode requires one CSV per token with shared condition_id and aligned timestamps.",
+    "Executable bundle signals are only emitted when every leg has sane quotes (0<=bid<=ask<=1) at that timestamp.",
+    "The scanner also requires complementary reference prices to sum near $1 (configurable) to suppress stale or structurally inconsistent quote artifacts.",
+    "Edges here are raw bundle sums versus $1 and do not yet subtract fees, inventory, or execution latency."
+  ],
+  "combinatorial_scaffold": {
+    "status": "not_implemented_yet",
+    "idea": "Future step: link logically dependent conditions across separate markets once we have robust dependency mapping and executable pricing checks."
+  }
+}

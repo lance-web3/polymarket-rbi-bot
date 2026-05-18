@@ -1,0 +1,34 @@
+[
+  {
+    "token_id": "2527312495175492857904889758552137141356236738032676480522356889996545113869",
+    "path": "data/quote_backtests_clob_sample/quote_backtest_2527312495175492857904889758552137141356236738032676480522356889996545113869.csv",
+    "rows": 1,
+    "question": "Russia-Ukraine Ceasefire before GTA VI?",
+    "condition_id": "0x9c1a953fe92c8357f1b646ba25d983aa83e90c525992db14fb726fa895cb5763",
+    "outcome": "No"
+  },
+  {
+    "token_id": "53831553061883006530739877284105938919721408776239639687877978808906551086026",
+    "path": "data/quote_backtests_clob_sample/quote_backtest_53831553061883006530739877284105938919721408776239639687877978808906551086026.csv",
+    "rows": 1,
+    "question": "New Rihanna Album before GTA VI?",
+    "condition_id": "0x1fad72fae204143ff1c3035e99e7c0f65ea8d5cd9bd1070987bd1a3316f772be",
+    "outcome": "No"
+  },
+  {
+    "token_id": "8501497159083948713316135768103773293754490207922884688769443031624417212426",
+    "path": "data/quote_backtests_clob_sample/quote_backtest_8501497159083948713316135768103773293754490207922884688769443031624417212426.csv",
+    "rows": 1,
+    "question": "Russia-Ukraine Ceasefire before GTA VI?",
+    "condition_id": "0x9c1a953fe92c8357f1b646ba25d983aa83e90c525992db14fb726fa895cb5763",
+    "outcome": "Yes"
+  },
+  {
+    "token_id": "98022490269692409998126496127597032490334070080325855126491859374983463996227",
+    "path": "data/quote_backtests_clob_sample/quote_backtest_98022490269692409998126496127597032490334070080325855126491859374983463996227.csv",
+    "rows": 1,
+    "question": "New Rihanna Album before GTA VI?",
+    "condition_id": "0x1fad72fae204143ff1c3035e99e7c0f65ea8d5cd9bd1070987bd1a3316f772be",
+    "outcome": "Yes"
+  }
+]

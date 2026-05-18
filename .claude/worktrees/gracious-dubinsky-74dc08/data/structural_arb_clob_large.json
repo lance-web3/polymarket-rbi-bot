@@ -1,0 +1,488 @@
+{
+  "mode": "quote_backtests",
+  "summary": {
+    "conditions_scanned": 12,
+    "timestamp_rows_scanned": 288,
+    "buy_bundle_count": 0,
+    "sell_bundle_count": 0,
+    "invalid_quote_rows": 0,
+    "rejected_reference_rows": 0,
+    "ask_buffer": 0.01,
+    "bid_buffer": 0.01,
+    "min_rows_per_condition": 5,
+    "min_reference_sum": 0.95,
+    "max_reference_sum": 1.05,
+    "top_requested": 30
+  },
+  "shortlist": [],
+  "ranked_conditions": [
+    {
+      "condition_id": "0x289568d555ec620ed6fa33c936c5f42649d3a2e30748a1daf7079f42453fbea4",
+      "question": "Will Ivory Coast win the 2026 FIFA World Cup?",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "paths": [
+        "data/quote_backtests_clob_large/quote_backtest_58374167250364215964582274356498746399676421878376948523944979542572589542202.csv",
+        "data/quote_backtests_clob_large/quote_backtest_70753274007979480001882804624792378182371580903023185997594096497692751054228.csv"
+      ],
+      "aligned_rows": 24,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 0,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0x33a87d02fa01e958929385c74b8627d32cc4474e9ebd312d268865c5207147fa",
+      "question": "Will Jordan win the 2026 FIFA World Cup?",
+      "outcomes": [
+        "No",
+        "Yes"
+      ],
+      "paths": [
+        "data/quote_backtests_clob_large/quote_backtest_64799211284650435818319700973089994510508551533538430983091938324711590775445.csv",
+        "data/quote_backtests_clob_large/quote_backtest_98686749402500678753487703372528277029342097490180026723487433517076969282825.csv"
+      ],
+      "aligned_rows": 24,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 0,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0x3bc69cb672591e4fcd2ef856b64b219a906e15d4601b50066ac81a446574dfaf",
+      "question": "Will Cape Verde win the 2026 FIFA World Cup?",
+      "outcomes": [
+        "No",
+        "Yes"
+      ],
+      "paths": [
+        "data/quote_backtests_clob_large/quote_backtest_51603557647605526784272094285656249935467020057355371392584885347569984808630.csv",
+        "data/quote_backtests_clob_large/quote_backtest_61595193871140044336898809781418183952441527621084596848414908595268863899573.csv"
+      ],
+      "aligned_rows": 24,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 0,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0x3fb8a8de2ac275882d72b2c4f22d41776fcf033f9e413a77a84dd395c0d5257c",
+      "question": "Will Saudi Arabia win the 2026 FIFA World Cup?",
+      "outcomes": [
+        "No",
+        "Yes"
+      ],
+      "paths": [
+        "data/quote_backtests_clob_large/quote_backtest_114546670306823666642195507621782951860129088864927983250949362928442688463192.csv",
+        "data/quote_backtests_clob_large/quote_backtest_23542782083949026234898323432000742558288032327930681121040136746492993951914.csv"
+      ],
+      "aligned_rows": 24,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 0,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0x4fe305a2ae995a52ff278895344895fe587b4fec3d5f04347b4dbf5e99bce99c",
+      "question": "Will Qatar win the 2026 FIFA World Cup?",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "paths": [
+        "data/quote_backtests_clob_large/quote_backtest_18605216520960122093689427575806651607517827372535894526532079999408408169156.csv",
+        "data/quote_backtests_clob_large/quote_backtest_84553189233868837011173802287245466242361930181501918469303092803731514390253.csv"
+      ],
+      "aligned_rows": 24,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 0,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0x506f80bcf76bc75e6b31a250e2d754f347c4c231665326931d58bdb339ba1913",
+      "question": "Will Haiti win the 2026 FIFA World Cup?",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "paths": [
+        "data/quote_backtests_clob_large/quote_backtest_113379015922744700109400673843380371641970914885846970213129353605968934558386.csv",
+        "data/quote_backtests_clob_large/quote_backtest_7452445673065716792879664309598949732608843578632923430902121866203768915742.csv"
+      ],
+      "aligned_rows": 24,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 0,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0x51e8c8df709aa78f64d2d9324d9d2556270f81e3966ade308099e5338bb4e4c9",
+      "question": "Will Iraq win the 2026 FIFA World Cup?",
+      "outcomes": [
+        "No",
+        "Yes"
+      ],
+      "paths": [
+        "data/quote_backtests_clob_large/quote_backtest_104137480799334367207764507943317769727862093918816792190533154232239547234217.csv",
+        "data/quote_backtests_clob_large/quote_backtest_53465512181802150755993130711224070738002100921790051090044528012833736167995.csv"
+      ],
+      "aligned_rows": 24,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 0,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0x5e614739363bbfc399469102c600e4e8260032d41e59e0bc12ebc0e71231642d",
+      "question": "Will Cezchia win the 2026 FIFA World Cup?",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "paths": [
+        "data/quote_backtests_clob_large/quote_backtest_35797818400757287472708740881657961304270157125643131597907636474183210188025.csv",
+        "data/quote_backtests_clob_large/quote_backtest_7178132479418833271220202496199802982233847400465199094850639568068936253094.csv"
+      ],
+      "aligned_rows": 24,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 0,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0x881a3ffa618b6ae0ab95a5637e310afb1afc2d99c921bfe3235b15eccfce0344",
+      "question": "Will Ghana win the 2026 FIFA World Cup?",
+      "outcomes": [
+        "No",
+        "Yes"
+      ],
+      "paths": [
+        "data/quote_backtests_clob_large/quote_backtest_10398766811303655595339782235864350348828881761515262235130136230008770201075.csv",
+        "data/quote_backtests_clob_large/quote_backtest_43907673646206657865778036957293730446366626078011238443367990170655175896145.csv"
+      ],
+      "aligned_rows": 24,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 0,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0x9779c09fd4dd0a1c82dd82618269c2aa5669d91305293b396d1e0b8a166b566e",
+      "question": "Will Panama win the 2026 FIFA World Cup?",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "paths": [
+        "data/quote_backtests_clob_large/quote_backtest_112181485529919660901332188537214992263355343785744498550605179448744432717486.csv",
+        "data/quote_backtests_clob_large/quote_backtest_54713157489249811305010442901837547158293079674050742517995375602657385198814.csv"
+      ],
+      "aligned_rows": 24,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 0,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0xbce6698c9a61376c0709a2a724a9cf0dd0236d8dea882533073b6bb062efbee0",
+      "question": "Will Bosnia-Herzegovina win the 2026 FIFA World Cup?",
+      "outcomes": [
+        "No",
+        "Yes"
+      ],
+      "paths": [
+        "data/quote_backtests_clob_large/quote_backtest_334114555297655433618918589540388457186530884312703967834539640747792887116.csv",
+        "data/quote_backtests_clob_large/quote_backtest_89770121993255619705119104591644526712193505786928967250693522950895615785005.csv"
+      ],
+      "aligned_rows": 24,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 0,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0xff0cfa9506cfa95759e4c7591654195bd26e3011f9882b51439135e04f2b69f1",
+      "question": "Will Tunisia win the 2026 FIFA World Cup?",
+      "outcomes": [
+        "No",
+        "Yes"
+      ],
+      "paths": [
+        "data/quote_backtests_clob_large/quote_backtest_110028171623846551687151479494325822981244001939750602839571004785511377900325.csv",
+        "data/quote_backtests_clob_large/quote_backtest_86035858416252385053603758548087253570549129844230230783932738372075949702177.csv"
+      ],
+      "aligned_rows": 24,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 0,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    }
+  ],
+  "all_condition_summaries": [
+    {
+      "condition_id": "0x289568d555ec620ed6fa33c936c5f42649d3a2e30748a1daf7079f42453fbea4",
+      "question": "Will Ivory Coast win the 2026 FIFA World Cup?",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "paths": [
+        "data/quote_backtests_clob_large/quote_backtest_58374167250364215964582274356498746399676421878376948523944979542572589542202.csv",
+        "data/quote_backtests_clob_large/quote_backtest_70753274007979480001882804624792378182371580903023185997594096497692751054228.csv"
+      ],
+      "aligned_rows": 24,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 0,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0x33a87d02fa01e958929385c74b8627d32cc4474e9ebd312d268865c5207147fa",
+      "question": "Will Jordan win the 2026 FIFA World Cup?",
+      "outcomes": [
+        "No",
+        "Yes"
+      ],
+      "paths": [
+        "data/quote_backtests_clob_large/quote_backtest_64799211284650435818319700973089994510508551533538430983091938324711590775445.csv",
+        "data/quote_backtests_clob_large/quote_backtest_98686749402500678753487703372528277029342097490180026723487433517076969282825.csv"
+      ],
+      "aligned_rows": 24,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 0,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0x3bc69cb672591e4fcd2ef856b64b219a906e15d4601b50066ac81a446574dfaf",
+      "question": "Will Cape Verde win the 2026 FIFA World Cup?",
+      "outcomes": [
+        "No",
+        "Yes"
+      ],
+      "paths": [
+        "data/quote_backtests_clob_large/quote_backtest_51603557647605526784272094285656249935467020057355371392584885347569984808630.csv",
+        "data/quote_backtests_clob_large/quote_backtest_61595193871140044336898809781418183952441527621084596848414908595268863899573.csv"
+      ],
+      "aligned_rows": 24,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 0,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0x3fb8a8de2ac275882d72b2c4f22d41776fcf033f9e413a77a84dd395c0d5257c",
+      "question": "Will Saudi Arabia win the 2026 FIFA World Cup?",
+      "outcomes": [
+        "No",
+        "Yes"
+      ],
+      "paths": [
+        "data/quote_backtests_clob_large/quote_backtest_114546670306823666642195507621782951860129088864927983250949362928442688463192.csv",
+        "data/quote_backtests_clob_large/quote_backtest_23542782083949026234898323432000742558288032327930681121040136746492993951914.csv"
+      ],
+      "aligned_rows": 24,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 0,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0x4fe305a2ae995a52ff278895344895fe587b4fec3d5f04347b4dbf5e99bce99c",
+      "question": "Will Qatar win the 2026 FIFA World Cup?",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "paths": [
+        "data/quote_backtests_clob_large/quote_backtest_18605216520960122093689427575806651607517827372535894526532079999408408169156.csv",
+        "data/quote_backtests_clob_large/quote_backtest_84553189233868837011173802287245466242361930181501918469303092803731514390253.csv"
+      ],
+      "aligned_rows": 24,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 0,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0x506f80bcf76bc75e6b31a250e2d754f347c4c231665326931d58bdb339ba1913",
+      "question": "Will Haiti win the 2026 FIFA World Cup?",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "paths": [
+        "data/quote_backtests_clob_large/quote_backtest_113379015922744700109400673843380371641970914885846970213129353605968934558386.csv",
+        "data/quote_backtests_clob_large/quote_backtest_7452445673065716792879664309598949732608843578632923430902121866203768915742.csv"
+      ],
+      "aligned_rows": 24,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 0,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0x51e8c8df709aa78f64d2d9324d9d2556270f81e3966ade308099e5338bb4e4c9",
+      "question": "Will Iraq win the 2026 FIFA World Cup?",
+      "outcomes": [
+        "No",
+        "Yes"
+      ],
+      "paths": [
+        "data/quote_backtests_clob_large/quote_backtest_104137480799334367207764507943317769727862093918816792190533154232239547234217.csv",
+        "data/quote_backtests_clob_large/quote_backtest_53465512181802150755993130711224070738002100921790051090044528012833736167995.csv"
+      ],
+      "aligned_rows": 24,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 0,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0x5e614739363bbfc399469102c600e4e8260032d41e59e0bc12ebc0e71231642d",
+      "question": "Will Cezchia win the 2026 FIFA World Cup?",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "paths": [
+        "data/quote_backtests_clob_large/quote_backtest_35797818400757287472708740881657961304270157125643131597907636474183210188025.csv",
+        "data/quote_backtests_clob_large/quote_backtest_7178132479418833271220202496199802982233847400465199094850639568068936253094.csv"
+      ],
+      "aligned_rows": 24,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 0,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0x881a3ffa618b6ae0ab95a5637e310afb1afc2d99c921bfe3235b15eccfce0344",
+      "question": "Will Ghana win the 2026 FIFA World Cup?",
+      "outcomes": [
+        "No",
+        "Yes"
+      ],
+      "paths": [
+        "data/quote_backtests_clob_large/quote_backtest_10398766811303655595339782235864350348828881761515262235130136230008770201075.csv",
+        "data/quote_backtests_clob_large/quote_backtest_43907673646206657865778036957293730446366626078011238443367990170655175896145.csv"
+      ],
+      "aligned_rows": 24,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 0,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0x9779c09fd4dd0a1c82dd82618269c2aa5669d91305293b396d1e0b8a166b566e",
+      "question": "Will Panama win the 2026 FIFA World Cup?",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "paths": [
+        "data/quote_backtests_clob_large/quote_backtest_112181485529919660901332188537214992263355343785744498550605179448744432717486.csv",
+        "data/quote_backtests_clob_large/quote_backtest_54713157489249811305010442901837547158293079674050742517995375602657385198814.csv"
+      ],
+      "aligned_rows": 24,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 0,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0xbce6698c9a61376c0709a2a724a9cf0dd0236d8dea882533073b6bb062efbee0",
+      "question": "Will Bosnia-Herzegovina win the 2026 FIFA World Cup?",
+      "outcomes": [
+        "No",
+        "Yes"
+      ],
+      "paths": [
+        "data/quote_backtests_clob_large/quote_backtest_334114555297655433618918589540388457186530884312703967834539640747792887116.csv",
+        "data/quote_backtests_clob_large/quote_backtest_89770121993255619705119104591644526712193505786928967250693522950895615785005.csv"
+      ],
+      "aligned_rows": 24,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 0,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    },
+    {
+      "condition_id": "0xff0cfa9506cfa95759e4c7591654195bd26e3011f9882b51439135e04f2b69f1",
+      "question": "Will Tunisia win the 2026 FIFA World Cup?",
+      "outcomes": [
+        "No",
+        "Yes"
+      ],
+      "paths": [
+        "data/quote_backtests_clob_large/quote_backtest_110028171623846551687151479494325822981244001939750602839571004785511377900325.csv",
+        "data/quote_backtests_clob_large/quote_backtest_86035858416252385053603758548087253570549129844230230783932738372075949702177.csv"
+      ],
+      "aligned_rows": 24,
+      "buy_bundle_count": 0,
+      "sell_bundle_count": 0,
+      "invalid_quote_rows": 0,
+      "rejected_reference_rows": 0,
+      "best_buy_edge": null,
+      "best_sell_edge": null
+    }
+  ],
+  "notes": [
+    "quote-backtest mode requires one CSV per token with shared condition_id and aligned timestamps.",
+    "Executable bundle signals are only emitted when every leg has sane quotes (0<=bid<=ask<=1) at that timestamp.",
+    "The scanner also requires complementary reference prices to sum near $1 (configurable) to suppress stale or structurally inconsistent quote artifacts.",
+    "Edges here are raw bundle sums versus $1 and do not yet subtract fees, inventory, or execution latency."
+  ],
+  "combinatorial_scaffold": {
+    "status": "not_implemented_yet",
+    "idea": "Future step: link logically dependent conditions across separate markets once we have robust dependency mapping and executable pricing checks."
+  }
+}

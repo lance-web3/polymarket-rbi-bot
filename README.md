@@ -240,6 +240,13 @@ print(f"rows={len(rows)}")
 PY
 ```
 
+### Windows/WSL collector bring-up
+
+The old macOS LaunchAgents in `deploy/*.plist` are preserved for reference, but
+Windows should supervise the collectors separately. Use the NSSM/WSL runbook at
+`deploy/windows_wsl_bringup.md`; the installer script is
+`deploy/install_windows_wsl_collectors.ps1`.
+
 9. Scan structural bundle / no-arbitrage opportunities for research:
 
 ```bash

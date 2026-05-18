@@ -1,0 +1,37 @@
+[
+  {
+    "label": "btc_updown_5m",
+    "asset": "BTC",
+    "market_type": "up_down_short_horizon",
+    "url": "https://polymarket.com/event/btc-updown-5m-1775729100",
+    "notes": "Seed market mentioned by Lance. Resolve token ids before quote collection."
+  },
+  {
+    "label": "eth_updown_5m",
+    "asset": "ETH",
+    "market_type": "up_down_short_horizon",
+    "url": "https://polymarket.com/search?query=Ethereum%20Up%20or%20Down%20-%205%20Minutes",
+    "notes": "Short-horizon ETH candidate family discovered from Polymarket crypto pages."
+  },
+  {
+    "label": "sol_updown_5m",
+    "asset": "SOL",
+    "market_type": "up_down_short_horizon",
+    "url": "https://polymarket.com/search?query=Solana%20Up%20or%20Down%20-%205%20Minutes",
+    "notes": "Short-horizon SOL candidate family discovered from Polymarket crypto pages."
+  },
+  {
+    "label": "xrp_updown_5m",
+    "asset": "XRP",
+    "market_type": "up_down_short_horizon",
+    "url": "https://polymarket.com/search?query=XRP%20Up%20or%20Down%20-%205%20Minutes",
+    "notes": "Short-horizon XRP candidate family discovered from Polymarket crypto pages."
+  },
+  {
+    "label": "doge_updown_5m",
+    "asset": "DOGE",
+    "market_type": "up_down_short_horizon",
+    "url": "https://polymarket.com/search?query=Dogecoin%20Up%20or%20Down%20-%205%20Minutes",
+    "notes": "Short-horizon DOGE candidate family discovered from Polymarket crypto pages."
+  }
+]

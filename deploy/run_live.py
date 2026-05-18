@@ -20,6 +20,7 @@ from polymarket_rbi_bot.config import BotConfig
 from polymarket_rbi_bot.data import load_snapshots_from_csv, rows_to_snapshots
 from polymarket_rbi_bot.models import Candle, MarketSnapshot, Position
 from strategies.cvd_strategy import CVDStrategy
+from strategies.llm_probability_strategy import LLMProbabilityStrategy
 from strategies.long_entry_strategy import LongEntryStrategy
 from strategies.macd_strategy import MACDStrategy
 from strategies.rsi_strategy import RSIStrategy
@@ -77,15 +78,44 @@ def main() -> None:
     parser.add_argument("--skip-eligibility", action="store_true", help="Bypass market eligibility checks.")
     parser.add_argument("--execute", action="store_true", help="Actually send the order to Polymarket.")
     parser.add_argument("--skip-reconcile", action="store_true", help="Skip exchange-state refresh before decisioning.")
+    parser.add_argument(
+        "--llm-mode",
+        action="store_true",
+        help=(
+            "Replace the default MACD/RSI/CVD/LongEntry ensemble with a single "
+            "LLMProbabilityStrategy that reads pre-computed predictions from "
+            "data/llm_predictions.jsonl (Stage C). Run `python -m deploy.llm_predict_markets` "
+            "first to generate predictions; this script just consumes them."
+        ),
+    )
+    parser.add_argument(
+        "--llm-predictions",
+        default=None,
+        help="Override predictions JSONL path (defaults to BotConfig.llm_predictions_path).",
+    )
+    parser.add_argument(
+        "--llm-max-age-hours",
+        type=float,
+        default=48.0,
+        help="Reject predictions older than this in --llm-mode.",
+    )
     args = parser.parse_args()
 
     decision_ts = parse_timestamp(args.decision_ts)
     now = datetime.now(tz=timezone.utc)
 
     config = BotConfig.from_env()
-    trader = PolymarketTrader(
-        config=config,
-        strategies=[
+    if args.llm_mode:
+        predictions_path = Path(args.llm_predictions or config.llm_predictions_path)
+        strategies = [
+            LLMProbabilityStrategy(
+                predictions_path=predictions_path,
+                token_id=args.token_id,
+                max_age_hours=args.llm_max_age_hours,
+            ),
+        ]
+    else:
+        strategies = [
             LongEntryStrategy(
                 strict_mode=config.strict_strategy_mode,
                 strict_min_price=config.strict_min_price,
@@ -94,8 +124,8 @@ def main() -> None:
             MACDStrategy(),
             RSIStrategy(),
             CVDStrategy(),
-        ],
-    )
+        ]
+    trader = PolymarketTrader(config=config, strategies=strategies)
     risk = RiskManager(config)
     risk.daily_realized_pnl = trader.state_store.realized_pnl if trader.state_store is not None else 0.0
 
